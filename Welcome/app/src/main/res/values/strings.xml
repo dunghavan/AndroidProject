@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Welcome</string>
+    <string name="resName">Welcome Android App Development!</string>
+    <string name="my_logo">The minion logo</string>
+</resources>
