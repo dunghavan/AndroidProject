@@ -1,0 +1,58 @@
+[
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/Navigation_Default/app/build/intermediates/res/merged/debug/drawable-v21/ic_menu_slideshow.xml",
+        "source": "/home/dunghv/Desktop/TestGit/AndroidProject/Navigation_Default/app/src/main/res/drawable-v21/ic_menu_slideshow.xml"
+    },
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/Navigation_Default/app/build/intermediates/res/merged/debug/drawable-v21/design_password_eye.xml",
+        "source": "/home/dunghv/.android/build-cache/8b6c7b54dd7f0644fd1288f72820f22fa7ddfa1d/output/res/drawable-v21/design_password_eye.xml"
+    },
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/Navigation_Default/app/build/intermediates/res/merged/debug/drawable-v21/abc_edit_text_material.xml",
+        "source": "/home/dunghv/.android/build-cache/ac830f979cdb0386e8a24a929e59f74c173f56ca/output/res/drawable-v21/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/Navigation_Default/app/build/intermediates/res/merged/debug/drawable-v21/design_bottom_navigation_item_background.xml",
+        "source": "/home/dunghv/.android/build-cache/8b6c7b54dd7f0644fd1288f72820f22fa7ddfa1d/output/res/drawable-v21/design_bottom_navigation_item_background.xml"
+    },
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/Navigation_Default/app/build/intermediates/res/merged/debug/drawable-v21/ic_menu_gallery.xml",
+        "source": "/home/dunghv/Desktop/TestGit/AndroidProject/Navigation_Default/app/src/main/res/drawable-v21/ic_menu_gallery.xml"
+    },
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/Navigation_Default/app/build/intermediates/res/merged/debug/drawable-v21/notification_action_background.xml",
+        "source": "/home/dunghv/.android/build-cache/ac830f979cdb0386e8a24a929e59f74c173f56ca/output/res/drawable-v21/notification_action_background.xml"
+    },
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/Navigation_Default/app/build/intermediates/res/merged/debug/drawable-v21/abc_btn_colored_material.xml",
+        "source": "/home/dunghv/.android/build-cache/ac830f979cdb0386e8a24a929e59f74c173f56ca/output/res/drawable-v21/abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/Navigation_Default/app/build/intermediates/res/merged/debug/drawable-v21/ic_menu_camera.xml",
+        "source": "/home/dunghv/Desktop/TestGit/AndroidProject/Navigation_Default/app/src/main/res/drawable-v21/ic_menu_camera.xml"
+    },
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/Navigation_Default/app/build/intermediates/res/merged/debug/drawable-v21/ic_menu_send.xml",
+        "source": "/home/dunghv/Desktop/TestGit/AndroidProject/Navigation_Default/app/src/main/res/drawable-v21/ic_menu_send.xml"
+    },
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/Navigation_Default/app/build/intermediates/res/merged/debug/drawable-v21/ic_menu_manage.xml",
+        "source": "/home/dunghv/Desktop/TestGit/AndroidProject/Navigation_Default/app/src/main/res/drawable-v21/ic_menu_manage.xml"
+    },
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/Navigation_Default/app/build/intermediates/res/merged/debug/drawable-v21/avd_show_password.xml",
+        "source": "/home/dunghv/.android/build-cache/8b6c7b54dd7f0644fd1288f72820f22fa7ddfa1d/output/res/drawable-v21/avd_show_password.xml"
+    },
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/Navigation_Default/app/build/intermediates/res/merged/debug/drawable-v21/avd_hide_password.xml",
+        "source": "/home/dunghv/.android/build-cache/8b6c7b54dd7f0644fd1288f72820f22fa7ddfa1d/output/res/drawable-v21/avd_hide_password.xml"
+    },
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/Navigation_Default/app/build/intermediates/res/merged/debug/drawable-v21/ic_menu_share.xml",
+        "source": "/home/dunghv/Desktop/TestGit/AndroidProject/Navigation_Default/app/src/main/res/drawable-v21/ic_menu_share.xml"
+    },
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/Navigation_Default/app/build/intermediates/res/merged/debug/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "/home/dunghv/.android/build-cache/ac830f979cdb0386e8a24a929e59f74c173f56ca/output/res/drawable-v21/abc_action_bar_item_background_material.xml"
+    }
+]

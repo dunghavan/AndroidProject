@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/Navigation_Default/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher.png",
+        "source": "/home/dunghv/Desktop/TestGit/AndroidProject/Navigation_Default/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/Navigation_Default/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher_round.png",
+        "source": "/home/dunghv/Desktop/TestGit/AndroidProject/Navigation_Default/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+    }
+]

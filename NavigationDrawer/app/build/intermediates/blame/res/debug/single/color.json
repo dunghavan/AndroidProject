@@ -1,0 +1,90 @@
+[
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_dark.xml",
+        "source": "/home/dunghv/.android/build-cache/b7b6c528ddd259f85c9e86070e8ea00bffb15c92/output/res/color/abc_hint_foreground_material_dark.xml"
+    },
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/build/intermediates/res/merged/debug/color/abc_btn_colored_borderless_text_material.xml",
+        "source": "/home/dunghv/.android/build-cache/b7b6c528ddd259f85c9e86070e8ea00bffb15c92/output/res/color/abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_light.xml",
+        "source": "/home/dunghv/.android/build-cache/b7b6c528ddd259f85c9e86070e8ea00bffb15c92/output/res/color/abc_hint_foreground_material_light.xml"
+    },
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_dark.xml",
+        "source": "/home/dunghv/.android/build-cache/b7b6c528ddd259f85c9e86070e8ea00bffb15c92/output/res/color/abc_primary_text_material_dark.xml"
+    },
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_light.xml",
+        "source": "/home/dunghv/.android/build-cache/b7b6c528ddd259f85c9e86070e8ea00bffb15c92/output/res/color/abc_secondary_text_material_light.xml"
+    },
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/build/intermediates/res/merged/debug/color/design_error.xml",
+        "source": "/home/dunghv/.android/build-cache/dd75efcaf1a811aefb26e9c3e84b75f5e0c23f54/output/res/color/design_error.xml"
+    },
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml",
+        "source": "/home/dunghv/.android/build-cache/b7b6c528ddd259f85c9e86070e8ea00bffb15c92/output/res/color/abc_primary_text_disable_only_material_dark.xml"
+    },
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/build/intermediates/res/merged/debug/color/abc_tint_switch_thumb.xml",
+        "source": "/home/dunghv/.android/build-cache/b7b6c528ddd259f85c9e86070e8ea00bffb15c92/output/res/color/abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/build/intermediates/res/merged/debug/color/abc_btn_colored_text_material.xml",
+        "source": "/home/dunghv/.android/build-cache/b7b6c528ddd259f85c9e86070e8ea00bffb15c92/output/res/color/abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/build/intermediates/res/merged/debug/color/abc_tint_switch_track.xml",
+        "source": "/home/dunghv/.android/build-cache/b7b6c528ddd259f85c9e86070e8ea00bffb15c92/output/res/color/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/build/intermediates/res/merged/debug/color/switch_thumb_material_light.xml",
+        "source": "/home/dunghv/.android/build-cache/b7b6c528ddd259f85c9e86070e8ea00bffb15c92/output/res/color/switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/build/intermediates/res/merged/debug/color/abc_tint_btn_checkable.xml",
+        "source": "/home/dunghv/.android/build-cache/b7b6c528ddd259f85c9e86070e8ea00bffb15c92/output/res/color/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/build/intermediates/res/merged/debug/color/switch_thumb_material_dark.xml",
+        "source": "/home/dunghv/.android/build-cache/b7b6c528ddd259f85c9e86070e8ea00bffb15c92/output/res/color/switch_thumb_material_dark.xml"
+    },
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/build/intermediates/res/merged/debug/color/design_tint_password_toggle.xml",
+        "source": "/home/dunghv/.android/build-cache/dd75efcaf1a811aefb26e9c3e84b75f5e0c23f54/output/res/color/design_tint_password_toggle.xml"
+    },
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/build/intermediates/res/merged/debug/color/abc_search_url_text.xml",
+        "source": "/home/dunghv/.android/build-cache/b7b6c528ddd259f85c9e86070e8ea00bffb15c92/output/res/color/abc_search_url_text.xml"
+    },
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/build/intermediates/res/merged/debug/color/abc_tint_edittext.xml",
+        "source": "/home/dunghv/.android/build-cache/b7b6c528ddd259f85c9e86070e8ea00bffb15c92/output/res/color/abc_tint_edittext.xml"
+    },
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_light.xml",
+        "source": "/home/dunghv/.android/build-cache/b7b6c528ddd259f85c9e86070e8ea00bffb15c92/output/res/color/abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_light.xml",
+        "source": "/home/dunghv/.android/build-cache/b7b6c528ddd259f85c9e86070e8ea00bffb15c92/output/res/color/abc_primary_text_material_light.xml"
+    },
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_dark.xml",
+        "source": "/home/dunghv/.android/build-cache/b7b6c528ddd259f85c9e86070e8ea00bffb15c92/output/res/color/abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/build/intermediates/res/merged/debug/color/abc_tint_spinner.xml",
+        "source": "/home/dunghv/.android/build-cache/b7b6c528ddd259f85c9e86070e8ea00bffb15c92/output/res/color/abc_tint_spinner.xml"
+    },
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/build/intermediates/res/merged/debug/color/abc_tint_seek_thumb.xml",
+        "source": "/home/dunghv/.android/build-cache/b7b6c528ddd259f85c9e86070e8ea00bffb15c92/output/res/color/abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/build/intermediates/res/merged/debug/color/abc_tint_default.xml",
+        "source": "/home/dunghv/.android/build-cache/b7b6c528ddd259f85c9e86070e8ea00bffb15c92/output/res/color/abc_tint_default.xml"
+    }
+]
