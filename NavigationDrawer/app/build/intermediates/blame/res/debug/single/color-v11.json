@@ -1,10 +1,10 @@
 [
     {
-        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
-        "source": "/home/dunghv/.android/build-cache/b7b6c528ddd259f85c9e86070e8ea00bffb15c92/output/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\NavigationDrawer\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
     },
     {
-        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
-        "source": "/home/dunghv/.android/build-cache/b7b6c528ddd259f85c9e86070e8ea00bffb15c92/output/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\NavigationDrawer\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
     }
 ]

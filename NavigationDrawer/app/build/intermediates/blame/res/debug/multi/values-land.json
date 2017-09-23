@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
+        "outputFile": "C:\\Users\\Dung\\Desktop\\AndroidProject\\NavigationDrawer\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 120
                 },
                 "from": {
-                    "file": "/home/dunghv/.android/build-cache/b7b6c528ddd259f85c9e86070e8ea00bffb15c92/output/res/values-land/values-land.xml",
+                    "file": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\values-land\\values-land.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 184
                 },
                 "from": {
-                    "file": "/home/dunghv/.android/build-cache/b7b6c528ddd259f85c9e86070e8ea00bffb15c92/output/res/values-land/values-land.xml",
+                    "file": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\values-land\\values-land.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -49,7 +49,7 @@
                     "endOffset": 255
                 },
                 "from": {
-                    "file": "/home/dunghv/.android/build-cache/b7b6c528ddd259f85c9e86070e8ea00bffb15c92/output/res/values-land/values-land.xml",
+                    "file": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\values-land\\values-land.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -68,7 +68,7 @@
                     "endOffset": 323
                 },
                 "from": {
-                    "file": "/home/dunghv/.android/build-cache/b7b6c528ddd259f85c9e86070e8ea00bffb15c92/output/res/values-land/values-land.xml",
+                    "file": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\values-land\\values-land.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -88,7 +88,7 @@
                     "endOffset": 505
                 },
                 "from": {
-                    "file": "/home/dunghv/.android/build-cache/dd75efcaf1a811aefb26e9c3e84b75f5e0c23f54/output/res/values-land/values-land.xml",
+                    "file": "C:\\Users\\Dung\\.android\\build-cache\\afe1a01980e2158552441804949726e46f9ec6c6\\output\\res\\values-land\\values-land.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,

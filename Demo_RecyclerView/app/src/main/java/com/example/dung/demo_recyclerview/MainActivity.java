@@ -35,21 +35,42 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         recyclerView.setLayoutManager(layoutManager);
         //
         data = new ArrayList<String>();
-        data.add("Ha Van Dung");
-        data.add("Phan Nhat Dang");
-        data.add("Pham Quang Trung");
-        data.add("Vu Anh Thu");
-        data.add("Le Dinh Nhat");
-        data.add("Le Dinh Tiep");
+        data.add("Hà Văn Dũng");
+        data.add("Phan Nhật Đăng");
+        data.add("Phạm Quang Trung");
+        data.add("Vũ Anh Thư");
+        data.add("Lê Đình Nhật");
+        data.add("Lê Đình Tiệp");
         data.add("Phan Anh Khoa");
-        data.add("Tran Ngoc Tu");
+        data.add("Trần Ngọc Tú");
+        data.add("Hà Văn Dũng");
+        data.add("Phan Nhật Đăng");
+        data.add("Phạm Quang Trung");
+        data.add("Vũ Anh Thư");
+        data.add("Lê Đình Nhật");
+        data.add("Lê Đình Tiệp");
+        data.add("Phan Anh Khoa");
+        data.add("Trần Ngọc Tú");
+        data.add("Hà Văn Dũng");
+        data.add("Phan Nhật Đăng");
+        data.add("Phạm Quang Trung");
+        data.add("Vũ Anh Thư");
+        data.add("Lê Đình Nhật");
+        data.add("Lê Đình Tiệp");
+        data.add("Phan Anh Khoa");
+        data.add("Trần Ngọc Tú");
+        data.add("Hà Văn Dũng");
+        data.add("Phan Nhật Đăng");
+        data.add("Phạm Quang Trung");
+        data.add("Vũ Anh Thư");
+        data.add("Lê Đình Nhật");
+        data.add("Lê Đình Tiệp");
 
         customRecyclerAdapter = new CustomRecyclerAdapter(data);
         recyclerView.setAdapter(customRecyclerAdapter);
 
         ((Button)findViewById(R.id.button_Add)).setOnClickListener(this);
     }
-
     @Override
     public void onClick(View v){
         addItem();
@@ -59,5 +80,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String newData = inputText.getText().toString();
         //data.add(newData);
         customRecyclerAdapter.addItem(data.size(), newData);
+        // Empty the TextBox
+        inputText.setText("");
+        inputText.requestFocus();
     }
 }

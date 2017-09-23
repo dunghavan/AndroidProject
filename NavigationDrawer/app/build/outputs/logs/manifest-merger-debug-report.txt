@@ -1,95 +1,95 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/src/main/AndroidManifest.xml:2:1-21:12
+ADDED from C:\Users\Dung\Desktop\AndroidProject\NavigationDrawer\app\src\main\AndroidManifest.xml:2:1-21:12
 	package
-		ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/src/main/AndroidManifest.xml:3:5-50
-		INJECTED from /home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/src/main/AndroidManifest.xml
-		INJECTED from /home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/src/main/AndroidManifest.xml
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\NavigationDrawer\app\src\main\AndroidManifest.xml:3:5-50
+		INJECTED from C:\Users\Dung\Desktop\AndroidProject\NavigationDrawer\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Dung\Desktop\AndroidProject\NavigationDrawer\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from /home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/src/main/AndroidManifest.xml
-		INJECTED from /home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\Dung\Desktop\AndroidProject\NavigationDrawer\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Dung\Desktop\AndroidProject\NavigationDrawer\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\NavigationDrawer\app\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
-		INJECTED from /home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/src/main/AndroidManifest.xml
-		INJECTED from /home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\Dung\Desktop\AndroidProject\NavigationDrawer\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Dung\Desktop\AndroidProject\NavigationDrawer\app\src\main\AndroidManifest.xml
 application
-ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/src/main/AndroidManifest.xml:5:5-19:19
-MERGED from [com.android.support.constraint:constraint-layout:1.0.0-alpha8] /home/dunghv/.android/build-cache/855bb9507f6ed703e0f7765c4ecad9f51e64e8e1/output/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:design:25.3.1] /home/dunghv/.android/build-cache/dd75efcaf1a811aefb26e9c3e84b75f5e0c23f54/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:appcompat-v7:25.3.1] /home/dunghv/.android/build-cache/b7b6c528ddd259f85c9e86070e8ea00bffb15c92/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/dunghv/.android/build-cache/c615fa62bb42e6095501b8c5e684125d0d73c051/output/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/dunghv/.android/build-cache/67f9272b0237ab188ab65d9ea2be43dfbbf5d554/output/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:transition:25.3.1] /home/dunghv/.android/build-cache/902bf811e420776deab7aab2b5b62f2706d56d17/output/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-v4:25.3.1] /home/dunghv/.android/build-cache/21b39eb43b9b3f6ee3ca607b492d8a9b4bf5ccd1/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-fragment:25.3.1] /home/dunghv/.android/build-cache/012b29211710742f7b191c74b7467eba8b50d177/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-media-compat:25.3.1] /home/dunghv/.android/build-cache/7380ff54769a0ff1c3f90ea61dbf0b08c8f37ce7/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:25.3.1] /home/dunghv/.android/build-cache/aa2cc60d2cd91da3a5df84322d429c20f3087232/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:25.3.1] /home/dunghv/.android/build-cache/3a4f280bceb13949f31d4e3634e806c09e77e8f7/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-compat:25.3.1] /home/dunghv/.android/build-cache/91b83a0781127b1f86e0e039521fd7d2aebe0296/output/AndroidManifest.xml:29:5-20
+ADDED from C:\Users\Dung\Desktop\AndroidProject\NavigationDrawer\app\src\main\AndroidManifest.xml:5:5-19:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.0-alpha8] C:\Users\Dung\.android\build-cache\ac22971a1ed3f87e40391146eedea327d9d2dead\output\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:design:25.3.1] C:\Users\Dung\.android\build-cache\afe1a01980e2158552441804949726e46f9ec6c6\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Dung\.android\build-cache\a498329850230e498b07a7b380c32e0bb079905f\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Dung\.android\build-cache\d4f8089c8d7a977c5bed6227e2fc28e07ddd2c20\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Dung\.android\build-cache\70fed4d1b5111e67114126bbbf9e8ea0f61f876d\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:25.3.1] C:\Users\Dung\.android\build-cache\7336d30c06e6ebeb70fe7174bffe56ba77224614\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Dung\.android\build-cache\3dca98a422483026da0553abb3ce04dd0be113cb\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Dung\.android\build-cache\e5b2bf485e0ae30bc180d3d3e41446e8d6c84a85\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Dung\.android\build-cache\1f1888fce8a8d48b5e1839eccb1de7361287d50f\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Dung\.android\build-cache\c10f5a2475167c7219787c5867dc9bc8fd62bec2\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Dung\.android\build-cache\ef6d2f30cb3dd06bdaa54a212f5ade4621cde299\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Dung\.android\build-cache\be09dadcca01e2ce869d1fe92f8b30da0849978f\output\AndroidManifest.xml:29:5-20
 	android:label
-		ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/src/main/AndroidManifest.xml:8:9-41
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\NavigationDrawer\app\src\main\AndroidManifest.xml:8:9-41
 	android:supportsRtl
-		ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/src/main/AndroidManifest.xml:10:9-35
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\NavigationDrawer\app\src\main\AndroidManifest.xml:10:9-35
 	android:roundIcon
-		ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/src/main/AndroidManifest.xml:9:9-54
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\NavigationDrawer\app\src\main\AndroidManifest.xml:9:9-54
 	android:allowBackup
-		ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/src/main/AndroidManifest.xml:6:9-35
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\NavigationDrawer\app\src\main\AndroidManifest.xml:6:9-35
 	android:icon
-		ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/src/main/AndroidManifest.xml:7:9-43
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\NavigationDrawer\app\src\main\AndroidManifest.xml:7:9-43
 	android:theme
-		ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/src/main/AndroidManifest.xml:11:9-40
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\NavigationDrawer\app\src\main\AndroidManifest.xml:11:9-40
 activity#com.example.dunghv.navigationdrawer.MainActivity
-ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/src/main/AndroidManifest.xml:12:9-18:20
+ADDED from C:\Users\Dung\Desktop\AndroidProject\NavigationDrawer\app\src\main\AndroidManifest.xml:12:9-18:20
 	android:name
-		ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/src/main/AndroidManifest.xml:12:19-47
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\NavigationDrawer\app\src\main\AndroidManifest.xml:12:19-47
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/src/main/AndroidManifest.xml:13:13-17:29
+ADDED from C:\Users\Dung\Desktop\AndroidProject\NavigationDrawer\app\src\main\AndroidManifest.xml:13:13-17:29
 action#android.intent.action.MAIN
-ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/src/main/AndroidManifest.xml:14:17-69
+ADDED from C:\Users\Dung\Desktop\AndroidProject\NavigationDrawer\app\src\main\AndroidManifest.xml:14:17-69
 	android:name
-		ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/src/main/AndroidManifest.xml:14:25-66
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\NavigationDrawer\app\src\main\AndroidManifest.xml:14:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/src/main/AndroidManifest.xml:16:17-77
+ADDED from C:\Users\Dung\Desktop\AndroidProject\NavigationDrawer\app\src\main\AndroidManifest.xml:16:17-77
 	android:name
-		ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/src/main/AndroidManifest.xml:16:27-74
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\NavigationDrawer\app\src\main\AndroidManifest.xml:16:27-74
 uses-sdk
-INJECTED from /home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support.constraint:constraint-layout:1.0.0-alpha8] /home/dunghv/.android/build-cache/855bb9507f6ed703e0f7765c4ecad9f51e64e8e1/output/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:design:25.3.1] /home/dunghv/.android/build-cache/dd75efcaf1a811aefb26e9c3e84b75f5e0c23f54/output/AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:appcompat-v7:25.3.1] /home/dunghv/.android/build-cache/b7b6c528ddd259f85c9e86070e8ea00bffb15c92/output/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/dunghv/.android/build-cache/c615fa62bb42e6095501b8c5e684125d0d73c051/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/dunghv/.android/build-cache/67f9272b0237ab188ab65d9ea2be43dfbbf5d554/output/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:25.3.1] /home/dunghv/.android/build-cache/1accd6e3c8ae08484ebb9724a450f043f767acdf/output/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:transition:25.3.1] /home/dunghv/.android/build-cache/902bf811e420776deab7aab2b5b62f2706d56d17/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:25.3.1] /home/dunghv/.android/build-cache/21b39eb43b9b3f6ee3ca607b492d8a9b4bf5ccd1/output/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.3.1] /home/dunghv/.android/build-cache/012b29211710742f7b191c74b7467eba8b50d177/output/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.3.1] /home/dunghv/.android/build-cache/7380ff54769a0ff1c3f90ea61dbf0b08c8f37ce7/output/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.3.1] /home/dunghv/.android/build-cache/aa2cc60d2cd91da3a5df84322d429c20f3087232/output/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.3.1] /home/dunghv/.android/build-cache/3a4f280bceb13949f31d4e3634e806c09e77e8f7/output/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.3.1] /home/dunghv/.android/build-cache/91b83a0781127b1f86e0e039521fd7d2aebe0296/output/AndroidManifest.xml:21:5-23:58
+INJECTED from C:\Users\Dung\Desktop\AndroidProject\NavigationDrawer\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support.constraint:constraint-layout:1.0.0-alpha8] C:\Users\Dung\.android\build-cache\ac22971a1ed3f87e40391146eedea327d9d2dead\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:design:25.3.1] C:\Users\Dung\.android\build-cache\afe1a01980e2158552441804949726e46f9ec6c6\output\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Dung\.android\build-cache\a498329850230e498b07a7b380c32e0bb079905f\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Dung\.android\build-cache\d4f8089c8d7a977c5bed6227e2fc28e07ddd2c20\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Dung\.android\build-cache\70fed4d1b5111e67114126bbbf9e8ea0f61f876d\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Dung\.android\build-cache\b4112471419de2f9f7c0465179cabb38781c1123\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.3.1] C:\Users\Dung\.android\build-cache\7336d30c06e6ebeb70fe7174bffe56ba77224614\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Dung\.android\build-cache\3dca98a422483026da0553abb3ce04dd0be113cb\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Dung\.android\build-cache\e5b2bf485e0ae30bc180d3d3e41446e8d6c84a85\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Dung\.android\build-cache\1f1888fce8a8d48b5e1839eccb1de7361287d50f\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Dung\.android\build-cache\c10f5a2475167c7219787c5867dc9bc8fd62bec2\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Dung\.android\build-cache\ef6d2f30cb3dd06bdaa54a212f5ade4621cde299\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Dung\.android\build-cache\be09dadcca01e2ce869d1fe92f8b30da0849978f\output\AndroidManifest.xml:21:5-23:58
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:25.3.1] /home/dunghv/.android/build-cache/dd75efcaf1a811aefb26e9c3e84b75f5e0c23f54/output/AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:25.3.1] C:\Users\Dung\.android\build-cache\afe1a01980e2158552441804949726e46f9ec6c6\output\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
-		INJECTED from /home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/src/main/AndroidManifest.xml
-		INJECTED from /home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\Dung\Desktop\AndroidProject\NavigationDrawer\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Dung\Desktop\AndroidProject\NavigationDrawer\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/src/main/AndroidManifest.xml
-		INJECTED from /home/dunghv/Desktop/TestGit/AndroidProject/NavigationDrawer/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\Dung\Desktop\AndroidProject\NavigationDrawer\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Dung\Desktop\AndroidProject\NavigationDrawer\app\src\main\AndroidManifest.xml
 meta-data#android.support.VERSION
-ADDED from [com.android.support:design:25.3.1] /home/dunghv/.android/build-cache/dd75efcaf1a811aefb26e9c3e84b75f5e0c23f54/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:appcompat-v7:25.3.1] /home/dunghv/.android/build-cache/b7b6c528ddd259f85c9e86070e8ea00bffb15c92/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/dunghv/.android/build-cache/c615fa62bb42e6095501b8c5e684125d0d73c051/output/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/dunghv/.android/build-cache/67f9272b0237ab188ab65d9ea2be43dfbbf5d554/output/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:recyclerview-v7:25.3.1] /home/dunghv/.android/build-cache/1accd6e3c8ae08484ebb9724a450f043f767acdf/output/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:transition:25.3.1] /home/dunghv/.android/build-cache/902bf811e420776deab7aab2b5b62f2706d56d17/output/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-v4:25.3.1] /home/dunghv/.android/build-cache/21b39eb43b9b3f6ee3ca607b492d8a9b4bf5ccd1/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-fragment:25.3.1] /home/dunghv/.android/build-cache/012b29211710742f7b191c74b7467eba8b50d177/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-media-compat:25.3.1] /home/dunghv/.android/build-cache/7380ff54769a0ff1c3f90ea61dbf0b08c8f37ce7/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-ui:25.3.1] /home/dunghv/.android/build-cache/aa2cc60d2cd91da3a5df84322d429c20f3087232/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-utils:25.3.1] /home/dunghv/.android/build-cache/3a4f280bceb13949f31d4e3634e806c09e77e8f7/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-compat:25.3.1] /home/dunghv/.android/build-cache/91b83a0781127b1f86e0e039521fd7d2aebe0296/output/AndroidManifest.xml:25:5-27:34
+ADDED from [com.android.support:design:25.3.1] C:\Users\Dung\.android\build-cache\afe1a01980e2158552441804949726e46f9ec6c6\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Dung\.android\build-cache\a498329850230e498b07a7b380c32e0bb079905f\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Dung\.android\build-cache\d4f8089c8d7a977c5bed6227e2fc28e07ddd2c20\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Dung\.android\build-cache\70fed4d1b5111e67114126bbbf9e8ea0f61f876d\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Dung\.android\build-cache\b4112471419de2f9f7c0465179cabb38781c1123\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] C:\Users\Dung\.android\build-cache\7336d30c06e6ebeb70fe7174bffe56ba77224614\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Dung\.android\build-cache\3dca98a422483026da0553abb3ce04dd0be113cb\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Dung\.android\build-cache\e5b2bf485e0ae30bc180d3d3e41446e8d6c84a85\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Dung\.android\build-cache\1f1888fce8a8d48b5e1839eccb1de7361287d50f\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Dung\.android\build-cache\c10f5a2475167c7219787c5867dc9bc8fd62bec2\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Dung\.android\build-cache\ef6d2f30cb3dd06bdaa54a212f5ade4621cde299\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Dung\.android\build-cache\be09dadcca01e2ce869d1fe92f8b30da0849978f\output\AndroidManifest.xml:25:5-27:34
 	android:value
-		ADDED from [com.android.support:design:25.3.1] /home/dunghv/.android/build-cache/dd75efcaf1a811aefb26e9c3e84b75f5e0c23f54/output/AndroidManifest.xml:27:9-31
+		ADDED from [com.android.support:design:25.3.1] C:\Users\Dung\.android\build-cache\afe1a01980e2158552441804949726e46f9ec6c6\output\AndroidManifest.xml:27:9-31
 	android:name
-		ADDED from [com.android.support:design:25.3.1] /home/dunghv/.android/build-cache/dd75efcaf1a811aefb26e9c3e84b75f5e0c23f54/output/AndroidManifest.xml:26:9-47
+		ADDED from [com.android.support:design:25.3.1] C:\Users\Dung\.android\build-cache\afe1a01980e2158552441804949726e46f9ec6c6\output\AndroidManifest.xml:26:9-47
