@@ -12,9 +12,21 @@ import android.support.design.widget.Snackbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+
+    @Override
+    protected void onResume() {
+        Toast.makeText(this, "onResume method!", Toast.LENGTH_SHORT).show();
+        super.onResume();
+    }
+    @Override
+    protected void onPause() {
+        Toast.makeText(this, "onPause method!", Toast.LENGTH_SHORT).show();
+        super.onPause();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +36,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //Khởi tạo toolbar mới thay cho ActionBar:
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        //Hiện nút back
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //Khởi tạo và bắt sự kiện cho floatingActionButton:
         FloatingActionButton fab = (FloatingActionButton)findViewById(R.id.fab);
@@ -61,10 +75,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.main, menu);
-        getMenuInflater().inflate(R.menu.main, menu);
-        getMenuInflater().inflate(R.menu.main, menu);
-        getMenuInflater().inflate(R.menu.main, menu);
-        getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
@@ -85,16 +95,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
+            Toast.makeText(this, "This is Camera", Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_gallery) {
-
+            Toast.makeText(this, "This is Gallery", Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_slideshow) {
-
+            Toast.makeText(this, "This is Slideshow", Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_manage) {
-
+            Toast.makeText(this, "This is Nav Manager", Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_share) {
-
+            Toast.makeText(this, "This is Nav Share", Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_send) {
-
+            Toast.makeText(this, "This is Nav Send", Toast.LENGTH_LONG).show();
         }
         DrawerLayout drawerLayout = (DrawerLayout)findViewById(R.id.activity_main);
         drawerLayout.closeDrawer(GravityCompat.START);

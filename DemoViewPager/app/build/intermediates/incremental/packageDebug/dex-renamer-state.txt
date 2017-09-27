@@ -1,0 +1,4 @@
+#Sat Sep 16 22:56:55 ICT 2017
+base.0=C\:\\Users\\Dung\\Desktop\\AndroidProject\\DemoViewPager\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
+renamed.0=classes.dex
+file.0=C\:\\Users\\Dung\\Desktop\\AndroidProject\\DemoViewPager\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex

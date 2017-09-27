@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\Dung\.android\build-cache\825872ae515101ac2a3b9777c44c48bb6d7d6cd1\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\Dung\Desktop\AndroidProject\DemoViewPager\app\build\intermediates\pre-dexed\debug\classes_525b0ed08a9d648bf53d8d3c4f80758c893406f2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Dung\.android\build-cache\05992af56226764d3d6d8c292c99f5181bf82e0d\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="C:\Users\Dung\Desktop\AndroidProject\DemoViewPager\app\build\intermediates\pre-dexed\debug\classes_41f9ecebea62d02d7155f4d9ec65b17a338a0e6e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Dung\.android\build-cache\fce29bb30f654f8ea0128fca8babd5bb2fb7ca49\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="C:\Users\Dung\Desktop\AndroidProject\DemoViewPager\app\build\intermediates\pre-dexed\debug\classes_ec57005ef24d23b24e67db94b1ea2b716387de45.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Dung\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.0-alpha8\constraint-layout-solver-1.0.0-alpha8.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="80c371a4fd5e1b77f0e3a25b171356878543ffdd">
+        <dex dex="C:\Users\Dung\Desktop\AndroidProject\DemoViewPager\app\build\intermediates\pre-dexed\debug\constraint-layout-solver-1.0.0-alpha8_2a0fdffdd2226f86ff23c2f08566e36b671ab7fa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Dung\.android\build-cache\bdab2351906a800dc969b4836e45eb6ff642c1af\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6a022bf00ccd0948a8180c505e8e458bbddd43a6">
+        <dex dex="C:\Users\Dung\Desktop\AndroidProject\DemoViewPager\app\build\intermediates\pre-dexed\debug\classes_388afbdadf9adc83f006290c1d4a6d19351564bf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Dung\.android\build-cache\5aa47c514857bcf04d1b924490a87516fd847323\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="C:\Users\Dung\Desktop\AndroidProject\DemoViewPager\app\build\intermediates\pre-dexed\debug\classes_7409c3f240188838d00191fcb76f22c259f4fca8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Dung\.android\build-cache\62bf16bdbf000738bafe8b8db5a2bfec46aae9e2\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="952944218ecedea1554a513dec0c14d570642843">
+        <dex dex="C:\Users\Dung\Desktop\AndroidProject\DemoViewPager\app\build\intermediates\pre-dexed\debug\classes_4efb7938eaf36490cae4f592c7777a967d1d6d65.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Dung\.android\build-cache\160afda572c30c067d1122145acb99bf53c30765\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="cddcd0fb93bc70e27325f2f715b2710332004ebb">
+        <dex dex="C:\Users\Dung\Desktop\AndroidProject\DemoViewPager\app\build\intermediates\pre-dexed\debug\classes_628306ec674543cdb19ff4efe6b852606f57bec7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Dung\.android\build-cache\d8024794d26abbcd1422df20fb96f1a1dcca0204\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="C:\Users\Dung\Desktop\AndroidProject\DemoViewPager\app\build\intermediates\pre-dexed\debug\classes_31279525da35ffdac9cc419e4ecd47ab3ba5571e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Dung\.android\build-cache\ac22971a1ed3f87e40391146eedea327d9d2dead\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0e753ea8d0a2dea270da7d96a7d6e9d2e9c10f94">
+        <dex dex="C:\Users\Dung\Desktop\AndroidProject\DemoViewPager\app\build\intermediates\pre-dexed\debug\classes_d1a19618067ef1cc4d07bbd95c5345e0d1827489.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Dung\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\26.0.0-alpha1\support-annotations-26.0.0-alpha1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="023ee503b631f69511e335a061ea008f8da60f40">
+        <dex dex="C:\Users\Dung\Desktop\AndroidProject\DemoViewPager\app\build\intermediates\pre-dexed\debug\support-annotations-26.0.0-alpha1_b6352c96959e2a4d8096505ca077e819a69e3113.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Dung\.android\build-cache\27c92fde0f7081fe347d464a7023419d2296931f\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="C:\Users\Dung\Desktop\AndroidProject\DemoViewPager\app\build\intermediates\pre-dexed\debug\classes_358555ff6559c34ee8bb25b37c24ce4101b56e80.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Dung\.android\build-cache\1eca2ea4288fbe0bd9555f61ce694ed15744a942\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
+        <dex dex="C:\Users\Dung\Desktop\AndroidProject\DemoViewPager\app\build\intermediates\pre-dexed\debug\classes_93be4ac4c2c5bde1427ddc8cc4634196af32756a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Dung\.android\build-cache\9c999593e3ebefa61d6ebf54e3ab48d32cbc86c2\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c4f45092eee6cdf1a5dbd597b2b6819be652ce2e">
+        <dex dex="C:\Users\Dung\Desktop\AndroidProject\DemoViewPager\app\build\intermediates\pre-dexed\debug\classes_ae24d7e39f996d0f515cc7b2b54e647a14d515cf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Dung\.android\build-cache\e4211f528f7fe1c808d65676e451ee4de2c8fde5\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="C:\Users\Dung\Desktop\AndroidProject\DemoViewPager\app\build\intermediates\pre-dexed\debug\classes_f263a51cd5b85b9c9cba8cc18e7cd9c5b405bfb2.jar" />
+    </item>
+
+</items>

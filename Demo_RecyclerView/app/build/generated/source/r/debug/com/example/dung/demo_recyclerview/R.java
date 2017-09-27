@@ -2227,7 +2227,6 @@ containing a value of this type.
         public static final int bottom=0x7f0b0024;
         public static final int btn_delete=0x7f0b005c;
         public static final int buttonPanel=0x7f0b0030;
-        public static final int button_Add=0x7f0b0059;
         public static final int cancel_action=0x7f0b0061;
         public static final int checkbox=0x7f0b0040;
         public static final int chronometer=0x7f0b0069;
@@ -2249,8 +2248,8 @@ containing a value of this type.
         public static final int icon_group=0x7f0b006e;
         public static final int ifRoom=0x7f0b0021;
         public static final int image=0x7f0b002b;
+        public static final int imageView=0x7f0b0059;
         public static final int info=0x7f0b006a;
-        public static final int inputText=0x7f0b0058;
         public static final int item_touch_helper_previous_elevation=0x7f0b0005;
         public static final int line1=0x7f0b006f;
         public static final int line3=0x7f0b0071;
@@ -2270,7 +2269,7 @@ containing a value of this type.
         public static final int progress_circular=0x7f0b0006;
         public static final int progress_horizontal=0x7f0b0007;
         public static final int radio=0x7f0b0042;
-        public static final int recyclerview=0x7f0b005a;
+        public static final int recyclerview=0x7f0b0058;
         public static final int right_icon=0x7f0b006c;
         public static final int right_side=0x7f0b0067;
         public static final int screen=0x7f0b0016;
@@ -2311,7 +2310,8 @@ containing a value of this type.
         public static final int title_template=0x7f0b003c;
         public static final int top=0x7f0b0025;
         public static final int topPanel=0x7f0b003b;
-        public static final int tv_name=0x7f0b005b;
+        public static final int tv_name=0x7f0b005a;
+        public static final int tv_price=0x7f0b005b;
         public static final int up=0x7f0b0009;
         public static final int useLogo=0x7f0b0013;
         public static final int withText=0x7f0b0023;
@@ -2376,7 +2376,6 @@ containing a value of this type.
     public static final class mipmap {
         public static final int ic_launcher=0x7f030000;
         public static final int ic_launcher_round=0x7f030001;
-        public static final int icon_delete=0x7f030002;
     }
     public static final class string {
         public static final int abc_action_bar_home_description=0x7f060000;

@@ -2994,6 +2994,7 @@ containing a value of this type.
         public static final int side_nav_bar=0x7f02006c;
     }
     public static final class id {
+        public static final int about=0x7f0d00aa;
         public static final int action0=0x7f0d0089;
         public static final int action_bar=0x7f0d0065;
         public static final int action_bar_activity_content=0x7f0d0000;
@@ -3077,6 +3078,7 @@ containing a value of this type.
         public static final int middle=0x7f0d003a;
         public static final int mini=0x7f0d0038;
         public static final int multiply=0x7f0d001f;
+        public static final int my_profile=0x7f0d00a9;
         public static final int nav_camera=0x7f0d009f;
         public static final int nav_gallery=0x7f0d00a0;
         public static final int nav_gallery2=0x7f0d00a5;

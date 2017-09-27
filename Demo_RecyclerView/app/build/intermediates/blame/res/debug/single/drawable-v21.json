@@ -1,18 +1,18 @@
 [
     {
-        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/build/intermediates/res/merged/debug/drawable-v21/abc_btn_colored_material.xml",
-        "source": "/home/dunghv/.android/build-cache/b7b6c528ddd259f85c9e86070e8ea00bffb15c92/output/res/drawable-v21/abc_btn_colored_material.xml"
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\notification_action_background.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable-v21\\notification_action_background.xml"
     },
     {
-        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/build/intermediates/res/merged/debug/drawable-v21/abc_action_bar_item_background_material.xml",
-        "source": "/home/dunghv/.android/build-cache/b7b6c528ddd259f85c9e86070e8ea00bffb15c92/output/res/drawable-v21/abc_action_bar_item_background_material.xml"
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable-v21\\abc_btn_colored_material.xml"
     },
     {
-        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/build/intermediates/res/merged/debug/drawable-v21/abc_edit_text_material.xml",
-        "source": "/home/dunghv/.android/build-cache/b7b6c528ddd259f85c9e86070e8ea00bffb15c92/output/res/drawable-v21/abc_edit_text_material.xml"
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable-v21\\abc_edit_text_material.xml"
     },
     {
-        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/build/intermediates/res/merged/debug/drawable-v21/notification_action_background.xml",
-        "source": "/home/dunghv/.android/build-cache/b7b6c528ddd259f85c9e86070e8ea00bffb15c92/output/res/drawable-v21/notification_action_background.xml"
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
     }
 ]

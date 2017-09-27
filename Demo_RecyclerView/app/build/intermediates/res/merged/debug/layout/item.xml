@@ -1,22 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/holo_blue_bright"
+    android:orientation="horizontal"
     android:paddingLeft="8dp"
-    android:paddingRight="8dp">
+    android:paddingRight="8dp"
+    android:weightSum="10">
 
-    <TextView
-        android:id="@+id/tv_name"
-        android:layout_width="0dp"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"/>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_weight="0.9" />
+        android:background="#a2ed64"
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_weight="7"
+        android:weightSum="3">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2" />
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+    </LinearLayout>
 
     <ImageButton
         android:id="@+id/btn_delete"
-        android:layout_width="32dp"
+        android:layout_width="50dp"
         android:layout_height="35dp"
-        android:src="@mipmap/icon_delete"/>
+        android:layout_weight="1"
+        android:src="@android:drawable/ic_delete" />
 
 </LinearLayout>
