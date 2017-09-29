@@ -3,6 +3,7 @@ package com.example.dung.demo_recyclerview;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -34,10 +35,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         context = getApplicationContext();
 
         boolean b = checkInternetConnection();
+        BottomNavigationView bottomNavigationView = (BottomNavigationView)findViewById(R.id.bottom_navigation);
+
+    }
+    @Override
+    public void onClick(View v){
+
+    }
+
+    public void runDemoRecyclerView(){
 
         //Connect to views:
-        recyclerView = (RecyclerView)findViewById(R.id.recyclerview);
-        //inputText = (EditText)findViewById(R.id.inputText);
+        //recyclerView = (RecyclerView)findViewById(R.id.recyclerview);
         //Set fixed size for ReclyclerView:
         recyclerView.setHasFixedSize(true);
         //Setting the LayoutManager:
@@ -48,22 +57,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         customRecyclerAdapter = new CustomRecyclerAdapter(data);
         recyclerView.setAdapter(customRecyclerAdapter);
-
-        //((Button)findViewById(R.id.button_Add)).setOnClickListener(this);
     }
-    @Override
-    public void onClick(View v){
-
-    }
-
-//    public void addItem(){
-//        String newData = inputText.getText().toString();
-//        //data.add(newData);
-//        customRecyclerAdapter.addItem(data.size(), newData);
-//        // Empty the TextBox
-//        inputText.setText("");
-//        inputText.requestFocus();
-//    }
 
     private List<MonAn> initialData(){
         data = new ArrayList<>();
