@@ -1,5 +1,6 @@
 package com.example.dung.demo_recyclerview;
 
+import android.app.Activity;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -10,14 +11,15 @@ import android.widget.Toast;
  */
 
 public class CheckInternetState {
+
+
     public static boolean checkInternetConnection() {
 
         Context context = MainActivity.getMainActivityContext();
-
-        ConnectivityManager connManager =
-                (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-
-
+        ConnectivityManager connManager =  (ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (connManager == null) {
+            return false;
+        }
         NetworkInfo networkInfo = connManager.getActiveNetworkInfo();
 
         if (networkInfo == null) {

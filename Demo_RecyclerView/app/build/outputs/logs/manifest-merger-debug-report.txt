@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:2:1-23:12
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:2:1-25:12
 	package
 		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:3:5-49
 		INJECTED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml
@@ -13,8 +13,16 @@ ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\A
 	android:versionCode
 		INJECTED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:6:5-67
+	android:name
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:6:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:7:5-78
+	android:name
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:7:22-76
 application
-ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:5:5-21:19
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:8:5-23:19
 MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Dung\.android\build-cache\a498329850230e498b07a7b380c32e0bb079905f\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Dung\.android\build-cache\3dca98a422483026da0553abb3ce04dd0be113cb\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Dung\.android\build-cache\e5b2bf485e0ae30bc180d3d3e41446e8d6c84a85\output\AndroidManifest.xml:29:5-20
@@ -26,39 +34,31 @@ MERGED from [com.android.support.constraint:constraint-layout:1.0.0-alpha8] C:\U
 MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Dung\.android\build-cache\c10f5a2475167c7219787c5867dc9bc8fd62bec2\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Dung\.android\build-cache\be09dadcca01e2ce869d1fe92f8b30da0849978f\output\AndroidManifest.xml:29:5-20
 	android:label
-		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:8:9-41
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:11:9-41
 	android:supportsRtl
-		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:13:9-35
 	android:roundIcon
-		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:9:9-54
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:12:9-54
 	android:allowBackup
-		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:9:9-35
 	android:icon
-		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:7:9-43
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:10:9-43
 	android:theme
-		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:11:9-40
-uses-permission#android.permission.INTERNET
-ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:12:9-71
-	android:name
-		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:12:26-68
-uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:13:9-82
-	android:name
-		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:13:26-80
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:14:9-40
 activity#com.example.dung.demo_recyclerview.MainActivity
-ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:14:9-20:20
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:16:9-22:20
 	android:name
-		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:14:19-47
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:16:19-47
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:15:13-19:29
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:17:13-21:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:16:17-69
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:18:17-69
 	android:name
-		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:16:25-66
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:18:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:18:17-77
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:20:17-77
 	android:name
-		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:18:27-74
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:20:27-74
 uses-sdk
 INJECTED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Dung\.android\build-cache\a498329850230e498b07a7b380c32e0bb079905f\output\AndroidManifest.xml:21:5-23:78

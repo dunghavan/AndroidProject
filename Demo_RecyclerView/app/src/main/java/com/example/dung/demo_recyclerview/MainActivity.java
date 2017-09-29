@@ -1,6 +1,8 @@
 package com.example.dung.demo_recyclerview;
 
 import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -8,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,16 +25,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private static Context context;
     public static Context getMainActivityContext(){
-        return MainActivity.context;
+        return context;
     }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         context = getApplicationContext();
 
-        boolean b = CheckInternetState.checkInternetConnection();
+        boolean b = checkInternetConnection();
 
         //Connect to views:
         recyclerView = (RecyclerView)findViewById(R.id.recyclerview);
@@ -75,4 +77,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         return data;
     }
+
+    public boolean checkInternetConnection() {
+
+        ConnectivityManager connManager =  (ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connManager.getActiveNetworkInfo();
+
+        if (networkInfo == null) {
+            Toast.makeText(context, "No default network is currently active", Toast.LENGTH_LONG).show();
+            return false;
+        }
+
+        if (!networkInfo.isConnected()) {
+            Toast.makeText(context, "Network is not connected", Toast.LENGTH_LONG).show();
+            return false;
+        }
+
+        if (!networkInfo.isAvailable()) {
+            Toast.makeText(context, "Network not available", Toast.LENGTH_LONG).show();
+            return false;
+        }
+        Toast.makeText(context, "Network OK", Toast.LENGTH_LONG).show();
+        return true;
+    }
+
 }
