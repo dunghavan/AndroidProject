@@ -19,4 +19,16 @@
         android:icon="@drawable/ic_action_three"
         android:title="Three"
         app:showAsAction="always" />
+    <item
+        android:id="@+id/action_four"
+        android:enabled="true"
+        android:icon="@drawable/ic_action_three"
+        android:title="Four"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_five"
+        android:enabled="true"
+        android:icon="@drawable/ic_action_three"
+        android:title="Five"
+        app:showAsAction="always" />
 </menu>

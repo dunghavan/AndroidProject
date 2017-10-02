@@ -20,7 +20,7 @@ import java.util.List;
 
 public class CustomRecyclerAdapter extends RecyclerView.Adapter <CustomRecyclerAdapter.RecyclerViewHolder>{
     private List<MonAn> listData = new ArrayList<>();
-    CustomRecyclerAdapter(List<MonAn> _listData){
+    public CustomRecyclerAdapter(List<MonAn> _listData){
         this.listData = _listData;
     }
 
