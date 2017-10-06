@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.09"
-        android:text="IOS"
+        android:text="Nhà Hàng"
         android:textAlignment="center"/>
 
     <!--Demo RecyclerView-->

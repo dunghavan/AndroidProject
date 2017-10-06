@@ -8,17 +8,17 @@
     android:weightSum="1">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView_TenDanhSachNhaHang"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.09"
-        android:text="IOS"
+        android:text="Nhà Hàng"
         android:textAlignment="center"/>
 
-    <ImageView
-        android:id="@+id/imageView2"
+    <!--Demo RecyclerView-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_NhaHang"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.09"
-        app:srcCompat="@mipmap/ios" />
+        android:layout_height="match_parent"
+        android:scrollbars="vertical" />
 </LinearLayout>

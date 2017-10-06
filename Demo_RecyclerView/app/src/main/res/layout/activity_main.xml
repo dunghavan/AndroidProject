@@ -10,7 +10,7 @@
 
     <!--Demo BottomNavigationBar-->
     <FrameLayout
-        android:id="@+id/frame_layout"
+        android:id="@+id/frame_layout_in_main_activity"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/bottom_navigation">

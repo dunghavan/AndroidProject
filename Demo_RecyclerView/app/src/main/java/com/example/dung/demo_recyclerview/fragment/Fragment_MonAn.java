@@ -50,14 +50,14 @@ public class Fragment_MonAn extends Fragment {
         layoutManager = new LinearLayoutManager(context);
         recyclerView.setLayoutManager(layoutManager);
         //
-        data = initialData();
+        initialData();
 
         customRecyclerAdapter = new MonAnRecyclerAdapter(data);
         recyclerView.setAdapter(customRecyclerAdapter);
 
     }
 
-    private List<MonAn> initialData(){
+    private void initialData(){
         data = new ArrayList<>();
 
         data.add(new MonAn("Gỏi Cuốn", 200000.0, "http://giadinh.vcmedia.vn/k:2016/photo-0-1472785146823/nhungmonanngonchogiadinhdip29.jpg"));
@@ -67,7 +67,6 @@ public class Fragment_MonAn extends Fragment {
         data.add(new MonAn("Chả Ram", 200000.0, "http://media.vietq.vn/files/ctvhanh/mon-ngon2.jpg"));
         data.add(new MonAn("Bún Bò", 450000.0, "http://anh.24h.com.vn/upload/1-2014/images/2014-03-19/1395195457-mon-an-nhat-sanuki-udon-.jpg"));
 
-        return data;
     }
 
 }

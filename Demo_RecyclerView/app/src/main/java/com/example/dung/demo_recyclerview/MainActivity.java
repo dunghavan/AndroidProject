@@ -45,15 +45,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 switch (id){
                     case R.id.action_one:
                         fragment = new AndroidFragment();
-                        transaction.replace(R.id.frame_layout, fragment).commit();
+                        transaction.replace(R.id.frame_layout_in_main_activity, fragment).commit();
                         break;
                     case R.id.action_two:
                         fragment = new Fragment_NhaHang();
-                        transaction.replace(R.id.frame_layout, fragment).commit();
+                        transaction.replace(R.id.frame_layout_in_main_activity, fragment).commit();
                         break;
                     case R.id.action_three:
                         fragment = new Fragment_MonAn();
-                        transaction.replace(R.id.frame_layout, fragment).commit();
+                        transaction.replace(R.id.frame_layout_in_main_activity, fragment).commit();
                         break;
                 }
                 return true;
