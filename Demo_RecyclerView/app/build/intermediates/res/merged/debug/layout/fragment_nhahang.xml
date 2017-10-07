@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/ios_fragment"
+    android:id="@+id/php_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="1">
 
-    <TextView
-        android:id="@+id/textView_TenDanhSachNhaHang"
+    <android.support.design.widget.TabLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.09"
-        android:text="Nhà Hàng"
-        android:textAlignment="center"/>
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tabLayout_nhahang"
+        app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget">
+    </android.support.design.widget.TabLayout>
 
-    <!--Demo RecyclerView-->
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerview_NhaHang"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager_nhahang"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="vertical" />
+        android:layout_below="@+id/tabLayout" />
+
 </LinearLayout>

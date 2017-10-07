@@ -10,11 +10,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.Toast;
 
-import com.example.dung.demo_recyclerview.fragment.AndroidFragment;
-import com.example.dung.demo_recyclerview.fragment.Fragment_NhaHang;
 import com.example.dung.demo_recyclerview.fragment.Fragment_MonAn;
+import com.example.dung.demo_recyclerview.fragment.Fragment_NhaHang;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        getSupportActionBar().setTitle("Order App");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         context = getApplicationContext();
@@ -44,24 +46,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 final FragmentTransaction transaction = fragmentManager.beginTransaction();
                 switch (id){
                     case R.id.action_one:
-                        fragment = new AndroidFragment();
+                        fragment = new Fragment_MonAn();
                         transaction.replace(R.id.frame_layout_in_main_activity, fragment).commit();
+                        getSupportActionBar().setTitle("Món Ăn");
                         break;
                     case R.id.action_two:
                         fragment = new Fragment_NhaHang();
                         transaction.replace(R.id.frame_layout_in_main_activity, fragment).commit();
-                        break;
-                    case R.id.action_three:
-                        fragment = new Fragment_MonAn();
-                        transaction.replace(R.id.frame_layout_in_main_activity, fragment).commit();
+                        getSupportActionBar().setTitle("Nhà Hàng");
                         break;
                 }
                 return true;
             }
         });
 
-        bottomNavigation.getMenu().findItem(R.id.action_three).setChecked(true);
-        bottomNavigation.setSelectedItemId(R.id.action_three);
+        bottomNavigation.getMenu().findItem(R.id.action_one).setChecked(true);
+        bottomNavigation.setSelectedItemId(R.id.action_one);
 
     }
     @Override
