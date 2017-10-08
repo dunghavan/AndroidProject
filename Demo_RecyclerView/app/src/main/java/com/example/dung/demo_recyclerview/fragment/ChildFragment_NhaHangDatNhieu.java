@@ -1,5 +1,6 @@
 package com.example.dung.demo_recyclerview.fragment;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -45,7 +46,7 @@ public class ChildFragment_NhaHangDatNhieu extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
 
         initializeData();
-        nhaHangRecyclerAdapter = new NhaHangRecyclerAdapter(listNhaHang);
+        nhaHangRecyclerAdapter = new NhaHangRecyclerAdapter(listNhaHang, (MainActivity)context);
         recyclerView.setAdapter(nhaHangRecyclerAdapter);
     }
 

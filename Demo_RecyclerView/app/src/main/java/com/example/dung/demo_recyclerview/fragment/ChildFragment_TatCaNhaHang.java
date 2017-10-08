@@ -46,7 +46,7 @@ public class ChildFragment_TatCaNhaHang extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
 
         initializeData();
-        nhaHangRecyclerAdapter = new NhaHangRecyclerAdapter(listNhaHang);
+        nhaHangRecyclerAdapter = new NhaHangRecyclerAdapter(listNhaHang, (MainActivity)context);
         recyclerView.setAdapter(nhaHangRecyclerAdapter);
     }
 

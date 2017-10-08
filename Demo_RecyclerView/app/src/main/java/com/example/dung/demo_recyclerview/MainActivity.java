@@ -21,18 +21,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private BottomNavigationView bottomNavigation;
     private Fragment fragment;
     private FragmentManager fragmentManager;
-
     private static Context context;
+
     public static Context getMainActivityContext(){
         return context;
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
+        context = this;
         getSupportActionBar().setTitle("Order App");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        context = getApplicationContext();
 
         boolean b = CheckInternetState.checkInternetConnection();
 
