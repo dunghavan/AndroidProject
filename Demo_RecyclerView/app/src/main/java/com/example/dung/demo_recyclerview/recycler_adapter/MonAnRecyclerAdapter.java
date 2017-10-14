@@ -35,7 +35,7 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
     @Override
     public RecyclerViewHolder_MonAn onCreateViewHolder(ViewGroup viewGroup, int position){
         LayoutInflater layoutInflater = LayoutInflater.from(viewGroup.getContext());
-        View itemView = layoutInflater.inflate(R.layout.item____, viewGroup, false);
+        View itemView = layoutInflater.inflate(R.layout.item_monan, viewGroup, false);
 
         return new RecyclerViewHolder_MonAn(itemView);
     }

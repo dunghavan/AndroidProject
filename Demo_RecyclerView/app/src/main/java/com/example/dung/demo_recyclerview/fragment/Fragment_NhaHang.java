@@ -1,26 +1,17 @@
 package com.example.dung.demo_recyclerview.fragment;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.dung.demo_recyclerview.MainActivity;
 import com.example.dung.demo_recyclerview.R;
-import com.example.dung.demo_recyclerview.model.NhaHang;
-import com.example.dung.demo_recyclerview.recycler_adapter.MonAnRecyclerAdapter;
-import com.example.dung.demo_recyclerview.recycler_adapter.NhaHangRecyclerAdapter;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.example.dung.demo_recyclerview.viewpager_adapter.ViewPagerAdapter_NhaHang;
 
 /**
  * Created by Dung on 8/24/2017.

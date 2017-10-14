@@ -35,14 +35,14 @@ public class ChildFragment_MonAnDatNhieu extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        return inflater.inflate(R.layout.child_fragment_monan, container, false);
+        return inflater.inflate(R.layout.fragment_recyclerview_monan, container, false);
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
 
         //Connect to views:
-        recyclerView = (RecyclerView)view.findViewById(R.id.recyclerview_MonAn_Child);
+        recyclerView = (RecyclerView)view.findViewById(R.id.recyclerview_monan_child);
         //Set fixed size for ReclyclerView:
         recyclerView.setHasFixedSize(true);
         //Setting the LayoutManager:

@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Demo_RecyclerView</string>
+
+    <string name="com">Cơm</string>
+    <string name="bun_pho">Bún phở</string>
+    <string name="do_uong">Đồ uống</string>
+    <string name="trang_mieng">Tráng miệng</string>
+    <string name="via_he">Vỉa hè</string>
+
+    <string name="nha_hang">Nhà hàng</string>
+    <string name="mon_an">Món ăn</string>
+    <string name="khuyen_mai">Khuyến mại</string>
+    <string name="lich_su">Lịch sử</string>
+    <string name="ca_nhan">Cá nhân</string>
+
+
 </resources>

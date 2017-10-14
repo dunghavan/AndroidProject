@@ -1,10 +1,6 @@
 package com.example.dung.demo_recyclerview.recycler_adapter;
 
-import android.app.Activity;
-import android.content.Context;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +10,6 @@ import android.widget.TextView;
 
 import com.example.dung.demo_recyclerview.MainActivity;
 import com.example.dung.demo_recyclerview.R;
-import com.example.dung.demo_recyclerview.fragment.Fragment_MonAn;
 import com.example.dung.demo_recyclerview.model.NhaHang;
 import com.squareup.picasso.Picasso;
 
@@ -78,11 +73,12 @@ public class NhaHangRecyclerAdapter extends RecyclerView.Adapter <NhaHangRecycle
 
         @Override
         public void onClick(View view) {
-             // Chuyển sang Fragment mới....
+             // Start Activity các món ăn của nhà hàng
 
-            Fragment fragment = new Fragment_MonAn();
-            activity.getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.frame_layout_in_main_activity, fragment).commit();
+            Intent intent = new Intent(activity, Activity_MonAn_Of_NhaHang.class);
+            intent.putExtra("TEN_NHA_HANG", textView_TenNhaHang.getText());
+            activity.startActivity(intent);
+
         }
     }
 }

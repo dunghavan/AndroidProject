@@ -12,12 +12,20 @@
         "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\layout\\abc_action_menu_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\layout\\abc_action_bar_up_container.xml"
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_monan_6tabs.xml",
+        "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\layout\\fragment_monan_6tabs.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
         "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\layout\\abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_doan.xml",
+        "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\layout\\fragment_doan.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\layout\\abc_action_bar_up_container.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
@@ -52,12 +60,12 @@
         "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\layout\\abc_action_mode_bar.xml"
     },
     {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\layout\\select_dialog_singlechoice_material.xml"
-    },
-    {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
         "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\layout\\select_dialog_singlechoice_material.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
@@ -68,10 +76,6 @@
         "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\child_fragment_monan.xml",
-        "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\layout\\child_fragment_monan.xml"
-    },
-    {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines_media.xml",
         "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\layout\\notification_template_lines_media.xml"
     },
@@ -80,12 +84,16 @@
         "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\layout\\abc_dialog_title_material.xml"
     },
     {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\layout\\abc_list_menu_item_layout.xml"
+    },
+    {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_nhahang.xml",
         "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\layout\\fragment_nhahang.xml"
     },
     {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\layout\\abc_list_menu_item_layout.xml"
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_monan.xml",
+        "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\layout\\item_monan.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_icon_group.xml",
@@ -136,6 +144,10 @@
         "source": "C:\\Users\\Dung\\.android\\build-cache\\afe1a01980e2158552441804949726e46f9ec6c6\\output\\res\\layout\\design_text_input_password_icon.xml"
     },
     {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_recyclerview_nhahang.xml",
+        "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\layout\\fragment_recyclerview_nhahang.xml"
+    },
+    {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
         "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\layout\\abc_screen_toolbar.xml"
     },
@@ -144,12 +156,20 @@
         "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\layout\\abc_activity_chooser_view_list_item.xml"
     },
     {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_monan_of_nhahang.xml",
+        "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\layout\\activity_monan_of_nhahang.xml"
+    },
+    {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
         "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\layout\\abc_screen_content_include.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
         "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\layout\\notification_template_media.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_monan_2tabs.xml",
+        "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\layout\\fragment_monan_2tabs.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
@@ -164,6 +184,10 @@
         "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\layout\\abc_alert_dialog_title_material.xml"
     },
     {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_recyclerview_monan.xml",
+        "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\layout\\fragment_recyclerview_monan.xml"
+    },
+    {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
         "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\layout\\abc_screen_simple.xml"
     },
@@ -174,10 +198,6 @@
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\bottom_nav_view_activity.xml",
         "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\layout\\bottom_nav_view_activity.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item____.xml",
-        "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\layout\\item____.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
@@ -196,10 +216,6 @@
         "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\layout\\notification_template_media_custom.xml"
     },
     {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\child_fragment_nhahang.xml",
-        "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\layout\\child_fragment_nhahang.xml"
-    },
-    {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_subheader.xml",
         "source": "C:\\Users\\Dung\\.android\\build-cache\\afe1a01980e2158552441804949726e46f9ec6c6\\output\\res\\layout\\design_navigation_item_subheader.xml"
     },
@@ -214,10 +230,6 @@
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
         "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\layout\\notification_template_part_chronometer.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_monan.xml",
-        "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\layout\\fragment_monan.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action.xml",

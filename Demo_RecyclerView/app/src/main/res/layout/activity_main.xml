@@ -21,10 +21,11 @@
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#dca4a4"
-        android:itemBackground="#000000"
+        android:background="@color/colorPrimary"
         android:layout_alignParentBottom="true"
         app:menu="@menu/bottom_nav_bar_menu"
+        app:itemIconTint="@color/colorNavigationItem"
+        app:itemTextColor="@color/colorNavigationItem"
         android:layout_alignParentStart="false"
         />
 
