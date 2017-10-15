@@ -23,6 +23,7 @@ public class Fragment_MonAn_6_Tabs extends Fragment {
     ViewPager viewPager;
     TabLayout tabLayout;
     TextView textView_categoryName;
+
     public Fragment_MonAn_6_Tabs(){
     }
 
@@ -45,11 +46,20 @@ public class Fragment_MonAn_6_Tabs extends Fragment {
         viewPager.setAdapter(viewPagerAdapter_monAn_6Tabs);
         tabLayout.setupWithViewPager(viewPager);
 
+        // Set icon for tabs:
+        tabLayout.getTabAt(0).setIcon(R.drawable.com_6tabs);
+        tabLayout.getTabAt(1).setIcon(R.drawable.bun_pho_6tabs);
+        tabLayout.getTabAt(2).setIcon(R.drawable.do_uong_6tabs);
+        tabLayout.getTabAt(3).setIcon(R.drawable.trang_mieng_6tabs);
+        tabLayout.getTabAt(4).setIcon(R.drawable.via_he_6tabs);
+
+
         //viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener(){
             public void onPageScrollStateChanged(int state) {}
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {}
 
+            // Display title of category when tab selected
             public void onPageSelected(int position) {
                 // Check if this is the page you want.
                 switch (position){

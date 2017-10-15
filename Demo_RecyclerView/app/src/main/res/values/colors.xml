@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#bf6383</color>
     <color name="colorNavigationItem">#a13b69</color>
+    <color name="tab_background_selected">#cab8b8</color>
+    <color name="tab_background_unselected">#ffffff</color>
 </resources>

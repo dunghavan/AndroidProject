@@ -1,4 +1,4 @@
-#Sat Oct 14 16:01:49 ICT 2017
+#Sun Oct 15 14:30:45 ICT 2017
 file.2=C\:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\picasso-2.4.0_e401d043977be3c753f40ec7bf74ddeea84fa03e\\classes.dex
 base.2=C\:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\picasso-2.4.0_e401d043977be3c753f40ec7bf74ddeea84fa03e
 file.1=C\:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_bf451b5dc9869871118dd58710ba6761d6f4d4d5\\classes.dex

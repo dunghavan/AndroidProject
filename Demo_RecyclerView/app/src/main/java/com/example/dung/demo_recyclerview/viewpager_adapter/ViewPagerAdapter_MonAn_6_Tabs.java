@@ -50,15 +50,15 @@ public class ViewPagerAdapter_MonAn_6_Tabs extends FragmentStatePagerAdapter {
     public CharSequence getPageTitle(int position){
         String title = "";
         switch (position){
-            case 0: title = "A";
+            case 0: title = "";
                 break;
-            case 1: title = "B";
+            case 1: title = "";
                 break;
-            case 2: title = "C";
+            case 2: title = "";
                 break;
-            case 3: title = "D";
+            case 3: title = "";
                 break;
-            case 4: title = "E";
+            case 4: title = "";
                 break;
         }
         return title;

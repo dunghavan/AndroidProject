@@ -1,4 +1,4 @@
-#Sat Oct 14 16:30:53 ICT 2017
+#Sun Oct 15 14:30:46 ICT 2017
 base.0=C\:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_f7f9cfc8e1652f6c7ac36ffa52395e3a8f69b9c6
 renamed.1=classes.dex
 renamed.0=classes2.dex
