@@ -89,24 +89,31 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
             itemView.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(context, "ID of MonAn: " + listData.get(getAdapterPosition()).getId().toString(), Toast.LENGTH_LONG).show();
+                //Toast.makeText(context, "ID of MonAn: " + listData.get(getAdapterPosition()).getId().toString(), Toast.LENGTH_LONG).show();
                 }
             });
             //set listener for buttons:
             btn_Plus.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(context, "click " + getLayoutPosition(), Toast.LENGTH_LONG);
+                    //Toast.makeText(context, "click + " + getLayoutPosition(), Toast.LENGTH_LONG).show();
+                    String itemIdSelected = listData.get(getLayoutPosition()).getId();
+                    Cart.addToCart(itemIdSelected);
+                    String count = String.valueOf(Cart.getItemCountById(itemIdSelected));
+                    textView_SoLuongDat.setText(count);
+                    Toast.makeText(context, "Item in Cart: " + Cart.getAllItemCount(), Toast.LENGTH_SHORT).show();
                 }
             });
             btn_Minus.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+                    //Toast.makeText(context, "click - " + getLayoutPosition(), Toast.LENGTH_LONG).show();
+                    String itemIdSelected = listData.get(getLayoutPosition()).getId();
+                    Cart.removeFromCart(itemIdSelected);
+                    Toast.makeText(context, "Item in Cart: " + Cart.getAllItemCount(), Toast.LENGTH_SHORT).show();
                 }
             });
         }
-        // remove item when click btnDelete:
         @Override
         public void onClick(View v){
 
