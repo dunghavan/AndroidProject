@@ -101,7 +101,7 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                     Cart.addToCart(itemIdSelected);
                     String count = String.valueOf(Cart.getItemCountById(itemIdSelected));
                     textView_SoLuongDat.setText(count);
-                    Toast.makeText(context, "Item in Cart: " + Cart.getAllItemCount(), Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(context, "Item in Cart: " + Cart.getAllItemCount(), Toast.LENGTH_SHORT).show();
                 }
             });
             btn_Minus.setOnClickListener(new OnClickListener() {
@@ -110,7 +110,9 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                     //Toast.makeText(context, "click - " + getLayoutPosition(), Toast.LENGTH_LONG).show();
                     String itemIdSelected = listData.get(getLayoutPosition()).getId();
                     Cart.removeFromCart(itemIdSelected);
-                    Toast.makeText(context, "Item in Cart: " + Cart.getAllItemCount(), Toast.LENGTH_SHORT).show();
+                    String count = String.valueOf(Cart.getItemCountById(itemIdSelected));
+                    textView_SoLuongDat.setText(count);
+                    //Toast.makeText(context, "Item in Cart: " + Cart.getAllItemCount(), Toast.LENGTH_SHORT).show();
                 }
             });
         }

@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"   >
     <item android:id="@+id/about"
-        android:icon="@drawable/ic_cart"
         android:title="About"
-        app:showAsAction="always" />
+        app:showAsAction="always"
+        app:actionLayout="@layout/notification_icon"/>
 </menu>

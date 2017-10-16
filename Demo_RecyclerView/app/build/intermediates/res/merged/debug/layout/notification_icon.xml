@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="48dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:src="@drawable/ic_cart"/>
+
+    <TextView
+        android:id="@+id/counter"
+        android:layout_width="25dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:text="10"
+        android:textSize="10sp"
+        android:paddingLeft="6dp"
+        android:paddingTop="3dp"
+        android:textColor="#181616"
+        android:background="@drawable/round_counter_textview"/>
+</RelativeLayout>
