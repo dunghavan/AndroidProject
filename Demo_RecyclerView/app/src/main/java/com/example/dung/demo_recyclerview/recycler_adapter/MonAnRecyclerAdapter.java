@@ -52,6 +52,9 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
         viewHolder.textView_TenMonAn.setText(listData.get(position).getTenMonAn());
         viewHolder.textView_Gia.setText(String.format("%s", listData.get(position).getGia()));
 
+        String itemIdSelected = listData.get(position).getId();
+        String count = String.valueOf(Cart.getItemCountById(itemIdSelected));
+        viewHolder.textView_SoLuongDat.setText(count);
 
         String url = listData.get(position).getImgUrl();
         Picasso.with(MainActivity.getMainActivityContext())
@@ -101,6 +104,7 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                     Cart.addToCart(itemIdSelected);
                     String count = String.valueOf(Cart.getItemCountById(itemIdSelected));
                     textView_SoLuongDat.setText(count);
+                    MainActivity.setupBadge(Cart.getAllItemCount());
                     //Toast.makeText(context, "Item in Cart: " + Cart.getAllItemCount(), Toast.LENGTH_SHORT).show();
                 }
             });
@@ -112,6 +116,7 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                     Cart.removeFromCart(itemIdSelected);
                     String count = String.valueOf(Cart.getItemCountById(itemIdSelected));
                     textView_SoLuongDat.setText(count);
+                    MainActivity.setupBadge(Cart.getAllItemCount());
                     //Toast.makeText(context, "Item in Cart: " + Cart.getAllItemCount(), Toast.LENGTH_SHORT).show();
                 }
             });

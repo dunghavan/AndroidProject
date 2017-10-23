@@ -2,6 +2,7 @@ package com.example.dung.demo_recyclerview.viewpager_adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.example.dung.demo_recyclerview.fragment.ChildFragment_DoAn;
@@ -13,7 +14,7 @@ import com.example.dung.demo_recyclerview.fragment.ChildFragment_TatCaMonAn;
  * Created by Dung on 10/11/2017.
  */
 
-public class ViewPagerAdapter_MonAn_2_Tabs extends FragmentStatePagerAdapter{
+public class ViewPagerAdapter_MonAn_2_Tabs extends FragmentPagerAdapter {
     public ViewPagerAdapter_MonAn_2_Tabs(FragmentManager fm){
         super(fm);
     }

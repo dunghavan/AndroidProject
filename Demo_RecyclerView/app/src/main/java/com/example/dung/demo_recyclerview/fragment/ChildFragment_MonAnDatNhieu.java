@@ -53,9 +53,29 @@ public class ChildFragment_MonAnDatNhieu extends Fragment {
 
         customRecyclerAdapter = new MonAnRecyclerAdapter(data, context);
         recyclerView.setAdapter(customRecyclerAdapter);
-
+        setRetainInstance(false);
     }
 
+    public void refresh(){
+        customRecyclerAdapter = new MonAnRecyclerAdapter(data, context);
+    }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        if (isVisibleToUser) {
+            if(customRecyclerAdapter == null)
+                customRecyclerAdapter = new MonAnRecyclerAdapter(data, context);
+            else
+                customRecyclerAdapter.notifyDataSetChanged();
+        }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        initialData();
+    }
     private void initialData(){
         data = new ArrayList<>();
 

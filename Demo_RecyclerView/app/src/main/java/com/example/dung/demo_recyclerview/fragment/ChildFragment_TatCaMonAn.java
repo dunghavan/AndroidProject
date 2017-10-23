@@ -54,6 +54,18 @@ public class ChildFragment_TatCaMonAn extends Fragment{
         customRecyclerAdapter = new MonAnRecyclerAdapter(data, context);
         recyclerView.setAdapter(customRecyclerAdapter);
 
+        setRetainInstance(false);
+    }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        if (isVisibleToUser) {
+            if(customRecyclerAdapter == null)
+                customRecyclerAdapter = new MonAnRecyclerAdapter(data, context);
+            else
+                customRecyclerAdapter.notifyDataSetChanged();
+        }
     }
 
     @Override

@@ -734,7 +734,6 @@ int drawable tab_color_selector 0x7f020074
 int drawable trang_mieng_6tabs 0x7f020075
 int drawable user 0x7f020076
 int drawable via_he_6tabs 0x7f020077
-int id about 0x7f0d00b8
 int id action0 0x7f0d009d
 int id action_bar 0x7f0d0065
 int id action_bar_activity_content 0x7f0d0000
@@ -772,6 +771,7 @@ int id btn_minus 0x7f0d0092
 int id btn_plus 0x7f0d0094
 int id buttonPanel 0x7f0d004c
 int id cancel_action 0x7f0d009e
+int id cart 0x7f0d00b8
 int id center 0x7f0d0027
 int id center_horizontal 0x7f0d0028
 int id center_vertical 0x7f0d0029

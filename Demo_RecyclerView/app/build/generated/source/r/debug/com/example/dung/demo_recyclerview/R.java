@@ -3008,7 +3008,6 @@ containing a value of this type.
         public static final int via_he_6tabs=0x7f020077;
     }
     public static final class id {
-        public static final int about=0x7f0d00b8;
         public static final int action0=0x7f0d009d;
         public static final int action_bar=0x7f0d0065;
         public static final int action_bar_activity_content=0x7f0d0000;
@@ -3046,6 +3045,7 @@ containing a value of this type.
         public static final int btn_plus=0x7f0d0094;
         public static final int buttonPanel=0x7f0d004c;
         public static final int cancel_action=0x7f0d009e;
+        public static final int cart=0x7f0d00b8;
         public static final int center=0x7f0d0027;
         public static final int center_horizontal=0x7f0d0028;
         public static final int center_vertical=0x7f0d0029;

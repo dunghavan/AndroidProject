@@ -43,7 +43,7 @@ public class Cart {
         for(int i = 0; i < cartContent.size(); i++){
             item = cartContent.get(i);
             if(item.getItemId().equals(newItemId)){
-                if(item.getItemCount() > 0){
+                if(item.getItemCount() > 1){
                     item.setItemCount(item.getItemCount() - 1);
                     Log.d("Decrease itemCount: ", "count = " + item.getItemCount() + ", id = " + item.getItemId());
                 }
