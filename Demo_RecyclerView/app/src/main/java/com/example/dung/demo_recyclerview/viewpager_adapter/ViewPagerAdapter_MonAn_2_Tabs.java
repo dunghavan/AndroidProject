@@ -1,5 +1,6 @@
 package com.example.dung.demo_recyclerview.viewpager_adapter;
 
+import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -15,6 +16,7 @@ import com.example.dung.demo_recyclerview.fragment.ChildFragment_TatCaMonAn;
  */
 
 public class ViewPagerAdapter_MonAn_2_Tabs extends FragmentPagerAdapter {
+    Context context;
     public ViewPagerAdapter_MonAn_2_Tabs(FragmentManager fm){
         super(fm);
     }

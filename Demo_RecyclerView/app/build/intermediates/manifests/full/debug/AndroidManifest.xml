@@ -29,7 +29,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.dung.demo_recyclerview.recycler_adapter.Activity_MonAn_Of_NhaHang" />
+        <activity android:name="com.example.dung.demo_recyclerview.Activity_MonAn_Of_NhaHang" />
     </application>
 
 </manifest>

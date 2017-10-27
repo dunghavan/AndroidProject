@@ -1,7 +1,8 @@
 package com.example.dung.demo_recyclerview.recycler_adapter;
 
 import android.content.Context;
-import android.provider.ContactsContract;
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,15 +13,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.dung.demo_recyclerview.Activity_MonAn_Of_NhaHang;
 import com.example.dung.demo_recyclerview.Cart;
 import com.example.dung.demo_recyclerview.MainActivity;
+import com.example.dung.demo_recyclerview.MyApplication;
 import com.example.dung.demo_recyclerview.R;
 import com.example.dung.demo_recyclerview.model.MonAn;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * Created by Dung on 9/17/2017.
@@ -29,9 +31,8 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAdapter.RecyclerViewHolder_MonAn>{
     private List<MonAn> listData = new ArrayList<>();
     Context context;
-    public MonAnRecyclerAdapter(List<MonAn> _listData, Context context){
+    public MonAnRecyclerAdapter(List<MonAn> _listData){
         this.listData = _listData;
-        this.context = context;
     }
 
     @Override
@@ -93,6 +94,39 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                 @Override
                 public void onClick(View v) {
                 //Toast.makeText(context, "ID of MonAn: " + listData.get(getAdapterPosition()).getId().toString(), Toast.LENGTH_LONG).show();
+                    //get layout:
+                    LayoutInflater li = LayoutInflater.from(MyApplication.getCurrentContext());
+                    View alertDialogView = li.inflate(R.layout.alert_dialog_monan, null);
+                    AlertDialog.Builder alertDialog = new AlertDialog.Builder(MyApplication.getCurrentContext());
+                    alertDialog.setView(alertDialogView);
+
+                    TextView textViewTenMonAn = (TextView)alertDialogView.findViewById(R.id.textview_tenmonan_in_dialog);
+                    textViewTenMonAn.setText(listData.get(getAdapterPosition()).getTenMonAn().toString());
+                    TextView textView_SoLuongDat = (TextView)alertDialogView.findViewById(R.id.textview_soluongdat_in_dialog);
+                    String count = String.valueOf(Cart.getItemCountById(listData.get(getAdapterPosition()).getId()));
+                    textView_SoLuongDat.setText(count);
+                    ImageView hinhAnh = (ImageView)alertDialogView.findViewById(R.id.imageview_monan_in_dialog);
+                    String imageUrl = listData.get(getAdapterPosition()).getImgUrl();
+
+                    TextView textViewGia = (TextView)alertDialogView.findViewById(R.id.textview_gia_in_dialog);
+                    textViewGia.setText(String.valueOf(listData.get(getAdapterPosition()).getGia()));
+
+                    Picasso.with(MyApplication.getCurrentContext())
+                            .load(imageUrl)
+                            .into(hinhAnh);
+
+                    alertDialog.setCancelable(false)
+                            .setPositiveButton("Xong", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    //get date here...
+
+                                    Toast.makeText(Activity_MonAn_Of_NhaHang.getContext(), "Đã thêm vào giỏ" + getAdapterPosition(), Toast.LENGTH_SHORT).show();
+                                }
+                            });
+                    //Create a dialog:
+                    AlertDialog dialogToShow = alertDialog.create();
+                    dialogToShow.show();
                 }
             });
             //set listener for buttons:

@@ -51,7 +51,7 @@ public class ChildFragment_DoUong extends Fragment {
         //
         initialData();
 
-        monanRecyclerAdapter = new MonAnRecyclerAdapter(listDoUong, context);
+        monanRecyclerAdapter = new MonAnRecyclerAdapter(listDoUong);
         recyclerView.setAdapter(monanRecyclerAdapter);
 
     }

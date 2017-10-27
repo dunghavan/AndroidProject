@@ -51,7 +51,7 @@ public class ChildFragment_DoAn extends Fragment {
         //
         initialData();
 
-        monanRecyclerAdapter = new MonAnRecyclerAdapter(listDoAn, context);
+        monanRecyclerAdapter = new MonAnRecyclerAdapter(listDoAn);
         recyclerView.setAdapter(monanRecyclerAdapter);
 
     }

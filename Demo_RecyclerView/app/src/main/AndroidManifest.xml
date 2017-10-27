@@ -19,7 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".recycler_adapter.Activity_MonAn_Of_NhaHang"></activity>
+        <activity android:name=".Activity_MonAn_Of_NhaHang"></activity>
     </application>
 
 </manifest>

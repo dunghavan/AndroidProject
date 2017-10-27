@@ -6,25 +6,25 @@
     density="xhdpi"
     format="10"
     plugin-version="2.3.3"
-    timestamp="1508774132642"
+    timestamp="1509119470649"
     token="9100351899209389445"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="789" />
+        duration="6867" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="70" />
+        duration="86" />
     <task
         name="verifier"
-        duration="19" />
+        duration="25" />
 
     <artifact
-        location="C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+        location="C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
         type="SPLIT" />
     <artifact
         location="C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\build\outputs\apk\app-debug.apk"
@@ -32,28 +32,25 @@
 
     <build
         build-mode="FULL"
-        timestamp="1508772010321"
+        timestamp="1509119331524"
         verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            type="SPLIT" />
         <artifact
             location="C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\build\outputs\apk\app-debug.apk"
-            type="SPLIT_MAIN" />
-        <artifact
-            location="C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            location="C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
@@ -62,29 +59,24 @@
             location="C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+            location="C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            location="C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            location="C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1508773915018"
-        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\build\outputs\apk\app-debug.apk"
             type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1508774132642"
+        timestamp="1509119470649"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            location="C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\build\outputs\apk\app-debug.apk"

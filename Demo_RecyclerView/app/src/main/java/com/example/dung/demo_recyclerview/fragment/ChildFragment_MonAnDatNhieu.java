@@ -51,13 +51,9 @@ public class ChildFragment_MonAnDatNhieu extends Fragment {
         //
         initialData();
 
-        customRecyclerAdapter = new MonAnRecyclerAdapter(data, context);
+        customRecyclerAdapter = new MonAnRecyclerAdapter(data);
         recyclerView.setAdapter(customRecyclerAdapter);
         setRetainInstance(false);
-    }
-
-    public void refresh(){
-        customRecyclerAdapter = new MonAnRecyclerAdapter(data, context);
     }
 
     @Override
@@ -65,7 +61,7 @@ public class ChildFragment_MonAnDatNhieu extends Fragment {
         super.setUserVisibleHint(isVisibleToUser);
         if (isVisibleToUser) {
             if(customRecyclerAdapter == null)
-                customRecyclerAdapter = new MonAnRecyclerAdapter(data, context);
+                customRecyclerAdapter = new MonAnRecyclerAdapter(data);
             else
                 customRecyclerAdapter.notifyDataSetChanged();
         }

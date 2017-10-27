@@ -1,5 +1,7 @@
 package com.example.dung.demo_recyclerview.fragment;
 
+import android.app.ActivityManager;
+import android.content.ComponentName;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -17,6 +19,8 @@ import com.example.dung.demo_recyclerview.recycler_adapter.MonAnRecyclerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static android.content.Context.ACTIVITY_SERVICE;
 
 /**
  * Created by Dung on 10/6/2017.
@@ -51,7 +55,7 @@ public class ChildFragment_TatCaMonAn extends Fragment{
         //
         initialData();
 
-        customRecyclerAdapter = new MonAnRecyclerAdapter(data, context);
+        customRecyclerAdapter = new MonAnRecyclerAdapter(data);
         recyclerView.setAdapter(customRecyclerAdapter);
 
         setRetainInstance(false);
@@ -62,7 +66,7 @@ public class ChildFragment_TatCaMonAn extends Fragment{
         super.setUserVisibleHint(isVisibleToUser);
         if (isVisibleToUser) {
             if(customRecyclerAdapter == null)
-                customRecyclerAdapter = new MonAnRecyclerAdapter(data, context);
+                customRecyclerAdapter = new MonAnRecyclerAdapter(data);
             else
                 customRecyclerAdapter.notifyDataSetChanged();
         }

@@ -1,5 +1,7 @@
 package com.example.dung.demo_recyclerview.viewpager_adapter;
 
+import android.content.Context;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
@@ -12,6 +14,7 @@ import com.example.dung.demo_recyclerview.fragment.ChildFragment_TatCaNhaHang;
  */
 
 public class ViewPagerAdapter_NhaHang extends FragmentStatePagerAdapter{
+    Context context;
     public ViewPagerAdapter_NhaHang(FragmentManager fm){
         super(fm);
     }

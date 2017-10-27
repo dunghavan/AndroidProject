@@ -83,8 +83,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     protected void onResume() {
-        Toast.makeText(this, "onResume method!", Toast.LENGTH_SHORT).show();
         super.onResume();
+        Toast.makeText(this, "onResume method!", Toast.LENGTH_SHORT).show();
+        MyApplication.setCurrentContext(this);
     }
     @Override
     protected void onPause() {
