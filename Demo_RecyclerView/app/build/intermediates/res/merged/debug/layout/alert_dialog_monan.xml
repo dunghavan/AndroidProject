@@ -6,6 +6,7 @@
         android:id="@+id/imageview_monan_in_dialog"
         android:layout_width="match_parent"
         android:layout_height="150dp"
+        android:layout_margin="10dp"
         android:scaleType="centerCrop"/>
     <TextView
         android:id="@+id/textview_tenmonan_in_dialog"
@@ -16,6 +17,7 @@
         android:textStyle="bold"
         android:textSize="20sp"
         android:layout_marginStart="10dp"
+        android:layout_marginRight="20dp"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
@@ -26,17 +28,44 @@
         android:textAlignment="center"
         android:textSize="14sp"
         android:layout_marginStart="10dp"
+        android:layout_marginRight="20dp"
         android:textAppearance="?android:attr/textAppearanceLarge" />
-    <TextView
-        android:id="@+id/textview_gia_in_dialog"
+    <android.support.v7.widget.LinearLayoutCompat
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="20.000đ"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        android:layout_marginStart="10dp"
-        android:textColor="#893e07"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textview_gia_in_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20.000đ"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:layout_marginStart="10dp"
+            android:textColor="#893e07"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+        <TextView
+            android:id="@+id/textview_giakhuyenmai_in_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20.000đ"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:layout_marginStart="20dp"
+            android:textColor="#893e07"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+        <TextView
+            android:id="@+id/textview_khuyenmai_in_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20%"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:layout_marginStart="20dp"
+            android:textColor="#179e05"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
     <TextView
         android:id="@+id/textview_mota_monan"
         android:layout_width="match_parent"
