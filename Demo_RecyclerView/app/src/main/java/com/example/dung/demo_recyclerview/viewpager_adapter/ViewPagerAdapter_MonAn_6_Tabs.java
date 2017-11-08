@@ -4,6 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
+import com.example.dung.demo_recyclerview.MyConstant;
 import com.example.dung.demo_recyclerview.fragment.ChildFragment_MonAnDatNhieu;
 import com.example.dung.demo_recyclerview.fragment.ChildFragment_TatCaMonAn;
 import com.example.dung.demo_recyclerview.fragment.Fragment_MonAn_2_Tabs;
@@ -17,25 +18,25 @@ public class ViewPagerAdapter_MonAn_6_Tabs extends FragmentStatePagerAdapter {
         super(fm);
     }
 
-    public static String CATEGORY_NAME = "Name";
+    public static String CATEGORY_NAME = MyConstant.COM;
     @Override
     public Fragment getItem(int position){
         Fragment fragment = null;
         switch (position){
             case 0: fragment = new Fragment_MonAn_2_Tabs();
-                CATEGORY_NAME = "Cơm trưa";
+                CATEGORY_NAME = MyConstant.COM;
                 break;
             case 1: fragment = new Fragment_MonAn_2_Tabs();
-                CATEGORY_NAME = "Bún phở";
+                CATEGORY_NAME = MyConstant.BUNPHO;
                 break;
             case 2: fragment = new Fragment_MonAn_2_Tabs();
-                CATEGORY_NAME = "Đồ uống";
+                CATEGORY_NAME = MyConstant.DOUONG;
                 break;
             case 3: fragment = new Fragment_MonAn_2_Tabs();
-                CATEGORY_NAME = "Tráng miệng";
+                CATEGORY_NAME = MyConstant.TRANGMIENG;
                 break;
             case 4: fragment = new Fragment_MonAn_2_Tabs();
-                CATEGORY_NAME = "Vỉa hè";
+                CATEGORY_NAME = MyConstant.VIAHE;
                 break;
         }
         return fragment;

@@ -10,6 +10,10 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        // Fixed build error : Duplicate files copied in APK META-INF/LICENSE.txt
+        packagingOptions {
+            exclude 'META-INF/LICENSE'
+        }
     }
     buildTypes {
         release {
@@ -25,12 +29,16 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
-
-
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha8'
     compile 'com.android.support:recyclerview-v7:25.3.1'
     compile 'com.android.support:design:25.3.1'
     compile 'com.squareup.picasso:picasso:2.4.0'
     testCompile 'junit:junit:4.12'
+
+    //use ObjectMapper:
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.8.5'
+    compile 'com.fasterxml.jackson.core:jackson-core:2.8.5'
+    compile 'com.fasterxml.jackson.core:jackson-annotations:2.8.5'
+
 }

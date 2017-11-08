@@ -23,51 +23,51 @@ import java.util.List;
  */
 
 public class ChildFragment_DoUong extends Fragment {
-    RecyclerView recyclerView;
-    MonAnRecyclerAdapter monanRecyclerAdapter;
-    RecyclerView.LayoutManager layoutManager;
-    List<MonAn> listDoUong;
-
-    Context context;
-    public ChildFragment_DoUong(){
-        context = MainActivity.getMainActivityContext();
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        return inflater.inflate(R.layout.fragment_recyclerview_monan, container, false);
-    }
-
-    @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-
-        //Connect to views:
-        recyclerView = (RecyclerView)view.findViewById(R.id.recyclerview_monan_child);
-        //Set fixed size for ReclyclerView:
-        recyclerView.setHasFixedSize(true);
-        //Setting the LayoutManager:
-        layoutManager = new LinearLayoutManager(context);
-        recyclerView.setLayoutManager(layoutManager);
-        //
-        initialData();
-
-        monanRecyclerAdapter = new MonAnRecyclerAdapter(listDoUong);
-        recyclerView.setAdapter(monanRecyclerAdapter);
-
-    }
-
-    private void initialData(){
-        listDoUong = new ArrayList<>();
-
-        listDoUong.add(new MonAn("1", "Cơm Gà", 250000.0, "http://www.huynhthinga.com/wp-content/uploads/2014/11/2vv1.jpg"));
-        listDoUong.add(new MonAn("2", "Gà Lên Mâm", 300000.0, "https://i.ytimg.com/vi/NHlI_FsGtow/maxresdefault.jpg"));
-        listDoUong.add(new MonAn("3", "Chả Ram", 200000.0, "http://media.vietq.vn/files/ctvhanh/mon-ngon2.jpg"));
-        listDoUong.add(new MonAn("4", "Gỏi Cuốn", 200000.0, "http://giadinh.vcmedia.vn/k:2016/photo-0-1472785146823/nhungmonanngonchogiadinhdip29.jpg"));
-        listDoUong.add(new MonAn("5", "Gà Luộc", 510000.0, "http://alohal.com/wp-content/uploads/2015/12/1437195423-thit-ga-mia.jpg"));
-        listDoUong.add(new MonAn("6", "Cơm Gà", 250000.0, "http://www.huynhthinga.com/wp-content/uploads/2014/11/2vv1.jpg"));
-        listDoUong.add(new MonAn("7", "Gà Lên Mâm", 300000.0, "https://i.ytimg.com/vi/NHlI_FsGtow/maxresdefault.jpg"));
-        listDoUong.add(new MonAn("8", "Chả Ram", 200000.0, "http://media.vietq.vn/files/ctvhanh/mon-ngon2.jpg"));
-        listDoUong.add(new MonAn("9", "Bún Bò", 450000.0, "http://anh.24h.com.vn/upload/1-2014/images/2014-03-19/1395195457-mon-an-nhat-sanuki-udon-.jpg"));
-
-    }
+//    RecyclerView recyclerView;
+//    MonAnRecyclerAdapter monanRecyclerAdapter;
+//    RecyclerView.LayoutManager layoutManager;
+//    List<MonAn> listDoUong;
+//
+//    Context context;
+//    public ChildFragment_DoUong(){
+//        context = MainActivity.getMainActivityContext();
+//    }
+//
+//    @Override
+//    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+//        return inflater.inflate(R.layout.fragment_recyclerview_monan, container, false);
+//    }
+//
+//    @Override
+//    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+//
+//        //Connect to views:
+//        recyclerView = (RecyclerView)view.findViewById(R.id.recyclerview_monan_child);
+//        //Set fixed size for ReclyclerView:
+//        recyclerView.setHasFixedSize(true);
+//        //Setting the LayoutManager:
+//        layoutManager = new LinearLayoutManager(context);
+//        recyclerView.setLayoutManager(layoutManager);
+//        //
+//        initialData();
+//
+//        monanRecyclerAdapter = new MonAnRecyclerAdapter(listDoUong);
+//        recyclerView.setAdapter(monanRecyclerAdapter);
+//
+//    }
+//
+//    private void initialData(){
+//        listDoUong = new ArrayList<>();
+//
+//        listDoUong.add(new MonAn("1", "Cơm Gà", 250000.0, "http://www.huynhthinga.com/wp-content/uploads/2014/11/2vv1.jpg"));
+//        listDoUong.add(new MonAn("2", "Gà Lên Mâm", 300000.0, "https://i.ytimg.com/vi/NHlI_FsGtow/maxresdefault.jpg"));
+//        listDoUong.add(new MonAn("3", "Chả Ram", 200000.0, "http://media.vietq.vn/files/ctvhanh/mon-ngon2.jpg"));
+//        listDoUong.add(new MonAn("4", "Gỏi Cuốn", 200000.0, "http://giadinh.vcmedia.vn/k:2016/photo-0-1472785146823/nhungmonanngonchogiadinhdip29.jpg"));
+//        listDoUong.add(new MonAn("5", "Gà Luộc", 510000.0, "http://alohal.com/wp-content/uploads/2015/12/1437195423-thit-ga-mia.jpg"));
+//        listDoUong.add(new MonAn("6", "Cơm Gà", 250000.0, "http://www.huynhthinga.com/wp-content/uploads/2014/11/2vv1.jpg"));
+//        listDoUong.add(new MonAn("7", "Gà Lên Mâm", 300000.0, "https://i.ytimg.com/vi/NHlI_FsGtow/maxresdefault.jpg"));
+//        listDoUong.add(new MonAn("8", "Chả Ram", 200000.0, "http://media.vietq.vn/files/ctvhanh/mon-ngon2.jpg"));
+//        listDoUong.add(new MonAn("9", "Bún Bò", 450000.0, "http://anh.24h.com.vn/upload/1-2014/images/2014-03-19/1395195457-mon-an-nhat-sanuki-udon-.jpg"));
+//
+//    }
 }

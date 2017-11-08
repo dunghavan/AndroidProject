@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
+import com.example.dung.demo_recyclerview.MyConstant;
 import com.example.dung.demo_recyclerview.fragment.ChildFragment_DoAn;
 import com.example.dung.demo_recyclerview.fragment.ChildFragment_DoUong;
 import com.example.dung.demo_recyclerview.fragment.ChildFragment_MonAnDatNhieu;
@@ -17,6 +18,7 @@ import com.example.dung.demo_recyclerview.fragment.ChildFragment_TatCaMonAn;
 
 public class ViewPagerAdapter_MonAn_2_Tabs extends FragmentPagerAdapter {
     Context context;
+    public static String TAB_NAME = MyConstant.DATNHIEU;
     public ViewPagerAdapter_MonAn_2_Tabs(FragmentManager fm){
         super(fm);
     }
@@ -40,13 +42,12 @@ public class ViewPagerAdapter_MonAn_2_Tabs extends FragmentPagerAdapter {
 
     @Override
     public CharSequence getPageTitle(int position){
-        String title = "";
         switch (position){
-            case 0: title = "Tất cả";
+            case 0: TAB_NAME = MyConstant.TATCA;
                 break;
-            case 1: title = "Đặt nhiều";
+            case 1: TAB_NAME = MyConstant.DATNHIEU;
                 break;
         }
-        return title;
+        return TAB_NAME;
     }
 }

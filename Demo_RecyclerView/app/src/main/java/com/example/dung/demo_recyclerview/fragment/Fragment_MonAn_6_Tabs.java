@@ -61,19 +61,7 @@ public class Fragment_MonAn_6_Tabs extends Fragment {
 
             // Display title of category when tab selected
             public void onPageSelected(int position) {
-                // Check if this is the page you want.
-                switch (position){
-                    case 0: textView_categoryName.setText(R.string.com);
-                        break;
-                    case 1: textView_categoryName.setText(R.string.bun_pho);
-                        break;
-                    case 2: textView_categoryName.setText(R.string.do_uong);
-                        break;
-                    case 3: textView_categoryName.setText(R.string.trang_mieng);
-                        break;
-                    case 4: textView_categoryName.setText(R.string.via_he);
-                        break;
-                }
+                textView_categoryName.setText(ViewPagerAdapter_MonAn_6_Tabs.CATEGORY_NAME);
             }
         });
 

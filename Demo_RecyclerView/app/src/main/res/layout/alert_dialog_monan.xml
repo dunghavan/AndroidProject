@@ -74,6 +74,24 @@
         android:layout_marginRight="20dp"
         android:text="Cừu băm xào tôm là món ăn bổ dưỡng kết hợp thịt cừu và tôm tươi. Vị ngọt bùi thơm ngon từ tôm kết hợp cùng vị mềm mại, ngọt thanh từ miếng thịt cừu sẽ khiến thực khách ngất ngây với hương vị tan ra nơi đầu lưỡi.">
     </TextView>
+    <TextView
+        android:id="@+id/textview_nangluong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginRight="20dp"
+        android:textColor="#116606"
+        android:text="Năng lượng: 200">
+    </TextView>
+    <TextView
+        android:id="@+id/textview_protein"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginRight="20dp"
+        android:textColor="#116606"
+        android:text="Protein: 300">
+    </TextView>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"

@@ -58,13 +58,13 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
     @Override
     public void onBindViewHolder(RecyclerViewHolder_MonAn viewHolder, int position) {
         viewHolder.textView_TenMonAn.setText(listData.get(position).getTenMonAn());
-        viewHolder.textView_Gia.setText(String.format("%s", listData.get(position).getGia()));
+        viewHolder.textView_Gia.setText(String.format("%s", listData.get(position).getDonGia()));
 
         String itemIdSelected = listData.get(position).getId();
         String count = String.valueOf(Cart.getItemCountById(itemIdSelected));
         viewHolder.textView_SoLuongDat.setText(count);
 
-        String url = listData.get(position).getImgUrl();
+        String url = listData.get(position).getHinhAnh();
         Picasso.with(MainActivity.getMainActivityContext())
                 .load(url)
                 .into(viewHolder.imageView);
@@ -114,14 +114,16 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                     TextView textViewTenMonAn = (TextView)alertDialogView.findViewById(R.id.textview_tenmonan_in_dialog);
                     textViewTenMonAn.setText(monAn.getTenMonAn().toString());
 
+                    // So luong dat:
                     final TextView textView_SoLuongDat = (TextView)alertDialogView.findViewById(R.id.textview_soluongdat_in_dialog);
                     String count = String.valueOf(Cart.getItemCountById(monAn.getId()));
                     textView_SoLuongDat.setText(count);
 
+                    // Gia, khuyen mai, gia khuyen mai:
                     TextView textViewGia = (TextView)alertDialogView.findViewById(R.id.textview_gia_in_dialog);
                     TextView textViewGiaKhuyenMai = (TextView)alertDialogView.findViewById(R.id.textview_giakhuyenmai_in_dialog);
                     TextView textViewKhuyenMai = (TextView)alertDialogView.findViewById(R.id.textview_khuyenmai_in_dialog);
-                    monAn.setKhuyenMai(19D);
+
                     if(monAn.getKhuyenMai() != 0){
                         textViewGiaKhuyenMai.setText(String.valueOf(decimalFormat.format(monAn.getGiaKhuyenMai())) + " đ");
                         textViewKhuyenMai.setText("-" + String.valueOf(monAn.getKhuyenMai()) + "%");
@@ -134,17 +136,29 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                         textViewGiaKhuyenMai.setVisibility(View.INVISIBLE);
                         textViewKhuyenMai.setVisibility(View.INVISIBLE);
                     }
-                    textViewGia.setText(String.valueOf(decimalFormat.format(monAn.getGia())) + " đ");
+                    textViewGia.setText(String.valueOf(decimalFormat.format(monAn.getDonGia())) + " đ");
 
-                    TextView textViewTongTien = (TextView)alertDialogView.findViewById(R.id.textview_tongtien_in_dialog);
+                    // Tong tien:
+                    final TextView textViewTongTien = (TextView)alertDialogView.findViewById(R.id.textview_tongtien_in_dialog);
                     Double tongTien = Cart.getItemCountById(monAn.getId()) * monAn.getGiaKhuyenMai();
                     textViewTongTien.setText(String.valueOf(decimalFormat.format(tongTien)) + " đ");
 
+                    // Hinh anh:
                     ImageView hinhAnh = (ImageView)alertDialogView.findViewById(R.id.imageview_monan_in_dialog);
-                    String imageUrl = listData.get(getAdapterPosition()).getImgUrl();
+                    String imageUrl = monAn.getHinhAnh();
                     Picasso.with(MyApplication.getCurrentContext())
                             .load(imageUrl)
                             .into(hinhAnh);
+
+                    // Mo ta:
+                    TextView moTa = (TextView)alertDialogView.findViewById(R.id.textview_mota_monan);
+                    moTa.setText(monAn.getMoTa());
+
+                    // Nang luong, Protein:
+                    TextView tv_nangLuong = (TextView)alertDialogView.findViewById(R.id.textview_nangluong);
+                    TextView tv_protein = (TextView)alertDialogView.findViewById(R.id.textview_protein);
+                    tv_nangLuong.setText("Năng lượng: " + String.valueOf(monAn.getNangLuong()) + " Kcal");
+                    tv_protein.setText("Protein: " + String.valueOf(monAn.getProtein()) + " g");
 
                     //Click 2 button tren dialog:
                     final TextView tv_SoLuongDat_In_Dialog = (TextView)alertDialogView.findViewById(R.id.textview_soluongdat_in_dialog);
@@ -154,10 +168,16 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                         public void onClick(View v) {
                             String itemIdSelected = monAn.getId();
                             Cart.removeFromCart(itemIdSelected);
+
+                            Double tongTien = Cart.getItemCountById(monAn.getId()) * monAn.getGiaKhuyenMai();
+                            textViewTongTien.setText(String.valueOf(decimalFormat.format(tongTien)) + " đ");
+
                             String count = String.valueOf(Cart.getItemCountById(itemIdSelected));
                             tv_SoLuongDat_In_Dialog.setText(count);
-                            textView_SoLuongDat.setText(count);
+                            //textView_SoLuongDat.setText(count);
+                            update_SoLuongDat(count);
                             MainActivity.setupBadge(Cart.getAllItemCount());
+                            Activity_MonAn_Of_NhaHang.setupBadge(Cart.getAllItemCount());
                         }
                     });
                     ImageButton btn_plus_dialog = (ImageButton)alertDialogView.findViewById(R.id.btn_plus_in_dialog);
@@ -166,10 +186,16 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                         public void onClick(View v) {
                             String itemIdSelected = monAn.getId();
                             Cart.addToCart(itemIdSelected);
+
+                            Double tongTien = Cart.getItemCountById(monAn.getId()) * monAn.getGiaKhuyenMai();
+                            textViewTongTien.setText(String.valueOf(decimalFormat.format(tongTien)) + " đ");
+
                             String count = String.valueOf(Cart.getItemCountById(itemIdSelected));
                             tv_SoLuongDat_In_Dialog.setText(count);
-                            textView_SoLuongDat.setText(count);
+                            //textView_SoLuongDat.setText(count);
+                            update_SoLuongDat(count);
                             MainActivity.setupBadge(Cart.getAllItemCount());
+                            Activity_MonAn_Of_NhaHang.setupBadge(Cart.getAllItemCount());
                         }
                     });
 
@@ -187,7 +213,7 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                     dialogToShow.show();
                 }
             });
-            //set listener for buttons:
+            //Su kien 2 Buttons tren item:
             btn_Plus.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -195,8 +221,9 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                     String itemIdSelected = listData.get(getLayoutPosition()).getId();
                     Cart.addToCart(itemIdSelected);
                     String count = String.valueOf(Cart.getItemCountById(itemIdSelected));
-                    textView_SoLuongDat.setText(count);
+                    update_SoLuongDat(count);
                     MainActivity.setupBadge(Cart.getAllItemCount());
+                    Activity_MonAn_Of_NhaHang.setupBadge(Cart.getAllItemCount());
                     //Toast.makeText(context, "Item in Cart: " + Cart.getAllItemCount(), Toast.LENGTH_SHORT).show();
                 }
             });
@@ -207,16 +234,20 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                     String itemIdSelected = listData.get(getLayoutPosition()).getId();
                     Cart.removeFromCart(itemIdSelected);
                     String count = String.valueOf(Cart.getItemCountById(itemIdSelected));
-                    textView_SoLuongDat.setText(count);
+                    update_SoLuongDat(count);
                     MainActivity.setupBadge(Cart.getAllItemCount());
+                    Activity_MonAn_Of_NhaHang.setupBadge(Cart.getAllItemCount());
                     //Toast.makeText(context, "Item in Cart: " + Cart.getAllItemCount(), Toast.LENGTH_SHORT).show();
                 }
             });
         }
+        public void update_SoLuongDat(String count){
+            textView_SoLuongDat.setText(count);
+        }
+
         @Override
         public void onClick(View v){
 
         }
-
     }
 }
