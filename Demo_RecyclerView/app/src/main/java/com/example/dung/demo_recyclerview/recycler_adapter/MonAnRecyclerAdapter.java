@@ -44,6 +44,8 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
 
     @Override
     public int getItemCount(){
+        if(listData == null)
+            return 0;
         return listData.size();
     }
 
@@ -148,6 +150,8 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                     String imageUrl = monAn.getHinhAnh();
                     Picasso.with(MyApplication.getCurrentContext())
                             .load(imageUrl)
+                            .placeholder(R.drawable.loading)
+                            .error(R.drawable.failed_load_food)
                             .into(hinhAnh);
 
                     // Mo ta:

@@ -14,7 +14,7 @@
         android:title="@string/mon_an"
         app:showAsAction="always" />
     <item
-        android:id="@+id/action_sale"
+        android:id="@+id/action_advanced"
         android:enabled="true"
         android:icon="@drawable/sale"
         android:title="@string/khuyen_mai"

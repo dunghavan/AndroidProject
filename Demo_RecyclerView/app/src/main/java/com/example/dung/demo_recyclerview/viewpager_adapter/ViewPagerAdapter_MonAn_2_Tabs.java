@@ -7,8 +7,6 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.example.dung.demo_recyclerview.MyConstant;
-import com.example.dung.demo_recyclerview.fragment.ChildFragment_DoAn;
-import com.example.dung.demo_recyclerview.fragment.ChildFragment_DoUong;
 import com.example.dung.demo_recyclerview.fragment.ChildFragment_MonAnDatNhieu;
 import com.example.dung.demo_recyclerview.fragment.ChildFragment_TatCaMonAn;
 

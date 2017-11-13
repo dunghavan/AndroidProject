@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.dung.demo_recyclerview.MyConstant;
 import com.example.dung.demo_recyclerview.R;
 import com.example.dung.demo_recyclerview.viewpager_adapter.ViewPagerAdapter_MonAn_6_Tabs;
 
@@ -35,7 +36,7 @@ public class Fragment_MonAn_6_Tabs extends Fragment {
 
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         textView_categoryName = (TextView)view.findViewById(R.id.textview_category);
-        textView_categoryName.setText(R.string.com);
+        textView_categoryName.setText(MyConstant.COM);
 
         viewPager = (ViewPager)view.findViewById(R.id.view_pager_monan_6tabs);
         tabLayout = (TabLayout)view.findViewById(R.id.tabLayout_monan_6tabs);
