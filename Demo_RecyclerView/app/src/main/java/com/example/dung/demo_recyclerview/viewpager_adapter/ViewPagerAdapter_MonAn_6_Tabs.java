@@ -3,6 +3,7 @@ package com.example.dung.demo_recyclerview.viewpager_adapter;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
+import android.util.Log;
 
 import com.example.dung.demo_recyclerview.MyConstant;
 import com.example.dung.demo_recyclerview.fragment.ChildFragment_MonAnDatNhieu;
@@ -22,6 +23,7 @@ public class ViewPagerAdapter_MonAn_6_Tabs extends FragmentStatePagerAdapter {
     @Override
     public Fragment getItem(int position){
         Fragment fragment = null;
+        Log.d("Position in adapter: ", String.valueOf(position));
         switch (position){
             case 0: fragment = new Fragment_MonAn_2_Tabs();
                 CATEGORY_NAME = MyConstant.COM;

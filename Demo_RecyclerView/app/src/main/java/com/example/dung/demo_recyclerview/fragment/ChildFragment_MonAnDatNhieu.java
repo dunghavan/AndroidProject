@@ -31,6 +31,7 @@ public class ChildFragment_MonAnDatNhieu extends Fragment {
     Context context;
     public ChildFragment_MonAnDatNhieu(){
         context = MainActivity.getMainActivityContext();
+        data = new ArrayList<>();
     }
 
     @Override
@@ -72,7 +73,7 @@ public class ChildFragment_MonAnDatNhieu extends Fragment {
         super.onResume();
     }
     private void initialData(){
-        data = new ArrayList<>();
+        //data = new ArrayList<>();
 
         data.add(new MonAn("1", "Cơm Gà", 250000.0, "http://www.huynhthinga.com/wp-content/uploads/2014/11/2vv1.jpg", 20, 40, "Mô tả", 10D));
         data.add(new MonAn("2", "Gà Lên Mâm", 300000.0, "https://i.ytimg.com/vi/NHlI_FsGtow/maxresdefault.jpg", 34, 56, "Mô tả", 10D));

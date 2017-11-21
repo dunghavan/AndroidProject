@@ -69,6 +69,7 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
         String url = listData.get(position).getHinhAnh();
         Picasso.with(MainActivity.getMainActivityContext())
                 .load(url)
+                .fit()
                 .into(viewHolder.imageView);
     }
 
@@ -152,6 +153,7 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                             .load(imageUrl)
                             .placeholder(R.drawable.loading)
                             .error(R.drawable.failed_load_food)
+                            .fit()
                             .into(hinhAnh);
 
                     // Mo ta:

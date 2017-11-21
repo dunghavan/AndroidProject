@@ -40,7 +40,7 @@ public class Activity_MonAn_Of_NhaHang extends AppCompatActivity {
         viewPager = (ViewPager)findViewById(R.id.view_pager_monan_of_nhahang);
 
         FragmentManager fm = getSupportFragmentManager();
-        ViewPagerAdapter_MonAn_2_Tabs viewPagerAdapter_monAn_of_nhaHang = new ViewPagerAdapter_MonAn_2_Tabs(fm);
+        ViewPagerAdapter_MonAn_2_Tabs viewPagerAdapter_monAn_of_nhaHang = new ViewPagerAdapter_MonAn_2_Tabs(fm, 0);
 
         viewPager.setAdapter(viewPagerAdapter_monAn_of_nhaHang);
         tabLayout.setupWithViewPager(viewPager);

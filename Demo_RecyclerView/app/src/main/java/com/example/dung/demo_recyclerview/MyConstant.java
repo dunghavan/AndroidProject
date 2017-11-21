@@ -5,6 +5,7 @@ package com.example.dung.demo_recyclerview;
  */
 
 public class MyConstant {
+    public static String[] Array_6Tabs_Name = {"Cơm trưa", "Bún phở", "Đồ uống", "Tráng miệng", "Vỉa hè"};
     public static String COM = "Cơm trưa";
     public static String BUNPHO = "Bún phở";
     public static String DOUONG = "Đồ uống";
@@ -20,5 +21,8 @@ public class MyConstant {
     public static String TAB_NHAHANG = "Tab Nhà Hàng";
     public static String TAB_MONAN = "Tab Món Ăn";
     public static String TAB_NANGCAO = "Tab Nâng Cao";
+
+    public static String KEY_FOR_CATEGORY_FOOD = "FOOD_KEY";
+    public static String KEY_FOR_CATEGORY_TAB = "TAB_KEY";
 
 }

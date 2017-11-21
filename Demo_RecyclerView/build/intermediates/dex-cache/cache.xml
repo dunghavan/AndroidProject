@@ -16,35 +16,8 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="0bd341699c339fc61a12e17a8ed7883ea4e43fbc">
+        sha1="74bae5472d612426771d02f37adbb41719c01c53">
         <dex dex="C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_f7f9cfc8e1652f6c7ac36ffa52395e3a8f69b9c6\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Dung\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.8.5\60d059f5d2930ccd1ef03535b713fd9f933d1ba7\jackson-core-2.8.5.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="60d059f5d2930ccd1ef03535b713fd9f933d1ba7">
-        <dex dex="C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\build\intermediates\transforms\dex\debug\folders\1000\10\jackson-core-2.8.5_e8777cae12dc778ebfb632bec4674ed00ac88c78\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Dung\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-annotations\2.8.5\9d82ff47bc2c2d3b5b6a6618fe636782bbcd5b07\jackson-annotations-2.8.5.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="9d82ff47bc2c2d3b5b6a6618fe636782bbcd5b07">
-        <dex dex="C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\build\intermediates\transforms\dex\debug\folders\1000\10\jackson-annotations-2.8.5_cf139f8045053d15637eaecf03c70dcfd32796af\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Dung\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-databind\2.8.5\b3035f37e674c04dafe36a660c3815cc59f764e2\jackson-databind-2.8.5.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="b3035f37e674c04dafe36a660c3815cc59f764e2">
-        <dex dex="C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\build\intermediates\transforms\dex\debug\folders\1000\10\jackson-databind-2.8.5_749cadbaf9b149a4e3051bacaf226452e845e252\classes.dex" />
     </item>
 
 </items>

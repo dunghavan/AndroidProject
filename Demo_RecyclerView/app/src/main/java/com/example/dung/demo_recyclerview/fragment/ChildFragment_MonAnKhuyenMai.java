@@ -37,6 +37,7 @@ public class ChildFragment_MonAnKhuyenMai extends Fragment {
     Context context;
     public ChildFragment_MonAnKhuyenMai(){
         context = MyApplication.getCurrentContext();
+        listMonAnKhuyenMai = new ArrayList<>();
     }
 
     @Override
@@ -51,21 +52,21 @@ public class ChildFragment_MonAnKhuyenMai extends Fragment {
         layoutManager = new LinearLayoutManager(context);
         recyclerView.setLayoutManager(layoutManager);
         //
-        listMonAnKhuyenMai = new ArrayList<>();
         initialData();
-        adapter = new MonAnRecyclerAdapter(listMonAnKhuyenMai);
-        recyclerView.setAdapter(adapter);
+//        adapter = new MonAnRecyclerAdapter(listMonAnKhuyenMai);
+//        recyclerView.setAdapter(adapter);
         setRetainInstance(false);
     }
 
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
-        if(isVisibleToUser){
-            if(adapter == null)
-                adapter = new MonAnRecyclerAdapter(listMonAnKhuyenMai);
-            adapter.notifyDataSetChanged();
-        }
+//        if(isVisibleToUser){
+//            if(adapter == null)
+//                adapter = new MonAnRecyclerAdapter(listMonAnKhuyenMai);
+//            adapter.notifyDataSetChanged();
+//        }
+        initialData();
     }
 
     //Load du lieu theo loai da chon:
@@ -75,16 +76,28 @@ public class ChildFragment_MonAnKhuyenMai extends Fragment {
 
     }
 
-    private class DownloadFilesTask extends AsyncTask<String, Integer, String> {
-        protected String doInBackground(String... urls) {
+    private class DownloadFilesTask extends AsyncTask<String, Integer, List<MonAn>> {
+        protected List<MonAn> doInBackground(String... urls) {
             try{
                 String jsonString = MyHttpURLConnection.sendGet("http://orderfooduit.azurewebsites.net/api/MonAn/Get");
-                return  jsonString;
+                listMonAnKhuyenMai.clear();
+                try{
+                    JSONArray jsonArray = new JSONArray(jsonString);
+
+                    for(int i = 0; i < jsonArray.length(); i++){
+                        ObjectMapper objectMapper = new ObjectMapper();
+                        MonAn m = objectMapper.readValue(jsonArray.getJSONObject(i).toString(), MonAn.class);
+                        listMonAnKhuyenMai.add(m);
+                    }
+                }
+                catch (Exception e){
+                    Log.d("Error parse Json: ", e.getMessage());
+                }
             }
             catch (Exception e){
                 Log.d("Error while read api: ", e.getMessage());
             }
-            return "";
+            return listMonAnKhuyenMai;
         }
 
         protected void onProgressUpdate(Integer... progress) {
@@ -92,22 +105,11 @@ public class ChildFragment_MonAnKhuyenMai extends Fragment {
         }
 
         @Override
-        protected void onPostExecute(String result) {
-            listMonAnKhuyenMai.clear();
-            try{
-                JSONArray jsonArray = new JSONArray(result);
-
-                for(int i = 0; i < jsonArray.length(); i++){
-                    ObjectMapper objectMapper = new ObjectMapper();
-                    MonAn m = objectMapper.readValue(jsonArray.getJSONObject(i).toString(), MonAn.class);
-                    listMonAnKhuyenMai.add(m);
-                }
-            }
-            catch (Exception e){
-                Log.d("Error parse Json: ", e.getMessage());
-            }
-            Log.d("Data length: ", String.valueOf(listMonAnKhuyenMai.size()));
-            adapter = new MonAnRecyclerAdapter(listMonAnKhuyenMai);
+        protected void onPostExecute(List<MonAn> result) {
+            //Log.d("Data length: ", String.valueOf(result.size()));
+            layoutManager = new LinearLayoutManager(context);
+            recyclerView.setLayoutManager(layoutManager);
+            adapter = new MonAnRecyclerAdapter(result);
             recyclerView.setAdapter(adapter);
             setRetainInstance(false);
         }

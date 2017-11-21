@@ -39,9 +39,8 @@ public class MyHttpURLConnection {
             response.append(inputLine);
         }
         in.close();
-
         //print result
-        System.out.println("------------Response: " + response.toString());
+        //System.out.println("------------Response: " + response.toString());
 
         return response.toString();
     }

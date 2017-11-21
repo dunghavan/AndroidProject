@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.dung.demo_recyclerview.MyConstant;
 import com.example.dung.demo_recyclerview.R;
 import com.example.dung.demo_recyclerview.viewpager_adapter.ViewPagerAdapter_MonAn_2_Tabs;
 
@@ -31,13 +32,14 @@ public class Fragment_MonAn_2_Tabs extends Fragment {
 
     }
 
+
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
 
         viewPager = (ViewPager) view.findViewById(R.id.view_pager_monan_2tabs);
         tabLayout = (TabLayout) view.findViewById(R.id.tabLayout_monan_2tabs);
 
-        //FragmentManager fm = getActivity().getSupportFragmentManager();
-        viewPagerAdapter_monAn_2Tabs = new ViewPagerAdapter_MonAn_2_Tabs(getChildFragmentManager());
+        int foodCategoryName = getArguments().getInt(MyConstant.KEY_FOR_CATEGORY_FOOD);
+        viewPagerAdapter_monAn_2Tabs = new ViewPagerAdapter_MonAn_2_Tabs(getChildFragmentManager(), foodCategoryName);
 
         viewPager.setAdapter(viewPagerAdapter_monAn_2Tabs);
         tabLayout.setupWithViewPager(viewPager);

@@ -131,7 +131,6 @@ public class MainActivity extends AppCompatActivity{
         final SearchView searchView = (SearchView)MenuItemCompat.getActionView(menu.findItem(R.id.action_search));
         SearchManager searchManager = (SearchManager)getSystemService(SEARCH_SERVICE);
         searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
-        searchView.setQueryHint("Nhập tên món ăn");
 
         fragmentManager = getSupportFragmentManager();
 
@@ -162,6 +161,10 @@ public class MainActivity extends AppCompatActivity{
         MenuItemCompat.setOnActionExpandListener(searchItem, new MenuItemCompat.OnActionExpandListener() {
             @Override
             public boolean onMenuItemActionExpand(MenuItem item) {
+//                if(currentTab == MyConstant.TAB_NHAHANG)
+//                    searchView.setQueryHint("Nhập tên nhà hàng");
+//                else
+//                    searchView.setQueryHint("Nhập tên món ăn");
                 return true;
             }
 
@@ -184,6 +187,20 @@ public class MainActivity extends AppCompatActivity{
         });
         return true;
 
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        //SearchView:
+        final SearchView searchView = (SearchView)MenuItemCompat.getActionView(menu.findItem(R.id.action_search));
+        SearchManager searchManager = (SearchManager)getSystemService(SEARCH_SERVICE);
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+
+        if(currentTab == MyConstant.TAB_NHAHANG)
+            searchView.setQueryHint("Nhập tên nhà hàng");
+        else
+            searchView.setQueryHint("Nhập tên món ăn");
+        return super.onPrepareOptionsMenu(menu);
     }
 
     @Override
