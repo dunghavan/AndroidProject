@@ -12,5 +12,4 @@
         android:title="Cart"
         app:showAsAction="always"
         app:actionLayout="@layout/notification_icon"/>
-
 </menu>

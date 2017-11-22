@@ -2,6 +2,7 @@ package com.example.dung.demo_recyclerview;
 
 import android.app.SearchManager;
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
@@ -120,11 +121,18 @@ public class MainActivity extends AppCompatActivity{
         mOptionsMenu = menu;
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main_menu, menu);
-        MenuItem cartItem = menu.findItem(R.id.cart);
+        final MenuItem cartItem = menu.findItem(R.id.cart);
+        cartItem.getActionView().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity.this.onOptionsItemSelected(cartItem);
+            }
+        });
 
         //Cart
         View actionView = MenuItemCompat.getActionView(cartItem);
         textCartItemCount = (TextView) actionView.findViewById(R.id.counter);
+
         setupBadge(0);
 
         //SearchView:
@@ -161,10 +169,6 @@ public class MainActivity extends AppCompatActivity{
         MenuItemCompat.setOnActionExpandListener(searchItem, new MenuItemCompat.OnActionExpandListener() {
             @Override
             public boolean onMenuItemActionExpand(MenuItem item) {
-//                if(currentTab == MyConstant.TAB_NHAHANG)
-//                    searchView.setQueryHint("Nhập tên nhà hàng");
-//                else
-//                    searchView.setQueryHint("Nhập tên món ăn");
                 return true;
             }
 
@@ -186,7 +190,21 @@ public class MainActivity extends AppCompatActivity{
             }
         });
         return true;
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.cart:
+                Intent intent = new Intent(this, CartActivity.class);
+                this.startActivity(intent);
+                return true;
+            case R.id.action_search:
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     @Override
@@ -203,10 +221,6 @@ public class MainActivity extends AppCompatActivity{
         return super.onPrepareOptionsMenu(menu);
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        return super.onOptionsItemSelected(item);
-    }
 
     public static void setupBadge(int mCartItemCount){
         if (textCartItemCount != null) {
