@@ -61,11 +61,18 @@ public class Activity_MonAn_Of_NhaHang extends AppCompatActivity {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main_menu, menu);
         menu.findItem(R.id.action_search).setVisible(false);
-        MenuItem menuItem = menu.findItem(R.id.cart);
+        final MenuItem cartItem = menu.findItem(R.id.cart);
 
-        View actionView = MenuItemCompat.getActionView(menuItem);
+        View actionView = MenuItemCompat.getActionView(cartItem);
         textCartItemCount = (TextView) actionView.findViewById(R.id.counter);
 
+        // /Open CartActivity when click
+        cartItem.getActionView().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onOptionsItemSelected(cartItem);
+            }
+        });
         setupBadge(Cart.getAllItemCount());
 
         return true;
@@ -73,7 +80,17 @@ public class Activity_MonAn_Of_NhaHang extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        return super.onOptionsItemSelected(item);
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.cart:
+                Intent intent = new Intent(this, CartActivity.class);
+                this.startActivity(intent);
+                return true;
+            case R.id.action_search:
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     public static void setupBadge(int mCartItemCount){

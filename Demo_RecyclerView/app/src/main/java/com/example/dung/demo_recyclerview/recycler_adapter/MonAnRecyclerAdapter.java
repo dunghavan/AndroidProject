@@ -69,17 +69,19 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
         String url = listData.get(position).getHinhAnh();
         Picasso.with(MainActivity.getMainActivityContext())
                 .load(url)
+                .placeholder(R.drawable.loading)
+                .error(R.drawable.failed_load_food)
                 .fit()
                 .into(viewHolder.imageView);
     }
 
-    public void removeItem(String itemId){
-        Cart.removeFromCart(itemId);
-    }
-
-    public void addItem(String itemId){
-        Cart.addToCart(itemId);
-    }
+//    public void removeItem(String itemId){
+//        Cart.removeFromCart(itemId);
+//    }
+//
+//    public void addItem(MonAn item){
+//        Cart.addToCart(item);
+//    }
 
 
     public class RecyclerViewHolder_MonAn extends RecyclerView.ViewHolder implements OnClickListener{
@@ -191,7 +193,7 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                         @Override
                         public void onClick(View v) {
                             String itemIdSelected = monAn.getId();
-                            Cart.addToCart(itemIdSelected);
+                            Cart.addToCart(monAn);
 
                             Double tongTien = Cart.getItemCountById(monAn.getId()) * monAn.getGiaKhuyenMai();
                             textViewTongTien.setText(String.valueOf(decimalFormat.format(tongTien)) + " đ");
@@ -224,9 +226,9 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                 @Override
                 public void onClick(View v) {
                     //Toast.makeText(context, "click + " + getLayoutPosition(), Toast.LENGTH_LONG).show();
-                    String itemIdSelected = listData.get(getLayoutPosition()).getId();
-                    Cart.addToCart(itemIdSelected);
-                    String count = String.valueOf(Cart.getItemCountById(itemIdSelected));
+                    MonAn itemSelected = listData.get(getLayoutPosition());
+                    Cart.addToCart(itemSelected);
+                    String count = String.valueOf(Cart.getItemCountById(itemSelected.getId()));
                     update_SoLuongDat(count);
                     MainActivity.setupBadge(Cart.getAllItemCount());
                     Activity_MonAn_Of_NhaHang.setupBadge(Cart.getAllItemCount());
@@ -243,6 +245,7 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                     update_SoLuongDat(count);
                     MainActivity.setupBadge(Cart.getAllItemCount());
                     Activity_MonAn_Of_NhaHang.setupBadge(Cart.getAllItemCount());
+                    notifyDataSetChanged();
                     //Toast.makeText(context, "Item in Cart: " + Cart.getAllItemCount(), Toast.LENGTH_SHORT).show();
                 }
             });

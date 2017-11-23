@@ -101,8 +101,8 @@ public class MainActivity extends AppCompatActivity{
             }
         });
 
-        bottomNavigation.getMenu().findItem(R.id.action_home).setChecked(true);
-        bottomNavigation.setSelectedItemId(R.id.action_home);
+        bottomNavigation.getMenu().findItem(R.id.action_food).setChecked(true);
+        //bottomNavigation.setSelectedItemId(R.id.action_home);
 
     }
     @Override
@@ -122,6 +122,8 @@ public class MainActivity extends AppCompatActivity{
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main_menu, menu);
         final MenuItem cartItem = menu.findItem(R.id.cart);
+
+        //Open CartActivity when click
         cartItem.getActionView().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -189,7 +191,7 @@ public class MainActivity extends AppCompatActivity{
                 return true;
             }
         });
-        return true;
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override

@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="/home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_7bb32a644511d26bf0b22b8dd770c11203a2ef73\classes.dex" />
+        <dex dex="/home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_94ff3d3c8bbae18a260fc88ff3b25245d268fdbc/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="/home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="8988066623cea460be85e90cfa45169ba79ba58c">
-        <dex dex="C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_f7f9cfc8e1652f6c7ac36ffa52395e3a8f69b9c6\classes.dex" />
+        sha1="1e1f60ea642c4ee7a1b36a0a40a0aa5d2c8e338f">
+        <dex dex="/home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_f1abe9e33d0a0d6c619b37c2563d71ca0d74300a/classes.dex" />
     </item>
 
 </items>

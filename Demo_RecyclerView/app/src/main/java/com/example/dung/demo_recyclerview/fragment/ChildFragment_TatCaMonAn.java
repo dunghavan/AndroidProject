@@ -86,7 +86,7 @@ public class ChildFragment_TatCaMonAn extends Fragment{
     @Override
     public void onResume() {
         super.onResume();
-        //initialData(foodCategoryName, tabCategory);
+        initialData(foodCategoryName, tabCategory);
     }
 
     //Load du lieu theo loai da chon:
