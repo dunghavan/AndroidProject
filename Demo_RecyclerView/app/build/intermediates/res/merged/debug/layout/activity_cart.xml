@@ -3,12 +3,52 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <FrameLayout
-        android:id="@+id/frame_layout_in_main_activity"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/bottom_navigation">
 
+    <TextView
+        android:id="@+id/textview_username_in_cart_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tên khách hàng: "
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:layout_marginStart="10dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+    <TextView
+        android:id="@+id/textview_soluongmon_in_cart_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Số lượng món: "
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:layout_marginStart="10dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+    <TextView
+        android:id="@+id/textview_tongtien_in_cart_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tổng tiền: "
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:layout_marginStart="10dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+    //line
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+
+    <FrameLayout
+    android:id="@+id/frame_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <!--RecyclerView-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview_in_cart_activity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical" />
     </FrameLayout>
 
 

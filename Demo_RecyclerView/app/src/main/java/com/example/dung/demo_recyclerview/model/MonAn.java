@@ -28,6 +28,9 @@ public class MonAn {
     private Double giaKhuyenMai;
     private Double khuyenMai;
 
+    //add for cart:
+    private int itemCount;
+
     public MonAn(){
 
     }
@@ -41,6 +44,7 @@ public class MonAn {
         this.moTa = moTa;
         this.id = id;
         this.khuyenMai = khuyenMai;
+        this.itemCount = 0;
     }
     public MonAn(String tenMonAn, Double donGia, String maNhaHang, String hinhAnh, int soDiem, int luotXem,
                  String nguyenLieu, int protein, int nangLuong, String moTa, String id, String createDate,
@@ -65,6 +69,16 @@ public class MonAn {
             this.khuyenMai = 0D;
         else
             this.khuyenMai = khuyenMai;
+
+        this.itemCount = 0;
+    }
+
+    public int getItemCount() {
+            return itemCount;
+    }
+
+    public void setItemCount(int itemCount) {
+        this.itemCount = itemCount;
     }
 
     public String getTenMonAn() {

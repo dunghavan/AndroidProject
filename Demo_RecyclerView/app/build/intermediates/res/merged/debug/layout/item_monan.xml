@@ -21,17 +21,27 @@
 
             <TextView
                 android:id="@+id/tv_TenMonAn"
+                android:text="Tên món ăn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#000000"
-                android:textSize="24sp"
+                android:textSize="18sp"
+                android:layout_marginLeft="10dp"/>
+            <TextView
+                android:id="@+id/tv_tenNhaHang"
+                android:text="Tên nhà hàng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="14sp"
                 android:layout_marginLeft="10dp"/>
             <TextView
                 android:id="@+id/tv_GiaMonAn"
+                android:text="120000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#e1bf02"
-                android:textSize="15sp"
+                android:textSize="14sp"
                 android:layout_marginLeft="10dp"/>
         </LinearLayout>
         <ImageButton

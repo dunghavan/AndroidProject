@@ -38,9 +38,13 @@ import java.util.StringTokenizer;
 public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAdapter.RecyclerViewHolder_MonAn>{
     private List<MonAn> listData = new ArrayList<>();
     Context context;
+    final DecimalFormat decimalFormat = new DecimalFormat("###,###,###.#");
+
+
     public MonAnRecyclerAdapter(List<MonAn> _listData){
         this.listData = _listData;
     }
+
 
     @Override
     public int getItemCount(){
@@ -59,27 +63,30 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
 
     @Override
     public void onBindViewHolder(RecyclerViewHolder_MonAn viewHolder, int position) {
-        viewHolder.textView_TenMonAn.setText(listData.get(position).getTenMonAn());
-        viewHolder.textView_Gia.setText(String.format("%s", listData.get(position).getDonGia()));
+        MonAn monAnSelected = listData.get(position);
+        viewHolder.textView_TenMonAn.setText(monAnSelected.getTenMonAn());
+        viewHolder.textView_Gia.setText(String.format("%s", decimalFormat.format(monAnSelected.getDonGia())) + "đ");
 
-        String itemIdSelected = listData.get(position).getId();
+        String itemIdSelected = monAnSelected.getId();
         String count = String.valueOf(Cart.getItemCountById(itemIdSelected));
         viewHolder.textView_SoLuongDat.setText(count);
 
-        String url = listData.get(position).getHinhAnh();
+        String url = monAnSelected.getHinhAnh();
         Picasso.with(MainActivity.getMainActivityContext())
                 .load(url)
+                .placeholder(R.drawable.loading)
+                .error(R.drawable.failed_load_food)
                 .fit()
                 .into(viewHolder.imageView);
     }
 
-    public void removeItem(String itemId){
-        Cart.removeFromCart(itemId);
-    }
-
-    public void addItem(String itemId){
-        Cart.addToCart(itemId);
-    }
+//    public void removeItem(String itemId){
+//        Cart.removeFromCart(itemId);
+//    }
+//
+//    public void addItem(MonAn item){
+//        Cart.addToCart(item);
+//    }
 
 
     public class RecyclerViewHolder_MonAn extends RecyclerView.ViewHolder implements OnClickListener{
@@ -101,7 +108,6 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
             textView_SoLuongDat = (TextView)itemView.findViewById(R.id.textview_soluongdat);
 
             // Click vao Mon An:
-            final DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
             itemView.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -191,7 +197,7 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                         @Override
                         public void onClick(View v) {
                             String itemIdSelected = monAn.getId();
-                            Cart.addToCart(itemIdSelected);
+                            Cart.addToCart(monAn);
 
                             Double tongTien = Cart.getItemCountById(monAn.getId()) * monAn.getGiaKhuyenMai();
                             textViewTongTien.setText(String.valueOf(decimalFormat.format(tongTien)) + " đ");
@@ -224,9 +230,9 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                 @Override
                 public void onClick(View v) {
                     //Toast.makeText(context, "click + " + getLayoutPosition(), Toast.LENGTH_LONG).show();
-                    String itemIdSelected = listData.get(getLayoutPosition()).getId();
-                    Cart.addToCart(itemIdSelected);
-                    String count = String.valueOf(Cart.getItemCountById(itemIdSelected));
+                    MonAn itemSelected = listData.get(getLayoutPosition());
+                    Cart.addToCart(itemSelected);
+                    String count = String.valueOf(Cart.getItemCountById(itemSelected.getId()));
                     update_SoLuongDat(count);
                     MainActivity.setupBadge(Cart.getAllItemCount());
                     Activity_MonAn_Of_NhaHang.setupBadge(Cart.getAllItemCount());
@@ -243,6 +249,7 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                     update_SoLuongDat(count);
                     MainActivity.setupBadge(Cart.getAllItemCount());
                     Activity_MonAn_Of_NhaHang.setupBadge(Cart.getAllItemCount());
+                    notifyDataSetChanged();
                     //Toast.makeText(context, "Item in Cart: " + Cart.getAllItemCount(), Toast.LENGTH_SHORT).show();
                 }
             });

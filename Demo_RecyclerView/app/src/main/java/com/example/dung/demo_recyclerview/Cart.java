@@ -2,6 +2,10 @@ package com.example.dung.demo_recyclerview;
 
 import android.util.Log;
 
+import com.example.dung.demo_recyclerview.model.MonAn;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,52 +14,60 @@ import java.util.List;
  */
 
 public class Cart {
-    private static List<CartItem> cartContent = new ArrayList<>();
+    private static List<MonAn> cartContent = new ArrayList<>();
 
-    public static void addToCart(String newItemId){
+    public static List<MonAn> getCartContent(){
+        return cartContent;
+    }
+
+    public static void addToCart(MonAn newMonAn){
         boolean added = false;
-        if(cartContent.size() == 0)
+        if(cartContent.size() == 0) //Cart is empty:
         {
-            cartContent.add(new CartItem(newItemId, 1, ""));
+            newMonAn.setItemCount(1);
+            cartContent.add(newMonAn);
             added = true;
         }
         else
-            for (CartItem item: cartContent) {
-                if (item.getItemId().equals(newItemId)) {
-                    Log.d("Add to cart:", "Found itemId = " + item.getItemId() + ", count = " + item.getItemCount());
+            for (MonAn item: cartContent) {
+                if (item.getId().equals(newMonAn.getId())) { //MonAn already exist in cartContent:
+                    Log.d("Add to cart:", "Found itemId = " + item.getId() + ", count = " + item.getItemCount());
                     item.setItemCount(item.getItemCount() + 1);
                     Log.d("Increase itemCount: ", Integer.toString(item.getItemCount()));
                     added = true;
                     break;
                 }
             }
-            if(added == false)
+            if(added == false) //MonAn not exist in cartContent:
             {
-                CartItem newItem = new CartItem(newItemId, 1, "");
-                cartContent.add(newItem);
-                Log.d("Add new item: ", "id = " + newItemId);
+                newMonAn.setItemCount(1);
+                cartContent.add(newMonAn);
+                Log.d("Add new item: ", "id = " + newMonAn.getId());
             }
+
+            printString();
 
     }
 
     public static void removeFromCart(String newItemId){
-        CartItem item;
+        MonAn item;
         for(int i = 0; i < cartContent.size(); i++){
             item = cartContent.get(i);
-            if(item.getItemId().equals(newItemId)){
+            if(item.getId().equals(newItemId)){
                 if(item.getItemCount() > 1){
                     item.setItemCount(item.getItemCount() - 1);
-                    Log.d("Decrease itemCount: ", "count = " + item.getItemCount() + ", id = " + item.getItemId());
+                    Log.d("Decrease itemCount: ", "count = " + item.getItemCount() + ", id = " + item.getId());
                 }
                 else{
                     cartContent.remove(i);
-                    Log.d("Remove itemId = " + item.getItemId(), "");
+                    Log.d("Remove itemId = " + item.getId(), "");
                 }
             }
             else {
                 Log.d("Not found itemId = " + newItemId, "Do nothing!");
             }
         }
+        printString();
     }
 
     public static int getAllItemCount(){
@@ -63,12 +75,33 @@ public class Cart {
     }
 
     public static int getItemCountById(String id){
-        for (CartItem item: cartContent) {
-            if (item.getItemId().equals(id)) {
+        for (MonAn item: cartContent) {
+            if (item.getId().equals(id)) {
                 return item.getItemCount();
             }
         }
         return 0;
+    }
+
+    public static Double getTotal(){
+        Double total = 0D;
+        for(MonAn item: cartContent){
+            total += item.getItemCount() * item.getGiaKhuyenMai();
+        }
+        return total;
+    }
+
+
+    public static void printString() {
+        ObjectMapper objectMapper = new ObjectMapper();
+        try{
+            for(MonAn item: cartContent)
+                Log.d("Cart to string", objectMapper.writeValueAsString(item));
+        }
+        catch (JsonProcessingException e){
+            Log.d("JsonProcessingException", e.getMessage());
+        }
+
     }
 
 }
