@@ -46,18 +46,18 @@ public class MyHttpURLConnection {
     }
 
     // HTTP POST request
-    private void sendPost() throws Exception {
+    public static String sendPost() throws Exception {
 
-        String url = "https://selfsolve.apple.com/wcResults.do";
+        String url = "http://orderfooduit.azurewebsites.net/api/GioHang/Get";
         URL obj = new URL(url);
-        HttpsURLConnection con = (HttpsURLConnection) obj.openConnection();
+        HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 
         //add request header
         con.setRequestMethod("POST");
         //con.setRequestProperty("User-Agent", USER_AGENT);
         con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
 
-        String urlParameters = "sn=C02G8416DRJM&cn=&locale=&caller=&num=12345";
+        String urlParameters = "maKH=KH001&tongTien=12345";
 
         // Send post request
         con.setDoOutput(true);
@@ -83,6 +83,6 @@ public class MyHttpURLConnection {
 
         //print result
         System.out.println(response.toString());
-
+        return response.toString();
     }
 }

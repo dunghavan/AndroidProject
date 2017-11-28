@@ -1,20 +1,54 @@
 package com.example.dung.demo_recyclerview.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 /**
  * Created by Dung on 10/6/2017.
  */
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class NhaHang {
     String tenNhaHang;
     String diaChi;
-    int khuyenMai;
     String urlHinhAnh;
+    String gioMoCua;
+    String gioDongCua;
+    String SDT;
+    int luotXem;
+    int soDiem;
+    String maKhuVuc;
+    String id;
+    String createDate;
+    String createdBy;
+    boolean active;
+    String updateBy;
 
-    public NhaHang(String tenNhaHang, String diaChi, int khuyenMai, String urlHinhAnh) {
+    public NhaHang(){
+
+    }
+    public NhaHang(String tenNhaHang, String diaChi, String urlHinhAnh) {
         this.tenNhaHang = tenNhaHang;
         this.diaChi = diaChi;
-        this.khuyenMai = khuyenMai;
         this.urlHinhAnh = urlHinhAnh;
+    }
+
+    public NhaHang(String tenNhaHang, String diaChi, String urlHinhAnh, String gioMoCua, String gioDongCua, String SDT,
+                   int luotXem, int soDiem, String maKhuVuc, String id, String createDate, String createdBy,
+                   boolean active, String updateBy) {
+        this.tenNhaHang = tenNhaHang;
+        this.diaChi = diaChi;
+        this.urlHinhAnh = urlHinhAnh;
+        this.gioMoCua = gioMoCua;
+        this.gioDongCua = gioDongCua;
+        this.SDT = SDT;
+        this.luotXem = luotXem;
+        this.soDiem = soDiem;
+        this.maKhuVuc = maKhuVuc;
+        this.id = id;
+        this.createDate = createDate;
+        this.createdBy = createdBy;
+        this.active = active;
+        this.updateBy = updateBy;
     }
 
     public String getTenNhaHang() {
@@ -33,19 +67,67 @@ public class NhaHang {
         this.diaChi = diaChi;
     }
 
-    public int getKhuyenMai() {
-        return khuyenMai;
-    }
-
-    public void setKhuyenMai(int khuyenMai) {
-        this.khuyenMai = khuyenMai;
-    }
-
     public String getUrlHinhAnh() {
         return urlHinhAnh;
     }
 
     public void setUrlHinhAnh(String urlHinhAnh) {
         this.urlHinhAnh = urlHinhAnh;
+    }
+
+    public String getGioMoCua() {
+        return gioMoCua;
+    }
+
+    public void setGioMoCua(String gioMoCua) {
+        this.gioMoCua = gioMoCua;
+    }
+
+    public String getGioDongCua() {
+        return gioDongCua;
+    }
+
+    public void setGioDongCua(String gioDongCua) {
+        this.gioDongCua = gioDongCua;
+    }
+
+    public String getSDT() {
+        return SDT;
+    }
+
+    public void setSDT(String SDT) {
+        this.SDT = SDT;
+    }
+
+    public int getLuotXem() {
+        return luotXem;
+    }
+
+    public void setLuotXem(int luotXem) {
+        this.luotXem = luotXem;
+    }
+
+    public int getSoDiem() {
+        return soDiem;
+    }
+
+    public void setSoDiem(int soDiem) {
+        this.soDiem = soDiem;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
     }
 }

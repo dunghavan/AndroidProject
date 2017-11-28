@@ -1,14 +1,23 @@
 package com.example.dung.demo_recyclerview;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.dung.demo_recyclerview.model.MonAn;
 import com.example.dung.demo_recyclerview.recycler_adapter.MonAnRecyclerAdapter;
 import com.example.dung.demo_recyclerview.recycler_adapter.RecyclerAdapter_For_CartActivity;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import org.json.JSONArray;
 
 import java.text.DecimalFormat;
 
@@ -24,6 +33,9 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
     TextView tv_tenKhachHang;
     TextView tv_soLuongMon;
     TextView tv_tongTien;
+
+    Button back_btn, next_btn;
+
     final DecimalFormat decimalFormat = new DecimalFormat("###,###,###.#");
 
     @Override
@@ -49,6 +61,23 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
         recyclerView.setAdapter(adapter);
         adapter.setOnUpdateListner(this);
 
+
+        back_btn = (Button)findViewById(R.id.back_btn_in_cart);
+        next_btn = (Button)findViewById(R.id.next_btn_in_cart);
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
+        next_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new ReadApiTask().execute();
+            }
+        });
+
     }
 
     public void onUpdateUI(){
@@ -62,5 +91,34 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
         super.onResume();
         MyApplication.setCurrentContext(this);
         onUpdateUI();
+    }
+
+    private class ReadApiTask extends AsyncTask<String, Integer, String> {
+        protected String doInBackground(String... urls) {
+            Log.d("AsyncTask", "sendPost() to submitCart");
+            try{
+                String jsonString = MyHttpURLConnection.sendPost();
+                return  jsonString;
+            }
+            catch (Exception e){
+                Log.d("Error while read api: ", e.getMessage());
+            }
+            return "";
+        }
+
+        protected void onProgressUpdate(Integer... progress) {
+
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            Log.d("Call method", "onPostExecute of submitCart");
+            try{
+                Log.d("Result of submitCart: ", result);
+            }
+            catch (Exception e){
+                Log.d("Error after submitCar: ", e.getMessage());
+            }
+        }
     }
 }

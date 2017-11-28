@@ -48,7 +48,7 @@ public class NhaHangRecyclerAdapter extends RecyclerView.Adapter <NhaHangRecycle
     public void onBindViewHolder(RecyclerViewHolder_NhaHang viewHolder, int position){
         viewHolder.textView_TenNhaHang.setText(listData.get(position).getTenNhaHang());
         viewHolder.textView_DiaChi.setText(listData.get(position).getDiaChi());
-        viewHolder.textView_KhuyenMai.setText(listData.get(position).getKhuyenMai() + "% Off");
+        //viewHolder.textView_KhuyenMai.setText(listData.get(position).getKhuyenMai() + "% Off");
 
         String url = listData.get(position).getUrlHinhAnh();
         Picasso.with(MainActivity.getMainActivityContext())
