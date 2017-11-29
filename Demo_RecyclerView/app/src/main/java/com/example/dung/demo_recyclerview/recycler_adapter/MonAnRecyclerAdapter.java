@@ -46,6 +46,7 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
     private List<MonAn> listData = new ArrayList<>();
     Context context;
     private NhaHang nhaHang_from_json;
+    private String tenNhaHang;
     final DecimalFormat decimalFormat = new DecimalFormat("###,###,###.#");
 
 
@@ -70,15 +71,11 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
     }
 
     @Override
-    public void onBindViewHolder(RecyclerViewHolder_MonAn viewHolder, int position) {
+    public void onBindViewHolder(final RecyclerViewHolder_MonAn viewHolder, int position) {
         MonAn monAnSelected = listData.get(position);
         viewHolder.textView_TenMonAn.setText(monAnSelected.getTenMonAn());
         viewHolder.textView_Gia.setText(String.format("%s", decimalFormat.format(monAnSelected.getDonGia())) + "đ");
 
-        String api = "http://orderfooduit.azurewebsites.net/api/NhaHang/GetID/";
-        new ReadApiTask().execute(api + monAnSelected.getMaNhaHang());
-        if(nhaHang_from_json != null)
-            viewHolder.tv_tenNhaHang.setText(nhaHang_from_json.getTenNhaHang());
 
         String itemIdSelected = monAnSelected.getId();
         String count = String.valueOf(Cart.getItemCountById(itemIdSelected));
@@ -94,6 +91,44 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                     .fit()
                     .into(viewHolder.imageView);
         }
+
+        class ReadApiTask extends AsyncTask<String, Integer, String> {
+            protected String doInBackground(String... urls) {
+                Log.d("API get NhaHang", "doInBackground");
+                try{
+                    String jsonString = MyHttpURLConnection.sendGet(urls[0]);
+                    return  jsonString;
+                }
+                catch (Exception e){
+                    Log.d("Error while read api: ", e.getMessage());
+                }
+                return "";
+            }
+
+            protected void onProgressUpdate(Integer... progress) {
+
+            }
+
+            @Override
+            protected void onPostExecute(String result) {
+                Log.d("API get NhaHang", "onPostExecute");
+                try{
+                    //JSONObject jsonObject = new JSONObject(result);
+                    ObjectMapper objectMapper = new ObjectMapper();
+                    nhaHang_from_json = objectMapper.readValue(result, NhaHang.class);
+                    if(nhaHang_from_json != null){
+                        viewHolder.tv_tenNhaHang.setText(nhaHang_from_json.getTenNhaHang());
+                        tenNhaHang = nhaHang_from_json.getTenNhaHang();
+                    }
+                }
+                catch (Exception e){
+                    Log.d("Error parse Json: ", e.getMessage());
+                }
+            }
+        }
+        //Read API to binding name of NhaHang
+        String api = "http://orderfooduit.azurewebsites.net/api/NhaHang/GetID/";
+        new ReadApiTask().execute(api + monAnSelected.getMaNhaHang());
     }
 
 //    public void removeItem(String itemId){
@@ -170,6 +205,9 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                     Double tongTien = Cart.getItemCountById(monAn.getId()) * monAn.getGiaKhuyenMai();
                     textViewTongTien.setText(String.valueOf(decimalFormat.format(tongTien)) + " đ");
 
+                    //Ten nha hang:
+                    TextView tenNH = (TextView)alertDialogView.findViewById(R.id.textview_tennhahang_in_dialog);
+                    tenNH.setText(tenNhaHang);
                     // Hinh anh:
                     ImageView hinhAnh = (ImageView)alertDialogView.findViewById(R.id.imageview_monan_in_dialog);
                     String imageUrl = monAn.getHinhAnh();
@@ -302,36 +340,6 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
             if(maNhaHang_in_cart.equalsIgnoreCase(maNhaHang))
                 return false; //exist
             return true; //not exist
-        }
-    }
-    private class ReadApiTask extends AsyncTask<String, Integer, String> {
-        protected String doInBackground(String... urls) {
-            Log.d("API get NhaHang", "doInBackground");
-            try{
-                String jsonString = MyHttpURLConnection.sendGet(urls[0]);
-                return  jsonString;
-            }
-            catch (Exception e){
-                Log.d("Error while read api: ", e.getMessage());
-            }
-            return "";
-        }
-
-        protected void onProgressUpdate(Integer... progress) {
-
-        }
-
-        @Override
-        protected void onPostExecute(String result) {
-            Log.d("API get NhaHang", "onPostExecute");
-            try{
-                //JSONObject jsonObject = new JSONObject(result);
-                ObjectMapper objectMapper = new ObjectMapper();
-                nhaHang_from_json = objectMapper.readValue(result, NhaHang.class);
-            }
-            catch (Exception e){
-                Log.d("Error parse Json: ", e.getMessage());
-            }
         }
     }
 }
