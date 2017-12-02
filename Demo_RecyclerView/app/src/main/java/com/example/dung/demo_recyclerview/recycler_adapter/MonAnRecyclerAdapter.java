@@ -26,6 +26,8 @@ import com.example.dung.demo_recyclerview.MyHttpURLConnection;
 import com.example.dung.demo_recyclerview.R;
 import com.example.dung.demo_recyclerview.model.MonAn;
 import com.example.dung.demo_recyclerview.model.NhaHang;
+import com.example.dung.demo_recyclerview.retrofit.APIService;
+import com.example.dung.demo_recyclerview.retrofit.ApiUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.squareup.picasso.Picasso;
 
@@ -37,6 +39,10 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * Created by Dung on 9/17/2017.
@@ -83,7 +89,6 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
 
         String url = monAnSelected.getHinhAnh();
         if (url != null && !url.isEmpty()) {
-            Log.d("Url make crash", url);
             Picasso.with(MainActivity.getMainActivityContext())
                     .load(url)
                     .placeholder(R.drawable.loading)
@@ -92,52 +97,56 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                     .into(viewHolder.imageView);
         }
 
-        class ReadApiTask extends AsyncTask<String, Integer, String> {
-            protected String doInBackground(String... urls) {
-                Log.d("API get NhaHang", "doInBackground");
-                try{
-                    String jsonString = MyHttpURLConnection.sendGet(urls[0]);
-                    return  jsonString;
-                }
-                catch (Exception e){
-                    Log.d("Error while read api: ", e.getMessage());
-                }
-                return "";
-            }
-
-            protected void onProgressUpdate(Integer... progress) {
-
-            }
-
+        APIService apiService = ApiUtils.getAPIService();
+        apiService.getTenNhaHang(monAnSelected.getMaNhaHang()).enqueue(new Callback<NhaHang>() {
             @Override
-            protected void onPostExecute(String result) {
-                Log.d("API get NhaHang", "onPostExecute");
-                try{
-                    //JSONObject jsonObject = new JSONObject(result);
-                    ObjectMapper objectMapper = new ObjectMapper();
-                    nhaHang_from_json = objectMapper.readValue(result, NhaHang.class);
-                    if(nhaHang_from_json != null){
-                        viewHolder.tv_tenNhaHang.setText(nhaHang_from_json.getTenNhaHang());
-                        tenNhaHang = nhaHang_from_json.getTenNhaHang();
-                    }
-                }
-                catch (Exception e){
-                    Log.d("Error parse Json: ", e.getMessage());
-                }
+            public void onResponse(Call<NhaHang> call, Response<NhaHang> response) {
+                    if(response.body() != null)
+                        viewHolder.tv_tenNhaHang.setText(response.body().getTenNhaHang());
             }
-        }
-        //Read API to binding name of NhaHang
-        String api = "http://orderfooduit.azurewebsites.net/api/NhaHang/GetID/";
-        new ReadApiTask().execute(api + monAnSelected.getMaNhaHang());
-    }
-
-//    public void removeItem(String itemId){
-//        Cart.removeFromCart(itemId);
-//    }
+            @Override
+            public void onFailure (Call<NhaHang> call, Throwable t){
+                Log.d("Get tenNhaHang", "Failure");
+            }
+        });
+//        class ReadApiTask extends AsyncTask<String, Integer, String> {
+//            protected String doInBackground(String... urls) {
+//                Log.d("API get NhaHang", "doInBackground");
+//                try{
+//                    String jsonString = MyHttpURLConnection.sendGet(urls[0]);
+//                    return  jsonString;
+//                }
+//                catch (Exception e){
+//                    Log.d("Error while read api: ", e.getMessage());
+//                }
+//                return "";
+//            }
 //
-//    public void addItem(MonAn item){
-//        Cart.addToCart(item);
-//    }
+//            protected void onProgressUpdate(Integer... progress) {
+//
+//            }
+//
+//            @Override
+//            protected void onPostExecute(String result) {
+//                Log.d("API get NhaHang", "onPostExecute");
+//                try{
+//                    //JSONObject jsonObject = new JSONObject(result);
+//                    ObjectMapper objectMapper = new ObjectMapper();
+//                    nhaHang_from_json = objectMapper.readValue(result, NhaHang.class);
+//                    if(nhaHang_from_json != null){
+//                        viewHolder.tv_tenNhaHang.setText(nhaHang_from_json.getTenNhaHang());
+//                        tenNhaHang = nhaHang_from_json.getTenNhaHang();
+//                    }
+//                }
+//                catch (Exception e){
+//                    Log.d("Error parse Json: ", e.getMessage());
+//                }
+//            }
+//        }
+        //Read API to binding name of NhaHang
+//        String api = "http://orderfooduit.azurewebsites.net/api/NhaHang/GetID/";
+//        new ReadApiTask().execute(api + monAnSelected.getMaNhaHang());
+    }
 
 
     public class RecyclerViewHolder_MonAn extends RecyclerView.ViewHolder implements OnClickListener{

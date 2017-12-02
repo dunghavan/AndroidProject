@@ -101,8 +101,8 @@ public class MainActivity extends AppCompatActivity{
             }
         });
 
-        bottomNavigation.getMenu().findItem(R.id.action_food).setChecked(true);
-        bottomNavigation.setSelectedItemId(R.id.action_food);
+        bottomNavigation.getMenu().findItem(R.id.action_home).setChecked(true);
+        bottomNavigation.setSelectedItemId(R.id.action_home);
 
     }
     @Override
@@ -149,15 +149,24 @@ public class MainActivity extends AppCompatActivity{
             public boolean onQueryTextSubmit(String query) {
                 transaction = fragmentManager.beginTransaction();
                 if(currentTab == MyConstant.TAB_MONAN){
+                    Bundle param = new Bundle();
+                    param.putString("MONAN_KEYWORD", query);
                     fragment = new Fragment_MonAn_FindResult();
+                    fragment.setArguments(param);
                     transaction.replace(R.id.frame_layout_in_main_activity, fragment).commit();
 
+                    searchView.clearFocus();
                 }
-//                if(currentTab == MyConstant.TAB_NHAHANG){
-//                    fragment = new Fragment_NhaHang_FindResult();
-//                    transaction.replace(R.id.frame_layout_in_main_activity, fragment).commit();
-//
-//                }
+
+                if(currentTab == MyConstant.TAB_NHAHANG){
+                    Bundle param = new Bundle();
+                    param.putString("NHAHANG_KEYWORD", query);
+                    fragment = new Fragment_NhaHang_FindResult();
+                    fragment.setArguments(param);
+                    transaction.replace(R.id.frame_layout_in_main_activity, fragment).commit();
+
+                    searchView.clearFocus();
+                }
                 return true;
             }
 
@@ -182,11 +191,11 @@ public class MainActivity extends AppCompatActivity{
                     fragment = new Fragment_MonAn_6_Tabs();
                     transaction.replace(R.id.frame_layout_in_main_activity, fragment).commit();
                 }
-//                if(currentTab == MyConstant.TAB_NHAHANG){
-//                    transaction = fragmentManager.beginTransaction();
-//                    fragment = new Fragment_NhaHang();
-//                    transaction.replace(R.id.frame_layout_in_main_activity, fragment).commit();
-//                }
+                if(currentTab == MyConstant.TAB_NHAHANG){
+                    transaction = fragmentManager.beginTransaction();
+                    fragment = new Fragment_NhaHang();
+                    transaction.replace(R.id.frame_layout_in_main_activity, fragment).commit();
+                }
 
                 return true;
             }

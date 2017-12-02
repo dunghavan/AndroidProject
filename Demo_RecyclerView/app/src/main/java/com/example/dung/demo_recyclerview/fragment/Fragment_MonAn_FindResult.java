@@ -16,13 +16,20 @@ import com.example.dung.demo_recyclerview.MainActivity;
 import com.example.dung.demo_recyclerview.MyHttpURLConnection;
 import com.example.dung.demo_recyclerview.R;
 import com.example.dung.demo_recyclerview.model.MonAn;
+import com.example.dung.demo_recyclerview.model.NhaHang;
 import com.example.dung.demo_recyclerview.recycler_adapter.MonAnRecyclerAdapter;
+import com.example.dung.demo_recyclerview.retrofit.APIService;
+import com.example.dung.demo_recyclerview.retrofit.ApiUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.json.JSONArray;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * Created by Dung on 11/13/2017.
@@ -34,6 +41,8 @@ public class Fragment_MonAn_FindResult extends Fragment {
     MonAnRecyclerAdapter monAnRecyclerAdapter;
     RecyclerView.LayoutManager layoutManager;
     List<MonAn> searchResultData;
+    String keywordMonAn = "";
+    APIService apiService;
 
     Context context;
     public Fragment_MonAn_FindResult(){
@@ -57,6 +66,7 @@ public class Fragment_MonAn_FindResult extends Fragment {
         layoutManager = new LinearLayoutManager(context);
         recyclerView.setLayoutManager(layoutManager);
         //
+        keywordMonAn += this.getArguments().getString("MONAN_KEYWORD");
         searchResultData = new ArrayList<>();
         initialData();
 
@@ -81,8 +91,29 @@ public class Fragment_MonAn_FindResult extends Fragment {
 
     //Load du lieu theo loai da chon:
     private void initialData(){
-        String api = "http://orderfooduit.azurewebsites.net/api/MonAn/Get";
-        new DownloadFilesTask().execute(api);
+        //String api = "http://orderfooduit.azurewebsites.net/api/MonAn/Get";
+        apiService = ApiUtils.getAPIService();
+        apiService.searchMonAn(keywordMonAn).enqueue(new Callback<List<MonAn>>() {
+            @Override
+            public void onResponse(Call<List<MonAn>> call, Response<List<MonAn>> response) {
+                try{
+                    searchResultData = response.body();
+                    Log.d("Data length: ", String.valueOf(searchResultData.size()));
+                    monAnRecyclerAdapter = new MonAnRecyclerAdapter(searchResultData);
+                    recyclerView.setAdapter(monAnRecyclerAdapter);
+                    setRetainInstance(false);
+                }
+                catch (Exception e){
+                    Log.d("Error search MonAn", e.getMessage());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<MonAn>> call, Throwable t) {
+
+            }
+        });
+        //new DownloadFilesTask().execute(api);
 
     }
 

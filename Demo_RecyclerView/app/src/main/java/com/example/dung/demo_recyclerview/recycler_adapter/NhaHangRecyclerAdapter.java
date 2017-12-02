@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.example.dung.demo_recyclerview.Activity_MonAn_Of_NhaHang;
 import com.example.dung.demo_recyclerview.MainActivity;
+import com.example.dung.demo_recyclerview.MyApplication;
 import com.example.dung.demo_recyclerview.R;
 import com.example.dung.demo_recyclerview.model.NhaHang;
 import com.squareup.picasso.Picasso;
@@ -51,9 +52,16 @@ public class NhaHangRecyclerAdapter extends RecyclerView.Adapter <NhaHangRecycle
         //viewHolder.textView_KhuyenMai.setText(listData.get(position).getKhuyenMai() + "% Off");
 
         String url = listData.get(position).getUrlHinhAnh();
-        Picasso.with(MainActivity.getMainActivityContext())
-                .load(url)
-                .into(viewHolder.imageView_HinhAnh);
+        if (url != null && !url.isEmpty()){
+            Picasso.with(MyApplication.getCurrentContext())
+                    .load(url)
+                    .placeholder(R.drawable.loading)
+                    .error(R.drawable.failed_load_food)
+                    .fit()
+                    .into(viewHolder.imageView_HinhAnh);
+
+        }
+
     }
     //Class View Holder ket noi voi file giao dien:
     class RecyclerViewHolder_NhaHang extends RecyclerView.ViewHolder implements View.OnClickListener{

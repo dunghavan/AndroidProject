@@ -20,12 +20,18 @@ import com.example.dung.demo_recyclerview.model.MonAn;
 import com.example.dung.demo_recyclerview.model.NhaHang;
 import com.example.dung.demo_recyclerview.recycler_adapter.MonAnRecyclerAdapter;
 import com.example.dung.demo_recyclerview.recycler_adapter.NhaHangRecyclerAdapter;
+import com.example.dung.demo_recyclerview.retrofit.APIService;
+import com.example.dung.demo_recyclerview.retrofit.ApiUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.json.JSONArray;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * Created by Dung on 11/13/2017.
@@ -36,6 +42,8 @@ public class Fragment_NhaHang_FindResult extends Fragment {
     NhaHangRecyclerAdapter adapter;
     RecyclerView.LayoutManager layoutManager;
     List<NhaHang> searchResultData;
+    APIService apiService;
+    String nhahangKeyword = "";
 
     Context context;
     public Fragment_NhaHang_FindResult(){
@@ -59,6 +67,8 @@ public class Fragment_NhaHang_FindResult extends Fragment {
         layoutManager = new LinearLayoutManager(context);
         recyclerView.setLayoutManager(layoutManager);
         //
+        nhahangKeyword += getArguments().getString("NHAHANG_KEYWORD");
+
         searchResultData = new ArrayList<>();
         initialData();
 
@@ -83,8 +93,29 @@ public class Fragment_NhaHang_FindResult extends Fragment {
 
     //Load du lieu theo loai da chon:
     private void initialData(){
-        String api = "http://orderfooduit.azurewebsites.net/api/MonAn/Get";
-        new DownloadFilesTask().execute(api);
+//        String api = "http://orderfooduit.azurewebsites.net/api/MonAn/Get";
+//        new DownloadFilesTask().execute(api);
+        apiService = ApiUtils.getAPIService();
+        apiService.searchNhaHang(nhahangKeyword).enqueue(new Callback<List<NhaHang>>() {
+            @Override
+            public void onResponse(Call<List<NhaHang>> call, Response<List<NhaHang>> response) {
+                try{
+                    searchResultData = response.body();
+                    Log.d("Data length: ", String.valueOf(searchResultData.size()));
+                    adapter = new NhaHangRecyclerAdapter(searchResultData, (MainActivity)MyApplication.getCurrentContext());
+                    recyclerView.setAdapter(adapter);
+                    setRetainInstance(false);
+                }
+                catch (Exception e){
+                    Log.d("Error search NhaHang", e.getMessage());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<NhaHang>> call, Throwable t) {
+
+            }
+        });
 
     }
 
