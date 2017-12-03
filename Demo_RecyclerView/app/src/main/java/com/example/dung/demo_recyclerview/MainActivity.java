@@ -101,8 +101,8 @@ public class MainActivity extends AppCompatActivity{
             }
         });
 
-        bottomNavigation.getMenu().findItem(R.id.action_home).setChecked(true);
-        bottomNavigation.setSelectedItemId(R.id.action_home);
+        bottomNavigation.getMenu().findItem(R.id.action_food).setChecked(true);
+        bottomNavigation.setSelectedItemId(R.id.action_food);
 
     }
     @Override

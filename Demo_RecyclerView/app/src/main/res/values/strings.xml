@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Demo_RecyclerView</string>
+    <!--<string name="app_name">FacebookLoginExample</string>-->
+    <string name="facebook_app_id">511737779200458</string>
 
     <string name="com">Cơm</string>
     <string name="bun_pho">Bún phở</string>

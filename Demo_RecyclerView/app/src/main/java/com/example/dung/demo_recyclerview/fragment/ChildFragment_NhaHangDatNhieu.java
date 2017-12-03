@@ -66,11 +66,13 @@ public class ChildFragment_NhaHangDatNhieu extends Fragment {
             public void onResponse(Call<List<NhaHang>> call, Response<List<NhaHang>> response) {
                 try{
                     listNhaHang = response.body();
+                    Log.d("response.body()", response.body().get(0).getHinhAnh());
                     nhaHangRecyclerAdapter = new NhaHangRecyclerAdapter(listNhaHang, (MainActivity)context);
                     recyclerView.setAdapter(nhaHangRecyclerAdapter);
                 }
                 catch (Exception e){
-                    Log.d("Error get all NhaHang", e.getMessage());
+                    if(e.getMessage() != null)
+                        Log.d("Error get all NhaHang", e.getMessage());
                 }
             }
 

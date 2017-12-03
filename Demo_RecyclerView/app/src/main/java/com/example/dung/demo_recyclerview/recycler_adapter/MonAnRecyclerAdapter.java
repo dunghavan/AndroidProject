@@ -97,18 +97,18 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                     .into(viewHolder.imageView);
         }
 
-        APIService apiService = ApiUtils.getAPIService();
-        apiService.getTenNhaHang(monAnSelected.getMaNhaHang()).enqueue(new Callback<NhaHang>() {
-            @Override
-            public void onResponse(Call<NhaHang> call, Response<NhaHang> response) {
-                    if(response.body() != null)
-                        viewHolder.tv_tenNhaHang.setText(response.body().getTenNhaHang());
-            }
-            @Override
-            public void onFailure (Call<NhaHang> call, Throwable t){
-                Log.d("Get tenNhaHang", "Failure");
-            }
-        });
+//        APIService apiService = ApiUtils.getAPIService();
+//        apiService.getTenNhaHang(monAnSelected.getMaNhaHang()).enqueue(new Callback<NhaHang>() {
+//            @Override
+//            public void onResponse(Call<NhaHang> call, Response<NhaHang> response) {
+//                    if(response.body() != null)
+//                        viewHolder.tv_tenNhaHang.setText(response.body().getTenNhaHang());
+//            }
+//            @Override
+//            public void onFailure (Call<NhaHang> call, Throwable t){
+//                Log.d("Get tenNhaHang", "Failure");
+//            }
+//        });
 //        class ReadApiTask extends AsyncTask<String, Integer, String> {
 //            protected String doInBackground(String... urls) {
 //                Log.d("API get NhaHang", "doInBackground");
@@ -268,7 +268,7 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                         public void onClick(View v) {
                             //Check
                             if(Cart.getCartContent().size() != 0 && maNhaHangNotExist(maNhaHang))
-                                Toast.makeText(MyApplication.getCurrentContext(), "Ban phai chon cac mon an cung 1 nha hang!", Toast.LENGTH_LONG).show();
+                                Toast.makeText(MyApplication.getCurrentContext(), "Bạn phải chọn các món ăn trong cùng một nhà hàng!", Toast.LENGTH_SHORT).show();
                             else {
                                 String itemIdSelected = monAn.getId();
                                 Cart.addToCart(monAn);
@@ -293,7 +293,6 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                                 public void onClick(DialogInterface dialog, int which) {
                                     //get date here...
                                     textView_SoLuongDat.setText(String.valueOf(Cart.getItemCountById(monAn.getId())));
-                                    Toast.makeText(MyApplication.getCurrentContext(), "Đã thêm vào giỏ" + getAdapterPosition(), Toast.LENGTH_SHORT).show();
                                 }
                             });
                     //Create a dialog:
@@ -309,7 +308,7 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                     String maNhaHang = itemSelected.getMaNhaHang();
                     //Check
                     if(Cart.getCartContent().size() != 0 && maNhaHangNotExist(maNhaHang))
-                        Toast.makeText(MyApplication.getCurrentContext(), "Ban phai chon cac mon an cung 1 nha hang!", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MyApplication.getCurrentContext(), "Bạn phải chọn các món ăn trong cùng một nhà hàng!", Toast.LENGTH_SHORT).show();
                     else {
                         Cart.addToCart(itemSelected);
                         String count = String.valueOf(Cart.getItemCountById(itemSelected.getId()));

@@ -10,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class NhaHang {
     String tenNhaHang;
     String diaChi;
-    String urlHinhAnh;
+    String hinhAnh;
     String gioMoCua;
     String gioDongCua;
     String SDT;
@@ -29,7 +29,7 @@ public class NhaHang {
     public NhaHang(String tenNhaHang, String diaChi, String urlHinhAnh) {
         this.tenNhaHang = tenNhaHang;
         this.diaChi = diaChi;
-        this.urlHinhAnh = urlHinhAnh;
+        this.hinhAnh = urlHinhAnh;
     }
 
     public NhaHang(String tenNhaHang, String diaChi, String urlHinhAnh, String gioMoCua, String gioDongCua, String SDT,
@@ -37,7 +37,7 @@ public class NhaHang {
                    boolean active, String updateBy) {
         this.tenNhaHang = tenNhaHang;
         this.diaChi = diaChi;
-        this.urlHinhAnh = urlHinhAnh;
+        this.hinhAnh = urlHinhAnh;
         this.gioMoCua = gioMoCua;
         this.gioDongCua = gioDongCua;
         this.SDT = SDT;
@@ -67,12 +67,12 @@ public class NhaHang {
         this.diaChi = diaChi;
     }
 
-    public String getUrlHinhAnh() {
-        return urlHinhAnh;
+    public String getHinhAnh() {
+        return hinhAnh;
     }
 
-    public void setUrlHinhAnh(String urlHinhAnh) {
-        this.urlHinhAnh = urlHinhAnh;
+    public void setHinhAnh(String urlHinhAnh) {
+        this.hinhAnh = urlHinhAnh;
     }
 
     public String getGioMoCua() {
@@ -129,5 +129,12 @@ public class NhaHang {
 
     public void setActive(boolean active) {
         this.active = active;
+    }
+
+    @Override
+    public String toString() {
+        return "Tên: " + getTenNhaHang()
+                + "Địa chỉ: " + getDiaChi()
+                + "Url hình ảnh: " + hinhAnh;
     }
 }

@@ -1,5 +1,6 @@
 package com.example.dung.demo_recyclerview;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -34,7 +35,8 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
     TextView tv_soLuongMon;
     TextView tv_tongTien;
 
-    Button back_btn, next_btn;
+    Button back_btn, next_btn, login_btn;
+    CartActivity activity;
 
     final DecimalFormat decimalFormat = new DecimalFormat("###,###,###.#");
 
@@ -43,6 +45,7 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
         super.onCreate(savedInstanceState);
         getSupportActionBar().setTitle("Giỏ hàng của bạn");
         setContentView(R.layout.activity_cart);
+        activity = this;
 
         recyclerView = (RecyclerView)findViewById(R.id.recyclerview_in_cart_activity);
         recyclerView.setHasFixedSize(true);
@@ -50,8 +53,6 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
         tv_tenKhachHang = (TextView)findViewById(R.id.textview_username_in_cart_activity);
         tv_soLuongMon = (TextView)findViewById(R.id.textview_soluongmon_in_cart_activity);
         tv_tongTien = (TextView)findViewById(R.id.textview_tongtien_in_cart_activity);
-
-        onUpdateUI();
 
         //Setting the LayoutManager:
         layoutManager = new LinearLayoutManager(this);
@@ -61,9 +62,9 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
         recyclerView.setAdapter(adapter);
         adapter.setOnUpdateListner(this);
 
-
         back_btn = (Button)findViewById(R.id.back_btn_in_cart);
         next_btn = (Button)findViewById(R.id.next_btn_in_cart);
+        login_btn = (Button)findViewById(R.id.login_btn_in_cart);
         back_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -78,10 +79,27 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
             }
         });
 
+        login_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(activity, LoginActivity.class);
+                activity.startActivity(intent);
+            }
+        });
+
     }
 
     public void onUpdateUI(){
-        tv_tenKhachHang.setText("Khách hàng: " + "dunghavan@gmail.com");
+
+        if(!LoginActivity.isAuthenticated()){
+            login_btn.setVisibility(View.VISIBLE);
+            next_btn.setVisibility(View.GONE);
+        }
+        else { // Logged in
+            login_btn.setVisibility(View.GONE);
+            next_btn.setVisibility(View.VISIBLE);
+        }
+        tv_tenKhachHang.setText("Khách hàng: " + LoginActivity.getNAME());
         tv_soLuongMon.setText("Số lượng món: " + String.valueOf(Cart.getAllItemCount()));
         tv_tongTien.setText("Tổng tiền: " + String.valueOf(decimalFormat.format(Cart.getTotal())) + " đ");
     }
