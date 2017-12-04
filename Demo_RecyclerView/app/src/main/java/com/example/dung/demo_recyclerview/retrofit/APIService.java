@@ -25,7 +25,7 @@ public interface APIService {
                          @Field("userId") long userId);
 
     @GET("/api/NhaHang/GetID/{Id}")
-    Call<NhaHang> getTenNhaHang(@Path("Id") String id);
+    Call<NhaHang> getNhaHangById(@Path("Id") String id);
 
     @GET("/api/MonAn/GetByTimKiem/{Key}")
     Call<List<MonAn>> searchMonAn(@Path("Key") String keyword);

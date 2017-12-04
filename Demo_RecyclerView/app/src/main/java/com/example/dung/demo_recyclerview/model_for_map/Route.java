@@ -47,6 +47,13 @@ public class Route {
     static String TRANSPORT_BIKE = "bicycling";
     static String TRANSPORT_TRANSIT = "transit";
 
+    public interface onUpdateListener{
+        void onUpdateMapUI(String distance, String duration);
+    }
+    private onUpdateListener listener;
+    public void setOnUpdateUIListener(onUpdateListener _listener){
+        listener = _listener;
+    }
 
     public boolean drawRoute(GoogleMap map, Context c, ArrayList<LatLng> points, boolean withIndications, String language, boolean optimize)
     {
@@ -306,13 +313,18 @@ public class Route {
                         .width(6)
                         .color(Color.BLUE).geodesic(true));
             }
-            // Get Distance
+            // @dung: Get Distance
             JSONArray mArrayLegs = routes.getJSONArray("legs");
             JSONObject mLegs = mArrayLegs.getJSONObject(0);
             ObjectMapper objectMaper = new ObjectMapper();
             Legs leg = objectMaper.readValue(mLegs.toString(), Legs.class);
-            Log.d("Distance", leg.getDistance().getText());
-            Log.d("Duration", leg.getDuration().getText());
+            String distance = leg.getDistance().getText();
+            String duration = leg.getDuration().getText();
+            Log.d("Distance", distance);
+            Log.d("Duration", duration);
+            // UpdateUI in MapActivity:
+            if(listener != null)
+                listener.onUpdateMapUI(distance, duration);
             // Zoom Camera
             mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(10.862561, 106.780504), 13.0f));
 
@@ -343,7 +355,6 @@ public class Route {
             Log.d("Error IOException", e.getMessage());
         }
     }
-
 
     /**
      * Class that represent every step of the directions. It store distance, location and instructions

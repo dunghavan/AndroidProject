@@ -2,8 +2,13 @@ package com.example.dung.demo_recyclerview;
 
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.TextView;
 
+import com.example.dung.demo_recyclerview.model.NhaHang;
 import com.example.dung.demo_recyclerview.model_for_map.Route;
+import com.example.dung.demo_recyclerview.retrofit.APIService;
+import com.example.dung.demo_recyclerview.retrofit.ApiUtils;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -11,10 +16,19 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MapActivity extends FragmentActivity implements OnMapReadyCallback {
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
+public class MapActivity extends FragmentActivity implements OnMapReadyCallback, Route.onUpdateListener {
+
+    //private Route route; // Used for send to interface of CartActivity
     private GoogleMap mMap;
     Route route;
+    private NhaHang nhaHang;
+    APIService apiService;
+    // UI
+    TextView tv_diaChiCuaHang, tv_diaChiCuaBan, tv_khoangCach, tv_thoiGian;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +38,39 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.fragment_map);
         mapFragment.getMapAsync(this);
+
+        tv_diaChiCuaHang = (TextView)findViewById(R.id.tv_from);
+        tv_diaChiCuaBan = (TextView)findViewById(R.id.tv_to);
+        tv_khoangCach = (TextView)findViewById(R.id.tv_distance);
+        tv_thoiGian = (TextView)findViewById(R.id.tv_duration);
+
+
+        String maNhaHang = Cart.getCartContent().get(0).getMaNhaHang();
+        apiService = ApiUtils.getAPIService();
+        apiService.getNhaHangById(maNhaHang).enqueue(new Callback<NhaHang>() {
+            @Override
+            public void onResponse(Call<NhaHang> call, Response<NhaHang> response) {
+                try{
+                    nhaHang = response.body();
+                    tv_diaChiCuaHang.setText("From: " + nhaHang.getDiaChi());
+                }
+                catch (Exception e){
+                    tv_diaChiCuaHang.setText("From: null");
+                    Log.d("Error in MapActivity", e.getMessage());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<NhaHang> call, Throwable t) {
+                Log.d("Error in MapActivity", "Failure");
+            }
+        });
     }
 
+    public void onUpdateMapUI(String distance, String duration){
+        tv_khoangCach.setText("Khoảng cách: " + distance);
+        tv_thoiGian.setText("Thời gian: " + duration);
+    }
 
     /**
      * Manipulates the map once available.
@@ -45,8 +90,10 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
 
-        LatLng golf = new LatLng(10.862561, 106.780504);
+        //LatLng golf = new LatLng(10.862561, 106.780504);
+        LatLng golf = new LatLng(10.840808, 106.745635);
         route = new Route();
         route.drawRoute(mMap, this, golf, sydney, Route.LANGUAGE_ENGLISH);
+        route.setOnUpdateUIListener(this);
     }
 }
