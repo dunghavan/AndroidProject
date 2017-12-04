@@ -26,6 +26,14 @@ public class LoginActivity extends AppCompatActivity {
     static LoginActivity activity;
     CallbackManager callbackManager;
     LoginButton fbLoginButton;
+
+    public interface OnUpdateListener{
+        void onUpdateUI();
+    }
+    static OnUpdateListener listener;
+    public void setOnUpdateListener(OnUpdateListener listener){
+        this.listener = listener;
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -81,7 +89,9 @@ public class LoginActivity extends AppCompatActivity {
 
                                 ID = me.optString("id");
                                 NAME = me.optString("name");
-
+                                if(listener != null)
+                                    listener.onUpdateUI();
+                                CartActivity.isCheckAuthen = true;
                                 Toast.makeText(MyApplication.getCurrentContext(), "Name: " + me.optString("name"), Toast.LENGTH_SHORT).show();
                                 Toast.makeText(MyApplication.getCurrentContext(), "ID: " + me.optString("id"), Toast.LENGTH_SHORT).show();
 

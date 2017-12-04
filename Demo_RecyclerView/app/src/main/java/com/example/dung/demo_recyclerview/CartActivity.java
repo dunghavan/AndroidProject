@@ -26,7 +26,8 @@ import java.text.DecimalFormat;
  * Created by Dung on 11/22/2017.
  */
 
-public class CartActivity extends AppCompatActivity implements RecyclerAdapter_For_CartActivity.OnUpdateListener {
+public class CartActivity extends AppCompatActivity implements RecyclerAdapter_For_CartActivity.OnUpdateListener,
+            LoginActivity.OnUpdateListener{
 
     RecyclerView.LayoutManager layoutManager;
     RecyclerView recyclerView;
@@ -36,7 +37,9 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
     TextView tv_tongTien;
 
     Button back_btn, next_btn, login_btn;
-    CartActivity activity;
+    CartActivity cartActivity; // Used to start LoginActivity
+    LoginActivity loginActivity; // Used to setOnUpdateListener in LoginActivity
+    public static boolean isCheckAuthen;
 
     final DecimalFormat decimalFormat = new DecimalFormat("###,###,###.#");
 
@@ -45,7 +48,9 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
         super.onCreate(savedInstanceState);
         getSupportActionBar().setTitle("Giỏ hàng của bạn");
         setContentView(R.layout.activity_cart);
-        activity = this;
+        cartActivity = this; // Used to start LoginActivity
+        loginActivity = new LoginActivity();   // Used to setOnUpdateListener in LoginActivity
+        loginActivity.setOnUpdateListener(this);
 
         recyclerView = (RecyclerView)findViewById(R.id.recyclerview_in_cart_activity);
         recyclerView.setHasFixedSize(true);
@@ -82,32 +87,36 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
         login_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(activity, LoginActivity.class);
-                activity.startActivity(intent);
+                Intent intent = new Intent(cartActivity, LoginActivity.class);
+                cartActivity.startActivity(intent);
             }
         });
 
     }
 
     public void onUpdateUI(){
+        if(!isCheckAuthen)
+        {
+            if(!LoginActivity.isAuthenticated()){
+                login_btn.setVisibility(View.VISIBLE);
+                next_btn.setVisibility(View.GONE);
+            }
+            else { // Logged in
+                login_btn.setVisibility(View.GONE);
+                next_btn.setVisibility(View.VISIBLE);
+            }
+            tv_tenKhachHang.setText("Khách hàng: " + LoginActivity.getNAME());
+            tv_soLuongMon.setText("Số lượng món: " + String.valueOf(Cart.getAllItemCount()));
+            tv_tongTien.setText("Tổng tiền: " + String.valueOf(decimalFormat.format(Cart.getTotal())) + " đ");
+        }
 
-        if(!LoginActivity.isAuthenticated()){
-            login_btn.setVisibility(View.VISIBLE);
-            next_btn.setVisibility(View.GONE);
-        }
-        else { // Logged in
-            login_btn.setVisibility(View.GONE);
-            next_btn.setVisibility(View.VISIBLE);
-        }
-        tv_tenKhachHang.setText("Khách hàng: " + LoginActivity.getNAME());
-        tv_soLuongMon.setText("Số lượng món: " + String.valueOf(Cart.getAllItemCount()));
-        tv_tongTien.setText("Tổng tiền: " + String.valueOf(decimalFormat.format(Cart.getTotal())) + " đ");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         MyApplication.setCurrentContext(this);
+        isCheckAuthen = false;
         onUpdateUI();
     }
 

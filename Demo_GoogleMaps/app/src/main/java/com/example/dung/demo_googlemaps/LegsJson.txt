@@ -1,0 +1,94 @@
+{
+  "distance":
+ {
+   "text":"23.8 km",
+  "value":23792
+ },
+ "duration":
+ {
+   "text":"47 mins",
+   "value":2848
+ },
+  "end_address":"Vietnam",
+  "end_location":
+  {
+    "lat":10.8666834,
+    "lng":106.8030621
+  },
+  "start_address":"Unnamed Road, Vietnam",
+  "start_location":
+  {
+    "lat":10.8325688,
+   "lng":106.649478
+  },
+  "steps":
+  [
+    {"distance":
+     {"text":"58 m",
+      "value":58
+     },
+     "duration":
+     {"text":"1 min",
+      "value":11},
+     "end_location":
+     {"lat":10.8322119,
+      "lng":106.6495534
+     },
+     "html_instructions":"Head <b>southwest<\/b>",
+     "polyline":
+     {"points":"qvbaAg"
+     },
+     "start_location":
+     {"lat":10.8325688,
+      "lng":106.649478
+     },
+     "travel_mode":"DRIVING"
+    },
+    {
+      "distance":
+      {
+        "text":"0.1 km",
+        "value":121
+      },
+      "duration":
+      {
+        "text":"1 min",
+        "value":41
+      },
+      "end_location":
+      {
+        "lat":10.8131425,
+        "lng":106.6700129
+      },
+      "html_instructions":"Continue straight past",
+      "maneuver":"straight",
+      "polyline":
+      {
+        "points":"}c_aAk_ajSxEX"
+      },
+      "start_location":
+      {
+        "lat":10.8142269,
+        "lng":106.6701377
+      },
+      "travel_mode":"DRIVING"
+    },
+    {
+      "distance":
+     {
+       "text":"0.9 km",
+       "value":932
+     },
+      "duration":
+      {
+        "text":"2 mins",
+        "value":135
+      },
+      "end_location":
+      {
+        "lat":10.8140083,
+        "lng":106.6782358
+      }
+    }
+    ]
+}
