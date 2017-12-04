@@ -80,7 +80,8 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
         next_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new ReadApiTask().execute();
+                Intent intent = new Intent(cartActivity, MapActivity.class);
+                cartActivity.startActivity(intent);
             }
         });
 

@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
+    useLibrary 'org.apache.http.legacy' //import HttpClient
     compileSdkVersion 25
     buildToolsVersion "25.0.0"
     defaultConfig {
@@ -47,4 +48,8 @@ dependencies {
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
     //FB login
     compile 'com.facebook.android:facebook-android-sdk:[4,5)'
+    // Maps
+    compile 'com.google.android.gms:play-services-maps:11.0.4'
+    //compile 'com.hamweather:aeris-maps-library:1.1.1@aar'
+
 }
