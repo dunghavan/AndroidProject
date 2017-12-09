@@ -1,9 +1,17 @@
 package com.example.dung.demo_recyclerview;
 
+import android.app.DatePickerDialog;
+import android.app.Dialog;
+import android.app.TimePickerDialog;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.text.format.DateFormat;
 import android.util.Log;
+import android.view.View;
+import android.widget.DatePicker;
 import android.widget.TextView;
+import android.widget.TimePicker;
 
 import com.example.dung.demo_recyclerview.model.NhaHang;
 import com.example.dung.demo_recyclerview.model_for_map.Route;
@@ -15,6 +23,8 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import java.util.Calendar;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -29,6 +39,9 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
     APIService apiService;
     // UI
     TextView tv_diaChiCuaHang, tv_diaChiCuaBan, tv_khoangCach, tv_thoiGian;
+    static TextView tv_date, tv_time;
+    DialogFragment dateFragment;
+    DialogFragment timeFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +57,20 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
         tv_khoangCach = (TextView)findViewById(R.id.tv_distance);
         tv_thoiGian = (TextView)findViewById(R.id.tv_duration);
 
+        tv_date = (TextView)findViewById(R.id.tv_date_in_map);
+        tv_time = (TextView)findViewById(R.id.tv_time_in_map);
 
+        tv_date.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dateFragment = new DatePickerFragment();
+                dateFragment.show(getSupportFragmentManager(), "datePicker");
+            }
+        });
+
+
+
+        //Get thong tin nha hang
         String maNhaHang = Cart.getCartContent().get(0).getMaNhaHang();
         apiService = ApiUtils.getAPIService();
         apiService.getNhaHangById(maNhaHang).enqueue(new Callback<NhaHang>() {
@@ -67,6 +93,45 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
         });
     }
 
+    public static class DatePickerFragment extends DialogFragment implements DatePickerDialog.OnDateSetListener {
+
+        public DatePickerFragment(){}
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+            // Use the current date as the default date in the picker
+            final Calendar c = Calendar.getInstance();
+            int year = c.get(Calendar.YEAR);
+            int month = c.get(Calendar.MONTH);
+            int day = c.get(Calendar.DAY_OF_MONTH);
+
+            // Create a new instance of DatePickerDialog and return it
+            return new DatePickerDialog(getActivity(), this, year, month, day);
+        }
+
+        @Override
+        public void onDateSet(DatePicker view, int year, int month, int day) {
+            tv_date.setText("Ngày: " + day + "/" + month + 1 + "/" + year);
+        }
+    }
+    public static class TimePickerFragment extends DialogFragment implements
+            TimePickerDialog.OnTimeSetListener {
+
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+            // Use the current time as the default values for the picker
+            final Calendar c = Calendar.getInstance();
+            int hour = c.get(Calendar.HOUR_OF_DAY);
+            int minute = c.get(Calendar.MINUTE);
+
+            // Create a new instance of TimePickerDialog and return it
+            return new TimePickerDialog(getActivity(), this, hour, minute,
+                    DateFormat.is24HourFormat(getActivity()));
+        }
+
+        public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+            tv_time.setText("Giờ: " + hourOfDay + ":" + minute);
+        }
+    }
     public void onUpdateMapUI(String distance, String duration){
         tv_khoangCach.setText("Khoảng cách: " + distance);
         tv_thoiGian.setText("Thời gian: " + duration);

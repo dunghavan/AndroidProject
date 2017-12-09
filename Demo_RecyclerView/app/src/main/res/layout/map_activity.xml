@@ -68,16 +68,63 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
-            android:id="@+id/tv_date"
-            android:text="22/12/2017"
+            android:id="@+id/tv_date_in_map"
+            android:text="Ngày: 22/12/2017"
             android:layout_marginStart="50dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <TextView
-            android:id="@+id/tv_time"
-            android:text="10:23:12"
+            android:id="@+id/tv_time_in_map"
+            android:text="Giờ: 10:23:12"
             android:layout_marginStart="80dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_phone_number_label"
+            android:text="Nhập số điện thoại của bạn:"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/textview_sdt_in_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="01681366842"
+            android:textSize="13sp"
+            android:layout_marginStart="30dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout_for_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom">
+
+        <Button
+            android:id="@+id/back_btn_in_map"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="Quay lại"
+            android:textAllCaps="false"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/next_btn_in_map"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Tiếp theo"
+            android:layout_gravity="right"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+
 </LinearLayout>

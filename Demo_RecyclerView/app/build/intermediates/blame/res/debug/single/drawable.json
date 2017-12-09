@@ -5,19 +5,15 @@
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_material.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\abc_ratingbar_material.xml"
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable\\abc_ratingbar_material.xml"
     },
     {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tooltip_frame_light.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable\\tooltip_frame_light.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\abc_cab_background_internal_bg.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\abc_btn_colored_material.xml"
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable\\abc_cab_background_internal_bg.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\loading.gif",
@@ -25,7 +21,7 @@
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\abc_btn_radio_material.xml"
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable\\abc_btn_radio_material.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light_normal.xml",
@@ -33,39 +29,187 @@
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_voice_search_api_material.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\abc_ic_voice_search_api_material.xml"
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable\\abc_ic_voice_search_api_material.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_bottom_navigation_item_background.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\afe1a01980e2158552441804949726e46f9ec6c6\\output\\res\\drawable\\design_bottom_navigation_item_background.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_login_logo.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\f2d8611a73a333ef2d25fc30db10c9ba1a6bfda7\\output\\res\\drawable\\com_facebook_button_login_logo.xml"
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\63baca96be3c820c70e5e7574688bacb37e9e2db\\output\\res\\drawable\\design_bottom_navigation_item_background.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_auth_dialog_cancel_background.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\dec720a8944a84fe8133dc07f54641657edb6709\\output\\res\\drawable\\com_facebook_auth_dialog_cancel_background.xml"
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\84c6147c280c786f6b45af2b8f5f7ba803a798bf\\output\\res\\drawable\\com_facebook_auth_dialog_cancel_background.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\messenger_button_blue_bg_round.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\f7f30c7b7777247475357f0a9a1fcaf26ce67b92\\output\\res\\drawable\\messenger_button_blue_bg_round.xml"
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8e26a3e131e3934a1d9a43561b1db7a6c6e1916a\\output\\res\\drawable\\messenger_button_blue_bg_round.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_icon.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\dec720a8944a84fe8133dc07f54641657edb6709\\output\\res\\drawable\\com_facebook_button_icon.xml"
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\84c6147c280c786f6b45af2b8f5f7ba803a798bf\\output\\res\\drawable\\com_facebook_button_icon.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\round_textview.xml",
         "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\drawable\\round_textview.xml"
     },
     {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\abc_btn_check_material.xml"
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bun_pho_6tabs.png",
+        "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\drawable\\bun_pho_6tabs.png"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_like_background.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\84c6147c280c786f6b45af2b8f5f7ba803a798bf\\output\\res\\drawable\\com_facebook_button_like_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\messenger_button_white_bg_round.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8e26a3e131e3934a1d9a43561b1db7a6c6e1916a\\output\\res\\drawable\\messenger_button_white_bg_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_tile_bg.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\3ef226c562665ae7965f0f38a6b360c397ee1095\\output\\res\\drawable\\notification_tile_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_overflow_material.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable\\abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light_normal.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8d4d6dac4365cfc65b47f26724a53c81755b27d6\\output\\res\\drawable\\common_google_signin_btn_icon_light_normal.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg_low.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\3ef226c562665ae7965f0f38a6b360c397ee1095\\output\\res\\drawable\\notification_bg_low.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_6tabs.png",
+        "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\drawable\\com_6tabs.png"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_cart.png",
+        "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\drawable\\ic_cart.png"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable\\abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable\\abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\sale.png",
+        "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\drawable\\sale.png"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\navigation_empty_icon.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\63baca96be3c820c70e5e7574688bacb37e9e2db\\output\\res\\drawable\\navigation_empty_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_password_eye.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\63baca96be3c820c70e5e7574688bacb37e9e2db\\output\\res\\drawable\\design_password_eye.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_background.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\84c6147c280c786f6b45af2b8f5f7ba803a798bf\\output\\res\\drawable\\com_facebook_button_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\failed_load_food.png",
+        "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\drawable\\failed_load_food.png"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8d4d6dac4365cfc65b47f26724a53c81755b27d6\\output\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_dark_normal.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8d4d6dac4365cfc65b47f26724a53c81755b27d6\\output\\res\\drawable\\common_google_signin_btn_text_dark_normal.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\food.png",
+        "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\drawable\\food.png"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_disabled.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8d4d6dac4365cfc65b47f26724a53c81755b27d6\\output\\res\\drawable\\common_google_signin_btn_icon_disabled.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark_normal.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8d4d6dac4365cfc65b47f26724a53c81755b27d6\\output\\res\\drawable\\common_google_signin_btn_icon_dark_normal.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_send_background.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\7c789079a9d310e83998733184ae2161eeb90c6b\\output\\res\\drawable\\com_facebook_button_send_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_send_button_icon.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\7c789079a9d310e83998733184ae2161eeb90c6b\\output\\res\\drawable\\com_facebook_send_button_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\my_backgroud.xml",
+        "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\drawable\\my_backgroud.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_icon_background.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\3ef226c562665ae7965f0f38a6b360c397ee1095\\output\\res\\drawable\\notification_icon_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\history.png",
+        "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\drawable\\history.png"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tooltip_frame_dark.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable\\tooltip_frame_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\user.png",
+        "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\drawable\\user.png"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\messenger_button_blue_bg_selector.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8e26a3e131e3934a1d9a43561b1db7a6c6e1916a\\output\\res\\drawable\\messenger_button_blue_bg_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_login_logo.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\b966c1fad0882bc96d1dcc2696083f1a5f16e190\\output\\res\\drawable\\com_facebook_button_login_logo.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_dark_focused.xml",
         "source": "C:\\Users\\Dung\\.android\\build-cache\\8d4d6dac4365cfc65b47f26724a53c81755b27d6\\output\\res\\drawable\\common_google_signin_btn_text_dark_focused.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable\\abc_btn_check_material.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\round_counter_textview.xml",
@@ -76,64 +220,28 @@
         "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\drawable\\ic_plus.png"
     },
     {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bun_pho_6tabs.png",
-        "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\drawable\\bun_pho_6tabs.png"
-    },
-    {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_clear_material.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\abc_ic_clear_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_like_background.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\dec720a8944a84fe8133dc07f54641657edb6709\\output\\res\\drawable\\com_facebook_button_like_background.xml"
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable\\abc_ic_clear_material.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\abc_dialog_material_background.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\abc_ratingbar_indicator_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\messenger_button_white_bg_round.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\f7f30c7b7777247475357f0a9a1fcaf26ce67b92\\output\\res\\drawable\\messenger_button_white_bg_round.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_tile_bg.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\notification_tile_bg.xml"
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable\\abc_dialog_material_background.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_ab_back_material.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\abc_ic_ab_back_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_overflow_material.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\abc_ic_menu_overflow_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light_normal.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\8d4d6dac4365cfc65b47f26724a53c81755b27d6\\output\\res\\drawable\\common_google_signin_btn_icon_light_normal.xml"
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable\\abc_ic_ab_back_material.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\afe1a01980e2158552441804949726e46f9ec6c6\\output\\res\\drawable\\design_snackbar_background.xml"
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\63baca96be3c820c70e5e7574688bacb37e9e2db\\output\\res\\drawable\\design_snackbar_background.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_login_silver_background.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\f2d8611a73a333ef2d25fc30db10c9ba1a6bfda7\\output\\res\\drawable\\com_facebook_button_login_silver_background.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg_low.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\notification_bg_low.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\b966c1fad0882bc96d1dcc2696083f1a5f16e190\\output\\res\\drawable\\com_facebook_button_login_silver_background.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_search.png",
@@ -145,27 +253,15 @@
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_auth_dialog_header_background.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\dec720a8944a84fe8133dc07f54641657edb6709\\output\\res\\drawable\\com_facebook_auth_dialog_header_background.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_6tabs.png",
-        "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\drawable\\com_6tabs.png"
-    },
-    {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_cart.png",
-        "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\drawable\\ic_cart.png"
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\84c6147c280c786f6b45af2b8f5f7ba803a798bf\\output\\res\\drawable\\com_facebook_auth_dialog_header_background.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_tick_mark_material.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\abc_list_selector_holo_light.xml"
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_favicon_blue.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\dec720a8944a84fe8133dc07f54641657edb6709\\output\\res\\drawable\\com_facebook_favicon_blue.xml"
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\84c6147c280c786f6b45af2b8f5f7ba803a798bf\\output\\res\\drawable\\com_facebook_favicon_blue.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark_focused.xml",
@@ -173,99 +269,47 @@
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\abc_text_cursor_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\abc_cab_background_top_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\sale.png",
-        "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\drawable\\sale.png"
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable\\abc_text_cursor_material.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\abc_btn_borderless_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\abc_edit_text_material.xml"
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable\\abc_btn_borderless_material.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\abc_switch_thumb_material.xml"
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable\\abc_switch_thumb_material.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tab_color_selector.xml",
         "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\drawable\\tab_color_selector.xml"
     },
     {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\navigation_empty_icon.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\afe1a01980e2158552441804949726e46f9ec6c6\\output\\res\\drawable\\navigation_empty_icon.xml"
-    },
-    {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light_focused.xml",
         "source": "C:\\Users\\Dung\\.android\\build-cache\\8d4d6dac4365cfc65b47f26724a53c81755b27d6\\output\\res\\drawable\\common_google_signin_btn_icon_light_focused.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\abc_item_background_holo_dark.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\rounded_button.xml",
         "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\drawable\\rounded_button.xml"
     },
     {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_password_eye.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\afe1a01980e2158552441804949726e46f9ec6c6\\output\\res\\drawable\\design_password_eye.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_background.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\dec720a8944a84fe8133dc07f54641657edb6709\\output\\res\\drawable\\com_facebook_button_background.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\failed_load_food.png",
-        "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\drawable\\failed_load_food.png"
-    },
-    {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\abc_tab_indicator_material.xml"
-    },
-    {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\messenger_button_white_bg_selector.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\f7f30c7b7777247475357f0a9a1fcaf26ce67b92\\output\\res\\drawable\\messenger_button_white_bg_selector.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\8d4d6dac4365cfc65b47f26724a53c81755b27d6\\output\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8e26a3e131e3934a1d9a43561b1db7a6c6e1916a\\output\\res\\drawable\\messenger_button_white_bg_selector.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_dark_normal.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\8d4d6dac4365cfc65b47f26724a53c81755b27d6\\output\\res\\drawable\\common_google_signin_btn_text_dark_normal.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\food.png",
-        "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\drawable\\food.png"
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_dark.xml",
         "source": "C:\\Users\\Dung\\.android\\build-cache\\8d4d6dac4365cfc65b47f26724a53c81755b27d6\\output\\res\\drawable\\common_google_signin_btn_text_dark.xml"
     },
     {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\abc_item_background_holo_light.xml"
-    },
-    {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\afe1a01980e2158552441804949726e46f9ec6c6\\output\\res\\drawable\\design_fab_background.xml"
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\63baca96be3c820c70e5e7574688bacb37e9e2db\\output\\res\\drawable\\design_fab_background.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\abc_ratingbar_small_material.xml"
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable\\abc_ratingbar_small_material.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light.xml",
@@ -276,16 +320,12 @@
         "source": "C:\\Users\\Dung\\.android\\build-cache\\8d4d6dac4365cfc65b47f26724a53c81755b27d6\\output\\res\\drawable\\common_google_signin_btn_text_light_focused.xml"
     },
     {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_disabled.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\8d4d6dac4365cfc65b47f26724a53c81755b27d6\\output\\res\\drawable\\common_google_signin_btn_icon_disabled.xml"
-    },
-    {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_go_search_api_material.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\abc_ic_go_search_api_material.xml"
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable\\abc_ic_go_search_api_material.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\abc_seekbar_track_material.xml"
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable\\abc_seekbar_track_material.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light.xml",
@@ -293,19 +333,7 @@
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\abc_textfield_search_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_send_background.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\345b345c3a0aa1edad647596950c18709d20bb39\\output\\res\\drawable\\com_facebook_button_send_background.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark_normal.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\8d4d6dac4365cfc65b47f26724a53c81755b27d6\\output\\res\\drawable\\common_google_signin_btn_icon_dark_normal.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_send_button_icon.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\345b345c3a0aa1edad647596950c18709d20bb39\\output\\res\\drawable\\com_facebook_send_button_icon.xml"
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable\\abc_textfield_search_material.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\home.png",
@@ -317,7 +345,7 @@
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_auth_dialog_background.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\dec720a8944a84fe8133dc07f54641657edb6709\\output\\res\\drawable\\com_facebook_auth_dialog_background.xml"
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\84c6147c280c786f6b45af2b8f5f7ba803a798bf\\output\\res\\drawable\\com_facebook_auth_dialog_background.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\trang_mieng_6tabs.png",
@@ -325,35 +353,23 @@
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_login_background.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\f2d8611a73a333ef2d25fc30db10c9ba1a6bfda7\\output\\res\\drawable\\com_facebook_button_login_background.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\my_backgroud.xml",
-        "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\drawable\\my_backgroud.xml"
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\b966c1fad0882bc96d1dcc2696083f1a5f16e190\\output\\res\\drawable\\com_facebook_button_login_background.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_vector_test.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\abc_vector_test.xml"
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable\\abc_vector_test.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_search_api_material.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\abc_ic_search_api_material.xml"
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable\\abc_ic_search_api_material.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\abc_list_selector_holo_dark.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_icon_background.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\notification_icon_background.xml"
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable\\abc_list_selector_holo_dark.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\abc_spinner_textfield_background_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\history.png",
-        "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\drawable\\history.png"
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable\\abc_spinner_textfield_background_material.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\via_he_6tabs.png",
@@ -361,18 +377,10 @@
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\abc_seekbar_thumb_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\user.png",
-        "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\drawable\\user.png"
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable\\abc_seekbar_thumb_material.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\a498329850230e498b07a7b380c32e0bb079905f\\output\\res\\drawable\\notification_bg.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\messenger_button_blue_bg_selector.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\f7f30c7b7777247475357f0a9a1fcaf26ce67b92\\output\\res\\drawable\\messenger_button_blue_bg_selector.xml"
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\3ef226c562665ae7965f0f38a6b360c397ee1095\\output\\res\\drawable\\notification_bg.xml"
     }
 ]

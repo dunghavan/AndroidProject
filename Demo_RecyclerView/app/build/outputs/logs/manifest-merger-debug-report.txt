@@ -34,31 +34,22 @@ MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Dung\.an
 application
 ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:10:5-33:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.0-alpha8] C:\Users\Dung\.android\build-cache\ac22971a1ed3f87e40391146eedea327d9d2dead\output\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:design:25.3.1] C:\Users\Dung\.android\build-cache\afe1a01980e2158552441804949726e46f9ec6c6\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:transition:25.3.1] C:\Users\Dung\.android\build-cache\7336d30c06e6ebeb70fe7174bffe56ba77224614\output\AndroidManifest.xml:26:5-20
-MERGED from [com.facebook.android:facebook-android-sdk:4.28.0] C:\Users\Dung\.android\build-cache\e89aec800294dd8b3b0b5ec69893673e6a20fc34\output\AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-login:4.28.0] C:\Users\Dung\.android\build-cache\f2d8611a73a333ef2d25fc30db10c9ba1a6bfda7\output\AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-share:4.28.0] C:\Users\Dung\.android\build-cache\345b345c3a0aa1edad647596950c18709d20bb39\output\AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-common:4.28.0] C:\Users\Dung\.android\build-cache\dec720a8944a84fe8133dc07f54641657edb6709\output\AndroidManifest.xml:28:5-34:19
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Dung\.android\build-cache\a498329850230e498b07a7b380c32e0bb079905f\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Dung\.android\build-cache\d4f8089c8d7a977c5bed6227e2fc28e07ddd2c20\output\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Dung\.android\build-cache\70fed4d1b5111e67114126bbbf9e8ea0f61f876d\output\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\Dung\.android\build-cache\9575e4324a57dc07963f002de3ff439c2c136355\output\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:customtabs:25.3.1] C:\Users\Dung\.android\build-cache\72d6de881fa4750a62f5b734af3ac0b6bfefbc2e\output\AndroidManifest.xml:26:5-20
-MERGED from [com.facebook.android:facebook-places:4.28.0] C:\Users\Dung\.android\build-cache\88102abc8a00e02bd17fa5743998f495887c13d8\output\AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-applinks:4.28.0] C:\Users\Dung\.android\build-cache\5a2fbb1cf0077cffaa9386befd8ef0e9f6267fea\output\AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-messenger:4.28.0] C:\Users\Dung\.android\build-cache\f7f30c7b7777247475357f0a9a1fcaf26ce67b92\output\AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-core:4.28.0] C:\Users\Dung\.android\build-cache\1b203f76a30da48d61a2b30adb8a7d57283c760f\output\AndroidManifest.xml:28:5-43:19
+MERGED from [com.android.support:design:26.0.1] C:\Users\Dung\.android\build-cache\63baca96be3c820c70e5e7574688bacb37e9e2db\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:recyclerview-v7:26.0.1] C:\Users\Dung\.android\build-cache\9923f45d949c1cf098c172e30d59c4d496ba3403\output\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.0.1] C:\Users\Dung\.android\build-cache\77cd110a6cdc9748867f71e3ab55c9eb75e2e11d\output\AndroidManifest.xml:22:5-26:19
+MERGED from [com.facebook.android:facebook-android-sdk:4.29.0] C:\Users\Dung\.android\build-cache\b5654020f299ea59f7586540edeb2382567b1b3e\output\AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-login:4.29.0] C:\Users\Dung\.android\build-cache\b966c1fad0882bc96d1dcc2696083f1a5f16e190\output\AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-share:4.29.0] C:\Users\Dung\.android\build-cache\7c789079a9d310e83998733184ae2161eeb90c6b\output\AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-common:4.29.0] C:\Users\Dung\.android\build-cache\84c6147c280c786f6b45af2b8f5f7ba803a798bf\output\AndroidManifest.xml:28:5-34:19
+MERGED from [com.facebook.android:facebook-places:4.29.0] C:\Users\Dung\.android\build-cache\3c03a17fa77a7980ce3b25c58b7fb7f815ef73b7\output\AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-applinks:4.29.0] C:\Users\Dung\.android\build-cache\be55c9fe40b3c354941ad64ca3360753cf0fedb0\output\AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-messenger:4.29.0] C:\Users\Dung\.android\build-cache\8e26a3e131e3934a1d9a43561b1db7a6c6e1916a\output\AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-core:4.29.0] C:\Users\Dung\.android\build-cache\e450ce8b4c11832a457bc8887fd020eec9b921e2\output\AndroidManifest.xml:28:5-43:19
 MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Dung\.android\build-cache\54e0d6175e78ee8ef2b10e9eeddafd2195429b24\output\AndroidManifest.xml:24:5-19
 MERGED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Dung\.android\build-cache\8d4d6dac4365cfc65b47f26724a53c81755b27d6\output\AndroidManifest.xml:18:5-20:19
 MERGED from [com.google.android.gms:play-services-tasks:11.0.4] C:\Users\Dung\.android\build-cache\835fb10a794fea91a24cb40258e8e2e9e25f617f\output\AndroidManifest.xml:4:5-19
 MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\Dung\.android\build-cache\c7dff8d209a3c19d48cc190bd4235887119f5ae5\output\AndroidManifest.xml:19:5-21:19
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Dung\.android\build-cache\3dca98a422483026da0553abb3ce04dd0be113cb\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Dung\.android\build-cache\e5b2bf485e0ae30bc180d3d3e41446e8d6c84a85\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Dung\.android\build-cache\1f1888fce8a8d48b5e1839eccb1de7361287d50f\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Dung\.android\build-cache\c10f5a2475167c7219787c5867dc9bc8fd62bec2\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Dung\.android\build-cache\ef6d2f30cb3dd06bdaa54a212f5ade4621cde299\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Dung\.android\build-cache\be09dadcca01e2ce869d1fe92f8b30da0849978f\output\AndroidManifest.xml:29:5-20
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Dung\.android\build-cache\8468335620fb107ebe463cd63e89f9eb28f22ffc\output\AndroidManifest.xml:24:5-28:19
 	android:label
 		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:14:9-41
 	android:supportsRtl
@@ -118,34 +109,35 @@ ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\A
 uses-sdk
 INJECTED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support.constraint:constraint-layout:1.0.0-alpha8] C:\Users\Dung\.android\build-cache\ac22971a1ed3f87e40391146eedea327d9d2dead\output\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:design:25.3.1] C:\Users\Dung\.android\build-cache\afe1a01980e2158552441804949726e46f9ec6c6\output\AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Dung\.android\build-cache\b4112471419de2f9f7c0465179cabb38781c1123\output\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:transition:25.3.1] C:\Users\Dung\.android\build-cache\7336d30c06e6ebeb70fe7174bffe56ba77224614\output\AndroidManifest.xml:20:5-44
-MERGED from [com.facebook.android:facebook-android-sdk:4.28.0] C:\Users\Dung\.android\build-cache\e89aec800294dd8b3b0b5ec69893673e6a20fc34\output\AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-login:4.28.0] C:\Users\Dung\.android\build-cache\f2d8611a73a333ef2d25fc30db10c9ba1a6bfda7\output\AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-share:4.28.0] C:\Users\Dung\.android\build-cache\345b345c3a0aa1edad647596950c18709d20bb39\output\AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-common:4.28.0] C:\Users\Dung\.android\build-cache\dec720a8944a84fe8133dc07f54641657edb6709\output\AndroidManifest.xml:24:5-26:41
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Dung\.android\build-cache\a498329850230e498b07a7b380c32e0bb079905f\output\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Dung\.android\build-cache\d4f8089c8d7a977c5bed6227e2fc28e07ddd2c20\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Dung\.android\build-cache\70fed4d1b5111e67114126bbbf9e8ea0f61f876d\output\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\Dung\.android\build-cache\9575e4324a57dc07963f002de3ff439c2c136355\output\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:customtabs:25.3.1] C:\Users\Dung\.android\build-cache\72d6de881fa4750a62f5b734af3ac0b6bfefbc2e\output\AndroidManifest.xml:20:5-44
-MERGED from [com.facebook.android:facebook-places:4.28.0] C:\Users\Dung\.android\build-cache\88102abc8a00e02bd17fa5743998f495887c13d8\output\AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-applinks:4.28.0] C:\Users\Dung\.android\build-cache\5a2fbb1cf0077cffaa9386befd8ef0e9f6267fea\output\AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-messenger:4.28.0] C:\Users\Dung\.android\build-cache\f7f30c7b7777247475357f0a9a1fcaf26ce67b92\output\AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-core:4.28.0] C:\Users\Dung\.android\build-cache\1b203f76a30da48d61a2b30adb8a7d57283c760f\output\AndroidManifest.xml:24:5-26:41
+MERGED from [com.android.support:design:26.0.1] C:\Users\Dung\.android\build-cache\63baca96be3c820c70e5e7574688bacb37e9e2db\output\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:recyclerview-v7:26.0.1] C:\Users\Dung\.android\build-cache\9923f45d949c1cf098c172e30d59c4d496ba3403\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.0.1] C:\Users\Dung\.android\build-cache\77cd110a6cdc9748867f71e3ab55c9eb75e2e11d\output\AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.android:facebook-android-sdk:4.29.0] C:\Users\Dung\.android\build-cache\b5654020f299ea59f7586540edeb2382567b1b3e\output\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-login:4.29.0] C:\Users\Dung\.android\build-cache\b966c1fad0882bc96d1dcc2696083f1a5f16e190\output\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-share:4.29.0] C:\Users\Dung\.android\build-cache\7c789079a9d310e83998733184ae2161eeb90c6b\output\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-common:4.29.0] C:\Users\Dung\.android\build-cache\84c6147c280c786f6b45af2b8f5f7ba803a798bf\output\AndroidManifest.xml:24:5-26:41
+MERGED from [com.android.support:appcompat-v7:27.0.1] C:\Users\Dung\.android\build-cache\8138d5355bf6de95ab3d12480134802038a11db2\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.0.1] C:\Users\Dung\.android\build-cache\4efa9507b9ad937fe488251095ef8b04b6c2502d\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.0.1] C:\Users\Dung\.android\build-cache\b24763d98928a7faa98d69b9acf744d022751477\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.0.1] C:\Users\Dung\.android\build-cache\7651c934d8907a7664629e8842a08ac448414208\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customtabs:27.0.1] C:\Users\Dung\.android\build-cache\2453bb440df0466acf0cc248acd49cdb4172ba3b\output\AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.android:facebook-places:4.29.0] C:\Users\Dung\.android\build-cache\3c03a17fa77a7980ce3b25c58b7fb7f815ef73b7\output\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-applinks:4.29.0] C:\Users\Dung\.android\build-cache\be55c9fe40b3c354941ad64ca3360753cf0fedb0\output\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-messenger:4.29.0] C:\Users\Dung\.android\build-cache\8e26a3e131e3934a1d9a43561b1db7a6c6e1916a\output\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-core:4.29.0] C:\Users\Dung\.android\build-cache\e450ce8b4c11832a457bc8887fd020eec9b921e2\output\AndroidManifest.xml:24:5-26:41
 MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Dung\.android\build-cache\54e0d6175e78ee8ef2b10e9eeddafd2195429b24\output\AndroidManifest.xml:23:5-43
 MERGED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Dung\.android\build-cache\8d4d6dac4365cfc65b47f26724a53c81755b27d6\output\AndroidManifest.xml:17:5-43
 MERGED from [com.google.android.gms:play-services-tasks:11.0.4] C:\Users\Dung\.android\build-cache\835fb10a794fea91a24cb40258e8e2e9e25f617f\output\AndroidManifest.xml:3:5-43
 MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\Dung\.android\build-cache\c7dff8d209a3c19d48cc190bd4235887119f5ae5\output\AndroidManifest.xml:17:5-43
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Dung\.android\build-cache\3dca98a422483026da0553abb3ce04dd0be113cb\output\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Dung\.android\build-cache\e5b2bf485e0ae30bc180d3d3e41446e8d6c84a85\output\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Dung\.android\build-cache\1f1888fce8a8d48b5e1839eccb1de7361287d50f\output\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Dung\.android\build-cache\c10f5a2475167c7219787c5867dc9bc8fd62bec2\output\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Dung\.android\build-cache\ef6d2f30cb3dd06bdaa54a212f5ade4621cde299\output\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Dung\.android\build-cache\be09dadcca01e2ce869d1fe92f8b30da0849978f\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-v4:27.0.1] C:\Users\Dung\.android\build-cache\eb74f4e702bd3e3ab46c708a4a394ce1455ec3b4\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.0.1] C:\Users\Dung\.android\build-cache\fe07268a6c89da1a216724ff43a18871c5851931\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.0.1] C:\Users\Dung\.android\build-cache\0204e0064b867ecba7d9bdf8c4d28d4623d949df\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.0.1] C:\Users\Dung\.android\build-cache\137b51ce7392ae31b90166cfc9ffae8653ffb017\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.0.1] C:\Users\Dung\.android\build-cache\26bd74f5d0e631d658fb43ecc34e163b1851ca8f\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.0.1] C:\Users\Dung\.android\build-cache\3ef226c562665ae7965f0f38a6b360c397ee1095\output\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Dung\.android\build-cache\8468335620fb107ebe463cd63e89f9eb28f22ffc\output\AndroidManifest.xml:20:5-22:41
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:25.3.1] C:\Users\Dung\.android\build-cache\afe1a01980e2158552441804949726e46f9ec6c6\output\AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:26.0.1] C:\Users\Dung\.android\build-cache\63baca96be3c820c70e5e7574688bacb37e9e2db\output\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
 		INJECTED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml
@@ -153,44 +145,33 @@ MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Dung\.android\b
 		INJECTED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml
 meta-data#android.support.VERSION
-ADDED from [com.android.support:design:25.3.1] C:\Users\Dung\.android\build-cache\afe1a01980e2158552441804949726e46f9ec6c6\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Dung\.android\build-cache\b4112471419de2f9f7c0465179cabb38781c1123\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:transition:25.3.1] C:\Users\Dung\.android\build-cache\7336d30c06e6ebeb70fe7174bffe56ba77224614\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Dung\.android\build-cache\a498329850230e498b07a7b380c32e0bb079905f\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Dung\.android\build-cache\d4f8089c8d7a977c5bed6227e2fc28e07ddd2c20\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Dung\.android\build-cache\70fed4d1b5111e67114126bbbf9e8ea0f61f876d\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\Dung\.android\build-cache\9575e4324a57dc07963f002de3ff439c2c136355\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:customtabs:25.3.1] C:\Users\Dung\.android\build-cache\72d6de881fa4750a62f5b734af3ac0b6bfefbc2e\output\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Dung\.android\build-cache\3dca98a422483026da0553abb3ce04dd0be113cb\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Dung\.android\build-cache\e5b2bf485e0ae30bc180d3d3e41446e8d6c84a85\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Dung\.android\build-cache\1f1888fce8a8d48b5e1839eccb1de7361287d50f\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Dung\.android\build-cache\c10f5a2475167c7219787c5867dc9bc8fd62bec2\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Dung\.android\build-cache\ef6d2f30cb3dd06bdaa54a212f5ade4621cde299\output\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Dung\.android\build-cache\be09dadcca01e2ce869d1fe92f8b30da0849978f\output\AndroidManifest.xml:25:5-27:34
+ADDED from [com.android.support:design:26.0.1] C:\Users\Dung\.android\build-cache\63baca96be3c820c70e5e7574688bacb37e9e2db\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:recyclerview-v7:26.0.1] C:\Users\Dung\.android\build-cache\9923f45d949c1cf098c172e30d59c4d496ba3403\output\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.0.1] C:\Users\Dung\.android\build-cache\77cd110a6cdc9748867f71e3ab55c9eb75e2e11d\output\AndroidManifest.xml:23:9-25:38
 	android:value
-		ADDED from [com.android.support:design:25.3.1] C:\Users\Dung\.android\build-cache\afe1a01980e2158552441804949726e46f9ec6c6\output\AndroidManifest.xml:27:9-31
+		ADDED from [com.android.support:design:26.0.1] C:\Users\Dung\.android\build-cache\63baca96be3c820c70e5e7574688bacb37e9e2db\output\AndroidManifest.xml:28:13-35
 	android:name
-		ADDED from [com.android.support:design:25.3.1] C:\Users\Dung\.android\build-cache\afe1a01980e2158552441804949726e46f9ec6c6\output\AndroidManifest.xml:26:9-47
+		ADDED from [com.android.support:design:26.0.1] C:\Users\Dung\.android\build-cache\63baca96be3c820c70e5e7574688bacb37e9e2db\output\AndroidManifest.xml:27:13-51
 activity#com.facebook.FacebookActivity
-ADDED from [com.facebook.android:facebook-common:4.28.0] C:\Users\Dung\.android\build-cache\dec720a8944a84fe8133dc07f54641657edb6709\output\AndroidManifest.xml:29:9-32:66
+ADDED from [com.facebook.android:facebook-common:4.29.0] C:\Users\Dung\.android\build-cache\84c6147c280c786f6b45af2b8f5f7ba803a798bf\output\AndroidManifest.xml:29:9-32:66
 	android:configChanges
-		ADDED from [com.facebook.android:facebook-common:4.28.0] C:\Users\Dung\.android\build-cache\dec720a8944a84fe8133dc07f54641657edb6709\output\AndroidManifest.xml:31:13-96
+		ADDED from [com.facebook.android:facebook-common:4.29.0] C:\Users\Dung\.android\build-cache\84c6147c280c786f6b45af2b8f5f7ba803a798bf\output\AndroidManifest.xml:31:13-96
 	android:theme
-		ADDED from [com.facebook.android:facebook-common:4.28.0] C:\Users\Dung\.android\build-cache\dec720a8944a84fe8133dc07f54641657edb6709\output\AndroidManifest.xml:32:13-63
+		ADDED from [com.facebook.android:facebook-common:4.29.0] C:\Users\Dung\.android\build-cache\84c6147c280c786f6b45af2b8f5f7ba803a798bf\output\AndroidManifest.xml:32:13-63
 	android:name
-		ADDED from [com.facebook.android:facebook-common:4.28.0] C:\Users\Dung\.android\build-cache\dec720a8944a84fe8133dc07f54641657edb6709\output\AndroidManifest.xml:30:13-57
+		ADDED from [com.facebook.android:facebook-common:4.29.0] C:\Users\Dung\.android\build-cache\84c6147c280c786f6b45af2b8f5f7ba803a798bf\output\AndroidManifest.xml:30:13-57
 activity#com.facebook.CustomTabMainActivity
-ADDED from [com.facebook.android:facebook-common:4.28.0] C:\Users\Dung\.android\build-cache\dec720a8944a84fe8133dc07f54641657edb6709\output\AndroidManifest.xml:33:9-71
+ADDED from [com.facebook.android:facebook-common:4.29.0] C:\Users\Dung\.android\build-cache\84c6147c280c786f6b45af2b8f5f7ba803a798bf\output\AndroidManifest.xml:33:9-71
 	android:name
-		ADDED from [com.facebook.android:facebook-common:4.28.0] C:\Users\Dung\.android\build-cache\dec720a8944a84fe8133dc07f54641657edb6709\output\AndroidManifest.xml:33:19-68
+		ADDED from [com.facebook.android:facebook-common:4.29.0] C:\Users\Dung\.android\build-cache\84c6147c280c786f6b45af2b8f5f7ba803a798bf\output\AndroidManifest.xml:33:19-68
 provider#com.facebook.internal.FacebookInitProvider
-ADDED from [com.facebook.android:facebook-core:4.28.0] C:\Users\Dung\.android\build-cache\1b203f76a30da48d61a2b30adb8a7d57283c760f\output\AndroidManifest.xml:39:9-42:40
+ADDED from [com.facebook.android:facebook-core:4.29.0] C:\Users\Dung\.android\build-cache\e450ce8b4c11832a457bc8887fd020eec9b921e2\output\AndroidManifest.xml:39:9-42:40
 	android:authorities
-		ADDED from [com.facebook.android:facebook-core:4.28.0] C:\Users\Dung\.android\build-cache\1b203f76a30da48d61a2b30adb8a7d57283c760f\output\AndroidManifest.xml:41:13-72
+		ADDED from [com.facebook.android:facebook-core:4.29.0] C:\Users\Dung\.android\build-cache\e450ce8b4c11832a457bc8887fd020eec9b921e2\output\AndroidManifest.xml:41:13-72
 	android:exported
-		ADDED from [com.facebook.android:facebook-core:4.28.0] C:\Users\Dung\.android\build-cache\1b203f76a30da48d61a2b30adb8a7d57283c760f\output\AndroidManifest.xml:42:13-37
+		ADDED from [com.facebook.android:facebook-core:4.29.0] C:\Users\Dung\.android\build-cache\e450ce8b4c11832a457bc8887fd020eec9b921e2\output\AndroidManifest.xml:42:13-37
 	android:name
-		ADDED from [com.facebook.android:facebook-core:4.28.0] C:\Users\Dung\.android\build-cache\1b203f76a30da48d61a2b30adb8a7d57283c760f\output\AndroidManifest.xml:40:13-70
+		ADDED from [com.facebook.android:facebook-core:4.29.0] C:\Users\Dung\.android\build-cache\e450ce8b4c11832a457bc8887fd020eec9b921e2\output\AndroidManifest.xml:40:13-70
 uses-feature#0x00020000
 ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Dung\.android\build-cache\54e0d6175e78ee8ef2b10e9eeddafd2195429b24\output\AndroidManifest.xml:21:5-77
 	android:glEsVersion
@@ -211,3 +192,9 @@ ADDED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\Dung\
 		ADDED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\Dung\.android\build-cache\c7dff8d209a3c19d48cc190bd4235887119f5ae5\output\AndroidManifest.xml:20:66-119
 	android:name
 		ADDED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\Dung\.android\build-cache\c7dff8d209a3c19d48cc190bd4235887119f5ae5\output\AndroidManifest.xml:20:20-65
+meta-data#android.arch.lifecycle.VERSION
+ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Dung\.android\build-cache\8468335620fb107ebe463cd63e89f9eb28f22ffc\output\AndroidManifest.xml:25:9-27:47
+	android:value
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Dung\.android\build-cache\8468335620fb107ebe463cd63e89f9eb28f22ffc\output\AndroidManifest.xml:27:13-44
+	android:name
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Dung\.android\build-cache\8468335620fb107ebe463cd63e89f9eb28f22ffc\output\AndroidManifest.xml:26:13-58
