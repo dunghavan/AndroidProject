@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:2:1-35:12
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:2:1-37:12
 	package
 		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:3:5-49
 		INJECTED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml
@@ -32,7 +32,7 @@ MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Dung\.an
 	android:name
 		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:8:22-76
 application
-ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:10:5-33:19
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:12:5-35:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.0-alpha8] C:\Users\Dung\.android\build-cache\ac22971a1ed3f87e40391146eedea327d9d2dead\output\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:design:26.0.1] C:\Users\Dung\.android\build-cache\63baca96be3c820c70e5e7574688bacb37e9e2db\output\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:recyclerview-v7:26.0.1] C:\Users\Dung\.android\build-cache\9923f45d949c1cf098c172e30d59c4d496ba3403\output\AndroidManifest.xml:22:5-26:19
@@ -46,66 +46,67 @@ MERGED from [com.facebook.android:facebook-applinks:4.29.0] C:\Users\Dung\.andro
 MERGED from [com.facebook.android:facebook-messenger:4.29.0] C:\Users\Dung\.android\build-cache\8e26a3e131e3934a1d9a43561b1db7a6c6e1916a\output\AndroidManifest.xml:28:5-29:19
 MERGED from [com.facebook.android:facebook-core:4.29.0] C:\Users\Dung\.android\build-cache\e450ce8b4c11832a457bc8887fd020eec9b921e2\output\AndroidManifest.xml:28:5-43:19
 MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Dung\.android\build-cache\54e0d6175e78ee8ef2b10e9eeddafd2195429b24\output\AndroidManifest.xml:24:5-19
+MERGED from [com.google.android.gms:play-services-location:11.0.4] C:\Users\Dung\.android\build-cache\510caaa7e5e2f9040d75bb7a341b4dbca77be19b\output\AndroidManifest.xml:4:5-19
 MERGED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Dung\.android\build-cache\8d4d6dac4365cfc65b47f26724a53c81755b27d6\output\AndroidManifest.xml:18:5-20:19
 MERGED from [com.google.android.gms:play-services-tasks:11.0.4] C:\Users\Dung\.android\build-cache\835fb10a794fea91a24cb40258e8e2e9e25f617f\output\AndroidManifest.xml:4:5-19
 MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\Dung\.android\build-cache\c7dff8d209a3c19d48cc190bd4235887119f5ae5\output\AndroidManifest.xml:19:5-21:19
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Dung\.android\build-cache\8468335620fb107ebe463cd63e89f9eb28f22ffc\output\AndroidManifest.xml:24:5-28:19
 	android:label
-		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:14:9-41
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:16:9-41
 	android:supportsRtl
-		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:16:9-35
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:18:9-35
 	android:roundIcon
-		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:15:9-54
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:17:9-54
 	android:allowBackup
-		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:12:9-35
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:14:9-35
 	android:icon
-		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:13:9-43
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:15:9-43
 	android:theme
-		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:17:9-40
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:19:9-40
 	android:name
-		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:11:9-38
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:13:9-38
 meta-data#com.facebook.sdk.ApplicationId
-ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:18:9-108
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:20:9-108
 	android:value
-		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:18:66-105
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:20:66-105
 	android:name
-		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:18:20-65
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:20:20-65
 meta-data#com.google.android.geo.API_KEY
-ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:19:9-21:71
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:21:9-23:71
 	android:value
-		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:21:13-68
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:23:13-68
 	android:name
-		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:20:13-58
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:22:13-58
 activity#com.example.dung.demo_recyclerview.MainActivity
-ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:22:9-28:20
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:24:9-30:20
 	android:name
-		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:22:19-47
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:24:19-47
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:23:13-27:29
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:25:13-29:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:24:17-69
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:26:17-69
 	android:name
-		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:24:25-66
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:26:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:26:17-77
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:28:17-77
 	android:name
-		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:26:27-74
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:28:27-74
 activity#com.example.dung.demo_recyclerview.Activity_MonAn_Of_NhaHang
-ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:29:9-62
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:31:9-62
 	android:name
-		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:29:19-60
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:31:19-60
 activity#com.example.dung.demo_recyclerview.CartActivity
-ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:30:9-49
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:32:9-49
 	android:name
-		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:30:19-47
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:32:19-47
 activity#com.example.dung.demo_recyclerview.LoginActivity
-ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:31:9-50
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:33:9-50
 	android:name
-		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:31:19-48
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:33:19-48
 activity#com.example.dung.demo_recyclerview.MapActivity
-ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:32:9-48
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:34:9-48
 	android:name
-		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:32:19-46
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:34:19-46
 uses-sdk
 INJECTED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support.constraint:constraint-layout:1.0.0-alpha8] C:\Users\Dung\.android\build-cache\ac22971a1ed3f87e40391146eedea327d9d2dead\output\AndroidManifest.xml:5:5-7:41
@@ -126,6 +127,7 @@ MERGED from [com.facebook.android:facebook-applinks:4.29.0] C:\Users\Dung\.andro
 MERGED from [com.facebook.android:facebook-messenger:4.29.0] C:\Users\Dung\.android\build-cache\8e26a3e131e3934a1d9a43561b1db7a6c6e1916a\output\AndroidManifest.xml:24:5-26:41
 MERGED from [com.facebook.android:facebook-core:4.29.0] C:\Users\Dung\.android\build-cache\e450ce8b4c11832a457bc8887fd020eec9b921e2\output\AndroidManifest.xml:24:5-26:41
 MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Dung\.android\build-cache\54e0d6175e78ee8ef2b10e9eeddafd2195429b24\output\AndroidManifest.xml:23:5-43
+MERGED from [com.google.android.gms:play-services-location:11.0.4] C:\Users\Dung\.android\build-cache\510caaa7e5e2f9040d75bb7a341b4dbca77be19b\output\AndroidManifest.xml:3:5-43
 MERGED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Dung\.android\build-cache\8d4d6dac4365cfc65b47f26724a53c81755b27d6\output\AndroidManifest.xml:17:5-43
 MERGED from [com.google.android.gms:play-services-tasks:11.0.4] C:\Users\Dung\.android\build-cache\835fb10a794fea91a24cb40258e8e2e9e25f617f\output\AndroidManifest.xml:3:5-43
 MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\Dung\.android\build-cache\c7dff8d209a3c19d48cc190bd4235887119f5ae5\output\AndroidManifest.xml:17:5-43
