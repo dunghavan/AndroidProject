@@ -9,7 +9,9 @@ import android.os.Bundle;
 import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.DatePicker;
+import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
@@ -42,6 +44,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
     static TextView tv_date, tv_time;
     DialogFragment dateFragment;
     DialogFragment timeFragment;
+    RadioButton radio_btn_select_time, radio_btn_earliest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,8 +70,35 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
                 dateFragment.show(getSupportFragmentManager(), "datePicker");
             }
         });
+        tv_time.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                timeFragment = new TimePickerFragment();
+                timeFragment.show(getSupportFragmentManager(), "timePicker");
+            }
+        });
 
+        radio_btn_select_time = findViewById(R.id.radio_select_time);
+        radio_btn_earliest = findViewById(R.id.radio_earliest);
 
+        radio_btn_select_time.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(b){
+                    radio_btn_select_time.setChecked(b);
+                    radio_btn_earliest.setChecked(!b);
+                }
+            }
+        });
+        radio_btn_earliest.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(b){
+                    radio_btn_select_time.setChecked(!b);
+                    radio_btn_earliest.setChecked(b);
+                }
+            }
+        });
 
         //Get thong tin nha hang
         String maNhaHang = Cart.getCartContent().get(0).getMaNhaHang();
@@ -110,7 +140,11 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 
         @Override
         public void onDateSet(DatePicker view, int year, int month, int day) {
-            tv_date.setText("Ngày: " + day + "/" + month + 1 + "/" + year);
+            if(month == 12)
+                month = 1;
+            else
+                month++;
+            tv_date.setText("Ngày: " + day + "/" + month + "/" + year);
         }
     }
     public static class TimePickerFragment extends DialogFragment implements
