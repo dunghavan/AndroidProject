@@ -57,7 +57,7 @@
         android:background="@android:color/darker_gray"/>
 
     <TextView
-        android:id="@+id/tv_time"
+        android:id="@+id/tv_time_label"
         android:text="Chọn thời gian giao hàng:"
         android:gravity="center_vertical"
         android:layout_width="match_parent"
@@ -67,9 +67,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <DatePicker
+        <TextView
+            android:id="@+id/tv_date"
+            android:text="22/12/2017"
+            android:layout_marginStart="50dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        </DatePicker>
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tv_time"
+            android:text="10:23:12"
+            android:layout_marginStart="80dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 </LinearLayout>
