@@ -54,5 +54,7 @@ dependencies {
 
     //LocationService:
     compile 'com.google.android.gms:play-services-location:11.0.4'
+    //for PayPalPayment
+    compile 'com.paypal.sdk:paypal-android-sdk:2.14.5'
 
 }

@@ -200,6 +200,10 @@
         "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\layout\\fragment_recyclerview_nhahang.xml"
     },
     {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_my_payment.xml",
+        "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\layout\\activity_my_payment.xml"
+    },
+    {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
         "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\layout\\abc_screen_toolbar.xml"
     },
@@ -302,10 +306,6 @@
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media_custom.xml",
         "source": "C:\\Users\\Dung\\.android\\build-cache\\fe07268a6c89da1a216724ff43a18871c5851931\\output\\res\\layout\\notification_template_media_custom.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_thanh_toan.xml",
-        "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\layout\\activity_thanh_toan.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_subheader.xml",

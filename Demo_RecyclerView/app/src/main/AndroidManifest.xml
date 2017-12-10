@@ -35,7 +35,7 @@
         <activity android:name=".CartActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".MapActivity" />
-        <activity android:name=".ThanhToanActivity"></activity>
+        <activity android:name=".MyPaymentActivity"></activity>
     </application>
 
 </manifest>

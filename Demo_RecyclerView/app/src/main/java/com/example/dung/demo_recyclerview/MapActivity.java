@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
@@ -63,8 +64,11 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MapActivity extends FragmentActivity implements GoogleApiClient.ConnectionCallbacks,
-        OnMapReadyCallback, Route.onUpdateListener, GoogleApiClient.OnConnectionFailedListener, LocationListener {
+        OnMapReadyCallback, Route.onUpdateListener, GoogleApiClient.OnConnectionFailedListener, LocationListener,
+        MyPaymentActivity.OnSendSubmitListener {
 
+    MapActivity mapActivity;
+    MyPaymentActivity paymentActivity;
     //private Route route; // Used for send to interface of CartActivityprivate Location location;
     // Đối tượng tương tác với Google API
     private final static int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
@@ -100,8 +104,11 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.map_activity);
+        mapActivity = this;
+        paymentActivity = new MyPaymentActivity();
+        paymentActivity.setOnSendSubmitListener(this);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+        final SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.fragment_map);
         mapFragment.getMapAsync(this);
 
@@ -193,26 +200,15 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
         btn_SendOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String _deliveryDateTime = deliveryDateTime.toString();
-                if(radio_btn_earliest.isChecked()){
-                    _deliveryDateTime = "SomNhatCoThe";
-                }
-                phoneNumber = editText_Phone.getText().toString();
-
                 if(radio_btn_pay.isChecked()){
-                    apiService.submitOrder(LoginActivity.getID(), curDateTime, _deliveryDateTime,
-                            submitAddress, phoneNumber, "ThanhToanKhiNhanHang", Cart.getTotal(), Cart.contentToString(),
-                            "false", "false").enqueue(new Callback<Void>() {
-                        @Override
-                        public void onResponse(Call<Void> call, Response<Void> response) {
-                            Toast.makeText(MyApplication.getCurrentContext(), "Send success", Toast.LENGTH_SHORT).show();
-                        }
-
-                        @Override
-                        public void onFailure(Call<Void> call, Throwable t) {
-                            Toast.makeText(MyApplication.getCurrentContext(), "Send onFailure()", Toast.LENGTH_SHORT).show();
-                        }
-                    });
+                    sendSubmitToServer("ThanhToanKhiNhanHang");
+                }
+                else{
+                    Intent intent = new Intent(mapActivity, MyPaymentActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putDouble("TOTAL", Cart.getTotal());
+                    intent.putExtras(bundle);
+                    mapActivity.startActivity(intent);
                 }
             }
         });
@@ -286,6 +282,27 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
         tv_thoiGian.setText("Thời gian: " + duration);
     }
 
+    public void sendSubmitToServer(String _paymentType){
+        String _deliveryDateTime = deliveryDateTime.toString();
+        if(radio_btn_earliest.isChecked()){
+            _deliveryDateTime = "SomNhatCoThe";
+        }
+        phoneNumber = editText_Phone.getText().toString();
+
+        apiService.submitOrder(LoginActivity.getID(), curDateTime, _deliveryDateTime,
+                submitAddress, phoneNumber, _paymentType, Cart.getTotal(), Cart.contentToString(),
+                "false", "false").enqueue(new Callback<Void>() {
+            @Override
+            public void onResponse(Call<Void> call, Response<Void> response) {
+                Toast.makeText(MyApplication.getCurrentContext(), "Send success", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onFailure(Call<Void> call, Throwable t) {
+                Toast.makeText(MyApplication.getCurrentContext(), "Send onFailure()", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
     /**
      * Manipulates the map once available.
      * This callback is triggered when the map is ready to be used.
