@@ -93,15 +93,20 @@ public class Cart {
 
 
     public static void printString() {
+        Log.d("Cart to string", contentToString());
+    }
+
+    public static String contentToString(){
+        StringBuilder sb = new StringBuilder();
         ObjectMapper objectMapper = new ObjectMapper();
         try{
             for(MonAn item: cartContent)
-                Log.d("Cart to string", objectMapper.writeValueAsString(item));
+                sb.append(objectMapper.writeValueAsString(item));
         }
         catch (JsonProcessingException e){
             Log.d("JsonProcessingException", e.getMessage());
         }
-
+        return sb.toString();
     }
 
 }

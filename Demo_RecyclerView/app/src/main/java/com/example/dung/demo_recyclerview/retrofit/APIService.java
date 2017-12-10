@@ -35,4 +35,17 @@ public interface APIService {
 
     @GET("/api/NhaHang/Get")
     Call<List<NhaHang>> getAllNhaHang();
+
+    @FormUrlEncoded
+    @POST("/api/DonDatHang/Post")
+    Call<Void> submitOrder(@Field("MaKhachHang")String MaKhachHang,
+                     @Field("NgayThang") String NgayThang,
+                     @Field("NgayGioGiao")String NgayGioGiao,
+                     @Field("DiaChiGiao")String DiaChiGiao,
+                     @Field("SoDienThoai")String SoDienThoai,
+                     @Field("HinhThucThanhToan") String HinhThucThanhToan,
+                     @Field("TongTien") Double TongTien,
+                     @Field("ChiTietDonHang")String ChiTietDonHang,
+                     @Field("DaXacNhan")String DaXacNhan,
+                     @Field("DaGiaoDich")String DaGiaoDich);
 }

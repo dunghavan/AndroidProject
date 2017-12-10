@@ -5,6 +5,8 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
@@ -15,13 +17,16 @@ import android.support.v4.content.ContextCompat;
 import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import com.example.dung.demo_recyclerview.model.MyDateTime;
 import com.example.dung.demo_recyclerview.model.NhaHang;
 import com.example.dung.demo_recyclerview.model_for_map.Route;
 import com.example.dung.demo_recyclerview.retrofit.APIService;
@@ -31,6 +36,8 @@ import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationListener;
+import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -38,35 +45,56 @@ import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.gms.location.places.*;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+import java.util.Locale;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MapActivity extends FragmentActivity implements GoogleApiClient.ConnectionCallbacks,
-        OnMapReadyCallback, Route.onUpdateListener, GoogleApiClient.OnConnectionFailedListener {
+        OnMapReadyCallback, Route.onUpdateListener, GoogleApiClient.OnConnectionFailedListener, LocationListener {
 
     //private Route route; // Used for send to interface of CartActivityprivate Location location;
     // Đối tượng tương tác với Google API
     private final static int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
-    LatLng sydney = new LatLng(10.866046, 106.803453);
+    LatLng sydney = new LatLng(10.860344, 106.761616);
     private GoogleApiClient gac;
+    LocationRequest mLocationRequest;
     private GoogleMap mMap;
-    Double userLong, userLat;
+    LatLng userLatLong;
+    Marker currLocationMarker;
+    Geocoder geocoder;
     Route route;
     private NhaHang nhaHang;
     APIService apiService;
+
+    // Informations for submit order
+    String curDateTime;
+    static MyDateTime deliveryDateTime;
+    String submitAddress;
+    String phoneNumber;
+    String paymentType;
+    Double total;
+    String orderDetail;
     // UI
     TextView tv_diaChiCuaHang, tv_diaChiCuaBan, tv_khoangCach, tv_thoiGian;
     static TextView tv_date, tv_time;
+    EditText editText_Phone;
     DialogFragment dateFragment;
     DialogFragment timeFragment;
-    RadioButton radio_btn_select_time, radio_btn_earliest;
+    RadioButton radio_btn_select_time, radio_btn_earliest, radio_btn_pay, radio_btn_paypal;
+    Button btn_Back, btn_SendOrder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,19 +106,23 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
         mapFragment.getMapAsync(this);
 
         //for map:
-        // Trước tiên chúng ta cần phải kiểm tra play services
+        // kiểm tra play services
         if (checkPlayServices()) {
             // Building the GoogleApi client
             buildGoogleApiClient();
         }
+        geocoder = new Geocoder(this, Locale.getDefault());
 
         tv_diaChiCuaHang = (TextView)findViewById(R.id.tv_from);
         tv_diaChiCuaBan = (TextView)findViewById(R.id.tv_to);
         tv_khoangCach = (TextView)findViewById(R.id.tv_distance);
         tv_thoiGian = (TextView)findViewById(R.id.tv_duration);
+        btn_Back = (Button)findViewById(R.id.back_btn_in_map);
+        btn_SendOrder = (Button)findViewById(R.id.send_btn_in_map);
 
         tv_date = (TextView)findViewById(R.id.tv_date_in_map);
         tv_time = (TextView)findViewById(R.id.tv_time_in_map);
+        editText_Phone = (EditText)findViewById(R.id.editText_sdt_in_map);
 
         Calendar c = Calendar.getInstance();
         int date = c.get(Calendar.DAY_OF_MONTH);
@@ -100,6 +132,15 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
         int hour = c.get(Calendar.HOUR_OF_DAY);
         int minute = c.get(Calendar.MINUTE);
         tv_time.setText("Giờ: " + hour + ":" + minute);
+
+        //Set current date time when send order:
+        curDateTime = date + "/" + month + "/" + year + "%" + hour + ":" + minute;
+        deliveryDateTime = new MyDateTime();
+        submitAddress = "";
+        phoneNumber = ""; //set later
+        paymentType = ""; //set later
+
+        apiService = ApiUtils.getAPIService();
 
         tv_date.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -120,6 +161,10 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
         radio_btn_earliest = findViewById(R.id.radio_earliest);
         radio_btn_earliest.setChecked(true);
 
+        radio_btn_pay = findViewById(R.id.radio_pay);
+        radio_btn_paypal = findViewById(R.id.radio_paypal);
+        radio_btn_pay.setChecked(true);
+
         radio_btn_select_time.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -139,9 +184,41 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
             }
         });
 
+        btn_Back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+        btn_SendOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String _deliveryDateTime = deliveryDateTime.toString();
+                if(radio_btn_earliest.isChecked()){
+                    _deliveryDateTime = "SomNhatCoThe";
+                }
+                phoneNumber = editText_Phone.getText().toString();
+
+                if(radio_btn_pay.isChecked()){
+                    apiService.submitOrder(LoginActivity.getID(), curDateTime, _deliveryDateTime,
+                            submitAddress, phoneNumber, "ThanhToanKhiNhanHang", Cart.getTotal(), Cart.contentToString(),
+                            "false", "false").enqueue(new Callback<Void>() {
+                        @Override
+                        public void onResponse(Call<Void> call, Response<Void> response) {
+                            Toast.makeText(MyApplication.getCurrentContext(), "Send success", Toast.LENGTH_SHORT).show();
+                        }
+
+                        @Override
+                        public void onFailure(Call<Void> call, Throwable t) {
+                            Toast.makeText(MyApplication.getCurrentContext(), "Send onFailure()", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                }
+            }
+        });
+
         //Get thong tin nha hang
         String maNhaHang = Cart.getCartContent().get(0).getMaNhaHang();
-        apiService = ApiUtils.getAPIService();
         apiService.getNhaHangById(maNhaHang).enqueue(new Callback<NhaHang>() {
             @Override
             public void onResponse(Call<NhaHang> call, Response<NhaHang> response) {
@@ -179,11 +256,9 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
 
         @Override
         public void onDateSet(DatePicker view, int year, int month, int day) {
-            if(month == 12)
-                month = 1;
-            else
-                month++;
+            month++;
             tv_date.setText("Ngày: " + day + "/" + month + "/" + year);
+            deliveryDateTime.setDate(day + "/" + month + "/" + year);
         }
     }
     public static class TimePickerFragment extends DialogFragment implements
@@ -203,6 +278,7 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
 
         public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
             tv_time.setText("Giờ: " + hourOfDay + ":" + minute);
+            deliveryDateTime.setTime(hourOfDay + ":" + minute);
         }
     }
     public void onUpdateMapUI(String distance, String duration){
@@ -223,11 +299,8 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         // Add a marker in Sydney and move the camera
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
+        mMap.addMarker(new MarkerOptions().position(sydney).title("Vị trí nhà hàng"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
-
-        //LatLng golf = new LatLng(10.862561, 106.780504);
-        //setUpMapIfNeeded();
 
     }
 
@@ -253,14 +326,45 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
             Location location = LocationServices.FusedLocationApi.getLastLocation(gac);
 
             if (location != null) {
-                userLat = location.getLatitude();
-                userLong = location.getLongitude();
-                Log.d("My Location", userLat + ", " + userLong);
+                userLatLong = new LatLng(location.getLatitude(), location.getLongitude());
 
-                LatLng golf = new LatLng(userLat, userLong);
+                Log.d("My Location", userLatLong.latitude + ", " + userLatLong.longitude);
                 route = new Route();
-                route.drawRoute(mMap, this, golf, sydney, Route.LANGUAGE_ENGLISH);
+                route.drawRoute(mMap, this, sydney, userLatLong, Route.LANGUAGE_ENGLISH);
+                //Add Marker:
+                MarkerOptions markerOptions = new MarkerOptions();
+                markerOptions.position(userLatLong);
+                markerOptions.title("Vị trí của bạn");
+                currLocationMarker = mMap.addMarker(markerOptions);
+                //Update location:
+                mLocationRequest = new LocationRequest();
+                mLocationRequest.setInterval(60000); //5 seconds
+                mLocationRequest.setFastestInterval(60000); //3 seconds
+                mLocationRequest.setPriority(LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY);
+                LocationServices.FusedLocationApi.requestLocationUpdates(gac, mLocationRequest, this);
+
                 route.setOnUpdateUIListener(this);
+
+                List<Address> addresses = new ArrayList<>();
+                try {
+                    addresses = geocoder.getFromLocation(userLatLong.latitude, userLatLong.longitude, 1);
+                    Log.d("Address", addresses.toString());
+                    android.location.Address address = addresses.get(0);
+                    if (address != null) {
+                        StringBuilder sb = new StringBuilder();
+                        for (int i = 0; i < address.getMaxAddressLineIndex(); i++){
+                            sb.append(address.getAddressLine(i) + "\n");
+                        }
+
+                        String newAddress = address.getFeatureName() + "-"
+                                + address.getSubLocality() + "-" + address.getSubAdminArea() + "-"
+                                + address.getAdminArea();
+                        tv_diaChiCuaBan.setText("Địa chỉ của bạn: " + newAddress);
+                        submitAddress = newAddress;
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 // Hiển thị
                 //tvLocation.setText(latitude + ", " + longitude);
             } else {
@@ -286,10 +390,6 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
         return true;
     }
 
-    public void dispLocation(View view) {
-        getLocation();
-    }
-
     @Override
     public void onConnected(Bundle connectionHint) {
         getLocation();
@@ -305,6 +405,28 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
         Toast.makeText(this, "Lỗi kết nối: " + result.getErrorMessage(), Toast.LENGTH_SHORT).show();
     }
 
+    @Override
+    public void onLocationChanged(Location location) {
+
+        //place marker at current position
+        //mGoogleMap.clear();
+        if (currLocationMarker != null) {
+            currLocationMarker.remove();
+        }
+        userLatLong = new LatLng(location.getLatitude(), location.getLongitude());
+        MarkerOptions markerOptions = new MarkerOptions();
+        markerOptions.position(userLatLong);
+        markerOptions.title("Vị trí của bạn");
+        //markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA));
+        currLocationMarker = mMap.addMarker(markerOptions);
+
+        //zoom to current position:
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(userLatLong, 13));
+
+        //If you only need one location, unregister the listener
+        //LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, this);
+
+    }
     private void setUpMapIfNeeded() {
         // Do a null check to confirm that we have not already instantiated the map.
         if (mMap == null) {
@@ -328,8 +450,7 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
                         if (task.isSuccessful()) {
                             // Set the map's camera position to the current location of the device.
                             Location mLastKnownLocation = (Location)task.getResult();
-                            userLong = mLastKnownLocation.getLongitude();
-                            userLat = mLastKnownLocation.getLatitude();
+                            userLatLong = new LatLng(mLastKnownLocation.getLatitude(), mLastKnownLocation.getLongitude());
                             //mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(
                                    // new LatLng(mLastKnownLocation.getLatitude(),
                                             //mLastKnownLocation.getLongitude()), 13.0f));
@@ -346,5 +467,11 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
                 Log.d("SecurityException", "Not have permission!");
             }
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        MyApplication.setCurrentContext(this);
     }
 }

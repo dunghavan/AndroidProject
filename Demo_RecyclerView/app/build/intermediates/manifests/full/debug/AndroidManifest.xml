@@ -45,6 +45,7 @@
         <activity android:name="com.example.dung.demo_recyclerview.CartActivity" />
         <activity android:name="com.example.dung.demo_recyclerview.LoginActivity" />
         <activity android:name="com.example.dung.demo_recyclerview.MapActivity" />
+        <activity android:name="com.example.dung.demo_recyclerview.ThanhToanActivity" />
 
         <meta-data
             android:name="android.support.VERSION"

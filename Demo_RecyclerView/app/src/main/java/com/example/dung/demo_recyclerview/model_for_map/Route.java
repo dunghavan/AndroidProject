@@ -326,7 +326,7 @@ public class Route {
             if(listener != null)
                 listener.onUpdateMapUI(distance, duration);
             // Zoom Camera
-            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(10.862561, 106.780504), 13.0f));
+            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(list.get(1), 13.0f));
 
             if(withSteps)
             {

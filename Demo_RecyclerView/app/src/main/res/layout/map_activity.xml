@@ -25,7 +25,7 @@
             android:id="@+id/tv_to"
             android:text="Địa chỉ của bạn:"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="50dp"
             android:gravity="center_vertical"
             android:layout_weight="1"
             android:textStyle="bold"/>
@@ -106,12 +106,38 @@
             android:layout_height="30dp"
             android:textStyle="bold" />
         <EditText
-            android:id="@+id/textview_sdt_in_map"
+            android:id="@+id/editText_sdt_in_map"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="01681366842"
             android:textSize="13sp"
             android:layout_marginStart="30dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioGroup_character">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thanh toán khi nhận hàng"
+                android:id="@+id/radio_pay"
+                android:checked="true" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cổng PayPal"
+                android:layout_marginStart="30dp"
+                android:id="@+id/radio_paypal"
+                android:checked="false" />
+        </RadioGroup>
     </LinearLayout>
     <LinearLayout
         android:id="@+id/linearLayout_for_btn"
@@ -133,10 +159,10 @@
             android:layout_weight="1"/>
 
         <Button
-            android:id="@+id/next_btn_in_map"
+            android:id="@+id/send_btn_in_map"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:text="Tiếp theo"
+            android:text="Gửi đơn hàng"
             android:layout_gravity="right"
             android:textAllCaps="false"/>
     </LinearLayout>
