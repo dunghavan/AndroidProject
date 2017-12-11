@@ -5,19 +5,10 @@ package com.example.dung.demo_recyclerview.model;
  */
 
 public class CTDonDatHang {
-    private String MaDonDatHang;
     private String MaMonAn;
     private Double DonGia;
     private int SoLuong;
     private Double ThanhTien;
-
-    public String getMaDonDatHang() {
-        return MaDonDatHang;
-    }
-
-    public void setMaDonDatHang(String maDonDatHang) {
-        MaDonDatHang = maDonDatHang;
-    }
 
     public String getMaMonAn() {
         return MaMonAn;
@@ -52,8 +43,7 @@ public class CTDonDatHang {
     }
 
     public String itemToString(){
-        return "\"MaDonDatHang\": " + MaDonDatHang
-                + ", " + "\"MaMonAn\": " + MaMonAn
+        return "\" " + "\"MaMonAn\": " + MaMonAn
                 + ", " + "\"DonGia\": " + DonGia
                 + ", " + "\"SoLuong\": " + SoLuong
                 + ", " + "\"ThanhTien\": " + ThanhTien;

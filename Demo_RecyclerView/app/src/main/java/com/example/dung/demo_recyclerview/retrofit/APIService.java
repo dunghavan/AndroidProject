@@ -45,7 +45,7 @@ public interface APIService {
                      @Field("SoDienThoai")String SoDienThoai,
                      @Field("HinhThucThanhToan") String HinhThucThanhToan,
                            @Field("PayID") String PayID,
-                     @Field("TongTien") Double TongTien,
+                     @Field("TongTien") int TongTien,
                      @Field("CTDonDatHang")String ChiTietDonHang,
                      @Field("DaXacNhan")String DaXacNhan,
                      @Field("DaGiaoDich")String DaGiaoDich);

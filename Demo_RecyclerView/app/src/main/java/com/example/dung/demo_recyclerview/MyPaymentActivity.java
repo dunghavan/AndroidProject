@@ -29,7 +29,7 @@ import java.text.DecimalFormat;
 public class MyPaymentActivity extends AppCompatActivity {
 
     public interface OnSendSubmitListener{
-        void sendSubmitToServer(String paymentType);
+        void sendSubmitToServer(String paymentType, String payID);
     }
     static OnSendSubmitListener listener;
     public void setOnSendSubmitListener(OnSendSubmitListener _listener){
@@ -120,7 +120,7 @@ public class MyPaymentActivity extends AppCompatActivity {
                 if (confirm != null) {
                     PayPal_Confirm payPal_confirm;
                     PayPal_Response payPal_response;
-                    String idOfResponse = "PaymentID: ";
+                    String idOfResponse = "";
                     try {
                         String confirmString = confirm.toJSONObject().toString(4);
                         Log.d("Confirm", confirmString);
@@ -140,7 +140,7 @@ public class MyPaymentActivity extends AppCompatActivity {
                         }
                         //Callback to MapActivity:
                         if(listener != null){
-                            listener.sendSubmitToServer(idOfResponse);
+                            listener.sendSubmitToServer("HinhThucThanhToan2", idOfResponse);
                         }
                         finish();
 

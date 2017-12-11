@@ -27,6 +27,6 @@ public class MyDateTime {
     public String toString(){
         if(date == null && time == null)
             return "";
-        return date + "%" + time;
+        return date + "T" + time;
     }
 }

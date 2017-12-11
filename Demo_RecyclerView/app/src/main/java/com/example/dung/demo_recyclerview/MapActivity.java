@@ -53,6 +53,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.gms.location.places.*;
 
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -100,6 +101,13 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
     RadioButton radio_btn_select_time, radio_btn_earliest, radio_btn_pay, radio_btn_paypal;
     Button btn_Back, btn_SendOrder;
 
+    Calendar c;
+    int date;
+    int month;
+    int year;
+    int hour;
+    int minute;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -131,18 +139,20 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
         tv_time = (TextView)findViewById(R.id.tv_time_in_map);
         editText_Phone = (EditText)findViewById(R.id.editText_sdt_in_map);
 
-        Calendar c = Calendar.getInstance();
-        int date = c.get(Calendar.DAY_OF_MONTH);
-        int month = c.get(Calendar.MONTH) + 1;
-        int year = c.get(Calendar.YEAR);
+        c = Calendar.getInstance();
+        date = c.get(Calendar.DAY_OF_MONTH);
+        month = c.get(Calendar.MONTH) + 1;
+        year = c.get(Calendar.YEAR);
         tv_date.setText("Ngày: " + date + "/" + month + "/" + year);
-        int hour = c.get(Calendar.HOUR_OF_DAY);
-        int minute = c.get(Calendar.MINUTE);
+        hour = c.get(Calendar.HOUR_OF_DAY);
+        minute = c.get(Calendar.MINUTE);
         tv_time.setText("Giờ: " + hour + ":" + minute);
 
         //Set current date time when send order:
-        curDateTime = date + "/" + month + "/" + year + "%" + hour + ":" + minute;
+        curDateTime = year + "-" + month + "-" + date + "T" + hour + ":" + minute + ":00";
         deliveryDateTime = new MyDateTime();
+        deliveryDateTime.setDate(year + "-" + month + "-" + date);
+        deliveryDateTime.setTime(hour + ":" + minute + ":00");
         submitAddress = "";
         phoneNumber = ""; //set later
         paymentType = ""; //set later
@@ -201,7 +211,7 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
             @Override
             public void onClick(View view) {
                 if(radio_btn_pay.isChecked()){
-                    sendSubmitToServer("ThanhToanKhiNhanHang");
+                    sendSubmitToServer("HinhThucThanhToan1", "");
                 }
                 else{
                     Intent intent = new Intent(mapActivity, MyPaymentActivity.class);
@@ -254,7 +264,7 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
         public void onDateSet(DatePicker view, int year, int month, int day) {
             month++;
             tv_date.setText("Ngày: " + day + "/" + month + "/" + year);
-            deliveryDateTime.setDate(day + "/" + month + "/" + year);
+            deliveryDateTime.setDate(year + "-" + month + "-" + day);
         }
     }
     public static class TimePickerFragment extends DialogFragment implements
@@ -274,7 +284,7 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
 
         public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
             tv_time.setText("Giờ: " + hourOfDay + ":" + minute);
-            deliveryDateTime.setTime(hourOfDay + ":" + minute);
+            deliveryDateTime.setTime(hourOfDay + ":" + minute + ":00");
         }
     }
     public void onUpdateMapUI(String distance, String duration){
@@ -282,15 +292,16 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
         tv_thoiGian.setText("Thời gian: " + duration);
     }
 
-    public void sendSubmitToServer(String _paymentType){
+    public void sendSubmitToServer(String _paymentType, String _payID){
         String _deliveryDateTime = deliveryDateTime.toString();
         if(radio_btn_earliest.isChecked()){
-            _deliveryDateTime = "SomNhatCoThe";
+            _deliveryDateTime = curDateTime;
         }
         phoneNumber = editText_Phone.getText().toString();
-
+        DecimalFormat df = new DecimalFormat("###");
+        int tongTien = (int)Math.round(Cart.getTotal());
         apiService.submitOrder(LoginActivity.getID(), curDateTime, _deliveryDateTime,
-                submitAddress, phoneNumber, _paymentType, "PayIDExample", Cart.getTotal(), Cart.convertTo_CTDDH(),
+                submitAddress, phoneNumber, _paymentType, _payID, tongTien, Cart.convertTo_CTDDH(),
                 "false", "false").enqueue(new Callback<Void>() {
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {

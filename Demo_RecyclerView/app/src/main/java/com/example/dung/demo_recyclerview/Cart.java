@@ -146,7 +146,8 @@ public class Cart {
                 Log.d("Convert CTDDH", e.getMessage());
             }
         }
-        return jsonArray.toString();
+        String result = jsonArray.toString().replaceAll("\\\\", ""); // Replace all \ digit
+        return result;
     }
 }
 
