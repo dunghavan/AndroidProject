@@ -290,7 +290,7 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
         phoneNumber = editText_Phone.getText().toString();
 
         apiService.submitOrder(LoginActivity.getID(), curDateTime, _deliveryDateTime,
-                submitAddress, phoneNumber, _paymentType, Cart.getTotal(), Cart.contentToString(),
+                submitAddress, phoneNumber, _paymentType, "PayIDExample", Cart.getTotal(), Cart.convertTo_CTDDH(),
                 "false", "false").enqueue(new Callback<Void>() {
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {

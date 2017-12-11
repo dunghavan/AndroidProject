@@ -20,8 +20,9 @@ public class MyConstant {
 
     public static String TAB_NHAHANG = "Tab Nhà Hàng";
     public static String TAB_MONAN = "Tab Món Ăn";
-    public static String TAB_NANGCAO = "Tab Nâng Cao";
+    public static String TAB_PROFILE = "Tab Profile";
 
+    public static String TAB_NANGCAO = "Tab Nâng Cao";
     public static String KEY_FOR_CATEGORY_FOOD = "FOOD_KEY";
     public static String KEY_FOR_CATEGORY_TAB = "TAB_KEY";
 

@@ -24,6 +24,7 @@ import com.example.dung.demo_recyclerview.fragment.Fragment_MonAn_6_Tabs;
 import com.example.dung.demo_recyclerview.fragment.Fragment_NangCao_2_Tabs;
 import com.example.dung.demo_recyclerview.fragment.Fragment_NhaHang;
 import com.example.dung.demo_recyclerview.fragment.Fragment_NhaHang_FindResult;
+import com.example.dung.demo_recyclerview.fragment.Fragment_Profile;
 
 public class MainActivity extends AppCompatActivity{
 
@@ -95,6 +96,10 @@ public class MainActivity extends AppCompatActivity{
                     case R.id.action_history:
                         break;
                     case R.id.action_user:
+                        fragment = new Fragment_Profile();
+                        transaction.replace(R.id.frame_layout_in_main_activity, fragment).commit();
+                        getSupportActionBar().setTitle("Cá nhân");
+                        currentTab = MyConstant.TAB_PROFILE;
                         break;
                 }
                 return true;

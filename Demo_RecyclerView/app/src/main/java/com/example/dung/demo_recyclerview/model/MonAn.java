@@ -77,6 +77,10 @@ public class MonAn {
             return itemCount;
     }
 
+    public Double getToTal_1_Item(){
+        return this.itemCount * getGiaKhuyenMai();
+    }
+
     public void setItemCount(int itemCount) {
         this.itemCount = itemCount;
     }

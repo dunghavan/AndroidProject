@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import com.facebook.*;
 import com.facebook.appevents.AppEventsLogger;
+import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 
@@ -123,11 +124,18 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public static boolean isAuthenticated() {
-        AccessToken  token = AccessToken.getCurrentAccessToken();
+        AccessToken token = AccessToken.getCurrentAccessToken();
         if(token != null){
             getFbInfo();
             return true;
         }
         return false;
+    }
+
+    public static void logout(){
+        AccessToken token = AccessToken.getCurrentAccessToken();
+        if(token != null){
+            LoginManager.getInstance().logOut();
+        }
     }
 }

@@ -2,9 +2,13 @@ package com.example.dung.demo_recyclerview;
 
 import android.util.Log;
 
+import com.example.dung.demo_recyclerview.model.CTDonDatHang;
 import com.example.dung.demo_recyclerview.model.MonAn;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.JsonArray;
+
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -82,6 +86,19 @@ public class Cart {
         }
         return 0;
     }
+//
+//    public Double getToTalById(String _id){
+//        return getItemCountById(_id) * getDonGiaById(_id);
+//    }
+//
+//    public Double getDonGiaById(String _id){
+//        for (MonAn item: cartContent) {
+//            if (item.getId().equals(_id)) {
+//                return item.getGiaKhuyenMai();
+//            }
+//        }
+//        return 0.0;
+//    }
 
     public static Double getTotal(){
         Double total = 0D;
@@ -109,5 +126,27 @@ public class Cart {
         return sb.toString();
     }
 
+    public static String convertTo_CTDDH(){
+        JsonArray jsonArray = new JsonArray();
+
+        for (MonAn item: cartContent){
+            CTDonDatHang ct = new CTDonDatHang();
+            ct.setMaMonAn(item.getId());
+            ct.setSoLuong(item.getItemCount());
+            ct.setDonGia(item.getGiaKhuyenMai());
+            ct.setThanhTien(item.getToTal_1_Item());
+
+            ObjectMapper objectMapper = new ObjectMapper();
+            try{
+                //String json = ct.itemToString();
+                String json = objectMapper.writeValueAsString(ct);
+                jsonArray.add(json);
+            }
+            catch (Exception e){
+                Log.d("Convert CTDDH", e.getMessage());
+            }
+        }
+        return jsonArray.toString();
+    }
 }
 
