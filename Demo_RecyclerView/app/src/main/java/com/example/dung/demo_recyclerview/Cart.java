@@ -4,6 +4,9 @@ import android.util.Log;
 
 import com.example.dung.demo_recyclerview.model.CTDonDatHang;
 import com.example.dung.demo_recyclerview.model.MonAn;
+import com.example.dung.demo_recyclerview.model.NhaHang;
+import com.example.dung.demo_recyclerview.retrofit.APIService;
+import com.example.dung.demo_recyclerview.retrofit.ApiUtils;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.JsonArray;
@@ -11,7 +14,12 @@ import com.google.gson.JsonArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.EmptyStackException;
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * Created by Dung on 10/15/2017.
@@ -149,5 +157,34 @@ public class Cart {
         String result = jsonArray.toString().replaceAll("\\\\", ""); // Replace all \ digit
         return result;
     }
+
+//    public static NhaHang result;
+//    public static NhaHang getNhaHangFromServer(){
+//        if(cartContent.size() != 0){
+//            String maNhaHang = cartContent.get(0).getMaNhaHang();
+//            APIService apiService = ApiUtils.getAPIService();
+//            apiService.getNhaHangById(maNhaHang).enqueue(new Callback<NhaHang>() {
+//                @Override
+//                public void onResponse(Call<NhaHang> call, Response<NhaHang> response) {
+//                    try {
+//                        result = response.body();
+//                    }
+//                    catch (Exception e){
+//                        Log.d("Err get NhaHang", e.getMessage());
+//                    }
+//
+//                }
+//
+//                @Override
+//                public void onFailure(Call<NhaHang> call, Throwable t) {
+//
+//                }
+//            });
+//
+//        }
+//        return null;
+//    }
+
+
 }
 

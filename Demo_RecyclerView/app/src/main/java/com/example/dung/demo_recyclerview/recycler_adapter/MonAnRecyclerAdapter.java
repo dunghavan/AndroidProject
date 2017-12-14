@@ -97,18 +97,18 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                     .into(viewHolder.imageView);
         }
 
-//        APIService apiService = ApiUtils.getAPIService();
-//        apiService.getTenNhaHang(monAnSelected.getMaNhaHang()).enqueue(new Callback<NhaHang>() {
-//            @Override
-//            public void onResponse(Call<NhaHang> call, Response<NhaHang> response) {
-//                    if(response.body() != null)
-//                        viewHolder.tv_tenNhaHang.setText(response.body().getTenNhaHang());
-//            }
-//            @Override
-//            public void onFailure (Call<NhaHang> call, Throwable t){
-//                Log.d("Get tenNhaHang", "Failure");
-//            }
-//        });
+        APIService apiService = ApiUtils.getAPIService();
+        apiService.getNhaHangById(monAnSelected.getMaNhaHang()).enqueue(new Callback<NhaHang>() {
+            @Override
+            public void onResponse(Call<NhaHang> call, Response<NhaHang> response) {
+                    if(response.body() != null)
+                        viewHolder.tv_tenNhaHang.setText(response.body().getTenNhaHang());
+            }
+            @Override
+            public void onFailure (Call<NhaHang> call, Throwable t){
+                Log.d("Get tenNhaHang", "Failure");
+            }
+        });
 //        class ReadApiTask extends AsyncTask<String, Integer, String> {
 //            protected String doInBackground(String... urls) {
 //                Log.d("API get NhaHang", "doInBackground");

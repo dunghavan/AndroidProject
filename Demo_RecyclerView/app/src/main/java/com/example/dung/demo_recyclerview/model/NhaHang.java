@@ -1,6 +1,7 @@
 package com.example.dung.demo_recyclerview.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.databind.ser.std.StdArraySerializers;
 
 /**
  * Created by Dung on 10/6/2017.
@@ -17,6 +18,8 @@ public class NhaHang {
     int luotXem;
     int soDiem;
     String maKhuVuc;
+    Double kinhDo;
+    Double viDo;
     String id;
     String createDate;
     String createdBy;
@@ -32,18 +35,18 @@ public class NhaHang {
         this.hinhAnh = urlHinhAnh;
     }
 
-    public NhaHang(String tenNhaHang, String diaChi, String urlHinhAnh, String gioMoCua, String gioDongCua, String SDT,
-                   int luotXem, int soDiem, String maKhuVuc, String id, String createDate, String createdBy,
-                   boolean active, String updateBy) {
+    public NhaHang(String tenNhaHang, String diaChi, String hinhAnh, String gioMoCua, String gioDongCua, String SDT, int luotXem, int soDiem, String maKhuVuc, Double kinhDo, Double viDo, String id, String createDate, String createdBy, boolean active, String updateBy) {
         this.tenNhaHang = tenNhaHang;
         this.diaChi = diaChi;
-        this.hinhAnh = urlHinhAnh;
+        this.hinhAnh = hinhAnh;
         this.gioMoCua = gioMoCua;
         this.gioDongCua = gioDongCua;
         this.SDT = SDT;
         this.luotXem = luotXem;
         this.soDiem = soDiem;
         this.maKhuVuc = maKhuVuc;
+        this.kinhDo = kinhDo;
+        this.viDo = viDo;
         this.id = id;
         this.createDate = createDate;
         this.createdBy = createdBy;
@@ -129,6 +132,22 @@ public class NhaHang {
 
     public void setActive(boolean active) {
         this.active = active;
+    }
+
+    public Double getKinhDo() {
+        return kinhDo;
+    }
+
+    public void setKinhDo(Double kinhDo) {
+        this.kinhDo = kinhDo;
+    }
+
+    public Double getViDo() {
+        return viDo;
+    }
+
+    public void setViDo(Double viDo) {
+        this.viDo = viDo;
     }
 
     @Override

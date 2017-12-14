@@ -73,7 +73,8 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
     //private Route route; // Used for send to interface of CartActivityprivate Location location;
     // Đối tượng tương tác với Google API
     private final static int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
-    LatLng sydney = new LatLng(10.860344, 106.761616);
+    //LatLng sydney = new LatLng(10.860344, 106.761616);
+    LatLng nhaHangLatLong;
     private GoogleApiClient gac;
     LocationRequest mLocationRequest;
     private GoogleMap mMap;
@@ -231,6 +232,7 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
                 try{
                     nhaHang = response.body();
                     tv_diaChiCuaHang.setText("From: " + nhaHang.getDiaChi());
+                    nhaHangLatLong = new LatLng(nhaHang.getViDo(), nhaHang.getKinhDo());
                 }
                 catch (Exception e){
                     tv_diaChiCuaHang.setText("From: null");
@@ -327,8 +329,8 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         // Add a marker in Sydney and move the camera
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Vị trí nhà hàng"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        mMap.addMarker(new MarkerOptions().position(nhaHangLatLong).title("Vị trí nhà hàng"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(nhaHangLatLong));
 
     }
 
@@ -358,7 +360,7 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
 
                 Log.d("My Location", userLatLong.latitude + ", " + userLatLong.longitude);
                 route = new Route();
-                route.drawRoute(mMap, this, sydney, userLatLong, Route.LANGUAGE_ENGLISH);
+                route.drawRoute(mMap, this, nhaHangLatLong, userLatLong, Route.LANGUAGE_ENGLISH);
                 //Add Marker:
                 MarkerOptions markerOptions = new MarkerOptions();
                 markerOptions.position(userLatLong);
