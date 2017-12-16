@@ -94,6 +94,15 @@ public class Cart {
         }
         return 0;
     }
+
+    public static double getGiaKhuyenMaiById(String id){
+        for (MonAn item: cartContent) {
+            if (item.getId().equals(id)) {
+                return item.getGiaKhuyenMai();
+            }
+        }
+        return 0;
+    }
 //
 //    public Double getToTalById(String _id){
 //        return getItemCountById(_id) * getDonGiaById(_id);
@@ -154,9 +163,13 @@ public class Cart {
                 Log.d("Convert CTDDH", e.getMessage());
             }
         }
-        String result = jsonArray.toString().replaceAll("\\\\", ""); // Replace all \ digit
-        return result;
+        String result = jsonArray.toString().replaceAll("\\\\", ""); // Remove all \ digit
+        String result1 = result.replaceAll("\"", "'"); // Replace all " digit to '
+        String result2 = result1.replaceAll("\'\\{", "{"); // Replace all " digit to '
+        String result3 = result2.replaceAll("\\}\'", "}"); // Replace all " digit to '
+        return result3;
     }
+    //          '{   {            }'        }
 
 //    public static NhaHang result;
 //    public static NhaHang getNhaHangFromServer(){

@@ -78,7 +78,7 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
 
     @Override
     public void onBindViewHolder(final RecyclerViewHolder_MonAn viewHolder, int position) {
-        MonAn monAnSelected = listData.get(position);
+        final MonAn monAnSelected = listData.get(position);
         viewHolder.textView_TenMonAn.setText(monAnSelected.getTenMonAn());
         viewHolder.textView_Gia.setText(String.format("%s", decimalFormat.format(monAnSelected.getDonGia())) + "đ");
 
@@ -97,18 +97,21 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                     .into(viewHolder.imageView);
         }
 
-        APIService apiService = ApiUtils.getAPIService();
-        apiService.getNhaHangById(monAnSelected.getMaNhaHang()).enqueue(new Callback<NhaHang>() {
-            @Override
-            public void onResponse(Call<NhaHang> call, Response<NhaHang> response) {
-                    if(response.body() != null)
-                        viewHolder.tv_tenNhaHang.setText(response.body().getTenNhaHang());
-            }
-            @Override
-            public void onFailure (Call<NhaHang> call, Throwable t){
-                Log.d("Get tenNhaHang", "Failure");
-            }
-        });
+//        APIService apiService = ApiUtils.getAPIService();
+//        apiService.getNhaHangById(monAnSelected.getMaNhaHang()).enqueue(new Callback<NhaHang>() {
+//            @Override
+//            public void onResponse(Call<NhaHang> call, Response<NhaHang> response) {
+//                    if(response.body() != null)
+//                        viewHolder.tv_tenNhaHang.setText(response.body().getTenNhaHang());
+//            }
+//            @Override
+//            public void onFailure (Call<NhaHang> call, Throwable t){
+//                Log.d("Get tenNhaHang", "Failure, ma nha hang = " + monAnSelected.getMaNhaHang());
+//            }
+//        });
+        viewHolder.tv_tenNhaHang.setText(monAnSelected.getTenNhaHang());
+
+        //Async Task
 //        class ReadApiTask extends AsyncTask<String, Integer, String> {
 //            protected String doInBackground(String... urls) {
 //                Log.d("API get NhaHang", "doInBackground");

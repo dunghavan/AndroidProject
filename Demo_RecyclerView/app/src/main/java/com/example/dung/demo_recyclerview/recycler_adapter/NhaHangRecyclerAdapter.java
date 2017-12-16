@@ -68,14 +68,14 @@ public class NhaHangRecyclerAdapter extends RecyclerView.Adapter <NhaHangRecycle
         public ImageView imageView_HinhAnh;
         public TextView textView_TenNhaHang;
         public TextView textView_DiaChi;
-        public TextView textView_KhuyenMai;
+        public TextView textView_LuotXem;
 
         public RecyclerViewHolder_NhaHang(View itemView){
             super(itemView);
             imageView_HinhAnh = (ImageView)itemView.findViewById(R.id.imageView_NhaHang);
             textView_TenNhaHang = (TextView)itemView.findViewById(R.id.tv_tenNhaHang);
             textView_DiaChi = (TextView)itemView.findViewById(R.id.tv_DiaChi);
-            textView_KhuyenMai = (TextView)itemView.findViewById(R.id.tv_KhuyenMai);
+            textView_LuotXem = (TextView)itemView.findViewById(R.id.tv_luotXem);
 
             itemView.setOnClickListener(this);
         }

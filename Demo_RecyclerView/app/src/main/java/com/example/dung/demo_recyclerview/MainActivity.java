@@ -3,6 +3,7 @@ package com.example.dung.demo_recyclerview;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
@@ -19,6 +20,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.dung.demo_recyclerview.fragment.Fragment_BeforeLogin;
 import com.example.dung.demo_recyclerview.fragment.Fragment_MonAn_FindResult;
 import com.example.dung.demo_recyclerview.fragment.Fragment_MonAn_6_Tabs;
 import com.example.dung.demo_recyclerview.fragment.Fragment_NangCao_2_Tabs;
@@ -96,11 +98,17 @@ public class MainActivity extends AppCompatActivity{
                     case R.id.action_history:
                         break;
                     case R.id.action_user:
-                        fragment = new Fragment_Profile();
+                        if(LoginActivity.isAuthenticated()){
+                            fragment = new Fragment_Profile();
+                        }
+                        else {
+                            fragment = new Fragment_BeforeLogin();
+                        }
                         transaction.replace(R.id.frame_layout_in_main_activity, fragment).commit();
                         getSupportActionBar().setTitle("Cá nhân");
                         currentTab = MyConstant.TAB_PROFILE;
                         break;
+
                 }
                 return true;
             }
@@ -113,12 +121,22 @@ public class MainActivity extends AppCompatActivity{
     @Override
     protected void onResume() {
         super.onResume();
-        Toast.makeText(this, "onResume method!", Toast.LENGTH_SHORT).show();
         MyApplication.setCurrentContext(this);
+        // Validate Fragment Profile
+        if(currentTab == MyConstant.TAB_PROFILE){
+            if(LoginActivity.isAuthenticated()){
+                fragment = new Fragment_Profile();
+            }
+            else {
+                fragment = new Fragment_BeforeLogin();
+            }
+            transaction  = fragmentManager.beginTransaction();
+            transaction.replace(R.id.frame_layout_in_main_activity, fragment).commit();
+        }
+
     }
     @Override
     protected void onPause() {
-        Toast.makeText(this, "onPause method!", Toast.LENGTH_SHORT).show();
         super.onPause();
     }
     @Override
@@ -251,5 +269,26 @@ public class MainActivity extends AppCompatActivity{
                 }
             }
         }
+    }
+
+    boolean doubleBackToExitPressedOnce = false;
+
+    @Override
+    public void onBackPressed() {
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed();
+            return;
+        }
+
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(this, "Nhấn \"Back\" thêm lần nữa để thoát", Toast.LENGTH_SHORT).show();
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce=false;
+            }
+        }, 2000);
     }
 }

@@ -13,8 +13,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.dung.demo_recyclerview.MainActivity;
+import com.example.dung.demo_recyclerview.MyApplication;
 import com.example.dung.demo_recyclerview.MyConstant;
 import com.example.dung.demo_recyclerview.MyHttpURLConnection;
 import com.example.dung.demo_recyclerview.R;
@@ -132,6 +134,7 @@ public class ChildFragment_TatCaMonAn extends Fragment{
                 Log.d("Error parse Json: ", e.getMessage());
             }
             Log.d("Data length: ", String.valueOf(data.size()));
+            Toast.makeText(MyApplication.getCurrentContext(), "Data length: " + String.valueOf(data.size()), Toast.LENGTH_SHORT).show();
             customRecyclerAdapter = new MonAnRecyclerAdapter(data);
             recyclerView.setAdapter(customRecyclerAdapter);
             setRetainInstance(false);

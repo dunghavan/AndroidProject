@@ -1,284 +1,288 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:2:1-41:12
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:2:1-43:12
 	package
-		ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:3:5-49
-		INJECTED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml
-		INJECTED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:3:5-49
+		INJECTED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml
-		INJECTED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
-		INJECTED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml
-		INJECTED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:5:5-79
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:5:5-79
 	android:name
-		ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:5:22-76
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:5:22-76
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:6:5-81
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:6:5-81
 	android:name
-		ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:6:22-78
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:6:22-78
 uses-permission#android.permission.INTERNET
-ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:7:5-67
-MERGED from [com.google.android.gms:play-services-maps:11.0.4] /home/dunghv/.android/build-cache/63fb6fa441e1676f286a224cfd8c48c919a3b533/output/AndroidManifest.xml:20:5-66
-MERGED from [com.paypal.sdk:paypal-android-sdk:2.14.5] /home/dunghv/.android/build-cache/ae70a3947dfdc1c11c5a76d4ce363ed959492872/output/AndroidManifest.xml:10:5-67
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:7:5-67
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Dung\.android\build-cache\54e0d6175e78ee8ef2b10e9eeddafd2195429b24\output\AndroidManifest.xml:20:5-66
+MERGED from [com.paypal.sdk:paypal-android-sdk:2.14.5] C:\Users\Dung\.android\build-cache\806da0b70cb18b8e49fdfe21c68e2860a52d8df7\output\AndroidManifest.xml:10:5-67
 	android:name
-		ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:7:22-64
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:7:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:8:5-79
-MERGED from [com.google.android.gms:play-services-maps:11.0.4] /home/dunghv/.android/build-cache/63fb6fa441e1676f286a224cfd8c48c919a3b533/output/AndroidManifest.xml:19:5-78
-MERGED from [com.paypal.sdk:paypal-android-sdk:2.14.5] /home/dunghv/.android/build-cache/ae70a3947dfdc1c11c5a76d4ce363ed959492872/output/AndroidManifest.xml:9:5-79
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:8:5-79
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Dung\.android\build-cache\54e0d6175e78ee8ef2b10e9eeddafd2195429b24\output\AndroidManifest.xml:19:5-78
+MERGED from [com.paypal.sdk:paypal-android-sdk:2.14.5] C:\Users\Dung\.android\build-cache\806da0b70cb18b8e49fdfe21c68e2860a52d8df7\output\AndroidManifest.xml:9:5-79
 	android:name
-		ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:8:22-76
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:8:22-76
 application
-ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:12:5-39:19
-MERGED from [com.android.support.constraint:constraint-layout:1.0.0-alpha8] /home/dunghv/.android/build-cache/855bb9507f6ed703e0f7765c4ecad9f51e64e8e1/output/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:design:26.0.1] /home/dunghv/.android/build-cache/742d5ffba5ed2a5bab5f805f086dbbfa02bd3606/output/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:recyclerview-v7:26.0.1] /home/dunghv/.android/build-cache/153cc804c3d7c2e29ad67bec4e188e91c241bf64/output/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:transition:26.0.1] /home/dunghv/.android/build-cache/a4f3b7030f2e6d87583eee70969428e2e6b52449/output/AndroidManifest.xml:22:5-26:19
-MERGED from [com.facebook.android:facebook-android-sdk:4.29.0] /home/dunghv/.android/build-cache/324495fb719103ac753fd324cc83b3e4dcf3efe8/output/AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-login:4.29.0] /home/dunghv/.android/build-cache/2f9cb04561fe7d1b5023ce9bf5c445c56ffecafc/output/AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-share:4.29.0] /home/dunghv/.android/build-cache/11f8b0f546df7e03b5d6a9ac7fb8e59e14e9c005/output/AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-common:4.29.0] /home/dunghv/.android/build-cache/c7869437c28330d19c4c8657f5fb43f8d17e468e/output/AndroidManifest.xml:28:5-34:19
-MERGED from [com.facebook.android:facebook-places:4.29.0] /home/dunghv/.android/build-cache/79137cecf1981b36d9c0133214722e247628386e/output/AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-applinks:4.29.0] /home/dunghv/.android/build-cache/60d4699679f335a6a94dadda6f5c88fa573a9344/output/AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-messenger:4.29.0] /home/dunghv/.android/build-cache/7cab69497a466394fa500adf3037c52836ba09d9/output/AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-core:4.29.0] /home/dunghv/.android/build-cache/cee140943ae54faa4df528268b5fb2ac071cf666/output/AndroidManifest.xml:28:5-43:19
-MERGED from [com.google.android.gms:play-services-maps:11.0.4] /home/dunghv/.android/build-cache/63fb6fa441e1676f286a224cfd8c48c919a3b533/output/AndroidManifest.xml:24:5-19
-MERGED from [com.google.android.gms:play-services-location:11.0.4] /home/dunghv/.android/build-cache/798bd6d9f35cf52be962842d0e09ba3748f6fb6c/output/AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-base:11.0.4] /home/dunghv/.android/build-cache/2b33b346befb3b3c3d005caf2c0204c508b896e8/output/AndroidManifest.xml:18:5-20:19
-MERGED from [com.google.android.gms:play-services-tasks:11.0.4] /home/dunghv/.android/build-cache/631c17d5ade6905da21b5aa2d85e916bda9f9389/output/AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-basement:11.0.4] /home/dunghv/.android/build-cache/902bda8c1fc6c9bfe1b685ed3d39c89ed395345c/output/AndroidManifest.xml:19:5-21:19
-MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/dunghv/.android/build-cache/dca9438f63aed65a56c7c0b17dd67dfbbcb778cd/output/AndroidManifest.xml:24:5-28:19
-MERGED from [com.paypal.sdk:paypal-android-sdk:2.14.5] /home/dunghv/.android/build-cache/ae70a3947dfdc1c11c5a76d4ce363ed959492872/output/AndroidManifest.xml:12:5-26:19
-MERGED from [io.card:android-sdk:5.4.0] /home/dunghv/.android/build-cache/80ae6b8a09af74f8cf4ff2b2bfbd85d9d50a9929/output/AndroidManifest.xml:21:5-26:19
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:12:5-41:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.0-alpha8] C:\Users\Dung\.android\build-cache\ac22971a1ed3f87e40391146eedea327d9d2dead\output\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:design:26.0.1] C:\Users\Dung\.android\build-cache\63baca96be3c820c70e5e7574688bacb37e9e2db\output\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:recyclerview-v7:26.0.1] C:\Users\Dung\.android\build-cache\9923f45d949c1cf098c172e30d59c4d496ba3403\output\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.0.1] C:\Users\Dung\.android\build-cache\77cd110a6cdc9748867f71e3ab55c9eb75e2e11d\output\AndroidManifest.xml:22:5-26:19
+MERGED from [com.facebook.android:facebook-android-sdk:4.29.0] C:\Users\Dung\.android\build-cache\b5654020f299ea59f7586540edeb2382567b1b3e\output\AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-login:4.29.0] C:\Users\Dung\.android\build-cache\b966c1fad0882bc96d1dcc2696083f1a5f16e190\output\AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-share:4.29.0] C:\Users\Dung\.android\build-cache\7c789079a9d310e83998733184ae2161eeb90c6b\output\AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-common:4.29.0] C:\Users\Dung\.android\build-cache\84c6147c280c786f6b45af2b8f5f7ba803a798bf\output\AndroidManifest.xml:28:5-34:19
+MERGED from [com.facebook.android:facebook-places:4.29.0] C:\Users\Dung\.android\build-cache\3c03a17fa77a7980ce3b25c58b7fb7f815ef73b7\output\AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-applinks:4.29.0] C:\Users\Dung\.android\build-cache\be55c9fe40b3c354941ad64ca3360753cf0fedb0\output\AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-messenger:4.29.0] C:\Users\Dung\.android\build-cache\8e26a3e131e3934a1d9a43561b1db7a6c6e1916a\output\AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-core:4.29.0] C:\Users\Dung\.android\build-cache\e450ce8b4c11832a457bc8887fd020eec9b921e2\output\AndroidManifest.xml:28:5-43:19
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Dung\.android\build-cache\54e0d6175e78ee8ef2b10e9eeddafd2195429b24\output\AndroidManifest.xml:24:5-19
+MERGED from [com.google.android.gms:play-services-location:11.0.4] C:\Users\Dung\.android\build-cache\510caaa7e5e2f9040d75bb7a341b4dbca77be19b\output\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Dung\.android\build-cache\8d4d6dac4365cfc65b47f26724a53c81755b27d6\output\AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-tasks:11.0.4] C:\Users\Dung\.android\build-cache\835fb10a794fea91a24cb40258e8e2e9e25f617f\output\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\Dung\.android\build-cache\c7dff8d209a3c19d48cc190bd4235887119f5ae5\output\AndroidManifest.xml:19:5-21:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Dung\.android\build-cache\8468335620fb107ebe463cd63e89f9eb28f22ffc\output\AndroidManifest.xml:24:5-28:19
+MERGED from [com.paypal.sdk:paypal-android-sdk:2.14.5] C:\Users\Dung\.android\build-cache\806da0b70cb18b8e49fdfe21c68e2860a52d8df7\output\AndroidManifest.xml:12:5-26:19
+MERGED from [io.card:android-sdk:5.4.0] C:\Users\Dung\.android\build-cache\84850693c036e12d75ec97bc6cf6090394d04822\output\AndroidManifest.xml:21:5-26:19
 	android:label
-		ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:16:9-41
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:16:9-41
 	android:supportsRtl
-		ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:18:9-35
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:18:9-35
 	android:roundIcon
-		ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:17:9-54
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:17:9-54
 	android:allowBackup
-		ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:14:9-35
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:14:9-35
 	android:icon
-		ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:15:9-43
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:15:9-40
 	android:theme
-		ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:19:9-40
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:19:9-40
 	android:name
-		ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:13:9-38
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:13:9-38
 meta-data#com.facebook.sdk.ApplicationId
-ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:20:9-22:55
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:20:9-22:55
 	android:value
-		ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:22:13-52
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:22:13-52
 	android:name
-		ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:21:13-58
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:21:13-58
 meta-data#com.google.android.geo.API_KEY
-ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:23:9-25:71
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:23:9-25:71
 	android:value
-		ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:25:13-68
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:25:13-68
 	android:name
-		ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:24:13-58
-activity#com.example.dung.demo_recyclerview.MainActivity
-ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:27:9-33:20
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:24:13-58
+activity#com.example.dung.demo_recyclerview.SplashActivity
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:27:9-32:20
 	android:name
-		ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:27:19-47
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:27:19-49
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:28:13-32:29
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:28:13-31:29
 action#android.intent.action.MAIN
-ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:29:17-69
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:29:17-69
 	android:name
-		ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:29:25-66
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:29:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:31:17-77
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:30:17-77
 	android:name
-		ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:31:27-74
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:30:27-74
+activity#com.example.dung.demo_recyclerview.MainActivity
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:34:9-35:20
+	android:name
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:34:19-47
 activity#com.example.dung.demo_recyclerview.Activity_MonAn_Of_NhaHang
-ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:34:9-63
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:36:9-63
 	android:name
-		ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:34:19-60
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:36:19-60
 activity#com.example.dung.demo_recyclerview.CartActivity
-ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:35:9-50
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:37:9-50
 	android:name
-		ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:35:19-47
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:37:19-47
 activity#com.example.dung.demo_recyclerview.LoginActivity
-ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:36:9-51
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:38:9-51
 	android:name
-		ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:36:19-48
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:38:19-48
 activity#com.example.dung.demo_recyclerview.MapActivity
-ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:37:9-49
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:39:9-49
 	android:name
-		ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:37:19-46
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:39:19-46
 activity#com.example.dung.demo_recyclerview.MyPaymentActivity
-ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:38:9-64
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:40:9-55
 	android:name
-		ADDED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml:38:19-52
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:40:19-52
 uses-sdk
-INJECTED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support.constraint:constraint-layout:1.0.0-alpha8] /home/dunghv/.android/build-cache/855bb9507f6ed703e0f7765c4ecad9f51e64e8e1/output/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:design:26.0.1] /home/dunghv/.android/build-cache/742d5ffba5ed2a5bab5f805f086dbbfa02bd3606/output/AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:recyclerview-v7:26.0.1] /home/dunghv/.android/build-cache/153cc804c3d7c2e29ad67bec4e188e91c241bf64/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:26.0.1] /home/dunghv/.android/build-cache/a4f3b7030f2e6d87583eee70969428e2e6b52449/output/AndroidManifest.xml:20:5-44
-MERGED from [com.facebook.android:facebook-android-sdk:4.29.0] /home/dunghv/.android/build-cache/324495fb719103ac753fd324cc83b3e4dcf3efe8/output/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-login:4.29.0] /home/dunghv/.android/build-cache/2f9cb04561fe7d1b5023ce9bf5c445c56ffecafc/output/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-share:4.29.0] /home/dunghv/.android/build-cache/11f8b0f546df7e03b5d6a9ac7fb8e59e14e9c005/output/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-common:4.29.0] /home/dunghv/.android/build-cache/c7869437c28330d19c4c8657f5fb43f8d17e468e/output/AndroidManifest.xml:24:5-26:41
-MERGED from [com.android.support:appcompat-v7:27.0.1] /home/dunghv/.android/build-cache/92669e0d671f1bf5f58cc27967eb1df7aa8e3244/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.0.1] /home/dunghv/.android/build-cache/b36a266677359b0bcbfb55c1b24283d73766b167/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.0.1] /home/dunghv/.android/build-cache/b96e45aa529ad7fdc2ab18458b5fc770b8a4ce1b/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:27.0.1] /home/dunghv/.android/build-cache/37b41aaa636dada445f2d6509e07d1ac16812377/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customtabs:27.0.1] /home/dunghv/.android/build-cache/f50111fc27123ddb36fabb89f9a92bd9cbc9caeb/output/AndroidManifest.xml:20:5-44
-MERGED from [com.facebook.android:facebook-places:4.29.0] /home/dunghv/.android/build-cache/79137cecf1981b36d9c0133214722e247628386e/output/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-applinks:4.29.0] /home/dunghv/.android/build-cache/60d4699679f335a6a94dadda6f5c88fa573a9344/output/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-messenger:4.29.0] /home/dunghv/.android/build-cache/7cab69497a466394fa500adf3037c52836ba09d9/output/AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-core:4.29.0] /home/dunghv/.android/build-cache/cee140943ae54faa4df528268b5fb2ac071cf666/output/AndroidManifest.xml:24:5-26:41
-MERGED from [com.google.android.gms:play-services-maps:11.0.4] /home/dunghv/.android/build-cache/63fb6fa441e1676f286a224cfd8c48c919a3b533/output/AndroidManifest.xml:23:5-43
-MERGED from [com.google.android.gms:play-services-location:11.0.4] /home/dunghv/.android/build-cache/798bd6d9f35cf52be962842d0e09ba3748f6fb6c/output/AndroidManifest.xml:3:5-43
-MERGED from [com.google.android.gms:play-services-base:11.0.4] /home/dunghv/.android/build-cache/2b33b346befb3b3c3d005caf2c0204c508b896e8/output/AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-tasks:11.0.4] /home/dunghv/.android/build-cache/631c17d5ade6905da21b5aa2d85e916bda9f9389/output/AndroidManifest.xml:3:5-43
-MERGED from [com.google.android.gms:play-services-basement:11.0.4] /home/dunghv/.android/build-cache/902bda8c1fc6c9bfe1b685ed3d39c89ed395345c/output/AndroidManifest.xml:17:5-43
-MERGED from [com.android.support:support-v4:27.0.1] /home/dunghv/.android/build-cache/5ee5d426951a0902c24f5fc29f57254db196672f/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.0.1] /home/dunghv/.android/build-cache/b3101f35c87d3418fd94d8f0f16b2bb158068f65/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.0.1] /home/dunghv/.android/build-cache/e7fb38341d9f643d9822b508cd4143c355cda8b2/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.0.1] /home/dunghv/.android/build-cache/10d37decef5398a3eb33cccbdd9d2092c989b690/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.0.1] /home/dunghv/.android/build-cache/5c476bd000569786c6b483b98b65e554a7d53560/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.0.1] /home/dunghv/.android/build-cache/5e9a1521d49edf4f85a8e620242a258dcce7d94e/output/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/dunghv/.android/build-cache/dca9438f63aed65a56c7c0b17dd67dfbbcb778cd/output/AndroidManifest.xml:20:5-22:41
-MERGED from [com.paypal.sdk:paypal-android-sdk:2.14.5] /home/dunghv/.android/build-cache/ae70a3947dfdc1c11c5a76d4ce363ed959492872/output/AndroidManifest.xml:5:5-7:41
-MERGED from [io.card:android-sdk:5.4.0] /home/dunghv/.android/build-cache/80ae6b8a09af74f8cf4ff2b2bfbd85d9d50a9929/output/AndroidManifest.xml:7:5-9:41
+INJECTED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support.constraint:constraint-layout:1.0.0-alpha8] C:\Users\Dung\.android\build-cache\ac22971a1ed3f87e40391146eedea327d9d2dead\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:design:26.0.1] C:\Users\Dung\.android\build-cache\63baca96be3c820c70e5e7574688bacb37e9e2db\output\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:recyclerview-v7:26.0.1] C:\Users\Dung\.android\build-cache\9923f45d949c1cf098c172e30d59c4d496ba3403\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.0.1] C:\Users\Dung\.android\build-cache\77cd110a6cdc9748867f71e3ab55c9eb75e2e11d\output\AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.android:facebook-android-sdk:4.29.0] C:\Users\Dung\.android\build-cache\b5654020f299ea59f7586540edeb2382567b1b3e\output\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-login:4.29.0] C:\Users\Dung\.android\build-cache\b966c1fad0882bc96d1dcc2696083f1a5f16e190\output\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-share:4.29.0] C:\Users\Dung\.android\build-cache\7c789079a9d310e83998733184ae2161eeb90c6b\output\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-common:4.29.0] C:\Users\Dung\.android\build-cache\84c6147c280c786f6b45af2b8f5f7ba803a798bf\output\AndroidManifest.xml:24:5-26:41
+MERGED from [com.android.support:appcompat-v7:27.0.1] C:\Users\Dung\.android\build-cache\8138d5355bf6de95ab3d12480134802038a11db2\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.0.1] C:\Users\Dung\.android\build-cache\4efa9507b9ad937fe488251095ef8b04b6c2502d\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.0.1] C:\Users\Dung\.android\build-cache\b24763d98928a7faa98d69b9acf744d022751477\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.0.1] C:\Users\Dung\.android\build-cache\7651c934d8907a7664629e8842a08ac448414208\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customtabs:27.0.1] C:\Users\Dung\.android\build-cache\2453bb440df0466acf0cc248acd49cdb4172ba3b\output\AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.android:facebook-places:4.29.0] C:\Users\Dung\.android\build-cache\3c03a17fa77a7980ce3b25c58b7fb7f815ef73b7\output\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-applinks:4.29.0] C:\Users\Dung\.android\build-cache\be55c9fe40b3c354941ad64ca3360753cf0fedb0\output\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-messenger:4.29.0] C:\Users\Dung\.android\build-cache\8e26a3e131e3934a1d9a43561b1db7a6c6e1916a\output\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-core:4.29.0] C:\Users\Dung\.android\build-cache\e450ce8b4c11832a457bc8887fd020eec9b921e2\output\AndroidManifest.xml:24:5-26:41
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Dung\.android\build-cache\54e0d6175e78ee8ef2b10e9eeddafd2195429b24\output\AndroidManifest.xml:23:5-43
+MERGED from [com.google.android.gms:play-services-location:11.0.4] C:\Users\Dung\.android\build-cache\510caaa7e5e2f9040d75bb7a341b4dbca77be19b\output\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Dung\.android\build-cache\8d4d6dac4365cfc65b47f26724a53c81755b27d6\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tasks:11.0.4] C:\Users\Dung\.android\build-cache\835fb10a794fea91a24cb40258e8e2e9e25f617f\output\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\Dung\.android\build-cache\c7dff8d209a3c19d48cc190bd4235887119f5ae5\output\AndroidManifest.xml:17:5-43
+MERGED from [com.android.support:support-v4:27.0.1] C:\Users\Dung\.android\build-cache\eb74f4e702bd3e3ab46c708a4a394ce1455ec3b4\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.0.1] C:\Users\Dung\.android\build-cache\fe07268a6c89da1a216724ff43a18871c5851931\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.0.1] C:\Users\Dung\.android\build-cache\0204e0064b867ecba7d9bdf8c4d28d4623d949df\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.0.1] C:\Users\Dung\.android\build-cache\137b51ce7392ae31b90166cfc9ffae8653ffb017\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.0.1] C:\Users\Dung\.android\build-cache\26bd74f5d0e631d658fb43ecc34e163b1851ca8f\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.0.1] C:\Users\Dung\.android\build-cache\3ef226c562665ae7965f0f38a6b360c397ee1095\output\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Dung\.android\build-cache\8468335620fb107ebe463cd63e89f9eb28f22ffc\output\AndroidManifest.xml:20:5-22:41
+MERGED from [com.paypal.sdk:paypal-android-sdk:2.14.5] C:\Users\Dung\.android\build-cache\806da0b70cb18b8e49fdfe21c68e2860a52d8df7\output\AndroidManifest.xml:5:5-7:41
+MERGED from [io.card:android-sdk:5.4.0] C:\Users\Dung\.android\build-cache\84850693c036e12d75ec97bc6cf6090394d04822\output\AndroidManifest.xml:7:5-9:41
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:26.0.1] /home/dunghv/.android/build-cache/742d5ffba5ed2a5bab5f805f086dbbfa02bd3606/output/AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:26.0.1] C:\Users\Dung\.android\build-cache\63baca96be3c820c70e5e7574688bacb37e9e2db\output\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
-		INJECTED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml
-		INJECTED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml
-		INJECTED from /home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml
 meta-data#android.support.VERSION
-ADDED from [com.android.support:design:26.0.1] /home/dunghv/.android/build-cache/742d5ffba5ed2a5bab5f805f086dbbfa02bd3606/output/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:recyclerview-v7:26.0.1] /home/dunghv/.android/build-cache/153cc804c3d7c2e29ad67bec4e188e91c241bf64/output/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:transition:26.0.1] /home/dunghv/.android/build-cache/a4f3b7030f2e6d87583eee70969428e2e6b52449/output/AndroidManifest.xml:23:9-25:38
+ADDED from [com.android.support:design:26.0.1] C:\Users\Dung\.android\build-cache\63baca96be3c820c70e5e7574688bacb37e9e2db\output\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:recyclerview-v7:26.0.1] C:\Users\Dung\.android\build-cache\9923f45d949c1cf098c172e30d59c4d496ba3403\output\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.0.1] C:\Users\Dung\.android\build-cache\77cd110a6cdc9748867f71e3ab55c9eb75e2e11d\output\AndroidManifest.xml:23:9-25:38
 	android:value
-		ADDED from [com.android.support:design:26.0.1] /home/dunghv/.android/build-cache/742d5ffba5ed2a5bab5f805f086dbbfa02bd3606/output/AndroidManifest.xml:28:13-35
+		ADDED from [com.android.support:design:26.0.1] C:\Users\Dung\.android\build-cache\63baca96be3c820c70e5e7574688bacb37e9e2db\output\AndroidManifest.xml:28:13-35
 	android:name
-		ADDED from [com.android.support:design:26.0.1] /home/dunghv/.android/build-cache/742d5ffba5ed2a5bab5f805f086dbbfa02bd3606/output/AndroidManifest.xml:27:13-51
+		ADDED from [com.android.support:design:26.0.1] C:\Users\Dung\.android\build-cache\63baca96be3c820c70e5e7574688bacb37e9e2db\output\AndroidManifest.xml:27:13-51
 activity#com.facebook.FacebookActivity
-ADDED from [com.facebook.android:facebook-common:4.29.0] /home/dunghv/.android/build-cache/c7869437c28330d19c4c8657f5fb43f8d17e468e/output/AndroidManifest.xml:29:9-32:66
+ADDED from [com.facebook.android:facebook-common:4.29.0] C:\Users\Dung\.android\build-cache\84c6147c280c786f6b45af2b8f5f7ba803a798bf\output\AndroidManifest.xml:29:9-32:66
 	android:configChanges
-		ADDED from [com.facebook.android:facebook-common:4.29.0] /home/dunghv/.android/build-cache/c7869437c28330d19c4c8657f5fb43f8d17e468e/output/AndroidManifest.xml:31:13-96
+		ADDED from [com.facebook.android:facebook-common:4.29.0] C:\Users\Dung\.android\build-cache\84c6147c280c786f6b45af2b8f5f7ba803a798bf\output\AndroidManifest.xml:31:13-96
 	android:theme
-		ADDED from [com.facebook.android:facebook-common:4.29.0] /home/dunghv/.android/build-cache/c7869437c28330d19c4c8657f5fb43f8d17e468e/output/AndroidManifest.xml:32:13-63
+		ADDED from [com.facebook.android:facebook-common:4.29.0] C:\Users\Dung\.android\build-cache\84c6147c280c786f6b45af2b8f5f7ba803a798bf\output\AndroidManifest.xml:32:13-63
 	android:name
-		ADDED from [com.facebook.android:facebook-common:4.29.0] /home/dunghv/.android/build-cache/c7869437c28330d19c4c8657f5fb43f8d17e468e/output/AndroidManifest.xml:30:13-57
+		ADDED from [com.facebook.android:facebook-common:4.29.0] C:\Users\Dung\.android\build-cache\84c6147c280c786f6b45af2b8f5f7ba803a798bf\output\AndroidManifest.xml:30:13-57
 activity#com.facebook.CustomTabMainActivity
-ADDED from [com.facebook.android:facebook-common:4.29.0] /home/dunghv/.android/build-cache/c7869437c28330d19c4c8657f5fb43f8d17e468e/output/AndroidManifest.xml:33:9-71
+ADDED from [com.facebook.android:facebook-common:4.29.0] C:\Users\Dung\.android\build-cache\84c6147c280c786f6b45af2b8f5f7ba803a798bf\output\AndroidManifest.xml:33:9-71
 	android:name
-		ADDED from [com.facebook.android:facebook-common:4.29.0] /home/dunghv/.android/build-cache/c7869437c28330d19c4c8657f5fb43f8d17e468e/output/AndroidManifest.xml:33:19-68
+		ADDED from [com.facebook.android:facebook-common:4.29.0] C:\Users\Dung\.android\build-cache\84c6147c280c786f6b45af2b8f5f7ba803a798bf\output\AndroidManifest.xml:33:19-68
 provider#com.facebook.internal.FacebookInitProvider
-ADDED from [com.facebook.android:facebook-core:4.29.0] /home/dunghv/.android/build-cache/cee140943ae54faa4df528268b5fb2ac071cf666/output/AndroidManifest.xml:39:9-42:40
+ADDED from [com.facebook.android:facebook-core:4.29.0] C:\Users\Dung\.android\build-cache\e450ce8b4c11832a457bc8887fd020eec9b921e2\output\AndroidManifest.xml:39:9-42:40
 	android:authorities
-		ADDED from [com.facebook.android:facebook-core:4.29.0] /home/dunghv/.android/build-cache/cee140943ae54faa4df528268b5fb2ac071cf666/output/AndroidManifest.xml:41:13-72
+		ADDED from [com.facebook.android:facebook-core:4.29.0] C:\Users\Dung\.android\build-cache\e450ce8b4c11832a457bc8887fd020eec9b921e2\output\AndroidManifest.xml:41:13-72
 	android:exported
-		ADDED from [com.facebook.android:facebook-core:4.29.0] /home/dunghv/.android/build-cache/cee140943ae54faa4df528268b5fb2ac071cf666/output/AndroidManifest.xml:42:13-37
+		ADDED from [com.facebook.android:facebook-core:4.29.0] C:\Users\Dung\.android\build-cache\e450ce8b4c11832a457bc8887fd020eec9b921e2\output\AndroidManifest.xml:42:13-37
 	android:name
-		ADDED from [com.facebook.android:facebook-core:4.29.0] /home/dunghv/.android/build-cache/cee140943ae54faa4df528268b5fb2ac071cf666/output/AndroidManifest.xml:40:13-70
+		ADDED from [com.facebook.android:facebook-core:4.29.0] C:\Users\Dung\.android\build-cache\e450ce8b4c11832a457bc8887fd020eec9b921e2\output\AndroidManifest.xml:40:13-70
 uses-feature#0x00020000
-ADDED from [com.google.android.gms:play-services-maps:11.0.4] /home/dunghv/.android/build-cache/63fb6fa441e1676f286a224cfd8c48c919a3b533/output/AndroidManifest.xml:21:5-77
+ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Dung\.android\build-cache\54e0d6175e78ee8ef2b10e9eeddafd2195429b24\output\AndroidManifest.xml:21:5-77
 	android:glEsVersion
-		ADDED from [com.google.android.gms:play-services-maps:11.0.4] /home/dunghv/.android/build-cache/63fb6fa441e1676f286a224cfd8c48c919a3b533/output/AndroidManifest.xml:21:19-51
+		ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Dung\.android\build-cache\54e0d6175e78ee8ef2b10e9eeddafd2195429b24\output\AndroidManifest.xml:21:19-51
 	android:required
-		ADDED from [com.google.android.gms:play-services-maps:11.0.4] /home/dunghv/.android/build-cache/63fb6fa441e1676f286a224cfd8c48c919a3b533/output/AndroidManifest.xml:21:52-75
+		ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Dung\.android\build-cache\54e0d6175e78ee8ef2b10e9eeddafd2195429b24\output\AndroidManifest.xml:21:52-75
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:11.0.4] /home/dunghv/.android/build-cache/2b33b346befb3b3c3d005caf2c0204c508b896e8/output/AndroidManifest.xml:19:9-172
+ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Dung\.android\build-cache\8d4d6dac4365cfc65b47f26724a53c81755b27d6\output\AndroidManifest.xml:19:9-172
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:11.0.4] /home/dunghv/.android/build-cache/2b33b346befb3b3c3d005caf2c0204c508b896e8/output/AndroidManifest.xml:19:146-170
+		ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Dung\.android\build-cache\8d4d6dac4365cfc65b47f26724a53c81755b27d6\output\AndroidManifest.xml:19:146-170
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:11.0.4] /home/dunghv/.android/build-cache/2b33b346befb3b3c3d005caf2c0204c508b896e8/output/AndroidManifest.xml:19:86-145
+		ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Dung\.android\build-cache\8d4d6dac4365cfc65b47f26724a53c81755b27d6\output\AndroidManifest.xml:19:86-145
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:11.0.4] /home/dunghv/.android/build-cache/2b33b346befb3b3c3d005caf2c0204c508b896e8/output/AndroidManifest.xml:19:19-85
+		ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Dung\.android\build-cache\8d4d6dac4365cfc65b47f26724a53c81755b27d6\output\AndroidManifest.xml:19:19-85
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:11.0.4] /home/dunghv/.android/build-cache/902bda8c1fc6c9bfe1b685ed3d39c89ed395345c/output/AndroidManifest.xml:20:9-121
+ADDED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\Dung\.android\build-cache\c7dff8d209a3c19d48cc190bd4235887119f5ae5\output\AndroidManifest.xml:20:9-121
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:11.0.4] /home/dunghv/.android/build-cache/902bda8c1fc6c9bfe1b685ed3d39c89ed395345c/output/AndroidManifest.xml:20:66-119
+		ADDED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\Dung\.android\build-cache\c7dff8d209a3c19d48cc190bd4235887119f5ae5\output\AndroidManifest.xml:20:66-119
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:11.0.4] /home/dunghv/.android/build-cache/902bda8c1fc6c9bfe1b685ed3d39c89ed395345c/output/AndroidManifest.xml:20:20-65
+		ADDED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\Dung\.android\build-cache\c7dff8d209a3c19d48cc190bd4235887119f5ae5\output\AndroidManifest.xml:20:20-65
 meta-data#android.arch.lifecycle.VERSION
-ADDED from [android.arch.lifecycle:runtime:1.0.0] /home/dunghv/.android/build-cache/dca9438f63aed65a56c7c0b17dd67dfbbcb778cd/output/AndroidManifest.xml:25:9-27:47
+ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Dung\.android\build-cache\8468335620fb107ebe463cd63e89f9eb28f22ffc\output\AndroidManifest.xml:25:9-27:47
 	android:value
-		ADDED from [android.arch.lifecycle:runtime:1.0.0] /home/dunghv/.android/build-cache/dca9438f63aed65a56c7c0b17dd67dfbbcb778cd/output/AndroidManifest.xml:27:13-44
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Dung\.android\build-cache\8468335620fb107ebe463cd63e89f9eb28f22ffc\output\AndroidManifest.xml:27:13-44
 	android:name
-		ADDED from [android.arch.lifecycle:runtime:1.0.0] /home/dunghv/.android/build-cache/dca9438f63aed65a56c7c0b17dd67dfbbcb778cd/output/AndroidManifest.xml:26:13-58
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Dung\.android\build-cache\8468335620fb107ebe463cd63e89f9eb28f22ffc\output\AndroidManifest.xml:26:13-58
 activity#com.paypal.android.sdk.payments.PaymentActivity
-ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] /home/dunghv/.android/build-cache/ae70a3947dfdc1c11c5a76d4ce363ed959492872/output/AndroidManifest.xml:13:9-84
+ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] C:\Users\Dung\.android\build-cache\806da0b70cb18b8e49fdfe21c68e2860a52d8df7\output\AndroidManifest.xml:13:9-84
 	android:name
-		ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] /home/dunghv/.android/build-cache/ae70a3947dfdc1c11c5a76d4ce363ed959492872/output/AndroidManifest.xml:13:19-81
+		ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] C:\Users\Dung\.android\build-cache\806da0b70cb18b8e49fdfe21c68e2860a52d8df7\output\AndroidManifest.xml:13:19-81
 activity#com.paypal.android.sdk.payments.PaymentMethodActivity
-ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] /home/dunghv/.android/build-cache/ae70a3947dfdc1c11c5a76d4ce363ed959492872/output/AndroidManifest.xml:14:9-90
+ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] C:\Users\Dung\.android\build-cache\806da0b70cb18b8e49fdfe21c68e2860a52d8df7\output\AndroidManifest.xml:14:9-90
 	android:name
-		ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] /home/dunghv/.android/build-cache/ae70a3947dfdc1c11c5a76d4ce363ed959492872/output/AndroidManifest.xml:14:19-87
+		ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] C:\Users\Dung\.android\build-cache\806da0b70cb18b8e49fdfe21c68e2860a52d8df7\output\AndroidManifest.xml:14:19-87
 activity#com.paypal.android.sdk.payments.PaymentConfirmActivity
-ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] /home/dunghv/.android/build-cache/ae70a3947dfdc1c11c5a76d4ce363ed959492872/output/AndroidManifest.xml:15:9-91
+ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] C:\Users\Dung\.android\build-cache\806da0b70cb18b8e49fdfe21c68e2860a52d8df7\output\AndroidManifest.xml:15:9-91
 	android:name
-		ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] /home/dunghv/.android/build-cache/ae70a3947dfdc1c11c5a76d4ce363ed959492872/output/AndroidManifest.xml:15:19-88
+		ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] C:\Users\Dung\.android\build-cache\806da0b70cb18b8e49fdfe21c68e2860a52d8df7\output\AndroidManifest.xml:15:19-88
 activity#com.paypal.android.sdk.payments.LoginActivity
-ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] /home/dunghv/.android/build-cache/ae70a3947dfdc1c11c5a76d4ce363ed959492872/output/AndroidManifest.xml:16:9-82
+ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] C:\Users\Dung\.android\build-cache\806da0b70cb18b8e49fdfe21c68e2860a52d8df7\output\AndroidManifest.xml:16:9-82
 	android:name
-		ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] /home/dunghv/.android/build-cache/ae70a3947dfdc1c11c5a76d4ce363ed959492872/output/AndroidManifest.xml:16:19-79
+		ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] C:\Users\Dung\.android\build-cache\806da0b70cb18b8e49fdfe21c68e2860a52d8df7\output\AndroidManifest.xml:16:19-79
 activity#com.paypal.android.sdk.payments.PayPalFuturePaymentActivity
-ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] /home/dunghv/.android/build-cache/ae70a3947dfdc1c11c5a76d4ce363ed959492872/output/AndroidManifest.xml:17:9-96
+ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] C:\Users\Dung\.android\build-cache\806da0b70cb18b8e49fdfe21c68e2860a52d8df7\output\AndroidManifest.xml:17:9-96
 	android:name
-		ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] /home/dunghv/.android/build-cache/ae70a3947dfdc1c11c5a76d4ce363ed959492872/output/AndroidManifest.xml:17:19-93
+		ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] C:\Users\Dung\.android\build-cache\806da0b70cb18b8e49fdfe21c68e2860a52d8df7\output\AndroidManifest.xml:17:19-93
 activity#com.paypal.android.sdk.payments.FuturePaymentConsentActivity
-ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] /home/dunghv/.android/build-cache/ae70a3947dfdc1c11c5a76d4ce363ed959492872/output/AndroidManifest.xml:18:9-97
+ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] C:\Users\Dung\.android\build-cache\806da0b70cb18b8e49fdfe21c68e2860a52d8df7\output\AndroidManifest.xml:18:9-97
 	android:name
-		ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] /home/dunghv/.android/build-cache/ae70a3947dfdc1c11c5a76d4ce363ed959492872/output/AndroidManifest.xml:18:19-94
+		ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] C:\Users\Dung\.android\build-cache\806da0b70cb18b8e49fdfe21c68e2860a52d8df7\output\AndroidManifest.xml:18:19-94
 activity#com.paypal.android.sdk.payments.FuturePaymentInfoActivity
-ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] /home/dunghv/.android/build-cache/ae70a3947dfdc1c11c5a76d4ce363ed959492872/output/AndroidManifest.xml:19:9-94
+ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] C:\Users\Dung\.android\build-cache\806da0b70cb18b8e49fdfe21c68e2860a52d8df7\output\AndroidManifest.xml:19:9-94
 	android:name
-		ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] /home/dunghv/.android/build-cache/ae70a3947dfdc1c11c5a76d4ce363ed959492872/output/AndroidManifest.xml:19:19-91
+		ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] C:\Users\Dung\.android\build-cache\806da0b70cb18b8e49fdfe21c68e2860a52d8df7\output\AndroidManifest.xml:19:19-91
 activity#com.paypal.android.sdk.payments.PayPalProfileSharingActivity
-ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] /home/dunghv/.android/build-cache/ae70a3947dfdc1c11c5a76d4ce363ed959492872/output/AndroidManifest.xml:20:9-97
+ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] C:\Users\Dung\.android\build-cache\806da0b70cb18b8e49fdfe21c68e2860a52d8df7\output\AndroidManifest.xml:20:9-97
 	android:name
-		ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] /home/dunghv/.android/build-cache/ae70a3947dfdc1c11c5a76d4ce363ed959492872/output/AndroidManifest.xml:20:19-94
+		ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] C:\Users\Dung\.android\build-cache\806da0b70cb18b8e49fdfe21c68e2860a52d8df7\output\AndroidManifest.xml:20:19-94
 activity#com.paypal.android.sdk.payments.ProfileSharingConsentActivity
-ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] /home/dunghv/.android/build-cache/ae70a3947dfdc1c11c5a76d4ce363ed959492872/output/AndroidManifest.xml:21:9-98
+ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] C:\Users\Dung\.android\build-cache\806da0b70cb18b8e49fdfe21c68e2860a52d8df7\output\AndroidManifest.xml:21:9-98
 	android:name
-		ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] /home/dunghv/.android/build-cache/ae70a3947dfdc1c11c5a76d4ce363ed959492872/output/AndroidManifest.xml:21:19-95
+		ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] C:\Users\Dung\.android\build-cache\806da0b70cb18b8e49fdfe21c68e2860a52d8df7\output\AndroidManifest.xml:21:19-95
 service#com.paypal.android.sdk.payments.PayPalService
-ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] /home/dunghv/.android/build-cache/ae70a3947dfdc1c11c5a76d4ce363ed959492872/output/AndroidManifest.xml:23:9-25:40
+ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] C:\Users\Dung\.android\build-cache\806da0b70cb18b8e49fdfe21c68e2860a52d8df7\output\AndroidManifest.xml:23:9-25:40
 	android:exported
-		ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] /home/dunghv/.android/build-cache/ae70a3947dfdc1c11c5a76d4ce363ed959492872/output/AndroidManifest.xml:25:13-37
+		ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] C:\Users\Dung\.android\build-cache\806da0b70cb18b8e49fdfe21c68e2860a52d8df7\output\AndroidManifest.xml:25:13-37
 	android:name
-		ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] /home/dunghv/.android/build-cache/ae70a3947dfdc1c11c5a76d4ce363ed959492872/output/AndroidManifest.xml:24:13-73
+		ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.5] C:\Users\Dung\.android\build-cache\806da0b70cb18b8e49fdfe21c68e2860a52d8df7\output\AndroidManifest.xml:24:13-73
 uses-permission#android.permission.CAMERA
-ADDED from [io.card:android-sdk:5.4.0] /home/dunghv/.android/build-cache/80ae6b8a09af74f8cf4ff2b2bfbd85d9d50a9929/output/AndroidManifest.xml:11:5-65
+ADDED from [io.card:android-sdk:5.4.0] C:\Users\Dung\.android\build-cache\84850693c036e12d75ec97bc6cf6090394d04822\output\AndroidManifest.xml:11:5-65
 	android:name
-		ADDED from [io.card:android-sdk:5.4.0] /home/dunghv/.android/build-cache/80ae6b8a09af74f8cf4ff2b2bfbd85d9d50a9929/output/AndroidManifest.xml:11:22-62
+		ADDED from [io.card:android-sdk:5.4.0] C:\Users\Dung\.android\build-cache\84850693c036e12d75ec97bc6cf6090394d04822\output\AndroidManifest.xml:11:22-62
 uses-permission#android.permission.VIBRATE
-ADDED from [io.card:android-sdk:5.4.0] /home/dunghv/.android/build-cache/80ae6b8a09af74f8cf4ff2b2bfbd85d9d50a9929/output/AndroidManifest.xml:12:5-66
+ADDED from [io.card:android-sdk:5.4.0] C:\Users\Dung\.android\build-cache\84850693c036e12d75ec97bc6cf6090394d04822\output\AndroidManifest.xml:12:5-66
 	android:name
-		ADDED from [io.card:android-sdk:5.4.0] /home/dunghv/.android/build-cache/80ae6b8a09af74f8cf4ff2b2bfbd85d9d50a9929/output/AndroidManifest.xml:12:22-63
+		ADDED from [io.card:android-sdk:5.4.0] C:\Users\Dung\.android\build-cache\84850693c036e12d75ec97bc6cf6090394d04822\output\AndroidManifest.xml:12:22-63
 uses-feature#android.hardware.camera
-ADDED from [io.card:android-sdk:5.4.0] /home/dunghv/.android/build-cache/80ae6b8a09af74f8cf4ff2b2bfbd85d9d50a9929/output/AndroidManifest.xml:14:5-16:36
+ADDED from [io.card:android-sdk:5.4.0] C:\Users\Dung\.android\build-cache\84850693c036e12d75ec97bc6cf6090394d04822\output\AndroidManifest.xml:14:5-16:36
 	android:required
-		ADDED from [io.card:android-sdk:5.4.0] /home/dunghv/.android/build-cache/80ae6b8a09af74f8cf4ff2b2bfbd85d9d50a9929/output/AndroidManifest.xml:16:9-33
+		ADDED from [io.card:android-sdk:5.4.0] C:\Users\Dung\.android\build-cache\84850693c036e12d75ec97bc6cf6090394d04822\output\AndroidManifest.xml:16:9-33
 	android:name
-		ADDED from [io.card:android-sdk:5.4.0] /home/dunghv/.android/build-cache/80ae6b8a09af74f8cf4ff2b2bfbd85d9d50a9929/output/AndroidManifest.xml:15:9-47
+		ADDED from [io.card:android-sdk:5.4.0] C:\Users\Dung\.android\build-cache\84850693c036e12d75ec97bc6cf6090394d04822\output\AndroidManifest.xml:15:9-47
 uses-feature#android.hardware.camera.autofocus
-ADDED from [io.card:android-sdk:5.4.0] /home/dunghv/.android/build-cache/80ae6b8a09af74f8cf4ff2b2bfbd85d9d50a9929/output/AndroidManifest.xml:17:5-19:36
+ADDED from [io.card:android-sdk:5.4.0] C:\Users\Dung\.android\build-cache\84850693c036e12d75ec97bc6cf6090394d04822\output\AndroidManifest.xml:17:5-19:36
 	android:required
-		ADDED from [io.card:android-sdk:5.4.0] /home/dunghv/.android/build-cache/80ae6b8a09af74f8cf4ff2b2bfbd85d9d50a9929/output/AndroidManifest.xml:19:9-33
+		ADDED from [io.card:android-sdk:5.4.0] C:\Users\Dung\.android\build-cache\84850693c036e12d75ec97bc6cf6090394d04822\output\AndroidManifest.xml:19:9-33
 	android:name
-		ADDED from [io.card:android-sdk:5.4.0] /home/dunghv/.android/build-cache/80ae6b8a09af74f8cf4ff2b2bfbd85d9d50a9929/output/AndroidManifest.xml:18:9-57
+		ADDED from [io.card:android-sdk:5.4.0] C:\Users\Dung\.android\build-cache\84850693c036e12d75ec97bc6cf6090394d04822\output\AndroidManifest.xml:18:9-57
 activity#io.card.payment.CardIOActivity
-ADDED from [io.card:android-sdk:5.4.0] /home/dunghv/.android/build-cache/80ae6b8a09af74f8cf4ff2b2bfbd85d9d50a9929/output/AndroidManifest.xml:22:9-24:66
+ADDED from [io.card:android-sdk:5.4.0] C:\Users\Dung\.android\build-cache\84850693c036e12d75ec97bc6cf6090394d04822\output\AndroidManifest.xml:22:9-24:66
 	android:configChanges
-		ADDED from [io.card:android-sdk:5.4.0] /home/dunghv/.android/build-cache/80ae6b8a09af74f8cf4ff2b2bfbd85d9d50a9929/output/AndroidManifest.xml:24:13-63
+		ADDED from [io.card:android-sdk:5.4.0] C:\Users\Dung\.android\build-cache\84850693c036e12d75ec97bc6cf6090394d04822\output\AndroidManifest.xml:24:13-63
 	android:name
-		ADDED from [io.card:android-sdk:5.4.0] /home/dunghv/.android/build-cache/80ae6b8a09af74f8cf4ff2b2bfbd85d9d50a9929/output/AndroidManifest.xml:23:13-58
+		ADDED from [io.card:android-sdk:5.4.0] C:\Users\Dung\.android\build-cache\84850693c036e12d75ec97bc6cf6090394d04822\output\AndroidManifest.xml:23:13-58
 activity#io.card.payment.DataEntryActivity
-ADDED from [io.card:android-sdk:5.4.0] /home/dunghv/.android/build-cache/80ae6b8a09af74f8cf4ff2b2bfbd85d9d50a9929/output/AndroidManifest.xml:25:9-70
+ADDED from [io.card:android-sdk:5.4.0] C:\Users\Dung\.android\build-cache\84850693c036e12d75ec97bc6cf6090394d04822\output\AndroidManifest.xml:25:9-70
 	android:name
-		ADDED from [io.card:android-sdk:5.4.0] /home/dunghv/.android/build-cache/80ae6b8a09af74f8cf4ff2b2bfbd85d9d50a9929/output/AndroidManifest.xml:25:19-67
+		ADDED from [io.card:android-sdk:5.4.0] C:\Users\Dung\.android\build-cache\84850693c036e12d75ec97bc6cf6090394d04822\output\AndroidManifest.xml:25:19-67

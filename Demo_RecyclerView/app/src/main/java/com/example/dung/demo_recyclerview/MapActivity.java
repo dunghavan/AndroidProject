@@ -121,14 +121,6 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
                 .findFragmentById(R.id.fragment_map);
         mapFragment.getMapAsync(this);
 
-        //for map:
-        // kiểm tra play services
-        if (checkPlayServices()) {
-            // Building the GoogleApi client
-            buildGoogleApiClient();
-        }
-        geocoder = new Geocoder(this, Locale.getDefault());
-
         tv_diaChiCuaHang = (TextView)findViewById(R.id.tv_from);
         tv_diaChiCuaBan = (TextView)findViewById(R.id.tv_to);
         tv_khoangCach = (TextView)findViewById(R.id.tv_distance);
@@ -233,6 +225,13 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
                     nhaHang = response.body();
                     tv_diaChiCuaHang.setText("From: " + nhaHang.getDiaChi());
                     nhaHangLatLong = new LatLng(nhaHang.getViDo(), nhaHang.getKinhDo());
+                    //for map:
+                    // kiểm tra play services
+                    if (checkPlayServices()) {
+                        // Building the GoogleApi client
+                        buildGoogleApiClient();
+                    }
+                    geocoder = new Geocoder(MyApplication.getCurrentContext(), Locale.getDefault());
                 }
                 catch (Exception e){
                     tv_diaChiCuaHang.setText("From: null");
@@ -245,6 +244,7 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
                 Log.d("Error in MapActivity", "Failure");
             }
         });
+
     }
 
     public static class DatePickerFragment extends DialogFragment implements DatePickerDialog.OnDateSetListener {
@@ -302,7 +302,7 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
         phoneNumber = editText_Phone.getText().toString();
         DecimalFormat df = new DecimalFormat("###");
         int tongTien = (int)Math.round(Cart.getTotal());
-        apiService.submitOrder(LoginActivity.getID(), curDateTime, _deliveryDateTime,
+        apiService.submitOrder(LoginActivity.facebook_profile.getId(), curDateTime, _deliveryDateTime,
                 submitAddress, phoneNumber, _paymentType, _payID, tongTien, Cart.convertTo_CTDDH(),
                 "false", "false").enqueue(new Callback<Void>() {
             @Override
@@ -328,10 +328,6 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-        // Add a marker in Sydney and move the camera
-        mMap.addMarker(new MarkerOptions().position(nhaHangLatLong).title("Vị trí nhà hàng"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(nhaHangLatLong));
-
     }
 
     /**
@@ -352,10 +348,11 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
             // Kiểm tra quyền hạn
             ActivityCompat.requestPermissions(this,
                     new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, 2);
-        } else {
+        }
+        //else {
             Location location = LocationServices.FusedLocationApi.getLastLocation(gac);
 
-            if (location != null) {
+            if (location != null && nhaHangLatLong != null && mMap != null) {
                 userLatLong = new LatLng(location.getLatitude(), location.getLongitude());
 
                 Log.d("My Location", userLatLong.latitude + ", " + userLatLong.longitude);
@@ -366,6 +363,10 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
                 markerOptions.position(userLatLong);
                 markerOptions.title("Vị trí của bạn");
                 currLocationMarker = mMap.addMarker(markerOptions);
+
+                // Add a marker in NhaHang and move the camera
+                mMap.addMarker(new MarkerOptions().position(nhaHangLatLong).title("Vị trí nhà hàng"));
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(nhaHangLatLong));
                 //Update location:
                 mLocationRequest = new LocationRequest();
                 mLocationRequest.setInterval(60000); //5 seconds
@@ -386,21 +387,18 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
                             sb.append(address.getAddressLine(i) + "\n");
                         }
 
-                        String newAddress = address.getFeatureName() + "-"
-                                + address.getSubLocality() + "-" + address.getSubAdminArea() + "-"
-                                + address.getAdminArea();
+                        String newAddress = writeAddress(address);
                         tv_diaChiCuaBan.setText("Địa chỉ của bạn: " + newAddress);
                         submitAddress = newAddress;
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                // Hiển thị
-                //tvLocation.setText(latitude + ", " + longitude);
-            } else {
-                //tvLocation.setText("(Không thể hiển thị vị trí. " + "Bạn đã kích hoạt location trên thiết bị chưa?)");
             }
-        }
+            else {
+                tv_diaChiCuaHang.setText("[Không tìm thấy địa chỉ cửa hàng]");
+            }
+        //}
     }
     /**
      * Phương thức kiểm chứng google play services trên thiết bị
@@ -432,7 +430,7 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
 
     @Override
     public void onConnectionFailed(ConnectionResult result) {
-        Toast.makeText(this, "Lỗi kết nối: " + result.getErrorMessage(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Lỗi biến gac: " + result.getErrorMessage(), Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -497,6 +495,20 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
                 Log.d("SecurityException", "Not have permission!");
             }
         }
+    }
+
+    private String writeAddress(Address address){
+        StringBuilder result = new StringBuilder();
+        if(address.getFeatureName() != null)
+            result.append(address.getFeatureName());
+        if(address.getSubLocality() != null)
+            result.append("-" + address.getSubLocality());
+        if(address.getSubAdminArea() != null)
+            result.append("-" + address.getSubAdminArea());
+        if(address.getAdminArea() != null)
+            result.append("-" + address.getAdminArea());
+
+        return result.toString();
     }
 
     @Override

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.example.dung.demo_recyclerview.model.Facebook_Profile;
 import com.facebook.*;
 import com.facebook.appevents.AppEventsLogger;
 import com.facebook.login.LoginManager;
@@ -22,8 +23,9 @@ import org.json.JSONObject;
 public class LoginActivity extends AppCompatActivity {
     private static final String TAG = LoginActivity.class.getSimpleName();
     //private static boolean isAuthenticated = false;
-    private static String ID = "";
-    private static String NAME = "";
+    public static Facebook_Profile facebook_profile;
+    public static String NAME = "";
+    public static String ID = "";
     static LoginActivity activity;
     CallbackManager callbackManager;
     LoginButton fbLoginButton;
@@ -42,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
         activity = this; //Used to close Activity in static method
         callbackManager = CallbackManager.Factory.create();
 
-        fbLoginButton = (LoginButton) findViewById(R.id.login_button);
+        fbLoginButton = (LoginButton) findViewById(R.id.fb_login_button);
         //https://developers.facebook.com/docs/facebook-login/permissions#reference
         fbLoginButton.setReadPermissions("email");
 
@@ -52,7 +54,7 @@ public class LoginActivity extends AppCompatActivity {
                 Log.d(TAG, "======Facebook login success======");
                 Log.d(TAG, "Facebook Access Token: " + loginResult.getAccessToken().getToken());
                 Toast.makeText(MyApplication.getCurrentContext(), "Login Facebook success.", Toast.LENGTH_SHORT).show();
-                //isAuthenticated = true;
+
                 getFbInfo();
             }
 
@@ -66,7 +68,6 @@ public class LoginActivity extends AppCompatActivity {
                 Log.e(TAG, "======Facebook login error======");
                 Log.e(TAG, "Error: " + error.toString());
                 Toast.makeText(MyApplication.getCurrentContext(), "Login Facebook error.", Toast.LENGTH_SHORT).show();
-                //isAuthenticated = false;
             }
         });
     }
@@ -87,9 +88,18 @@ public class LoginActivity extends AppCompatActivity {
                             if (me != null) {
                                 Log.i("Login: ", me.optString("name"));
                                 Log.i("ID: ", me.optString("id"));
+                                Log.i("ID: ", me.optString("picture"));
 
                                 ID = me.optString("id");
                                 NAME = me.optString("name");
+
+//                                facebook_profile.setId(me.optString("id"));
+//                                facebook_profile.setName(me.optString("name"));
+//                                facebook_profile.setGender(me.optString("gender"));
+//                                facebook_profile.setBirthday(me.optString("birthday"));
+//                                facebook_profile.setEmail(me.optString("email"));
+//                                facebook_profile.setUser_mobile_phone(me.optString("user_mobile_phone"));
+
                                 if(listener != null)
                                     listener.onUpdateUI();
                                 CartActivity.isCheckAuthen = true;
@@ -103,7 +113,8 @@ public class LoginActivity extends AppCompatActivity {
                     });
 
             Bundle parameters = new Bundle();
-            parameters.putString("fields", "id,name,link");
+            //parameters.putString("fields", "id, name, link, gender, birthday, email, user_mobile_phone");
+            parameters.putString("fields", "id, name, link");
             request.setParameters(parameters);
             request.executeAsync();
         }
@@ -113,14 +124,6 @@ public class LoginActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         MyApplication.setCurrentContext(this);
-    }
-
-    public static String getID() {
-        return ID;
-    }
-
-    public static String getNAME() {
-        return NAME;
     }
 
     public static boolean isAuthenticated() {
@@ -138,4 +141,13 @@ public class LoginActivity extends AppCompatActivity {
             LoginManager.getInstance().logOut();
         }
     }
+
+    AccessTokenTracker accessTokenTracker = new AccessTokenTracker() {
+        @Override
+        protected void onCurrentAccessTokenChanged(AccessToken oldAccessToken, AccessToken currentAccessToken) {
+            if(currentAccessToken == null){
+                finish();
+            }
+        }
+    };
 }

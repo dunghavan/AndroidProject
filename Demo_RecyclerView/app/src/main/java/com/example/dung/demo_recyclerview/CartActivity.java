@@ -106,7 +106,7 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
                 login_btn.setVisibility(View.GONE);
                 next_btn.setVisibility(View.VISIBLE);
             }
-            tv_tenKhachHang.setText("Khách hàng: " + LoginActivity.getNAME());
+            tv_tenKhachHang.setText("Khách hàng: " + LoginActivity.facebook_profile.getName());
             tv_soLuongMon.setText("Số lượng món: " + String.valueOf(Cart.getAllItemCount()));
             tv_tongTien.setText("Tổng tiền: " + String.valueOf(decimalFormat.format(Cart.getTotal())) + " đ");
         }

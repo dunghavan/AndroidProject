@@ -188,18 +188,24 @@ public class RecyclerAdapter_For_CartActivity extends RecyclerView.Adapter <Recy
                     btn_minus_dialog.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            String itemIdSelected = monAn.getId();
-                            Cart.removeFromCart(itemIdSelected);
+                            if(Cart.getCartContent().size() == 1 && Cart.getCartContent().get(0).getItemCount() == 1){
+                                //Mon an cuoi cung trong Cart && So luong == 1
+                            }
+                            else {
+                                String itemIdSelected = monAn.getId();
+                                Cart.removeFromCart(itemIdSelected);
 
-                            Double tongTien = Cart.getItemCountById(monAn.getId()) * monAn.getGiaKhuyenMai();
-                            textViewTongTien.setText(String.valueOf(decimalFormat.format(tongTien)) + " đ");
+                                Double tongTien = Cart.getItemCountById(monAn.getId()) * monAn.getGiaKhuyenMai();
+                                textViewTongTien.setText(String.valueOf(decimalFormat.format(tongTien)) + " đ");
 
-                            String count = String.valueOf(Cart.getItemCountById(itemIdSelected));
-                            tv_SoLuongDat_In_Dialog.setText(count);
-                            //textView_SoLuongDat.setText(count);
-                            update_SoLuongDat(count);
-                            MainActivity.setupBadge(Cart.getAllItemCount());
-                            Activity_MonAn_Of_NhaHang.setupBadge(Cart.getAllItemCount());
+                                String count = String.valueOf(Cart.getItemCountById(itemIdSelected));
+                                tv_SoLuongDat_In_Dialog.setText(count);
+                                //textView_SoLuongDat.setText(count);
+                                update_SoLuongDat(count,itemIdSelected);
+                                MainActivity.setupBadge(Cart.getAllItemCount());
+                                Activity_MonAn_Of_NhaHang.setupBadge(Cart.getAllItemCount());
+                            }
+
                         }
                     });
                     ImageButton btn_plus_dialog = (ImageButton)alertDialogView.findViewById(R.id.btn_plus_in_dialog);
@@ -215,7 +221,7 @@ public class RecyclerAdapter_For_CartActivity extends RecyclerView.Adapter <Recy
                             String count = String.valueOf(Cart.getItemCountById(itemIdSelected));
                             tv_SoLuongDat_In_Dialog.setText(count);
                             //textView_SoLuongDat.setText(count);
-                            update_SoLuongDat(count);
+                            update_SoLuongDat(count, itemIdSelected);
                             MainActivity.setupBadge(Cart.getAllItemCount());
                             Activity_MonAn_Of_NhaHang.setupBadge(Cart.getAllItemCount());
                         }
@@ -227,7 +233,7 @@ public class RecyclerAdapter_For_CartActivity extends RecyclerView.Adapter <Recy
                                 public void onClick(DialogInterface dialog, int which) {
                                     //get date here...
                                     textView_SoLuongDat.setText(String.valueOf(Cart.getItemCountById(monAn.getId())));
-                                    Toast.makeText(MyApplication.getCurrentContext(), "Đã thêm vào giỏ" + getAdapterPosition(), Toast.LENGTH_SHORT).show();
+                                    //Toast.makeText(MyApplication.getCurrentContext(), "Đã thêm vào giỏ" + getAdapterPosition(), Toast.LENGTH_SHORT).show();
                                 }
                             });
                     //Create a dialog:
@@ -243,7 +249,7 @@ public class RecyclerAdapter_For_CartActivity extends RecyclerView.Adapter <Recy
                     MonAn itemSelected = listData.get(getLayoutPosition());
                     Cart.addToCart(itemSelected);
                     String count = String.valueOf(Cart.getItemCountById(itemSelected.getId()));
-                    update_SoLuongDat(count);
+                    update_SoLuongDat(count, itemSelected.getId());
                     MainActivity.setupBadge(Cart.getAllItemCount());
                     Activity_MonAn_Of_NhaHang.setupBadge(Cart.getAllItemCount());
                     notifyDataSetChanged();
@@ -258,7 +264,7 @@ public class RecyclerAdapter_For_CartActivity extends RecyclerView.Adapter <Recy
                     String itemIdSelected = listData.get(getLayoutPosition()).getId();
                     Cart.removeFromCart(itemIdSelected);
                     String count = String.valueOf(Cart.getItemCountById(itemIdSelected));
-                    update_SoLuongDat(count);
+                    update_SoLuongDat(count, itemIdSelected);
                     MainActivity.setupBadge(Cart.getAllItemCount());
                     Activity_MonAn_Of_NhaHang.setupBadge(Cart.getAllItemCount());
                     notifyDataSetChanged();
@@ -267,8 +273,14 @@ public class RecyclerAdapter_For_CartActivity extends RecyclerView.Adapter <Recy
                 }
             });
         }
-        public void update_SoLuongDat(String count){
+        public void update_SoLuongDat(String count, String itemIdSelected){
             textView_SoLuongDat.setText(count);
+            // Tinh tong tien:
+            Double giaKhuyenMai = Cart.getGiaKhuyenMaiById(itemIdSelected);
+            String giaKhuyenMai_String = String.format("%s", decimalFormat.format(giaKhuyenMai));
+            Double tongTien = giaKhuyenMai * Cart.getItemCountById(itemIdSelected);
+            String tongTien_String = String.format("%s", decimalFormat.format(tongTien));
+            textView_Gia.setText(giaKhuyenMai_String + "đ x " + count + " = " + tongTien_String + "đ");
             //update UI in CartActivity
             if(listener != null){
                 listener.onUpdateUI();

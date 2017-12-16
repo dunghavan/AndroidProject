@@ -1,18 +1,26 @@
 [
     {
-        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_in.xml",
-        "source": "/home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/C:\\Users\\Dung\\.android\\build-cache\\63baca96be3c820c70e5e7574688bacb37e9e2db\\output\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
+        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
+        "source": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\C:\\Users\\Dung\\.android\\build-cache\\63baca96be3c820c70e5e7574688bacb37e9e2db\\output\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
     },
     {
-        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
-        "source": "/home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/C:\\Users\\Dung\\.android\\build-cache\\63baca96be3c820c70e5e7574688bacb37e9e2db\\output\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
+        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_in.xml",
+        "source": "C:\\home\\dunghv\\.android\\build-cache\\742d5ffba5ed2a5bab5f805f086dbbfa02bd3606\\output\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
     },
     {
-        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_out.xml",
-        "source": "/home/dunghv/.android/build-cache/742d5ffba5ed2a5bab5f805f086dbbfa02bd3606/output/res/anim-v21/design_bottom_sheet_slide_out.xml"
+        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
+        "source": "C:\\home\\dunghv\\.android\\build-cache\\742d5ffba5ed2a5bab5f805f086dbbfa02bd3606\\output\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
     },
     {
-        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_in.xml",
-        "source": "/home/dunghv/.android/build-cache/742d5ffba5ed2a5bab5f805f086dbbfa02bd3606/output/res/anim-v21/design_bottom_sheet_slide_in.xml"
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_in.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\63baca96be3c820c70e5e7574688bacb37e9e2db\\output\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\63baca96be3c820c70e5e7574688bacb37e9e2db\\output\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_in.xml",
+        "source": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\C:\\Users\\Dung\\.android\\build-cache\\63baca96be3c820c70e5e7574688bacb37e9e2db\\output\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
     }
 ]

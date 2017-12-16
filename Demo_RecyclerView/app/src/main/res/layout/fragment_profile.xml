@@ -11,7 +11,7 @@
 
         <android.support.v7.widget.CardView
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:elevation="12dp"
@@ -31,6 +31,7 @@
             </ImageView>
         </android.support.v7.widget.CardView>
         <TextView
+            android:id="@+id/textView_username_in_profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Username"
@@ -39,6 +40,7 @@
             android:textStyle="bold"
             android:textSize="18sp"/>
         <TextView
+            android:id="@+id/textView_id_in_profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ID: 000000000"
@@ -184,7 +186,7 @@
             android:background="@android:color/darker_gray">
         </View>
         <TextView
-            android:id="@+id/textView_logout_user"
+            android:id="@+id/textView_logout_in_profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"

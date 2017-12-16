@@ -48,8 +48,8 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:background="@drawable/rounded_button"
-            android:layout_height="20dp"
-            android:layout_width="20dp"/>
+            android:layout_height="28dp"
+            android:layout_width="28dp"/>
         <TextView
             android:id="@+id/textview_soluongdat_in_cart"
             android:layout_marginLeft="4dp"
@@ -64,8 +64,8 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:background="@drawable/rounded_button"
-            android:layout_height="20dp"
-            android:layout_width="20dp"/>
+            android:layout_height="28dp"
+            android:layout_width="28dp"/>
     </LinearLayout>
     <View
         android:layout_width="match_parent"

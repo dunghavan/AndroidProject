@@ -18,6 +18,7 @@ public class MonAn {
     private int protein;
     private int nangLuong;
     private String moTa;
+    private String tenNhaHang;
     private String id;
 
     private String createDate;
@@ -47,7 +48,7 @@ public class MonAn {
         this.itemCount = 0;
     }
     public MonAn(String tenMonAn, Double donGia, String maNhaHang, String hinhAnh, int soDiem, int luotXem,
-                 String nguyenLieu, int protein, int nangLuong, String moTa, String id, String createDate,
+                 String nguyenLieu, int protein, int nangLuong, String moTa, String tenNhaHang, String id, String createDate,
                  String createdBy, boolean active, String updateBy, Double giaKhuyenMai, Double khuyenMai) {
         this.tenMonAn = tenMonAn;
         this.donGia = donGia;
@@ -59,6 +60,7 @@ public class MonAn {
         this.protein = protein;
         this.nangLuong = nangLuong;
         this.moTa = moTa;
+        this.tenNhaHang = tenNhaHang;
         this.id = id;
         this.createDate = createDate;
         this.createdBy = createdBy;
@@ -79,6 +81,14 @@ public class MonAn {
 
     public Double getToTal_1_Item(){
         return this.itemCount * getGiaKhuyenMai();
+    }
+
+    public String getTenNhaHang() {
+        return tenNhaHang;
+    }
+
+    public void setTenNhaHang(String tenNhaHang) {
+        this.tenNhaHang = tenNhaHang;
     }
 
     public void setItemCount(int itemCount) {

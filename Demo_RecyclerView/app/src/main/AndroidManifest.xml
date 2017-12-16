@@ -24,18 +24,20 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDiyT1psu_4SiQoLnvLqENuvD5rb5X5AgU" />
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity android:name=".MainActivity">
         </activity>
         <activity android:name=".Activity_MonAn_Of_NhaHang" />
         <activity android:name=".CartActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".MapActivity" />
-        <activity android:name=".MyPaymentActivity"></activity>
+        <activity android:name=".MyPaymentActivity" />
     </application>
 
 </manifest>

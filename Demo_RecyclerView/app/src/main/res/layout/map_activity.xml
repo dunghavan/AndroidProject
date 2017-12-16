@@ -9,7 +9,7 @@
         android:id="@+id/fragment_map"
         class="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="250dp"/>
+        android:layout_height="160dp"/>
     <TextView
         android:id="@+id/tv_from"
         android:text="Địa chỉ cửa hàng:"
@@ -160,7 +160,7 @@
 
         <Button
             android:id="@+id/send_btn_in_map"
-            android:layout_width="100dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Gửi đơn hàng"
             android:layout_gravity="right"
