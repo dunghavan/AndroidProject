@@ -49,4 +49,18 @@ public interface APIService {
                      @Field("CTDonDatHang")String ChiTietDonHang,
                      @Field("DaXacNhan")String DaXacNhan,
                      @Field("DaGiaoDich")String DaGiaoDich);
+
+
+    @GET("/api/PhieuGiamGia/GetChietKhau/{idMonAn}")
+    Call<Integer> getChietKhauByMa(@Path("idMonAn")String id);
+
+    @GET("/api/MonAn/GetByGiamGia")
+    Call<List<MonAn>> getByGiamGia();
+
+    @GET("/api/MonAn/GetByMaLoai/{maLoai}")
+    Call<List<MonAn>> getAllMonAnByMaLoai(@Path("maLoai") Integer maLoai); //
+
+    @GET("/api/MonAn/GetByMaLoaiDatNhieu/{maLoai}")
+    Call<List<MonAn>> getMonAnDatNhieuByMaLoai(@Path("maLoai") Integer maLoai);
+
 }

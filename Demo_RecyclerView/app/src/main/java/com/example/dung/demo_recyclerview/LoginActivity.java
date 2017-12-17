@@ -33,6 +33,13 @@ public class LoginActivity extends AppCompatActivity {
     public interface OnUpdateListener{
         void onUpdateUI();
     }
+    public interface OnUpdateProfileUIListener{
+        void updateProfileUI();
+    }
+    static OnUpdateProfileUIListener ui_listner;
+    public void setOnUpdateProfileUIListener(OnUpdateProfileUIListener ui_listner){
+        this.ui_listner = ui_listner;
+    }
     static OnUpdateListener listener;
     public void setOnUpdateListener(OnUpdateListener listener){
         this.listener = listener;
@@ -103,6 +110,9 @@ public class LoginActivity extends AppCompatActivity {
 
                                 if(listener != null)
                                     listener.onUpdateUI();
+                                if(ui_listner != null)
+                                    ui_listner.updateProfileUI();
+
                                 CartActivity.isCheckAuthen = true;
                                 Toast.makeText(MyApplication.getCurrentContext(), "Name: " + me.optString("name"), Toast.LENGTH_SHORT).show();
                                 Toast.makeText(MyApplication.getCurrentContext(), "ID: " + me.optString("id"), Toast.LENGTH_SHORT).show();

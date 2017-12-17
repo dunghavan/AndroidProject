@@ -17,12 +17,18 @@ import com.example.dung.demo_recyclerview.MyHttpURLConnection;
 import com.example.dung.demo_recyclerview.R;
 import com.example.dung.demo_recyclerview.model.MonAn;
 import com.example.dung.demo_recyclerview.recycler_adapter.MonAnRecyclerAdapter;
+import com.example.dung.demo_recyclerview.retrofit.APIService;
+import com.example.dung.demo_recyclerview.retrofit.ApiUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.json.JSONArray;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * Created by Dung on 11/10/2017.
@@ -53,28 +59,44 @@ public class ChildFragment_MonAnKhuyenMai extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
         //
         initialData();
-//        adapter = new MonAnRecyclerAdapter(listMonAnKhuyenMai);
-//        recyclerView.setAdapter(adapter);
         setRetainInstance(false);
     }
 
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
-//        if(isVisibleToUser){
-//            if(adapter == null)
-//                adapter = new MonAnRecyclerAdapter(listMonAnKhuyenMai);
-//            adapter.notifyDataSetChanged();
-//        }
-        initialData();
+        //initialData();
     }
 
     //Load du lieu theo loai da chon:
     private void initialData(){
         String api = "http://orderfooduit.azurewebsites.net/api/MonAn/Get";
-        new DownloadFilesTask().execute(api);
+        //new DownloadFilesTask().execute(api);
+        APIService apiService = ApiUtils.getAPIService();
+        apiService.getByGiamGia().enqueue(new Callback<List<MonAn>>() {
+            @Override
+            public void onResponse(Call<List<MonAn>> call, Response<List<MonAn>> response) {
+                try{
+                    listMonAnKhuyenMai = response.body();
+                    Log.d("Data length: ", String.valueOf(listMonAnKhuyenMai.size()));
+                    adapter = new MonAnRecyclerAdapter(listMonAnKhuyenMai);
+                    recyclerView.setAdapter(adapter);
+                    setRetainInstance(false);
+                }
+                catch (Exception e){
+                    Log.d("Err monAnKhuyenMai", e.getMessage());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<MonAn>> call, Throwable t) {
+
+            }
+        });
 
     }
+
+
 
     private class DownloadFilesTask extends AsyncTask<String, Integer, List<MonAn>> {
         protected List<MonAn> doInBackground(String... urls) {

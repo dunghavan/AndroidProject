@@ -51,7 +51,7 @@ public class NhaHangRecyclerAdapter extends RecyclerView.Adapter <NhaHangRecycle
         viewHolder.textView_TenNhaHang.setText(item.getTenNhaHang());
         viewHolder.textView_DiaChi.setText(item.getDiaChi());
         viewHolder.textView_ThoiGianMoCua.setText("Giờ mở cửa: " + item.getGioMoCua() + "h - " + item.getGioDongCua() + "h");
-        viewHolder.textView_LuotXem.setText(item.getLuotXem() + " lượt xem");
+        viewHolder.textView_LuotXem.setText(String.valueOf(item.getLuotXem()));
 
         String url = listData.get(position).getHinhAnh();
         if (url != null && !url.isEmpty()){
