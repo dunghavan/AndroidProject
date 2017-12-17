@@ -43,6 +43,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         activity = this; //Used to close Activity in static method
         callbackManager = CallbackManager.Factory.create();
+        facebook_profile = new Facebook_Profile();
 
         fbLoginButton = (LoginButton) findViewById(R.id.fb_login_button);
         //https://developers.facebook.com/docs/facebook-login/permissions#reference

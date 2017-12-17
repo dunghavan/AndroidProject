@@ -80,15 +80,15 @@ public class ChildFragment_TatCaMonAn extends Fragment{
     public void setUserVisibleHint(boolean isVisibleToUser) {
         Log.d("Call method", "setUserVisibleHint");
         super.setUserVisibleHint(isVisibleToUser);
-        if (isVisibleToUser) {
-            initialData(foodCategoryName, tabCategory);
-        }
+//        if (isVisibleToUser) {
+//            initialData(foodCategoryName, tabCategory);
+//        }
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        initialData(foodCategoryName, tabCategory);
+        //initialData(foodCategoryName, tabCategory);
     }
 
     //Load du lieu theo loai da chon:

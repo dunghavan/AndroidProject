@@ -291,7 +291,7 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
     }
     public void onUpdateMapUI(String distance, String duration){
         tv_khoangCach.setText("Khoảng cách: " + distance);
-        tv_thoiGian.setText("Thời gian: " + duration);
+        tv_thoiGian.setText("Thời gian di chuyển: " + duration);
     }
 
     public void sendSubmitToServer(String _paymentType, String _payID){
@@ -302,7 +302,7 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
         phoneNumber = editText_Phone.getText().toString();
         DecimalFormat df = new DecimalFormat("###");
         int tongTien = (int)Math.round(Cart.getTotal());
-        apiService.submitOrder(LoginActivity.facebook_profile.getId(), curDateTime, _deliveryDateTime,
+        apiService.submitOrder(LoginActivity.ID, curDateTime, _deliveryDateTime,
                 submitAddress, phoneNumber, _paymentType, _payID, tongTien, Cart.convertTo_CTDDH(),
                 "false", "false").enqueue(new Callback<Void>() {
             @Override

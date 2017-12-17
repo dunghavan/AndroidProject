@@ -47,9 +47,11 @@ public class NhaHangRecyclerAdapter extends RecyclerView.Adapter <NhaHangRecycle
     //Gan du lieu vao ViewHolder:
     @Override
     public void onBindViewHolder(RecyclerViewHolder_NhaHang viewHolder, int position){
-        viewHolder.textView_TenNhaHang.setText(listData.get(position).getTenNhaHang());
-        viewHolder.textView_DiaChi.setText(listData.get(position).getDiaChi());
-        //viewHolder.textView_KhuyenMai.setText(listData.get(position).getKhuyenMai() + "% Off");
+        NhaHang item = listData.get(position);
+        viewHolder.textView_TenNhaHang.setText(item.getTenNhaHang());
+        viewHolder.textView_DiaChi.setText(item.getDiaChi());
+        viewHolder.textView_ThoiGianMoCua.setText("Giờ mở cửa: " + item.getGioMoCua() + "h - " + item.getGioDongCua() + "h");
+        viewHolder.textView_LuotXem.setText(item.getLuotXem() + " lượt xem");
 
         String url = listData.get(position).getHinhAnh();
         if (url != null && !url.isEmpty()){
@@ -68,6 +70,7 @@ public class NhaHangRecyclerAdapter extends RecyclerView.Adapter <NhaHangRecycle
         public ImageView imageView_HinhAnh;
         public TextView textView_TenNhaHang;
         public TextView textView_DiaChi;
+        public TextView textView_ThoiGianMoCua;
         public TextView textView_LuotXem;
 
         public RecyclerViewHolder_NhaHang(View itemView){
@@ -75,6 +78,7 @@ public class NhaHangRecyclerAdapter extends RecyclerView.Adapter <NhaHangRecycle
             imageView_HinhAnh = (ImageView)itemView.findViewById(R.id.imageView_NhaHang);
             textView_TenNhaHang = (TextView)itemView.findViewById(R.id.tv_tenNhaHang);
             textView_DiaChi = (TextView)itemView.findViewById(R.id.tv_DiaChi);
+            textView_ThoiGianMoCua = (TextView)itemView.findViewById(R.id.tv_thoiGianMoCua);
             textView_LuotXem = (TextView)itemView.findViewById(R.id.tv_luotXem);
 
             itemView.setOnClickListener(this);
