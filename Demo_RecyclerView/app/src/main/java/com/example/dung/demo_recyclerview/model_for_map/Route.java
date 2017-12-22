@@ -325,8 +325,6 @@ public class Route {
             // UpdateUI in MapActivity:
             if(listener != null)
                 listener.onUpdateMapUI(distance, duration);
-            // Zoom Camera
-            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(list.get(1), 13.0f));
 
             if(withSteps)
             {

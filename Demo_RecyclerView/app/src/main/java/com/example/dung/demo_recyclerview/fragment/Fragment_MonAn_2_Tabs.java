@@ -43,6 +43,8 @@ public class Fragment_MonAn_2_Tabs extends Fragment {
 
         viewPager.setAdapter(viewPagerAdapter_monAn_2Tabs);
         tabLayout.setupWithViewPager(viewPager);
+        TabLayout.Tab tab = tabLayout.getTabAt(1);
+        tab.select();
     }
 
 }

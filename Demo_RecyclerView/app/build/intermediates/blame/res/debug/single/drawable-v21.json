@@ -8,28 +8,12 @@
         "source": "C:\\Users\\Dung\\.android\\build-cache\\63baca96be3c820c70e5e7574688bacb37e9e2db\\output\\res\\drawable-v21\\avd_hide_password.xml"
     },
     {
-        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_hide_password.xml",
-        "source": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\C:\\Users\\Dung\\.android\\build-cache\\63baca96be3c820c70e5e7574688bacb37e9e2db\\output\\res\\drawable-v21\\avd_hide_password.xml"
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_password_eye.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\63baca96be3c820c70e5e7574688bacb37e9e2db\\output\\res\\drawable-v21\\design_password_eye.xml"
     },
     {
-        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\notification_action_background.xml",
-        "source": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\C:\\Users\\Dung\\.android\\build-cache\\3ef226c562665ae7965f0f38a6b360c397ee1095\\output\\res\\drawable-v21\\notification_action_background.xml"
-    },
-    {
-        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
-        "source": "C:\\home\\dunghv\\.android\\build-cache\\92669e0d671f1bf5f58cc27967eb1df7aa8e3244\\output\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
-    },
-    {
-        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
-        "source": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable-v21\\abc_btn_colored_material.xml"
-    },
-    {
-        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_show_password.xml",
-        "source": "C:\\home\\dunghv\\.android\\build-cache\\742d5ffba5ed2a5bab5f805f086dbbfa02bd3606\\output\\res\\drawable-v21\\avd_show_password.xml"
-    },
-    {
-        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_password_eye.xml",
-        "source": "C:\\home\\dunghv\\.android\\build-cache\\742d5ffba5ed2a5bab5f805f086dbbfa02bd3606\\output\\res\\drawable-v21\\design_password_eye.xml"
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_bottom_navigation_item_background.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\63baca96be3c820c70e5e7574688bacb37e9e2db\\output\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_show_password.xml",
@@ -40,56 +24,8 @@
         "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable-v21\\abc_btn_colored_material.xml"
     },
     {
-        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_edit_text_material.xml",
-        "source": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable-v21\\abc_edit_text_material.xml"
-    },
-    {
-        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_bottom_navigation_item_background.xml",
-        "source": "C:\\home\\dunghv\\.android\\build-cache\\742d5ffba5ed2a5bab5f805f086dbbfa02bd3606\\output\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
-    },
-    {
-        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
-        "source": "C:\\home\\dunghv\\.android\\build-cache\\92669e0d671f1bf5f58cc27967eb1df7aa8e3244\\output\\res\\drawable-v21\\abc_btn_colored_material.xml"
-    },
-    {
-        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
-        "source": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_password_eye.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\63baca96be3c820c70e5e7574688bacb37e9e2db\\output\\res\\drawable-v21\\design_password_eye.xml"
-    },
-    {
-        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_hide_password.xml",
-        "source": "C:\\home\\dunghv\\.android\\build-cache\\742d5ffba5ed2a5bab5f805f086dbbfa02bd3606\\output\\res\\drawable-v21\\avd_hide_password.xml"
-    },
-    {
-        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_edit_text_material.xml",
-        "source": "C:\\home\\dunghv\\.android\\build-cache\\92669e0d671f1bf5f58cc27967eb1df7aa8e3244\\output\\res\\drawable-v21\\abc_edit_text_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_bottom_navigation_item_background.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\63baca96be3c820c70e5e7574688bacb37e9e2db\\output\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
-    },
-    {
-        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_bottom_navigation_item_background.xml",
-        "source": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\C:\\Users\\Dung\\.android\\build-cache\\63baca96be3c820c70e5e7574688bacb37e9e2db\\output\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
-    },
-    {
-        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_show_password.xml",
-        "source": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\C:\\Users\\Dung\\.android\\build-cache\\63baca96be3c820c70e5e7574688bacb37e9e2db\\output\\res\\drawable-v21\\avd_show_password.xml"
-    },
-    {
-        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\notification_action_background.xml",
-        "source": "C:\\home\\dunghv\\.android\\build-cache\\5e9a1521d49edf4f85a8e620242a258dcce7d94e\\output\\res\\drawable-v21\\notification_action_background.xml"
-    },
-    {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_edit_text_material.xml",
         "source": "C:\\Users\\Dung\\.android\\build-cache\\8138d5355bf6de95ab3d12480134802038a11db2\\output\\res\\drawable-v21\\abc_edit_text_material.xml"
-    },
-    {
-        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_password_eye.xml",
-        "source": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\C:\\Users\\Dung\\.android\\build-cache\\63baca96be3c820c70e5e7574688bacb37e9e2db\\output\\res\\drawable-v21\\design_password_eye.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",

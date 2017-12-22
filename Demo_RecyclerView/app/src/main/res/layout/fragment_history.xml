@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textview_username_in_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tên khách hàng: "
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+    <TextView
+        android:id="@+id/textview_maKhachHang_in_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mã khách hàng: "
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:layout_marginStart="10dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#ffffff"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+        <!--RecyclerView-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview_history"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical" />
+    </FrameLayout>
+
+</LinearLayout>

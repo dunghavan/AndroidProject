@@ -21,6 +21,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.dung.demo_recyclerview.fragment.Fragment_BeforeLogin;
+import com.example.dung.demo_recyclerview.fragment.Fragment_History;
 import com.example.dung.demo_recyclerview.fragment.Fragment_MonAn_FindResult;
 import com.example.dung.demo_recyclerview.fragment.Fragment_MonAn_6_Tabs;
 import com.example.dung.demo_recyclerview.fragment.Fragment_NangCao_2_Tabs;
@@ -96,6 +97,21 @@ public class MainActivity extends AppCompatActivity{
                         }
                         break;
                     case R.id.action_history:
+                        if(LoginActivity.isAuthenticated()){
+                            fragment = new Fragment_History();
+                        }
+                        else {
+                            fragment = new Fragment_BeforeLogin();
+                        }
+                        transaction.replace(R.id.frame_layout_in_main_activity, fragment).commit();
+                        getSupportActionBar().setTitle("Lịch sử giao dịch");
+                        currentTab = MyConstant.TAB_HISTORY;
+
+                        if (mOptionsMenu != null) {
+                            mOptionsMenu.findItem(R.id.action_search).setVisible(false);
+                            mOptionsMenu.findItem(R.id.action_search).collapseActionView();
+                            onPrepareOptionsMenu(mOptionsMenu);
+                        }
                         break;
                     case R.id.action_user:
                         if(LoginActivity.isAuthenticated()){
@@ -107,6 +123,12 @@ public class MainActivity extends AppCompatActivity{
                         transaction.replace(R.id.frame_layout_in_main_activity, fragment).commit();
                         getSupportActionBar().setTitle("Cá nhân");
                         currentTab = MyConstant.TAB_PROFILE;
+
+                        if (mOptionsMenu != null) {
+                            mOptionsMenu.findItem(R.id.action_search).setVisible(false);
+                            mOptionsMenu.findItem(R.id.action_search).collapseActionView();
+                            onPrepareOptionsMenu(mOptionsMenu);
+                        }
                         break;
 
                 }
@@ -126,6 +148,17 @@ public class MainActivity extends AppCompatActivity{
         if(currentTab == MyConstant.TAB_PROFILE){
             if(LoginActivity.isAuthenticated()){
                 fragment = new Fragment_Profile();
+            }
+            else {
+                fragment = new Fragment_BeforeLogin();
+            }
+            transaction  = fragmentManager.beginTransaction();
+            transaction.replace(R.id.frame_layout_in_main_activity, fragment).commit();
+        }
+        // Validate Fragment History
+        if(currentTab == MyConstant.TAB_HISTORY){
+            if(LoginActivity.isAuthenticated()){
+                fragment = new Fragment_History();
             }
             else {
                 fragment = new Fragment_BeforeLogin();

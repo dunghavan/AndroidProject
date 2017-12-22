@@ -18,9 +18,10 @@
             android:id="@+id/login_button"
             android:text="Đăng nhập"
             android:textAllCaps="false"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="30dp"/>
+            android:layout_marginTop="30dp"
+            android:background="#72a4e1"/>
     </LinearLayout>
 </LinearLayout>

@@ -22,53 +22,5 @@
                 }
             }
         ]
-    },
-    {
-        "outputFile": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 45,
-                    "endOffset": 96
-                },
-                "from": {
-                    "file": "C:\\home\\dunghv\\.android\\build-cache\\cef6e32f6bdd2efb9933fbd134b9e96ec12ba54c\\output\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 229,
-                        "endColumn": 45,
-                        "endOffset": 270
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 45,
-                    "endOffset": 96
-                },
-                "from": {
-                    "file": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\C:\\Users\\Dung\\.android\\build-cache\\f80c286850196aede443d82c0f1ef47be54bed61\\output\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 229,
-                        "endColumn": 45,
-                        "endOffset": 270
-                    }
-                }
-            }
-        ]
     }
 ]

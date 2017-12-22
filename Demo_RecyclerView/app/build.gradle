@@ -56,5 +56,9 @@ dependencies {
     compile 'com.google.android.gms:play-services-location:11.0.4'
     //for PayPalPayment
     compile 'com.paypal.sdk:paypal-android-sdk:2.14.5'
+    // using gif image
+    //compile 'pl.droidsonroids.gif:android-gif-drawable:1.1.+'
+    // Glide to display GIF
+    compile 'com.github.bumptech.glide:glide:3.7.0'
 
 }

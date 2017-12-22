@@ -17,7 +17,6 @@
             android:elevation="12dp"
             android:id="@+id/view2"
             app:cardCornerRadius="35dp"
-            android:layout_centerHorizontal="true"
             android:innerRadius="0dp"
             android:shape="ring"
             android:thicknessRatio="1.9">

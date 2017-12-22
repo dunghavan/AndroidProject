@@ -143,6 +143,8 @@ public class LoginActivity extends AppCompatActivity {
             getFbInfo();
             return true;
         }
+        ID = null;
+        NAME = null;
         return false;
     }
 

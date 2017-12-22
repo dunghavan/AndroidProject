@@ -2,6 +2,7 @@ package com.example.dung.demo_recyclerview.retrofit;
 
 import com.example.dung.demo_recyclerview.model.MonAn;
 import com.example.dung.demo_recyclerview.model.NhaHang;
+import com.example.dung.demo_recyclerview.model.Payment;
 
 import java.util.List;
 
@@ -57,10 +58,12 @@ public interface APIService {
     @GET("/api/MonAn/GetByGiamGia")
     Call<List<MonAn>> getByGiamGia();
 
-    @GET("/api/MonAn/GetByMaLoai/{maLoai}")
+    @GET("api/MonAn/GetByMaLoai/{maLoai}")
     Call<List<MonAn>> getAllMonAnByMaLoai(@Path("maLoai") Integer maLoai); //
 
-    @GET("/api/MonAn/GetByMaLoaiDatNhieu/{maLoai}")
+    @GET("api/MonAn/GetByMaLoaiDatNhieu/{maLoai}")
     Call<List<MonAn>> getMonAnDatNhieuByMaLoai(@Path("maLoai") Integer maLoai);
 
+    @GET("api/DonDatHang/GetAllOrder/{maKhachHang}")
+    Call<List<Payment>> getAllPayment(@Path("maKhachHang")String maKhachHang);
 }

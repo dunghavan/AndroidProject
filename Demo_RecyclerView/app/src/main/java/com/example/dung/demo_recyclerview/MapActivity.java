@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
@@ -15,8 +16,10 @@ import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.text.format.DateFormat;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -307,14 +310,36 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
                 "false", "false").enqueue(new Callback<Void>() {
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {
-                Toast.makeText(MyApplication.getCurrentContext(), "Send success", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MyApplication.getCurrentContext(), "Send success", Toast.LENGTH_SHORT).show();
+                //Tao giao dien alertDialog:
+                LayoutInflater li = LayoutInflater.from(MyApplication.getCurrentContext());
+                View alertDialogView = li.inflate(R.layout.alert_dialog_submit_success, null);
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(MyApplication.getCurrentContext());
+                alertDialog.setView(alertDialogView);
+                alertDialog.setCancelable(false)
+                        .setPositiveButton("Ok", null);
+                //Create a dialog:
+                AlertDialog dialogToShow = alertDialog.create();
+                dialogToShow.show();
             }
 
             @Override
             public void onFailure(Call<Void> call, Throwable t) {
-                Toast.makeText(MyApplication.getCurrentContext(), "Send onFailure()", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MyApplication.getCurrentContext(), "Send onFailure()", Toast.LENGTH_SHORT).show();
+
+                //Tao giao dien alertDialog:
+                LayoutInflater li = LayoutInflater.from(MyApplication.getCurrentContext());
+                View alertDialogView = li.inflate(R.layout.alert_dialog_submit_failed, null);
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(MyApplication.getCurrentContext());
+                alertDialog.setView(alertDialogView);
+                alertDialog.setCancelable(false)
+                        .setPositiveButton("Ok", null);
+                //Create a dialog:
+                AlertDialog dialogToShow = alertDialog.create();
+                dialogToShow.show();
             }
         });
+        //WriteLog.WriteToFile("Write to file: " + _deliveryDateTime);
     }
     /**
      * Manipulates the map once available.
@@ -350,7 +375,18 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
                     new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, 2);
         }
         //else {
-            Location location = LocationServices.FusedLocationApi.getLastLocation(gac);
+        Location location = LocationServices.FusedLocationApi.getLastLocation(gac);
+        if(nhaHangLatLong != null){
+            // Add a marker in NhaHang and move the camera
+            mMap.addMarker(new MarkerOptions().position(nhaHangLatLong).title("Vị trí nhà hàng"));
+            mMap.moveCamera(CameraUpdateFactory.newLatLng(nhaHangLatLong));
+            // Zoom Camera
+            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(nhaHangLatLong, 13.0f));
+        }
+        else {
+
+            tv_diaChiCuaHang.setText("[Không tìm thấy địa chỉ cửa hàng]");
+        }
 
             if (location != null && nhaHangLatLong != null && mMap != null) {
                 userLatLong = new LatLng(location.getLatitude(), location.getLongitude());
@@ -364,15 +400,13 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
                 markerOptions.title("Vị trí của bạn");
                 currLocationMarker = mMap.addMarker(markerOptions);
 
-                // Add a marker in NhaHang and move the camera
-                mMap.addMarker(new MarkerOptions().position(nhaHangLatLong).title("Vị trí nhà hàng"));
-                mMap.moveCamera(CameraUpdateFactory.newLatLng(nhaHangLatLong));
+
                 //Update location:
-                mLocationRequest = new LocationRequest();
-                mLocationRequest.setInterval(60000); //5 seconds
-                mLocationRequest.setFastestInterval(60000); //3 seconds
-                mLocationRequest.setPriority(LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY);
-                LocationServices.FusedLocationApi.requestLocationUpdates(gac, mLocationRequest, this);
+//                mLocationRequest = new LocationRequest();
+//                mLocationRequest.setInterval(60000); //5 seconds
+//                mLocationRequest.setFastestInterval(60000); //3 seconds
+//                mLocationRequest.setPriority(LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY);
+//                LocationServices.FusedLocationApi.requestLocationUpdates(gac, mLocationRequest, this);
 
                 route.setOnUpdateUIListener(this);
 
@@ -396,7 +430,7 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
                 }
             }
             else {
-                tv_diaChiCuaHang.setText("[Không tìm thấy địa chỉ cửa hàng]");
+                tv_diaChiCuaBan.setText("[Không tìm thấy vị trí của bạn]");
             }
         //}
     }

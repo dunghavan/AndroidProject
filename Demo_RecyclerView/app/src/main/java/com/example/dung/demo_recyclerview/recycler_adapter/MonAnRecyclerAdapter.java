@@ -96,59 +96,8 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                     .fit()
                     .into(viewHolder.imageView);
         }
-
-//        APIService apiService = ApiUtils.getAPIService();
-//        apiService.getNhaHangById(monAnSelected.getMaNhaHang()).enqueue(new Callback<NhaHang>() {
-//            @Override
-//            public void onResponse(Call<NhaHang> call, Response<NhaHang> response) {
-//                    if(response.body() != null)
-//                        viewHolder.tv_tenNhaHang.setText(response.body().getTenNhaHang());
-//            }
-//            @Override
-//            public void onFailure (Call<NhaHang> call, Throwable t){
-//                Log.d("Get tenNhaHang", "Failure, ma nha hang = " + monAnSelected.getMaNhaHang());
-//            }
-//        });
         viewHolder.tv_tenNhaHang.setText(monAnSelected.getTenNhaHang());
 
-        //Async Task
-//        class ReadApiTask extends AsyncTask<String, Integer, String> {
-//            protected String doInBackground(String... urls) {
-//                Log.d("API get NhaHang", "doInBackground");
-//                try{
-//                    String jsonString = MyHttpURLConnection.sendGet(urls[0]);
-//                    return  jsonString;
-//                }
-//                catch (Exception e){
-//                    Log.d("Error while read api: ", e.getMessage());
-//                }
-//                return "";
-//            }
-//
-//            protected void onProgressUpdate(Integer... progress) {
-//
-//            }
-//
-//            @Override
-//            protected void onPostExecute(String result) {
-//                Log.d("API get NhaHang", "onPostExecute");
-//                try{
-//                    //JSONObject jsonObject = new JSONObject(result);
-//                    ObjectMapper objectMapper = new ObjectMapper();
-//                    nhaHang_from_json = objectMapper.readValue(result, NhaHang.class);
-//                    if(nhaHang_from_json != null){
-//                        viewHolder.tv_tenNhaHang.setText(nhaHang_from_json.getTenNhaHang());
-//                        tenNhaHang = nhaHang_from_json.getTenNhaHang();
-//                    }
-//                }
-//                catch (Exception e){
-//                    Log.d("Error parse Json: ", e.getMessage());
-//                }
-//            }
-//        }
-        //Read API to binding name of NhaHang
-//        String api = "http://orderfooduit.azurewebsites.net/api/NhaHang/GetID/";
-//        new ReadApiTask().execute(api + monAnSelected.getMaNhaHang());
     }
 
 

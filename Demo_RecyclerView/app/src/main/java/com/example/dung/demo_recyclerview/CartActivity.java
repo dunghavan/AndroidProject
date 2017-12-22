@@ -110,9 +110,9 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
                 tv_tenKhachHang.setText("Khách hàng: [Bạn chưa đăng nhập]");
             else
                 tv_tenKhachHang.setText("Khách hàng: " + LoginActivity.NAME);
-            tv_soLuongMon.setText("Số lượng món: " + String.valueOf(Cart.getAllItemCount()));
-            tv_tongTien.setText("Tổng tiền: " + String.valueOf(decimalFormat.format(Cart.getTotal())) + " đ");
         }
+        tv_soLuongMon.setText("Số lượng món: " + String.valueOf(Cart.getAllItemCount()));
+        tv_tongTien.setText("Tổng tiền: " + String.valueOf(decimalFormat.format(Cart.getTotal())) + " đ");
 
     }
 
