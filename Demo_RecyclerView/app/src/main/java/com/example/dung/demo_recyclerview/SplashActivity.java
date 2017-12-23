@@ -8,6 +8,7 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
+import com.facebook.login.Login;
 
 public class SplashActivity extends AppCompatActivity {
     /** Duration of wait **/
@@ -20,13 +21,8 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(icicle);
         setContentView(R.layout.activity_splash);
         imageView = (ImageView)findViewById(R.id.gif_image_splash);
-//        Glide.with(this).load(R.drawable.paypal)
-//                .asGif()
-//                .placeholder(R.drawable.gif_image_splash)
-//                .crossFade()
-//                .dontAnimate()
-//                .into(imageView);
-
+        //Get Login Info
+        LoginActivity.getFbInfo();
 
         GlideDrawableImageViewTarget imageViewTarget = new GlideDrawableImageViewTarget(imageView);
         Glide.with(this).load(R.drawable.gif_image_abc).into(imageViewTarget);

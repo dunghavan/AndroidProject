@@ -62,6 +62,8 @@ public class Fragment_History extends Fragment {
 
     private void initializeData(){
         APIService apiService = ApiUtils.getAPIService();
+        if(LoginActivity.ID == null)  // Chưa login
+            return;
         apiService.getAllPayment(LoginActivity.ID).enqueue(new Callback<List<Payment>>() {
             @Override
             public void onResponse(Call<List<Payment>> call, Response<List<Payment>> response) {
@@ -78,7 +80,7 @@ public class Fragment_History extends Fragment {
 
             @Override
             public void onFailure(Call<List<Payment>> call, Throwable t) {
-                Log.d("Parse payment onFailure", t.getMessage());
+                Log.d("Parse payment onFailure", t.getMessage()); //crash
             }
         });
         tv_username.setText("Khách hàng: " + LoginActivity.NAME);

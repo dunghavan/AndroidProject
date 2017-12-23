@@ -7,6 +7,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -143,7 +144,7 @@ public class ChildFragment_TatCaMonAn extends Fragment{
                 public void onFailure(Call<List<MonAn>> call, Throwable t) {
                     Log.d("Err maLoai onFailure", t.getMessage());
                     Toast.makeText(MyApplication.getCurrentContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
-
+                    showMyAlertDialog("Thông báo", "Không tải được danh sách món ăn, hãy thử lại!");
                 }
             });
         }
@@ -179,50 +180,20 @@ public class ChildFragment_TatCaMonAn extends Fragment{
                 public void onFailure(Call<List<MonAn>> call, Throwable t) {
                     Log.d("Err maLoai onFailure", t.getMessage());
                     Toast.makeText(MyApplication.getCurrentContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
+                    showMyAlertDialog("Thông báo", "Không tải được danh sách món ăn, hãy thử lại!");
                 }
             });
         }
 
     }
 
-    private class ReadApiTask extends AsyncTask<String, Integer, String> {
-        protected String doInBackground(String... urls) {
-            Log.d("Call method", "doInBackground");
-            try{
-                String jsonString = MyHttpURLConnection.sendGet(urls[0]);
-                return  jsonString;
-            }
-            catch (Exception e){
-                Log.d("Error while read api: ", e.getMessage());
-            }
-            return "";
-        }
+    private void showMyAlertDialog(String title, String message){
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(MyApplication.getCurrentContext());
+        alertDialogBuilder.setTitle(title)
+                .setMessage(message)
+                .setPositiveButton("Ok", null);
 
-        protected void onProgressUpdate(Integer... progress) {
-
-        }
-
-        @Override
-        protected void onPostExecute(String result) {
-            Log.d("Call method", "onPostExecute");
-            data.clear();
-            try{
-                JSONArray jsonArray = new JSONArray(result);
-
-                for(int i = 0; i < jsonArray.length(); i++){
-                    ObjectMapper objectMapper = new ObjectMapper();
-                    MonAn m = objectMapper.readValue(jsonArray.getJSONObject(i).toString(), MonAn.class);
-                    data.add(m);
-                }
-            }
-            catch (Exception e){
-                Log.d("Error parse Json: ", e.getMessage());
-            }
-            Log.d("Data length: ", String.valueOf(data.size()));
-            Toast.makeText(MyApplication.getCurrentContext(), "Data length: " + String.valueOf(data.size()), Toast.LENGTH_SHORT).show();
-            customRecyclerAdapter = new MonAnRecyclerAdapter(data);
-            recyclerView.setAdapter(customRecyclerAdapter);
-            setRetainInstance(false);
-        }
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
     }
 }

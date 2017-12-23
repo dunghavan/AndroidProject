@@ -28,17 +28,17 @@
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".MainActivity">
-        </activity>
+        <activity android:name=".MainActivity"></activity>
         <activity android:name=".Activity_MonAn_Of_NhaHang" />
         <activity android:name=".CartActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".MapActivity" />
         <activity android:name=".MyPaymentActivity" />
+        <activity android:name=".Activity_Payment_Details"></activity>
     </application>
 
 </manifest>

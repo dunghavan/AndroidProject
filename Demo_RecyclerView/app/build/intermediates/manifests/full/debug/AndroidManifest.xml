@@ -52,13 +52,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.dung.demo_recyclerview.MainActivity" >
-        </activity>
+        <activity android:name="com.example.dung.demo_recyclerview.MainActivity" />
         <activity android:name="com.example.dung.demo_recyclerview.Activity_MonAn_Of_NhaHang" />
         <activity android:name="com.example.dung.demo_recyclerview.CartActivity" />
         <activity android:name="com.example.dung.demo_recyclerview.LoginActivity" />
         <activity android:name="com.example.dung.demo_recyclerview.MapActivity" />
         <activity android:name="com.example.dung.demo_recyclerview.MyPaymentActivity" />
+        <activity android:name="com.example.dung.demo_recyclerview.Activity_Payment_Details" />
 
         <meta-data
             android:name="android.support.VERSION"

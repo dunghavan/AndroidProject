@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="3dp"
         android:id="@+id/tabLayout_monan_6tabs"
         app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget">
     </android.support.design.widget.TabLayout>

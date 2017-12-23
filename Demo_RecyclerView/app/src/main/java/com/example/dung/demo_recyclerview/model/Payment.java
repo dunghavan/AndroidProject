@@ -2,12 +2,14 @@ package com.example.dung.demo_recyclerview.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import java.io.Serializable;
+
 /**
  * Created by Dung on 12/22/2017.
  */
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Payment {
+public class Payment implements Serializable{
     String maKhachHang;
     String ngayThang;
     String ngayGioGiao;

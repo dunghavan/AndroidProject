@@ -87,7 +87,7 @@ public class LoginActivity extends AppCompatActivity {
         callbackManager.onActivityResult(requestCode, resultCode, data);
     }
 
-    private static void getFbInfo() {
+    public static void getFbInfo() {
         if (AccessToken.getCurrentAccessToken() != null) {
             GraphRequest request = GraphRequest.newMeRequest(AccessToken.getCurrentAccessToken(),
                     new GraphRequest.GraphJSONObjectCallback() {
