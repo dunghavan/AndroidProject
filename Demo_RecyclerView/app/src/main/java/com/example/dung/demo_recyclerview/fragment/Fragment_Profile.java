@@ -1,9 +1,11 @@
 package com.example.dung.demo_recyclerview.fragment;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,6 +33,8 @@ public class Fragment_Profile extends Fragment implements LoginActivity.OnUpdate
     TextView tv_logout;
     ImageView imgview_avatar;
 
+    TextView tv_tuVanNhanh;
+
     LoginActivity loginActivity; //for updateUI
     public Fragment_Profile(){
 
@@ -55,8 +59,39 @@ public class Fragment_Profile extends Fragment implements LoginActivity.OnUpdate
         });
 
         imgview_avatar = (ImageView)view.findViewById(R.id.imageView_avatar);
+        tv_tuVanNhanh = (TextView)view.findViewById(R.id.textView_message_user);
         loginActivity = new LoginActivity();
         loginActivity.setOnUpdateProfileUIListener(this);
+
+        tv_tuVanNhanh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Tao giao dien alertDialog:
+                LayoutInflater li = LayoutInflater.from(MyApplication.getCurrentContext());
+                View alertDialogView = li.inflate(R.layout.alert_dialog_message, null);
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(MyApplication.getCurrentContext());
+                alertDialog.setView(alertDialogView);
+
+                alertDialog.setCancelable(true)
+                        .setTitle("Tư vấn nhanh")
+                        .setNegativeButton("Hủy", null)
+                        .setPositiveButton("Gửi", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                // Gọi API gửi message
+                            }
+                        });
+
+
+                AlertDialog dialogToShow = alertDialog.create();
+                dialogToShow.show();
+
+
+                Button positive_button =  dialogToShow.getButton(DialogInterface.BUTTON_POSITIVE);
+                positive_button.setLeft(5);
+
+            }
+        });
     }
 
     public void updateProfileUI(){

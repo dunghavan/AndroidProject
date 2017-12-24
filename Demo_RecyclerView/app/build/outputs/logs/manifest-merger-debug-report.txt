@@ -100,7 +100,7 @@ ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\A
 	android:name
 		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:32:27-74
 activity#com.example.dung.demo_recyclerview.MainActivity
-ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:35:9-59
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:35:9-49
 	android:name
 		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:35:19-47
 activity#com.example.dung.demo_recyclerview.Activity_MonAn_Of_NhaHang
@@ -124,7 +124,7 @@ ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\A
 	android:name
 		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:40:19-52
 activity#com.example.dung.demo_recyclerview.Activity_Payment_Details
-ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:41:9-71
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:41:9-61
 	android:name
 		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:41:19-59
 uses-sdk

@@ -18,6 +18,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.dung.demo_recyclerview.MainActivity;
+import com.example.dung.demo_recyclerview.MyAlertDialog;
 import com.example.dung.demo_recyclerview.MyApplication;
 import com.example.dung.demo_recyclerview.MyConstant;
 import com.example.dung.demo_recyclerview.MyHttpURLConnection;
@@ -104,12 +105,13 @@ public class ChildFragment_TatCaMonAn extends Fragment{
     }
 
     //Load du lieu theo loai da chon:
+    boolean isShowAlertDialog = false;
     private void initialData(int _foodCategory, String _tabCategory){
 //        Log.d("Call method", "initialData");
 //        String api = "http://orderfooduit.azurewebsites.net/api/MonAn/GetByMaLoai/" + String.valueOf(foodCategoryName);
 //        new ReadApiTask().execute(api);
 //        Log.d("API", api);
-
+        isShowAlertDialog = false;
         APIService apiService = ApiUtils.getAPIService();
         if(_tabCategory == MyConstant.DATNHIEU){
             apiService.getMonAnDatNhieuByMaLoai(_foodCategory).enqueue(new Callback<List<MonAn>>() {
@@ -144,7 +146,10 @@ public class ChildFragment_TatCaMonAn extends Fragment{
                 public void onFailure(Call<List<MonAn>> call, Throwable t) {
                     Log.d("Err maLoai onFailure", t.getMessage());
                     Toast.makeText(MyApplication.getCurrentContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
-                    showMyAlertDialog("Thông báo", "Không tải được danh sách món ăn, hãy thử lại!");
+                    if(!isShowAlertDialog){
+                        MyAlertDialog.showMyAlertDialog("Thông báo", "Không tải được danh sách món ăn, hãy thử lại!");
+                        isShowAlertDialog = true;
+                    }
                 }
             });
         }
@@ -180,20 +185,14 @@ public class ChildFragment_TatCaMonAn extends Fragment{
                 public void onFailure(Call<List<MonAn>> call, Throwable t) {
                     Log.d("Err maLoai onFailure", t.getMessage());
                     Toast.makeText(MyApplication.getCurrentContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
-                    showMyAlertDialog("Thông báo", "Không tải được danh sách món ăn, hãy thử lại!");
+                    if(!isShowAlertDialog){
+                        MyAlertDialog.showMyAlertDialog("Thông báo", "Không tải được danh sách món ăn, hãy thử lại!");
+                        isShowAlertDialog = true;
+                    }
                 }
             });
         }
 
     }
 
-    private void showMyAlertDialog(String title, String message){
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(MyApplication.getCurrentContext());
-        alertDialogBuilder.setTitle(title)
-                .setMessage(message)
-                .setPositiveButton("Ok", null);
-
-        AlertDialog alertDialog = alertDialogBuilder.create();
-        alertDialog.show();
-    }
 }

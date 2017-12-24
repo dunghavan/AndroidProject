@@ -136,7 +136,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="20dp"
                 android:layout_weight="1"
-                android:text="Góp ý"
+                android:text="Tư vấn nhanh..."
                 android:textSize="18sp"/>
             <ImageView
                 android:layout_width="30dp"

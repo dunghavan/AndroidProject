@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.example.dung.demo_recyclerview.LoginActivity;
 import com.example.dung.demo_recyclerview.MainActivity;
+import com.example.dung.demo_recyclerview.MyAlertDialog;
 import com.example.dung.demo_recyclerview.MyApplication;
 import com.example.dung.demo_recyclerview.R;
 import com.example.dung.demo_recyclerview.model.Payment;
@@ -81,6 +82,7 @@ public class Fragment_History extends Fragment {
             @Override
             public void onFailure(Call<List<Payment>> call, Throwable t) {
                 Log.d("Parse payment onFailure", t.getMessage()); //crash
+                MyAlertDialog.showMyAlertDialog("Thông báo", "Không tải được lịch sử giao dịch, hãy thử lại!");
             }
         });
         tv_username.setText("Khách hàng: " + LoginActivity.NAME);
