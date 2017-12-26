@@ -11,5 +11,10 @@
     <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
         <item name="android:background">#4eef64</item>
     </style>
+    <style name="CustomStyle" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@color/colorPrimary</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
 
 </resources>

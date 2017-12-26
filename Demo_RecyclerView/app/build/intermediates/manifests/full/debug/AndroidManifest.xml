@@ -59,6 +59,7 @@
         <activity android:name="com.example.dung.demo_recyclerview.MapActivity" />
         <activity android:name="com.example.dung.demo_recyclerview.MyPaymentActivity" />
         <activity android:name="com.example.dung.demo_recyclerview.Activity_Payment_Details" />
+        <activity android:name="com.example.dung.demo_recyclerview.Input_Activity" />
 
         <meta-data
             android:name="android.support.VERSION"

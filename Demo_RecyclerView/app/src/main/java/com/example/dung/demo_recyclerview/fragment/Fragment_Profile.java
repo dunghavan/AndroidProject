@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.dung.demo_recyclerview.Input_Activity;
 import com.example.dung.demo_recyclerview.LoginActivity;
 import com.example.dung.demo_recyclerview.MainActivity;
 import com.example.dung.demo_recyclerview.MyApplication;
@@ -34,6 +35,7 @@ public class Fragment_Profile extends Fragment implements LoginActivity.OnUpdate
     ImageView imgview_avatar;
 
     TextView tv_tuVanNhanh;
+    TextView tv_tuVanKhauPhanAn;
 
     LoginActivity loginActivity; //for updateUI
     public Fragment_Profile(){
@@ -60,6 +62,7 @@ public class Fragment_Profile extends Fragment implements LoginActivity.OnUpdate
 
         imgview_avatar = (ImageView)view.findViewById(R.id.imageView_avatar);
         tv_tuVanNhanh = (TextView)view.findViewById(R.id.textView_message_user);
+        tv_tuVanKhauPhanAn = (TextView)view.findViewById(R.id.textView_tu_van_khau_phan_an_user);
         loginActivity = new LoginActivity();
         loginActivity.setOnUpdateProfileUIListener(this);
 
@@ -86,10 +89,14 @@ public class Fragment_Profile extends Fragment implements LoginActivity.OnUpdate
                 AlertDialog dialogToShow = alertDialog.create();
                 dialogToShow.show();
 
+            }
+        });
 
-                Button positive_button =  dialogToShow.getButton(DialogInterface.BUTTON_POSITIVE);
-                positive_button.setLeft(5);
-
+        tv_tuVanKhauPhanAn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MyApplication.getCurrentContext(), Input_Activity.class);
+                MyApplication.getCurrentContext().startActivity(intent);
             }
         });
     }

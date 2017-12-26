@@ -130,4 +130,10 @@ public class Activity_Payment_Details extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onResume(){
+        super.onResume();
+        MyApplication.setCurrentContext(this);
+    }
+
 }

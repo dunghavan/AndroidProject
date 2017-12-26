@@ -7,7 +7,7 @@
         android:layout_height="wrap_content"
         android:text="Tên của bạn: "
         android:textAlignment="center"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:layout_marginStart="10dp"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:text="Hà Văn Dũng"
         android:textAlignment="textStart"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:layout_marginStart="10dp"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:text="Số điện thoại: "
         android:textAlignment="center"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:layout_marginStart="10dp"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:text="01684569826"
         android:textAlignment="textStart"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:layout_marginStart="10dp"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:text="Email: "
         android:textAlignment="center"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:layout_marginStart="10dp"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -55,7 +55,7 @@
         android:layout_height="wrap_content"
         android:text="dunghavan@gmail.com"
         android:textAlignment="textStart"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:layout_marginStart="10dp"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -65,7 +65,7 @@
         android:layout_height="wrap_content"
         android:text="Lời nhắn của bạn: "
         android:textAlignment="center"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:layout_marginStart="10dp"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -75,7 +75,7 @@
         android:layout_height="wrap_content"
         android:text=""
         android:textAlignment="textStart"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:layout_marginStart="10dp"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 </LinearLayout>
