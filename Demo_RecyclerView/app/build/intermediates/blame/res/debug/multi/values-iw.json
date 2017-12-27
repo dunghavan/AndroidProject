@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-iw\\values-iw.xml",
+        "outputFile": "/home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-iw/values-iw.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 204
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\791415d759bc642b87bd5e72a98aaab3076d2cc5\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/92669e0d671f1bf5f58cc27967eb1df7aa8e3244/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 303
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\791415d759bc642b87bd5e72a98aaab3076d2cc5\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/92669e0d671f1bf5f58cc27967eb1df7aa8e3244/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -49,7 +49,7 @@
                     "endOffset": 411
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\791415d759bc642b87bd5e72a98aaab3076d2cc5\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/92669e0d671f1bf5f58cc27967eb1df7aa8e3244/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -68,7 +68,7 @@
                     "endOffset": 495
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\791415d759bc642b87bd5e72a98aaab3076d2cc5\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/92669e0d671f1bf5f58cc27967eb1df7aa8e3244/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -87,7 +87,7 @@
                     "endOffset": 595
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\791415d759bc642b87bd5e72a98aaab3076d2cc5\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/92669e0d671f1bf5f58cc27967eb1df7aa8e3244/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -106,7 +106,7 @@
                     "endOffset": 709
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\791415d759bc642b87bd5e72a98aaab3076d2cc5\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/92669e0d671f1bf5f58cc27967eb1df7aa8e3244/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -125,7 +125,7 @@
                     "endOffset": 787
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\791415d759bc642b87bd5e72a98aaab3076d2cc5\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/92669e0d671f1bf5f58cc27967eb1df7aa8e3244/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -144,7 +144,7 @@
                     "endOffset": 865
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\791415d759bc642b87bd5e72a98aaab3076d2cc5\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/92669e0d671f1bf5f58cc27967eb1df7aa8e3244/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -163,7 +163,7 @@
                     "endOffset": 946
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\791415d759bc642b87bd5e72a98aaab3076d2cc5\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/92669e0d671f1bf5f58cc27967eb1df7aa8e3244/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -182,7 +182,7 @@
                     "endOffset": 1048
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\791415d759bc642b87bd5e72a98aaab3076d2cc5\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/92669e0d671f1bf5f58cc27967eb1df7aa8e3244/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -201,7 +201,7 @@
                     "endOffset": 1152
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\791415d759bc642b87bd5e72a98aaab3076d2cc5\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/92669e0d671f1bf5f58cc27967eb1df7aa8e3244/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -220,7 +220,7 @@
                     "endOffset": 1250
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\791415d759bc642b87bd5e72a98aaab3076d2cc5\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/92669e0d671f1bf5f58cc27967eb1df7aa8e3244/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -239,7 +239,7 @@
                     "endOffset": 1353
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\791415d759bc642b87bd5e72a98aaab3076d2cc5\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/92669e0d671f1bf5f58cc27967eb1df7aa8e3244/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -258,7 +258,7 @@
                     "endOffset": 1454
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\791415d759bc642b87bd5e72a98aaab3076d2cc5\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/92669e0d671f1bf5f58cc27967eb1df7aa8e3244/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -277,7 +277,7 @@
                     "endOffset": 1554
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\791415d759bc642b87bd5e72a98aaab3076d2cc5\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/92669e0d671f1bf5f58cc27967eb1df7aa8e3244/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -296,7 +296,7 @@
                     "endOffset": 1706
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\791415d759bc642b87bd5e72a98aaab3076d2cc5\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/92669e0d671f1bf5f58cc27967eb1df7aa8e3244/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -315,7 +315,7 @@
                     "endOffset": 1802
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\791415d759bc642b87bd5e72a98aaab3076d2cc5\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/92669e0d671f1bf5f58cc27967eb1df7aa8e3244/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
@@ -334,7 +334,7 @@
                     "endOffset": 1960
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\795e67b38917627a3ce024b34867bb7c0181745c\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/2f9cb04561fe7d1b5023ce9bf5c445c56ffecafc/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -353,7 +353,7 @@
                     "endOffset": 2081
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\795e67b38917627a3ce024b34867bb7c0181745c\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/2f9cb04561fe7d1b5023ce9bf5c445c56ffecafc/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -372,7 +372,7 @@
                     "endOffset": 2209
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\795e67b38917627a3ce024b34867bb7c0181745c\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/2f9cb04561fe7d1b5023ce9bf5c445c56ffecafc/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -391,7 +391,7 @@
                     "endOffset": 2321
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\795e67b38917627a3ce024b34867bb7c0181745c\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/2f9cb04561fe7d1b5023ce9bf5c445c56ffecafc/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -410,7 +410,7 @@
                     "endOffset": 2409
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\795e67b38917627a3ce024b34867bb7c0181745c\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/2f9cb04561fe7d1b5023ce9bf5c445c56ffecafc/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -429,7 +429,7 @@
                     "endOffset": 2494
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\795e67b38917627a3ce024b34867bb7c0181745c\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/2f9cb04561fe7d1b5023ce9bf5c445c56ffecafc/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -448,7 +448,7 @@
                     "endOffset": 2568
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\795e67b38917627a3ce024b34867bb7c0181745c\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/2f9cb04561fe7d1b5023ce9bf5c445c56ffecafc/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -467,7 +467,7 @@
                     "endOffset": 2656
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\795e67b38917627a3ce024b34867bb7c0181745c\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/2f9cb04561fe7d1b5023ce9bf5c445c56ffecafc/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -486,7 +486,7 @@
                     "endOffset": 2744
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\795e67b38917627a3ce024b34867bb7c0181745c\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/2f9cb04561fe7d1b5023ce9bf5c445c56ffecafc/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -505,7 +505,7 @@
                     "endOffset": 2858
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\795e67b38917627a3ce024b34867bb7c0181745c\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/2f9cb04561fe7d1b5023ce9bf5c445c56ffecafc/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -524,7 +524,7 @@
                     "endOffset": 2969
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\795e67b38917627a3ce024b34867bb7c0181745c\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/2f9cb04561fe7d1b5023ce9bf5c445c56ffecafc/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -543,7 +543,7 @@
                     "endOffset": 3060
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\795e67b38917627a3ce024b34867bb7c0181745c\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/2f9cb04561fe7d1b5023ce9bf5c445c56ffecafc/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -562,7 +562,7 @@
                     "endOffset": 3151
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\795e67b38917627a3ce024b34867bb7c0181745c\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/2f9cb04561fe7d1b5023ce9bf5c445c56ffecafc/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -581,7 +581,7 @@
                     "endOffset": 3251
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\795e67b38917627a3ce024b34867bb7c0181745c\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/2f9cb04561fe7d1b5023ce9bf5c445c56ffecafc/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -600,7 +600,7 @@
                     "endOffset": 3368
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\795e67b38917627a3ce024b34867bb7c0181745c\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/2f9cb04561fe7d1b5023ce9bf5c445c56ffecafc/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -619,7 +619,7 @@
                     "endOffset": 3449
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\795e67b38917627a3ce024b34867bb7c0181745c\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/2f9cb04561fe7d1b5023ce9bf5c445c56ffecafc/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -638,7 +638,7 @@
                     "endOffset": 3534
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\795e67b38917627a3ce024b34867bb7c0181745c\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/2f9cb04561fe7d1b5023ce9bf5c445c56ffecafc/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
@@ -657,7 +657,7 @@
                     "endOffset": 3702
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\795e67b38917627a3ce024b34867bb7c0181745c\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/2f9cb04561fe7d1b5023ce9bf5c445c56ffecafc/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -676,7 +676,7 @@
                     "endOffset": 3796
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\795e67b38917627a3ce024b34867bb7c0181745c\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/2f9cb04561fe7d1b5023ce9bf5c445c56ffecafc/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -695,7 +695,7 @@
                     "endOffset": 3895
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\795e67b38917627a3ce024b34867bb7c0181745c\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/2f9cb04561fe7d1b5023ce9bf5c445c56ffecafc/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
@@ -714,7 +714,7 @@
                     "endOffset": 4012
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\795e67b38917627a3ce024b34867bb7c0181745c\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/2f9cb04561fe7d1b5023ce9bf5c445c56ffecafc/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,
@@ -733,7 +733,7 @@
                     "endOffset": 4119
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\795e67b38917627a3ce024b34867bb7c0181745c\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/2f9cb04561fe7d1b5023ce9bf5c445c56ffecafc/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 23,
                         "startColumn": 4,
@@ -752,7 +752,7 @@
                     "endOffset": 4250
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\795e67b38917627a3ce024b34867bb7c0181745c\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/2f9cb04561fe7d1b5023ce9bf5c445c56ffecafc/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 24,
                         "startColumn": 4,
@@ -771,7 +771,7 @@
                     "endOffset": 4355
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\8d4d6dac4365cfc65b47f26724a53c81755b27d6\\output\\res\\values-iw\\values.xml",
+                    "file": "/home/dunghv/.android/build-cache/2b33b346befb3b3c3d005caf2c0204c508b896e8/output/res/values-iw/values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 0,
@@ -790,7 +790,7 @@
                     "endOffset": 4541
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\8d4d6dac4365cfc65b47f26724a53c81755b27d6\\output\\res\\values-iw\\values.xml",
+                    "file": "/home/dunghv/.android/build-cache/2b33b346befb3b3c3d005caf2c0204c508b896e8/output/res/values-iw/values.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 0,
@@ -809,7 +809,7 @@
                     "endOffset": 4668
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\8d4d6dac4365cfc65b47f26724a53c81755b27d6\\output\\res\\values-iw\\values.xml",
+                    "file": "/home/dunghv/.android/build-cache/2b33b346befb3b3c3d005caf2c0204c508b896e8/output/res/values-iw/values.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 0,
@@ -828,7 +828,7 @@
                     "endOffset": 4774
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\8d4d6dac4365cfc65b47f26724a53c81755b27d6\\output\\res\\values-iw\\values.xml",
+                    "file": "/home/dunghv/.android/build-cache/2b33b346befb3b3c3d005caf2c0204c508b896e8/output/res/values-iw/values.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 0,
@@ -847,7 +847,7 @@
                     "endOffset": 4972
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\8d4d6dac4365cfc65b47f26724a53c81755b27d6\\output\\res\\values-iw\\values.xml",
+                    "file": "/home/dunghv/.android/build-cache/2b33b346befb3b3c3d005caf2c0204c508b896e8/output/res/values-iw/values.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 0,
@@ -866,7 +866,7 @@
                     "endOffset": 5099
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\8d4d6dac4365cfc65b47f26724a53c81755b27d6\\output\\res\\values-iw\\values.xml",
+                    "file": "/home/dunghv/.android/build-cache/2b33b346befb3b3c3d005caf2c0204c508b896e8/output/res/values-iw/values.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 0,
@@ -885,7 +885,7 @@
                     "endOffset": 5231
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\8d4d6dac4365cfc65b47f26724a53c81755b27d6\\output\\res\\values-iw\\values.xml",
+                    "file": "/home/dunghv/.android/build-cache/2b33b346befb3b3c3d005caf2c0204c508b896e8/output/res/values-iw/values.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 0,
@@ -904,7 +904,7 @@
                     "endOffset": 5408
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\c7dff8d209a3c19d48cc190bd4235887119f5ae5\\output\\res\\values-iw\\values.xml",
+                    "file": "/home/dunghv/.android/build-cache/902bda8c1fc6c9bfe1b685ed3d39c89ed395345c/output/res/values-iw/values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 0,
@@ -923,7 +923,7 @@
                     "endOffset": 5603
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\8d4d6dac4365cfc65b47f26724a53c81755b27d6\\output\\res\\values-iw\\values.xml",
+                    "file": "/home/dunghv/.android/build-cache/2b33b346befb3b3c3d005caf2c0204c508b896e8/output/res/values-iw/values.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 0,
@@ -942,7 +942,7 @@
                     "endOffset": 5708
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\8d4d6dac4365cfc65b47f26724a53c81755b27d6\\output\\res\\values-iw\\values.xml",
+                    "file": "/home/dunghv/.android/build-cache/2b33b346befb3b3c3d005caf2c0204c508b896e8/output/res/values-iw/values.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 0,
@@ -961,7 +961,7 @@
                     "endOffset": 5884
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\8d4d6dac4365cfc65b47f26724a53c81755b27d6\\output\\res\\values-iw\\values.xml",
+                    "file": "/home/dunghv/.android/build-cache/2b33b346befb3b3c3d005caf2c0204c508b896e8/output/res/values-iw/values.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 0,
@@ -980,7 +980,7 @@
                     "endOffset": 6009
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\8d4d6dac4365cfc65b47f26724a53c81755b27d6\\output\\res\\values-iw\\values.xml",
+                    "file": "/home/dunghv/.android/build-cache/2b33b346befb3b3c3d005caf2c0204c508b896e8/output/res/values-iw/values.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 0,
@@ -999,7 +999,7 @@
                     "endOffset": 6202
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\8d4d6dac4365cfc65b47f26724a53c81755b27d6\\output\\res\\values-iw\\values.xml",
+                    "file": "/home/dunghv/.android/build-cache/2b33b346befb3b3c3d005caf2c0204c508b896e8/output/res/values-iw/values.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 0,
@@ -1018,7 +1018,7 @@
                     "endOffset": 6377
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\8d4d6dac4365cfc65b47f26724a53c81755b27d6\\output\\res\\values-iw\\values.xml",
+                    "file": "/home/dunghv/.android/build-cache/2b33b346befb3b3c3d005caf2c0204c508b896e8/output/res/values-iw/values.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 0,
@@ -1037,7 +1037,7 @@
                     "endOffset": 6467
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\8d4d6dac4365cfc65b47f26724a53c81755b27d6\\output\\res\\values-iw\\values.xml",
+                    "file": "/home/dunghv/.android/build-cache/2b33b346befb3b3c3d005caf2c0204c508b896e8/output/res/values-iw/values.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 0,
@@ -1056,7 +1056,7 @@
                     "endOffset": 6557
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\8d4d6dac4365cfc65b47f26724a53c81755b27d6\\output\\res\\values-iw\\values.xml",
+                    "file": "/home/dunghv/.android/build-cache/2b33b346befb3b3c3d005caf2c0204c508b896e8/output/res/values-iw/values.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 0,
@@ -1075,7 +1075,7 @@
                     "endOffset": 6667
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\8d4d6dac4365cfc65b47f26724a53c81755b27d6\\output\\res\\values-iw\\values.xml",
+                    "file": "/home/dunghv/.android/build-cache/2b33b346befb3b3c3d005caf2c0204c508b896e8/output/res/values-iw/values.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 0,
@@ -1094,7 +1094,7 @@
                     "endOffset": 6748
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\791415d759bc642b87bd5e72a98aaab3076d2cc5\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/92669e0d671f1bf5f58cc27967eb1df7aa8e3244/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -1113,7 +1113,7 @@
                     "endOffset": 6851
                 },
                 "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\a4794f80946235f685247bdb3534ac2e673b0769\\output\\res\\values-iw\\values-iw.xml",
+                    "file": "/home/dunghv/.android/build-cache/5e9a1521d49edf4f85a8e620242a258dcce7d94e/output/res/values-iw/values-iw.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,

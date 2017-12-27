@@ -53,6 +53,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nam"
+                    android:checked="true"
                     android:layout_marginStart="50dp"
                     android:textSize="18sp"/>
                 <RadioButton
@@ -67,8 +68,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp">
+            android:orientation="horizontal">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -85,8 +85,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp">
+            android:orientation="horizontal">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -99,21 +98,26 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
             </Spinner>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(kg)"
+                android:layout_gravity="center_vertical"
+                android:textSize="18sp"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp">
+            android:orientation="horizontal">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Chế độ ăn: "
+                android:text="Chế độ: "
                 android:layout_marginStart="5dp"
                 android:layout_gravity="center_vertical"
                 android:textSize="18sp"/>
             <Spinner
-                android:id="@+id/spinner_chedoan_input_activity"
+                android:id="@+id/spinner_chedo_input_activity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
             </Spinner>
@@ -121,8 +125,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp">
+            android:orientation="horizontal">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -139,8 +142,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp">
+            android:orientation="horizontal">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -149,7 +151,24 @@
                 android:layout_gravity="center_vertical"
                 android:textSize="18sp"/>
             <Spinner
-                android:id="@+id/spinner_chodolaodong_input_activity"
+                android:id="@+id/spinner_chedolaodong_input_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </Spinner>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bữa ăn: "
+                android:layout_marginStart="5dp"
+                android:layout_gravity="center_vertical"
+                android:textSize="18sp"/>
+            <Spinner
+                android:id="@+id/spinner_buaan_input_activity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
             </Spinner>
@@ -161,7 +180,7 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:background="#72a4e1"/>
     </LinearLayout>
 </LinearLayout>

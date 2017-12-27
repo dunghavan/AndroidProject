@@ -28,8 +28,7 @@
         android:required="false" />
     <uses-feature
         android:name="android.hardware.camera.autofocus"
-        android:required="false" />
-
+        android:required="false" /> <!-- Hash Key SSL cho Facebook tren may Ubuntu: ga0RGNYHvNM5d0SLGQfpQWAPGJ8= -->
     <application
         android:name="com.example.dung.demo_recyclerview.MyApplication"
         android:allowBackup="true"

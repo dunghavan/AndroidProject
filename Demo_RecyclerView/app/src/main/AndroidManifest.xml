@@ -9,7 +9,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-
+<!--Hash Key SSL cho Facebook tren may Ubuntu: ga0RGNYHvNM5d0SLGQfpQWAPGJ8=   -->
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -39,7 +39,7 @@
         <activity android:name=".MapActivity" />
         <activity android:name=".MyPaymentActivity" />
         <activity android:name=".Activity_Payment_Details" />
-        <activity android:name=".Input_Activity"></activity>
+        <activity android:name=".Input_Activity"/>
     </application>
 
 </manifest>
