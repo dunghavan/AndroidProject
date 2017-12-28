@@ -1,4 +1,4 @@
-#Wed Dec 27 17:07:19 ICT 2017
+#Thu Dec 28 17:19:36 ICT 2017
 base.0=/home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_f1abe9e33d0a0d6c619b37c2563d71ca0d74300a
 renamed.1=classes2.dex
 renamed.0=classes.dex

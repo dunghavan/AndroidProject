@@ -49,7 +49,8 @@ public interface APIService {
                      @Field("TongTien") int TongTien,
                      @Field("CTDonDatHang")String ChiTietDonHang,
                      @Field("DaXacNhan")String DaXacNhan,
-                     @Field("DaGiaoDich")String DaGiaoDich);
+                     @Field("DaGiaoDich")String DaGiaoDich,
+                        @Field("MaNhaHang")String MaNhaHang);
 
 
     @GET("/api/PhieuGiamGia/GetChietKhau/{idMonAn}")
@@ -66,4 +67,14 @@ public interface APIService {
 
     @GET("api/DonDatHang/GetAllOrder/{maKhachHang}")
     Call<List<Payment>> getAllPayment(@Path("maKhachHang")String maKhachHang);
+
+    @FormUrlEncoded
+    @POST("api/NutritionConsulting")
+    Call<List<MonAn>> getMonAnDeXuat(@Field("GioiTinh")int GioiTinh,
+                                     @Field("CanNang")int CanNang,
+                                     @Field("NamSinh")int NamSinh,
+                                     @Field("CheDo")int CheDo,
+                                     @Field("NhuCau")int NhuCau,
+                                     @Field("CheDoLaoDong")int CheDoLaoDong,
+                                     @Field("Bua")int Bua);
 }

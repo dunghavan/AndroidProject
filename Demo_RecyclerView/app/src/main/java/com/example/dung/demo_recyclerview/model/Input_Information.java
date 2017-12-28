@@ -1,15 +1,17 @@
 package com.example.dung.demo_recyclerview.model;
 
+import java.io.Serializable;
+
 /**
  * Created by dunghv on 12/27/17.
  */
 
-public class Input_Information {
+public class Input_Information implements Serializable{
     private int gioiTinh;
     private int namSinh;
     private int canNang;
     private int cheDo;
-    private int mucDich;
+    private int nhuCau;
     private int cheDoLaoDong;
     private int buaAn;
 
@@ -45,12 +47,12 @@ public class Input_Information {
         this.cheDo = cheDo;
     }
 
-    public int getMucDich() {
-        return mucDich;
+    public int getNhuCau() {
+        return nhuCau;
     }
 
-    public void setMucDich(int mucDich) {
-        this.mucDich = mucDich;
+    public void setNhuCau(int nhuCau) {
+        this.nhuCau = nhuCau;
     }
 
     public int getCheDoLaoDong() {

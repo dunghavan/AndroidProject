@@ -307,7 +307,7 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
         int tongTien = (int)Math.round(Cart.getTotal());
         apiService.submitOrder(LoginActivity.ID, curDateTime, _deliveryDateTime,
                 submitAddress, phoneNumber, _paymentType, _payID, tongTien, Cart.convertTo_CTDDH(),
-                "false", "false").enqueue(new Callback<Void>() {
+                "false", "false", nhaHang.getId()).enqueue(new Callback<Void>() {
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {
                 //Toast.makeText(MyApplication.getCurrentContext(), "Send success", Toast.LENGTH_SHORT).show();

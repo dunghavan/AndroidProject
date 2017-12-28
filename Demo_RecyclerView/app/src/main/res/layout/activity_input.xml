@@ -129,12 +129,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mục đích: "
+                android:text="Nhu cầu: "
                 android:layout_marginStart="5dp"
                 android:layout_gravity="center_vertical"
                 android:textSize="18sp"/>
             <Spinner
-                android:id="@+id/spinner_mucdich_input_activity"
+                android:id="@+id/spinner_nhucau_input_activity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
             </Spinner>

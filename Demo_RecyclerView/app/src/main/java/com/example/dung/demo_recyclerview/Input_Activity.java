@@ -1,8 +1,10 @@
 package com.example.dung.demo_recyclerview;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -18,7 +20,7 @@ import java.util.List;
 public class Input_Activity extends AppCompatActivity {
 
     RadioButton radioButton_Nam, radioButton_Nu;
-    Spinner spinner_NamSinh, spinner_CanNang, spinner_CheDo, spinner_MucDich, spinner_CheDoLaoDong, spinner_BuaAn;
+    Spinner spinner_NamSinh, spinner_CanNang, spinner_CheDo, spinner_NhuCau, spinner_CheDoLaoDong, spinner_BuaAn;
     Button btn_Submit;
     Input_Information input_information;
 
@@ -33,9 +35,10 @@ public class Input_Activity extends AppCompatActivity {
         spinner_NamSinh = (Spinner)findViewById(R.id.spinner_namsinh_input_activity);
         spinner_CanNang = (Spinner)findViewById(R.id.spinner_cannang_input_activity);
         spinner_CheDo = (Spinner)findViewById(R.id.spinner_chedo_input_activity);
-        spinner_MucDich = (Spinner)findViewById(R.id.spinner_mucdich_input_activity);
+        spinner_NhuCau = (Spinner)findViewById(R.id.spinner_nhucau_input_activity);
         spinner_CheDoLaoDong = (Spinner)findViewById(R.id.spinner_chedolaodong_input_activity);
         spinner_BuaAn = (Spinner)findViewById(R.id.spinner_buaan_input_activity);
+        btn_Submit = (Button)findViewById(R.id.btn_hien_thi_mon_an_input_activity);
 
         setUpSpinners(true);
 
@@ -43,6 +46,13 @@ public class Input_Activity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 setUpSpinners(b);
+            }
+        });
+
+        btn_Submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getInput_Information();
             }
         });
 
@@ -84,32 +94,73 @@ public class Input_Activity extends AppCompatActivity {
             String cheDo = spinner_CheDo.getSelectedItem().toString();
             switch (cheDo){
                 case "Bình thường": input_information.setCheDo(1);
+                    break;
                 case "Bệnh tim mạch": input_information.setCheDo(2);
+                    break;
                 case "Bệnh béo phì": input_information.setCheDo(3);
+                    break;
                 case "Bệnh dạ dày": input_information.setCheDo(4);
+                    break;
                 case "Bệnh Gout": input_information.setCheDo(5);
+                    break;
                 case "Bệnh tiểu đường": input_information.setCheDo(6);
+                    break;
                 case "Mang thai": input_information.setCheDo(7);
+                    break;
                 case "Cho con bú": input_information.setCheDo(8);
+                    break;
                     default: input_information.setCheDo(1);
             }
         }
 
         // Muc dich:
-        if(spinner_MucDich.getSelectedItem() != null){
-            String mucDich = spinner_MucDich.getSelectedItem().toString();
+        if(spinner_NhuCau.getSelectedItem() != null){
+            String mucDich = spinner_NhuCau.getSelectedItem().toString();
             switch (mucDich){
-                case "Bình thường": input_information.setCheDo(1);
-                case "Bệnh tim mạch": input_information.setCheDo(2);
-                case "Bệnh béo phì": input_information.setCheDo(3);
-                case "Bệnh dạ dày": input_information.setCheDo(4);
-                case "Bệnh Gout": input_information.setCheDo(5);
-                case "Bệnh tiểu đường": input_information.setCheDo(6);
-                case "Mang thai": input_information.setCheDo(7);
-                case "Cho con bú": input_information.setCheDo(8);
-                default: input_information.setCheDo(1);
+                case "Giảm cân": input_information.setNhuCau(1);
+                    break;
+                case "Tăng cân": input_information.setNhuCau(2);
+                    break;
+                case "Mang thai": input_information.setNhuCau(3);
+                    break;
+                case "Cho con bú": input_information.setNhuCau(4);
+                    break;
+                default: input_information.setNhuCau(1);
             }
         }
+
+        // Che do lao dong:
+        if(spinner_CheDoLaoDong.getSelectedItem() != null){
+            String mucDich = spinner_CheDoLaoDong.getSelectedItem().toString();
+            switch (mucDich){
+                case "Lao động nhẹ": input_information.setCheDoLaoDong(1);
+                    break;
+                case "Lao động vừa": input_information.setCheDoLaoDong(2);
+                    break;
+                case "Lao động nặng": input_information.setCheDoLaoDong(3);
+                    break;
+                default: input_information.setCheDoLaoDong(1);
+            }
+        }
+
+        // Bua an:
+        if(spinner_BuaAn.getSelectedItem() != null){
+            String mucDich = spinner_BuaAn.getSelectedItem().toString();
+            switch (mucDich){
+                case "Sáng": input_information.setBuaAn(1);
+                    break;
+                case "Trưa": input_information.setBuaAn(2);
+                    break;
+                case "Tối": input_information.setBuaAn(3);
+                    break;
+                default: input_information.setBuaAn(1);
+            }
+        }
+
+        // Send information to Activity_MonAnDeXuat
+        Intent intent = new Intent(this, Activity_MonAnDeXuat.class);
+        intent.putExtra("Input Information", input_information);
+        this.startActivity(intent);
 
     }
 
@@ -147,17 +198,17 @@ public class Input_Activity extends AppCompatActivity {
         adapter_CheDo.setDropDownViewResource(R.layout.simple_list_item_1);
         spinner_CheDo.setAdapter(adapter_CheDo);
 
-        // Muc Dich
-        List<String> data_MucDich = new ArrayList<>();
-        data_MucDich.add("Giảm cân");
-        data_MucDich.add("Tăng cân");
+        // Nhu Cau
+        List<String> data_NhuCau = new ArrayList<>();
+        data_NhuCau.add("Giảm cân");
+        data_NhuCau.add("Tăng cân");
         if(!_gioiTinh){
-            data_MucDich.add("Mang thai");
-            data_MucDich.add("Cho con bú");
+            data_NhuCau.add("Mang thai");
+            data_NhuCau.add("Cho con bú");
         }
-        ArrayAdapter<String> adapter_MucDich = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, data_MucDich);
-        adapter_MucDich.setDropDownViewResource(R.layout.simple_list_item_1);
-        spinner_MucDich.setAdapter(adapter_MucDich);
+        ArrayAdapter<String> adapter_NhuCau = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, data_NhuCau);
+        adapter_NhuCau.setDropDownViewResource(R.layout.simple_list_item_1);
+        spinner_NhuCau.setAdapter(adapter_NhuCau);
 
         // Che Do Lao Dong
         String[] data_CheDoLaoDong = {"Lao động nhẹ", "Lao động vừa", "Lao động nặng"};

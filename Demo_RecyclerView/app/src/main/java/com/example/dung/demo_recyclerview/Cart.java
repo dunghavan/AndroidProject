@@ -152,6 +152,7 @@ public class Cart {
             ct.setSoLuong(item.getItemCount());
             ct.setDonGia(item.getGiaKhuyenMai());
             ct.setThanhTien(item.getToTal_1_Item());
+            ct.setTenMonAn(item.getTenMonAn());
 
             ObjectMapper objectMapper = new ObjectMapper();
             try{

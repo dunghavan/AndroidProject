@@ -2,6 +2,7 @@ package com.example.dung.demo_recyclerview.recycler_adapter;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.AsyncTask;
@@ -15,12 +16,15 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.dung.demo_recyclerview.Activity_MonAn_Of_NhaHang;
 import com.example.dung.demo_recyclerview.Cart;
+import com.example.dung.demo_recyclerview.LoginActivity;
 import com.example.dung.demo_recyclerview.MainActivity;
+import com.example.dung.demo_recyclerview.MyAlertDialog;
 import com.example.dung.demo_recyclerview.MyApplication;
 import com.example.dung.demo_recyclerview.MyHttpURLConnection;
 import com.example.dung.demo_recyclerview.R;
@@ -44,6 +48,9 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
+import static com.paypal.android.sdk.cx.l;
+
 /**
  * Created by Dung on 9/17/2017.
  */
@@ -53,6 +60,7 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
     Context context;
     private NhaHang nhaHang_from_json;
     private String tenNhaHang;
+    private int khuyenMaiFromServer;
     final DecimalFormat decimalFormat = new DecimalFormat("###,###,###.#");
 
 
@@ -83,6 +91,30 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
         viewHolder.textView_Gia.setText(String.format("%s", decimalFormat.format(monAnSelected.getDonGia())) + "đ");
 
 
+        viewHolder.textView_GiaKhuyenMai.setVisibility(View.INVISIBLE);
+        viewHolder.textView_KhuyenMai.setVisibility(View.INVISIBLE);
+        APIService apiService = ApiUtils.getAPIService();
+        apiService.getChietKhauByMa(monAnSelected.getId()).enqueue(new Callback<Integer>() {
+            @Override
+            public void onResponse(Call<Integer> call, Response<Integer> response) {
+                khuyenMaiFromServer = response.body();
+                monAnSelected.setKhuyenMai((double)khuyenMaiFromServer);
+                if(khuyenMaiFromServer != 0){
+                    viewHolder.textView_GiaKhuyenMai.setText(String.valueOf(decimalFormat.format(monAnSelected.getGiaKhuyenMai())) + " đ");
+                    viewHolder.textView_KhuyenMai.setText("-" + String.valueOf(monAnSelected.getKhuyenMai()) + "%");
+                    viewHolder.textView_GiaKhuyenMai.setVisibility(View.VISIBLE);
+                    viewHolder.textView_KhuyenMai.setVisibility(View.VISIBLE);
+                    viewHolder.textView_Gia.setPaintFlags(Paint.STRIKE_THRU_TEXT_FLAG);
+                    viewHolder.textView_Gia.setTextColor(Color.parseColor("#FFD19366"));
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Integer> call, Throwable t) {
+
+            }
+        });
+
         String itemIdSelected = monAnSelected.getId();
         String count = String.valueOf(Cart.getItemCountById(itemIdSelected));
         viewHolder.textView_SoLuongDat.setText(count);
@@ -105,6 +137,8 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
         public ImageView imageView;
         public TextView textView_TenMonAn;
         public TextView textView_Gia;
+        public TextView textView_GiaKhuyenMai;
+        public TextView textView_KhuyenMai;
         public TextView tv_tenNhaHang;
 
         public TextView textView_SoLuongDat;
@@ -115,7 +149,9 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
             super(itemView);
             imageView = (ImageView)itemView.findViewById(R.id.imageView_MonAn);
             textView_TenMonAn = (TextView)itemView.findViewById(R.id.tv_TenMonAn);
-            textView_Gia = (TextView)itemView.findViewById(R.id.tv_GiaMonAn);
+            textView_Gia = (TextView)itemView.findViewById(R.id.textview_gia_in_item);
+            textView_GiaKhuyenMai = (TextView)itemView.findViewById(R.id.textview_giakhuyenmai_in_item);
+            textView_KhuyenMai = (TextView)itemView.findViewById(R.id.textview_khuyenmai_in_item);
             btn_Plus = (ImageButton)itemView.findViewById(R.id.btn_plus);
             btn_Minus = (ImageButton)itemView.findViewById(R.id.btn_minus);
             textView_SoLuongDat = (TextView)itemView.findViewById(R.id.textview_soluongdat);
@@ -129,9 +165,9 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                     final MonAn monAn = listData.get(getAdapterPosition());
                     final String maNhaHang = monAn.getMaNhaHang();
                     //Tao giao dien alertDialog:
-                    LayoutInflater li = LayoutInflater.from(MyApplication.getCurrentContext());
-                    View alertDialogView = li.inflate(R.layout.alert_dialog_monan, null);
-                    AlertDialog.Builder alertDialog = new AlertDialog.Builder(MyApplication.getCurrentContext());
+                    final LayoutInflater li = LayoutInflater.from(MyApplication.getCurrentContext());
+                    final View alertDialogView = li.inflate(R.layout.alert_dialog_monan, null);
+                    final AlertDialog.Builder alertDialog = new AlertDialog.Builder(MyApplication.getCurrentContext());
                     alertDialog.setView(alertDialogView);
 
                     TextView textViewTenMonAn = (TextView)alertDialogView.findViewById(R.id.textview_tenmonan_in_dialog);
@@ -143,9 +179,9 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                     textView_SoLuongDat.setText(count);
 
                     // Gia, khuyen mai, gia khuyen mai:
-                    TextView textViewGia = (TextView)alertDialogView.findViewById(R.id.textview_gia_in_dialog);
-                    TextView textViewGiaKhuyenMai = (TextView)alertDialogView.findViewById(R.id.textview_giakhuyenmai_in_dialog);
-                    TextView textViewKhuyenMai = (TextView)alertDialogView.findViewById(R.id.textview_khuyenmai_in_dialog);
+                    final TextView textViewGia = (TextView)alertDialogView.findViewById(R.id.textview_gia_in_dialog);
+                    final TextView textViewGiaKhuyenMai = (TextView)alertDialogView.findViewById(R.id.textview_giakhuyenmai_in_dialog);
+                    final TextView textViewKhuyenMai = (TextView)alertDialogView.findViewById(R.id.textview_khuyenmai_in_dialog);
 
                     if(monAn.getKhuyenMai() != 0){
                         textViewGiaKhuyenMai.setText(String.valueOf(decimalFormat.format(monAn.getGiaKhuyenMai())) + " đ");
@@ -159,6 +195,7 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                         textViewGiaKhuyenMai.setVisibility(View.INVISIBLE);
                         textViewKhuyenMai.setVisibility(View.INVISIBLE);
                     }
+
                     textViewGia.setText(String.valueOf(decimalFormat.format(monAn.getDonGia())) + " đ");
 
                     // Tong tien:
@@ -239,7 +276,46 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                         }
                     });
 
-                    alertDialog.setCancelable(false)
+                    // TextView Danh gia:
+                    TextView tv_danhGia = (TextView)alertDialogView.findViewById(R.id.textview_danhgia_in_dialog);
+                    tv_danhGia.setOnClickListener(new OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            // If user not logged in:
+                            if(!LoginActivity.isAuthenticated()){
+                                Intent intent = new Intent(MyApplication.getCurrentContext(), LoginActivity.class);
+                                MyApplication.getCurrentContext().startActivity(intent);
+                            }
+
+                            View alertDialogView_rating = li.inflate(R.layout.alert_dialog_rating_monan, null);
+                            AlertDialog.Builder alertDialog_rating = new AlertDialog.Builder(MyApplication.getCurrentContext());
+                            alertDialog_rating.setView(alertDialogView_rating);
+
+                            RatingBar ratingBar_all_User = (RatingBar)alertDialogView_rating.findViewById(R.id.ratingBar_of_allUser);
+                            RatingBar ratingBar_currentUser = (RatingBar)alertDialogView_rating.findViewById(R.id.ratingBar_of_currentUser);
+                            ratingBar_all_User.setRating(monAn.getSoDiem());
+                            ratingBar_currentUser.setRating(2.5F);
+
+                            alertDialog_rating.setCancelable(false)
+                                    .setTitle("Đánh giá món ăn")
+                                    .setNegativeButton("Hủy", null)
+                                    .setPositiveButton("Xong", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialogInterface, int i) {
+                                            // Call API Rating
+
+                                            Toast.makeText(MyApplication.getCurrentContext(), "Rating Mon An", Toast.LENGTH_SHORT).show();
+                                        }
+                                    });
+                            AlertDialog dialog_toShow_rating = alertDialog_rating.create();
+                            dialog_toShow_rating.show();
+
+                        }
+                    });
+
+
+
+                    alertDialog.setCancelable(true)
                             .setPositiveButton("Xong", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {

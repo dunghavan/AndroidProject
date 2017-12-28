@@ -58,13 +58,12 @@
             android:id="@+id/textview_khuyenmai_in_dialog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="20%"
+            android:text="20% Off"
             android:textAlignment="center"
             android:textSize="16sp"
             android:layout_marginStart="20dp"
             android:textColor="#179e05"
             android:textAppearance="?android:attr/textAppearanceLarge" />
-
     </android.support.v7.widget.LinearLayoutCompat>
     <TextView
         android:id="@+id/textview_mota_monan"
@@ -72,7 +71,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginRight="20dp"
-        android:maxLines="2"
         android:ellipsize="end"
         android:text="Cừu băm xào tôm là món ăn bổ dưỡng kết hợp thịt cừu và tôm tươi. Vị ngọt bùi thơm ngon từ tôm kết hợp cùng vị mềm mại, ngọt thanh từ miếng thịt cừu sẽ khiến thực khách ngất ngây với hương vị tan ra nơi đầu lưỡi.">
     </TextView>
@@ -134,6 +132,18 @@
             android:background="@drawable/rounded_button"
             android:layout_height="20dp"
             android:layout_width="20dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="5dp">
+        <TextView
+            android:id="@+id/textview_danhgia_in_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đánh giá món ăn"
+            android:textColor="#f59c01"/>
     </LinearLayout>
 
 </LinearLayout>

@@ -9,6 +9,7 @@ public class CTDonDatHang {
     private Double DonGia;
     private int SoLuong;
     private Double ThanhTien;
+    private String TenMonAn;
 
     public String getMaMonAn() {
         return MaMonAn;
@@ -40,6 +41,14 @@ public class CTDonDatHang {
 
     public void setThanhTien(Double thanhTien) {
         ThanhTien = thanhTien;
+    }
+
+    public String getTenMonAn() {
+        return TenMonAn;
+    }
+
+    public void setTenMonAn(String tenMonAn) {
+        TenMonAn = tenMonAn;
     }
 
     public String itemToString(){
