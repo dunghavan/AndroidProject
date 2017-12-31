@@ -16,4 +16,10 @@
     <string name="ca_nhan">Cá nhân</string>
 
 
+    <string name="tiep_tuc_chon_mon"><u>Tiếp tục chọn món</u></string>
+    <string name="dang_nhap"><u>Đăng nhập</u></string>
+    <string name="tiep_theo"><u>Tiếp theo</u></string>
+    <string name="quay_lai"><u>Quay lại</u></string>
+    <string name="gui_don_hang"><u>Gửi đơn hàng</u></string>
+
 </resources>

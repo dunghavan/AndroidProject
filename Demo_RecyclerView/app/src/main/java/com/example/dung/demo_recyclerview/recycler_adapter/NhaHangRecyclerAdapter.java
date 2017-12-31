@@ -58,7 +58,7 @@ public class NhaHangRecyclerAdapter extends RecyclerView.Adapter <NhaHangRecycle
             Picasso.with(MyApplication.getCurrentContext())
                     .load(url)
                     .placeholder(R.drawable.loading)
-                    .error(R.drawable.failed_load_food)
+                    .error(R.drawable.failed_load_restaurant)
                     .fit()
                     .into(viewHolder.imageView_HinhAnh);
 
@@ -89,7 +89,8 @@ public class NhaHangRecyclerAdapter extends RecyclerView.Adapter <NhaHangRecycle
              // Start Activity các món ăn của nhà hàng
 
             Intent intent = new Intent(activity, Activity_MonAn_Of_NhaHang.class);
-            intent.putExtra("TEN_NHA_HANG", textView_TenNhaHang.getText());
+            NhaHang nhaHang_click = listData.get(getAdapterPosition());
+            intent.putExtra("NHA_HANG", nhaHang_click);
             activity.startActivity(intent);
 
         }

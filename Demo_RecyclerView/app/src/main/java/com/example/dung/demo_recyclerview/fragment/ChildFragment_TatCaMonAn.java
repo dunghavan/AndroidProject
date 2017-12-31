@@ -101,12 +101,15 @@ public class ChildFragment_TatCaMonAn extends Fragment{
     @Override
     public void onResume() {
         super.onResume();
-        //initialData(foodCategoryName, tabCategory);
+
+        customRecyclerAdapter = new MonAnRecyclerAdapter(data);
+        recyclerView.setAdapter(customRecyclerAdapter);
+        setRetainInstance(false);
     }
 
     //Load du lieu theo loai da chon:
     boolean isShowAlertDialog = false;
-    private void initialData(int _foodCategory, String _tabCategory){
+    private void initialData(final int _foodCategory, String _tabCategory){
 //        Log.d("Call method", "initialData");
 //        String api = "http://orderfooduit.azurewebsites.net/api/MonAn/GetByMaLoai/" + String.valueOf(foodCategoryName);
 //        new ReadApiTask().execute(api);
@@ -147,7 +150,7 @@ public class ChildFragment_TatCaMonAn extends Fragment{
                     Log.d("Err maLoai onFailure", t.getMessage());
                     Toast.makeText(MyApplication.getCurrentContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
                     if(!isShowAlertDialog){
-                        MyAlertDialog.showMyAlertDialog("Thông báo", "Không tải được danh sách món ăn, hãy thử lại!");
+                        MyAlertDialog.showMyAlertDialog("Thông báo", "Không tải được danh sách món ăn đặt nhiều mã loại: " + _foodCategory + ", hãy thử lại!");
                         isShowAlertDialog = true;
                     }
                 }
@@ -186,7 +189,7 @@ public class ChildFragment_TatCaMonAn extends Fragment{
                     Log.d("Err maLoai onFailure", t.getMessage());
                     Toast.makeText(MyApplication.getCurrentContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
                     if(!isShowAlertDialog){
-                        MyAlertDialog.showMyAlertDialog("Thông báo", "Không tải được danh sách món ăn, hãy thử lại!");
+                        MyAlertDialog.showMyAlertDialog("Thông báo", "Không tải được danh sách tất cả món ăn mã loại: " + _foodCategory + ", hãy thử lại!");
                         isShowAlertDialog = true;
                     }
                 }

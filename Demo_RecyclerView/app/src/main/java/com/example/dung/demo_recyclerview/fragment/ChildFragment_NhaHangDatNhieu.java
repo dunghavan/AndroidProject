@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.dung.demo_recyclerview.MainActivity;
+import com.example.dung.demo_recyclerview.MyAlertDialog;
 import com.example.dung.demo_recyclerview.R;
 import com.example.dung.demo_recyclerview.model.NhaHang;
 import com.example.dung.demo_recyclerview.recycler_adapter.NhaHangRecyclerAdapter;
@@ -53,7 +54,6 @@ public class ChildFragment_NhaHangDatNhieu extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
 
         listNhaHang = new ArrayList<>();
-
         initializeData();
         nhaHangRecyclerAdapter = new NhaHangRecyclerAdapter(listNhaHang, (MainActivity)context);
         recyclerView.setAdapter(nhaHangRecyclerAdapter);
@@ -73,12 +73,14 @@ public class ChildFragment_NhaHangDatNhieu extends Fragment {
                 catch (Exception e){
                     if(e.getMessage() != null)
                         Log.d("Error get all NhaHang", e.getMessage());
+                    MyAlertDialog.showMyAlertDialog("Lỗi API nhà hàng", "Lỗi gán danh sách nhà hàng!");
                 }
             }
 
             @Override
             public void onFailure(Call<List<NhaHang>> call, Throwable t) {
                 Log.d("onFailure getallNhaHang", call.toString());
+                MyAlertDialog.showMyAlertDialog("Lỗi API nhà hàng", "Đọc API bị onFailure!");
             }
         });
     }

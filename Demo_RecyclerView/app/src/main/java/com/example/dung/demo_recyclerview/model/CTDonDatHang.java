@@ -10,6 +10,7 @@ public class CTDonDatHang {
     private int SoLuong;
     private Double ThanhTien;
     private String TenMonAn;
+    private String maNhaHang;
 
     public String getMaMonAn() {
         return MaMonAn;
@@ -49,6 +50,14 @@ public class CTDonDatHang {
 
     public void setTenMonAn(String tenMonAn) {
         TenMonAn = tenMonAn;
+    }
+
+    public String getMaNhaHang() {
+        return maNhaHang;
+    }
+
+    public void setMaNhaHang(String maNhaHang) {
+        this.maNhaHang = maNhaHang;
     }
 
     public String itemToString(){

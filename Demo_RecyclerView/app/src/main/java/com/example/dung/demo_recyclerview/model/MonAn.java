@@ -12,7 +12,7 @@ public class MonAn {
     private Double donGia;
     private String maNhaHang;
     private String hinhAnh;
-    private int soDiem;
+    private Float soDiem;
     private int luotXem;
     private String nguyenLieu;
     private int protein;
@@ -47,7 +47,7 @@ public class MonAn {
         this.khuyenMai = khuyenMai;
         this.itemCount = 0;
     }
-    public MonAn(String tenMonAn, Double donGia, String maNhaHang, String hinhAnh, int soDiem, int luotXem,
+    public MonAn(String tenMonAn, Double donGia, String maNhaHang, String hinhAnh, Float soDiem, int luotXem,
                  String nguyenLieu, int protein, int nangLuong, String moTa, String tenNhaHang, String id, String createDate,
                  String createdBy, boolean active, String updateBy, Double giaKhuyenMai, Double khuyenMai) {
         this.tenMonAn = tenMonAn;
@@ -127,11 +127,11 @@ public class MonAn {
         this.hinhAnh = hinhAnh;
     }
 
-    public int getSoDiem() {
+    public Float getSoDiem() {
         return soDiem;
     }
 
-    public void setSoDiem(int soDiem) {
+    public void setSoDiem(Float soDiem) {
         this.soDiem = soDiem;
     }
 

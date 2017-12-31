@@ -219,7 +219,6 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                                 .into(hinhAnh);
                     }
 
-
                     // Mo ta:
                     TextView moTa = (TextView)alertDialogView.findViewById(R.id.textview_mota_monan);
                     moTa.setText(monAn.getMoTa());
@@ -282,19 +281,19 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                         @Override
                         public void onClick(View view) {
                             // If user not logged in:
-                            if(!LoginActivity.isAuthenticated()){
-                                Intent intent = new Intent(MyApplication.getCurrentContext(), LoginActivity.class);
-                                MyApplication.getCurrentContext().startActivity(intent);
-                            }
+//                            if(!LoginActivity.isAuthenticated()){
+//                                Intent intent = new Intent(MyApplication.getCurrentContext(), LoginActivity.class);
+//                                MyApplication.getCurrentContext().startActivity(intent);
+//                            }
 
                             View alertDialogView_rating = li.inflate(R.layout.alert_dialog_rating_monan, null);
                             AlertDialog.Builder alertDialog_rating = new AlertDialog.Builder(MyApplication.getCurrentContext());
                             alertDialog_rating.setView(alertDialogView_rating);
 
                             RatingBar ratingBar_all_User = (RatingBar)alertDialogView_rating.findViewById(R.id.ratingBar_of_allUser);
-                            RatingBar ratingBar_currentUser = (RatingBar)alertDialogView_rating.findViewById(R.id.ratingBar_of_currentUser);
+                            final RatingBar ratingBar_currentUser = (RatingBar)alertDialogView_rating.findViewById(R.id.ratingBar_of_currentUser);
                             ratingBar_all_User.setRating(monAn.getSoDiem());
-                            ratingBar_currentUser.setRating(2.5F);
+                            ratingBar_currentUser.setRating(monAn.getSoDiem());
 
                             alertDialog_rating.setCancelable(false)
                                     .setTitle("Đánh giá món ăn")
@@ -303,7 +302,24 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                                         @Override
                                         public void onClick(DialogInterface dialogInterface, int i) {
                                             // Call API Rating
+                                            APIService apiService = ApiUtils.getAPIService();
+                                            apiService.danhgiaMonAn(ratingBar_currentUser.getRating(), monAn.getId()).enqueue(new Callback<Void>() {
+                                                @Override
+                                                public void onResponse(Call<Void> call, Response<Void> response) {
+                                                    try {
+                                                        Log.d("rating onResponse", response.body().toString());
+                                                    }
+                                                    catch (Exception e){
+                                                        Log.d("rating onResponse", e.getMessage());
+                                                    }
+                                                }
 
+                                                @Override
+                                                public void onFailure(Call<Void> call, Throwable t) {
+                                                    Log.d("rating onFailure", t.getMessage());
+
+                                                }
+                                            });
                                             Toast.makeText(MyApplication.getCurrentContext(), "Rating Mon An", Toast.LENGTH_SHORT).show();
                                         }
                                     });

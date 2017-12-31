@@ -156,15 +156,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_gravity="bottom">
+        android:layout_gravity="bottom"
+        android:background="#fc6a6a">
 
         <Button
             android:id="@+id/back_btn_in_map"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
-            android:text="Quay lại"
-            android:textAllCaps="false"/>
+            android:text="@string/quay_lai"
+            android:textAllCaps="false"
+            android:background="@android:color/transparent"/>
         <View
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -174,9 +176,11 @@
             android:id="@+id/send_btn_in_map"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Gửi đơn hàng"
+            android:text="@string/gui_don_hang"
             android:layout_gravity="right"
-            android:textAllCaps="false"/>
+            android:layout_marginEnd="10dp"
+            android:textAllCaps="false"
+            android:background="@android:color/transparent"/>
     </LinearLayout>
 
 </LinearLayout>

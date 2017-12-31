@@ -3,12 +3,14 @@ package com.example.dung.demo_recyclerview.model;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.ser.std.StdArraySerializers;
 
+import java.io.Serializable;
+
 /**
  * Created by Dung on 10/6/2017.
  */
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class NhaHang {
+public class NhaHang implements Serializable{
     String tenNhaHang;
     String diaChi;
     String hinhAnh;

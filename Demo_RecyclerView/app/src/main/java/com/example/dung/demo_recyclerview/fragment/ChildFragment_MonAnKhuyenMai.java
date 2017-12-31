@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 
 import com.example.dung.demo_recyclerview.MyApplication;
 import com.example.dung.demo_recyclerview.MyHttpURLConnection;
@@ -35,6 +36,7 @@ import retrofit2.Response;
  */
 
 public class ChildFragment_MonAnKhuyenMai extends Fragment {
+    ProgressBar progressBar;
     RecyclerView recyclerView;
     MonAnRecyclerAdapter adapter;
     RecyclerView.LayoutManager layoutManager;
@@ -54,6 +56,8 @@ public class ChildFragment_MonAnKhuyenMai extends Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState){
         recyclerView = (RecyclerView)view.findViewById(R.id.recyclerview_monan_child);
+        progressBar = (ProgressBar)view.findViewById(R.id.progress_bar);
+        progressBar.setVisibility(View.GONE);
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(context);
         recyclerView.setLayoutManager(layoutManager);

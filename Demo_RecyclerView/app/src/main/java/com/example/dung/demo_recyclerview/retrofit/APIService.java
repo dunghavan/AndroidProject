@@ -77,4 +77,7 @@ public interface APIService {
                                      @Field("NhuCau")int NhuCau,
                                      @Field("CheDoLaoDong")int CheDoLaoDong,
                                      @Field("Bua")int Bua);
+
+    @POST("api/MonAn/DanhGia/{point}/{maMonAn}")
+    Call<Void> danhgiaMonAn(@Path("point")Float point, @Path("maMonAn")String maMonAn);
 }

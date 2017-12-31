@@ -103,7 +103,7 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
     DialogFragment dateFragment;
     DialogFragment timeFragment;
     RadioButton radio_btn_select_time, radio_btn_earliest, radio_btn_pay, radio_btn_paypal;
-    Button btn_Back, btn_SendOrder;
+    Button btn_Back, btn_SendOrder, btn_changeAddress;
 
     Calendar c;
     int date;
@@ -130,6 +130,22 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
         tv_thoiGian = (TextView)findViewById(R.id.tv_duration);
         btn_Back = (Button)findViewById(R.id.back_btn_in_map);
         btn_SendOrder = (Button)findViewById(R.id.send_btn_in_map);
+        btn_changeAddress = (Button)findViewById(R.id.btn_change_address);
+        btn_changeAddress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Tao giao dien alertDialog:
+                LayoutInflater li = LayoutInflater.from(MyApplication.getCurrentContext());
+                View alertDialogView = li.inflate(R.layout.alert_dialog_change_location, null);
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(MyApplication.getCurrentContext());
+                alertDialog.setView(alertDialogView);
+                alertDialog.setCancelable(false)
+                        .setPositiveButton("Đã hiểu", null);
+                //Create a dialog:
+                AlertDialog dialogToShow = alertDialog.create();
+                dialogToShow.show();
+            }
+        });
 
         tv_date = (TextView)findViewById(R.id.tv_date_in_map);
         tv_time = (TextView)findViewById(R.id.tv_time_in_map);
@@ -207,7 +223,21 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
             @Override
             public void onClick(View view) {
                 if(radio_btn_pay.isChecked()){
-                    sendSubmitToServer("HinhThucThanhToan1", "");
+                    //Tao giao dien alertDialog:
+                    LayoutInflater li = LayoutInflater.from(MyApplication.getCurrentContext());
+                    View alertDialogView = li.inflate(R.layout.alert_dialog_submit_confirm, null);
+                    AlertDialog.Builder alertDialog = new AlertDialog.Builder(MyApplication.getCurrentContext());
+                    alertDialog.setView(alertDialogView);
+                    alertDialog.setNegativeButton("Hủy", null)
+                            .setPositiveButton("Gửi đơn hàng", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    sendSubmitToServer("HinhThucThanhToan1", "");
+                                }
+                            });
+                    AlertDialog dialogToShow = alertDialog.create();
+                    dialogToShow.show();
+
                 }
                 else{
                     Intent intent = new Intent(mapActivity, MyPaymentActivity.class);

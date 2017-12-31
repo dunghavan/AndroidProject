@@ -93,6 +93,8 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
             }
         });
 
+        //onUpdateUI();
+
     }
 
     public void onUpdateUI(){
@@ -104,7 +106,6 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
             }
             else { // Logged in
                 login_btn.setVisibility(View.GONE);
-                next_btn.setVisibility(View.VISIBLE);
             }
             if(LoginActivity.isAuthenticated()== false)
                 tv_tenKhachHang.setText("Khách hàng: [Bạn chưa đăng nhập]");
@@ -114,6 +115,9 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
         tv_soLuongMon.setText("Số lượng món: " + String.valueOf(Cart.getAllItemCount()));
         tv_tongTien.setText("Tổng tiền: " + String.valueOf(decimalFormat.format(Cart.getTotal())) + " đ");
 
+        next_btn.setVisibility(View.GONE);
+        if(Cart.getCartContent().size() != 0)
+            next_btn.setVisibility(View.VISIBLE);
     }
 
     @Override

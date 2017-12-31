@@ -12,13 +12,18 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.dung.demo_recyclerview.R;
+import com.example.dung.demo_recyclerview.model.NhaHang;
 import com.example.dung.demo_recyclerview.viewpager_adapter.ViewPagerAdapter_MonAn_2_Tabs;
+import com.squareup.picasso.Picasso;
 
 public class Activity_MonAn_Of_NhaHang extends AppCompatActivity {
+    ImageView imageView_hinhAnh;
+    TextView tv_tenNhaHang, tv_diaChi, tv_gioMoCua;
     TabLayout tabLayout;
     ViewPager viewPager;
     private static Context context;
@@ -33,11 +38,33 @@ public class Activity_MonAn_Of_NhaHang extends AppCompatActivity {
         context = this;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_monan_of_nhahang);
+
+        imageView_hinhAnh = (ImageView)findViewById(R.id.imageView_nhahang_in_nhahang_detail);
+        tv_tenNhaHang = (TextView)findViewById(R.id.tv_tennhahang_in_nhahang_detail);
+        tv_diaChi = (TextView)findViewById(R.id.tv_giomocua_in_nhahang_detail);
+        tv_gioMoCua = (TextView)findViewById(R.id.tv_diachi_in_nhahang_detail);
+
         Intent intent = getIntent();
-        getSupportActionBar().setTitle(intent.getStringExtra("TEN_NHA_HANG"));
+        NhaHang nhaHang = (NhaHang)intent.getSerializableExtra("NHA_HANG");
+        getSupportActionBar().setTitle(nhaHang.getTenNhaHang());
 
         tabLayout = (TabLayout)findViewById(R.id.tabLayout_monan_of_nhahang);
         viewPager = (ViewPager)findViewById(R.id.view_pager_monan_of_nhahang);
+
+        tv_tenNhaHang.setText(nhaHang.getTenNhaHang());
+        tv_diaChi.setText("Địa chỉ: " + nhaHang.getDiaChi());
+        tv_gioMoCua.setText("Giờ mở cửa: " + nhaHang.getGioMoCua() + "h - " + nhaHang.getGioDongCua() + "h");
+
+        String imageUrl = nhaHang.getHinhAnh();
+        //if (imageUrl != null && !imageUrl.isEmpty())
+        {
+            Picasso.with(MyApplication.getCurrentContext())
+                    .load(imageUrl)
+                    .placeholder(R.drawable.loading)
+                    .error(R.drawable.failed_load_restaurant)
+                    .fit()
+                    .into(imageView_hinhAnh);
+        }
 
         FragmentManager fm = getSupportFragmentManager();
         ViewPagerAdapter_MonAn_2_Tabs viewPagerAdapter_monAn_of_nhaHang = new ViewPagerAdapter_MonAn_2_Tabs(fm, 0);
