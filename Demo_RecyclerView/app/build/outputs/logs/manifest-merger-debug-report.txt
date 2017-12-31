@@ -70,7 +70,7 @@ MERGED from [io.card:android-sdk:5.4.0] C:\Users\Dung\.android\build-cache\7dab1
 	android:icon
 		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:17:9-40
 	android:theme
-		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:21:9-40
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:21:9-43
 	android:name
 		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:15:9-38
 meta-data#com.facebook.sdk.ApplicationId
@@ -132,7 +132,7 @@ ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\A
 	android:name
 		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:43:19-49
 activity#com.example.dung.demo_recyclerview.Activity_MonAnDeXuat
-ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:44:9-67
+ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:44:9-57
 	android:name
 		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:44:19-55
 uses-sdk

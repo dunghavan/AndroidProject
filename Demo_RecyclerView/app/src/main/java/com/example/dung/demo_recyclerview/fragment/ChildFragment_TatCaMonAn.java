@@ -147,8 +147,6 @@ public class ChildFragment_TatCaMonAn extends Fragment{
 
                 @Override
                 public void onFailure(Call<List<MonAn>> call, Throwable t) {
-                    Log.d("Err maLoai onFailure", t.getMessage());
-                    Toast.makeText(MyApplication.getCurrentContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
                     if(!isShowAlertDialog){
                         MyAlertDialog.showMyAlertDialog("Thông báo", "Không tải được danh sách món ăn đặt nhiều mã loại: " + _foodCategory + ", hãy thử lại!");
                         isShowAlertDialog = true;

@@ -15,6 +15,7 @@
     <color name="abc_search_url_text_selected">@android:color/black</color>
     <color name="accent_material_dark">@color/material_deep_teal_200</color>
     <color name="accent_material_light">@color/material_deep_teal_500</color>
+    <color name="actionBar_background">#68c7c9</color>
     <color name="background_floating_material_dark">@color/material_grey_800</color>
     <color name="background_floating_material_light">@android:color/white</color>
     <color name="background_material_dark">@color/material_grey_850</color>
@@ -878,7 +879,7 @@
         <item name="android:windowExitAnimation">@anim/design_bottom_sheet_slide_out</item>
     </style>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        
+        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -2006,7 +2007,37 @@
     <item name="android:drawableLeft">@drawable/messenger_bubble_small_blue</item>
   </style>
     <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
-        <item name="android:background">#4eef64</item>
+        <item name="android:background">#ef4e74</item>
+    </style>
+    <style name="NewAppTheme" parent="Theme.AppCompat.Light">
+
+        <!-- Main theme colors -->
+        <!--   your app branding color for the app bar -->
+        <item name="colorPrimary">#d0d247</item>
+
+        <!--   darker variant for the status bar and contextual app bars -->
+        <item name="colorPrimaryDark">@color/actionBar_background</item>
+
+        <!--   theme UI controls like checkboxes and text fields -->
+        <!--   native widgets will now be "tinted" with accent color -->
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!--Action bar style-->
+        <item name="android:actionBarStyle">@style/NewAppTheme.ActionBar</item>
+        <item name="actionBarStyle">@style/NewAppTheme.ActionBar</item>
+
+    </style>
+    <style name="NewAppTheme.ActionBar" parent="Widget.AppCompat.Light.ActionBar">
+        <item name="android:titleTextStyle">@style/NewAppTheme.ActionBar.TitleText</item>
+        <item name="titleTextStyle">@style/NewAppTheme.ActionBar.TitleText</item>
+        <item name="android:height">40dp</item>
+        <item name="height">40dp</item>
+        <item name="android:background">@color/actionBar_background</item>
+        <item name="background">@color/actionBar_background</item>
+    </style>
+    <style name="NewAppTheme.ActionBar.TitleText" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#f50404</item>
     </style>
     <style name="Platform.AppCompat" parent="android:Theme">
         <item name="android:windowNoTitle">true</item>

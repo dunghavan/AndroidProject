@@ -46,7 +46,7 @@ public class Activity_MonAn_Of_NhaHang extends AppCompatActivity {
 
         Intent intent = getIntent();
         NhaHang nhaHang = (NhaHang)intent.getSerializableExtra("NHA_HANG");
-        getSupportActionBar().setTitle(nhaHang.getTenNhaHang());
+        getSupportActionBar().setTitle("Nhà hàng " + nhaHang.getTenNhaHang());
 
         tabLayout = (TabLayout)findViewById(R.id.tabLayout_monan_of_nhahang);
         viewPager = (ViewPager)findViewById(R.id.view_pager_monan_of_nhahang);

@@ -18,7 +18,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/NewAppTheme">
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
@@ -41,7 +41,7 @@
         <activity android:name=".MyPaymentActivity" />
         <activity android:name=".Activity_Payment_Details" />
         <activity android:name=".Input_Activity" />
-        <activity android:name=".Activity_MonAnDeXuat"></activity>
+        <activity android:name=".Activity_MonAnDeXuat"/>
     </application>
 
 </manifest>

@@ -10,6 +10,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.MenuItemCompat;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.SearchView;
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity{
     public static String currentTab = "";
     private Menu mOptionsMenu;
     FragmentTransaction transaction;
+    TextView actionBarTitle;
 
     private static TextView textCartItemCount;
 
@@ -47,7 +49,11 @@ public class MainActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         context = this;
-        getSupportActionBar().setTitle("Order App");
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.action_bar_layout);
+        actionBarTitle = (TextView)findViewById(R.id.action_bar_title_text);
+        actionBarTitle.setText("OrderFood App UIT");
+        //getSupportActionBar().setTitle("Order App");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -65,7 +71,8 @@ public class MainActivity extends AppCompatActivity{
                     case R.id.action_home:
                         fragment = new Fragment_NhaHang();
                         transaction.replace(R.id.frame_layout_in_main_activity, fragment).commit();
-                        getSupportActionBar().setTitle("Nhà Hàng");
+                        //getSupportActionBar().setTitle("Nhà Hàng");
+                        actionBarTitle.setText("Nhà Hàng");
                         currentTab = MyConstant.TAB_NHAHANG;
 
                         if (mOptionsMenu != null) {
@@ -76,7 +83,8 @@ public class MainActivity extends AppCompatActivity{
                     case R.id.action_food:
                         fragment = new Fragment_MonAn_6_Tabs();
                         transaction.replace(R.id.frame_layout_in_main_activity, fragment).commit();
-                        getSupportActionBar().setTitle("Món Ăn");
+                        //getSupportActionBar().setTitle("Món Ăn");
+                        actionBarTitle.setText("Món Ăn");
                         currentTab = MyConstant.TAB_MONAN;
 
                         if (mOptionsMenu != null) {
@@ -87,7 +95,8 @@ public class MainActivity extends AppCompatActivity{
                     case R.id.action_advanced:
                         fragment = new Fragment_NangCao_2_Tabs();
                         transaction.replace(R.id.frame_layout_in_main_activity, fragment).commit();
-                        getSupportActionBar().setTitle("Khuyến mại");
+                        //getSupportActionBar().setTitle("Khuyến mại");
+                        actionBarTitle.setText("Khuyến mại");
                         currentTab = MyConstant.TAB_NANGCAO;
 
                         if (mOptionsMenu != null) {
@@ -104,7 +113,8 @@ public class MainActivity extends AppCompatActivity{
                             fragment = new Fragment_BeforeLogin();
                         }
                         transaction.replace(R.id.frame_layout_in_main_activity, fragment).commit();
-                        getSupportActionBar().setTitle("Lịch sử giao dịch");
+                        //getSupportActionBar().setTitle("Lịch sử giao dịch");
+                        actionBarTitle.setText("Lịch sử giao dịch");
                         currentTab = MyConstant.TAB_HISTORY;
 
                         if (mOptionsMenu != null) {
@@ -121,7 +131,8 @@ public class MainActivity extends AppCompatActivity{
                             fragment = new Fragment_BeforeLogin();
                         }
                         transaction.replace(R.id.frame_layout_in_main_activity, fragment).commit();
-                        getSupportActionBar().setTitle("Cá nhân");
+                        //getSupportActionBar().setTitle("Cá nhân");
+                        actionBarTitle.setText("Cá nhân");
                         currentTab = MyConstant.TAB_PROFILE;
 
                         if (mOptionsMenu != null) {

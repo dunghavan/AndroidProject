@@ -6,4 +6,6 @@
     <color name="colorNavigationItem">#a13b69</color>
     <color name="tab_background_selected">#cab8b8</color>
     <color name="tab_background_unselected">#ffffff</color>
+
+    <color name="actionBar_background">#68c7c9</color>
 </resources>
