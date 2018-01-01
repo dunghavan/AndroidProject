@@ -10,6 +10,10 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+
+    <!--Key SHA-1 de dang nhap Google: F6:E8:9A:CA:C6:B2:3B:95:D1:0E:9D:41:A4:7D:32:25:1B:FE:C4:FB  -->
     <!-- Hash Key SSL cho Facebook tren may Ubuntu: ga0RGNYHvNM5d0SLGQfpQWAPGJ8= -->
     <application
         android:name=".MyApplication"

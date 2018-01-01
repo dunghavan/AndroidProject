@@ -25,5 +25,26 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="30dp"/>
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/google_login_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp" />
+        <Button
+            android:id="@+id/google_logout_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log out"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <Button
+            android:id="@+id/google_revoke_access_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Revoke access"
+            android:layout_gravity="center_horizontal"/>
     </LinearLayout>
 </LinearLayout>
