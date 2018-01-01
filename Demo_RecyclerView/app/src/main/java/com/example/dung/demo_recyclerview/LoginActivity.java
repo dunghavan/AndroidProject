@@ -20,18 +20,14 @@ import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-import com.google.android.gms.auth.api.signin.GoogleSignInApi;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.SignInButton;
-import com.google.android.gms.common.api.GoogleApi;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.OptionalPendingResult;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
-
-//import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 
 
 import org.json.JSONObject;
@@ -68,7 +64,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
     }
 
     private static final int RC_SIGN_IN = 007;
-    private GoogleApiClient mGoogleApiClient;
+    private static GoogleApiClient mGoogleApiClient;
     private SignInButton  btn_googleLogin;
     Button btn_googleLogout, btn_googleRevokeAccess;
     private ProgressDialog mProgressDialog;
@@ -87,6 +83,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                 .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
                 .build();
         btn_googleLogin = (SignInButton )findViewById(R.id.google_login_button);
+        btn_googleLogin.setSize(SignInButton.SIZE_STANDARD);
         btn_googleLogout = (Button)findViewById(R.id.google_logout_button);
         btn_googleRevokeAccess = (Button)findViewById(R.id.google_revoke_access_button);
         btn_googleLogin.setOnClickListener(this);
@@ -104,14 +101,6 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         callbackManager = CallbackManager.Factory.create();
         facebook_profile = new Facebook_Profile();
 
-        SignInButton googleSignInButton = findViewById(R.id.google_login_button);
-        googleSignInButton.setSize(SignInButton.SIZE_STANDARD);
-        googleSignInButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                signIn();
-            }
-        });
 
         fbLoginButton = (LoginButton) findViewById(R.id.fb_login_button);
         //https://developers.facebook.com/docs/facebook-login/permissions#reference
@@ -148,24 +137,24 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
 
         switch (id) {
             case R.id.google_login_button:
-                signIn();
+                googleSignIn();
                 break;
 
             case R.id.google_logout_button:
-                signOut();
+                googleSignOut();
                 break;
 
             case R.id.google_revoke_access_button:
-                revokeAccess();
+                googleRevokeAccess();
                 break;
         }
     }
 
-    private void signIn() {
+    private void googleSignIn() {
         Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
-    private void signOut() {
+    private void googleSignOut() {
         Auth.GoogleSignInApi.signOut(mGoogleApiClient).setResultCallback(
                 new ResultCallback<Status>() {
                     @Override
@@ -175,7 +164,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                 });
     }
 
-    private void revokeAccess() {
+    private void googleRevokeAccess() {
         Auth.GoogleSignInApi.revokeAccess(mGoogleApiClient).setResultCallback(
                 new ResultCallback<Status>() {
                     @Override
@@ -184,30 +173,12 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                     }
                 });
     }
+
     @Override
     public void onStart() {
         super.onStart();
 
-        OptionalPendingResult<GoogleSignInResult> opr = Auth.GoogleSignInApi.silentSignIn(mGoogleApiClient);
-        if (opr.isDone()) {
-            // If the user's cached credentials are valid, the OptionalPendingResult will be "done"
-            // and the GoogleSignInResult will be available instantly.
-            Log.d(TAG, "Got cached sign-in");
-            GoogleSignInResult result = opr.get();
-            handleSignInResult(result);
-        } else {
-            // If the user has not previously signed in on this device or the sign-in has expired,
-            // this asynchronous branch will attempt to sign in the user silently.  Cross-device
-            // single sign-on will occur in this branch.
-            showProgressDialog();
-            opr.setResultCallback(new ResultCallback<GoogleSignInResult>() {
-                @Override
-                public void onResult(GoogleSignInResult googleSignInResult) {
-                    hideProgressDialog();
-                    handleSignInResult(googleSignInResult);
-                }
-            });
-        }
+        getGoogleInfor();
     }
     private void showProgressDialog() {
         if (mProgressDialog == null) {
@@ -235,8 +206,12 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
             String personName = acct.getDisplayName();
             //String personPhotoUrl = acct.getPhotoUrl().toString();
             String email = acct.getEmail();
+            String googleID = acct.getId();
 
-            Log.e(TAG, "Name: " + personName + ", email: " + email);
+            Log.e(TAG, "Name: " + personName + ", email: " + email + ", ID: " + googleID);
+
+            ID = googleID;
+            NAME = acct.getDisplayName();
 
             updateUI(true);
         } else {
@@ -318,14 +293,57 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
     protected void onResume() {
         super.onResume();
         MyApplication.setCurrentContext(this);
+
+        getGoogleInfor();
+    }
+
+    public void getGoogleInfor(){
+        OptionalPendingResult<GoogleSignInResult> opr = Auth.GoogleSignInApi.silentSignIn(mGoogleApiClient);
+        if (opr.isDone()) {
+            // If the user's cached credentials are valid, the OptionalPendingResult will be "done"
+            // and the GoogleSignInResult will be available instantly.
+            Log.d(TAG, "Got cached sign-in");
+            GoogleSignInResult result = opr.get();
+            handleSignInResult(result);
+        } else {
+            // If the user has not previously signed in on this device or the sign-in has expired,
+            // this asynchronous branch will attempt to sign in the user silently.  Cross-device
+            // single sign-on will occur in this branch.
+            showProgressDialog();
+            opr.setResultCallback(new ResultCallback<GoogleSignInResult>() {
+                @Override
+                public void onResult(GoogleSignInResult googleSignInResult) {
+                    hideProgressDialog();
+                    handleSignInResult(googleSignInResult);
+                }
+            });
+        }
     }
 
     public static boolean isAuthenticated() {
+        // FB
         AccessToken token = AccessToken.getCurrentAccessToken();
         if(token != null){
             getFbInfo();
             return true;
         }
+
+        // Google
+        OptionalPendingResult<GoogleSignInResult> opr = Auth.GoogleSignInApi.silentSignIn(mGoogleApiClient);
+        if (opr.isDone()) {
+            // If the user's cached credentials are valid, the OptionalPendingResult will be "done"
+            // and the GoogleSignInResult will be available instantly.
+            Log.d(TAG, "Got cached sign-in");
+            GoogleSignInResult result = opr.get();
+            if (result.isSuccess()) {
+                // Signed in successfully, show authenticated UI.
+                GoogleSignInAccount acct = result.getSignInAccount();
+                ID = acct.getId();
+                NAME = acct.getDisplayName();
+                return true;
+            }
+        }
+
         ID = null;
         NAME = null;
         return false;
