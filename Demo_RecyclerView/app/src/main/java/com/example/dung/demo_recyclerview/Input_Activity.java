@@ -1,6 +1,7 @@
 package com.example.dung.demo_recyclerview;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,6 +11,7 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.example.dung.demo_recyclerview.model.Input_Information;
 
@@ -23,11 +25,16 @@ public class Input_Activity extends AppCompatActivity {
     Spinner spinner_NamSinh, spinner_CanNang, spinner_CheDo, spinner_NhuCau, spinner_CheDoLaoDong, spinner_BuaAn;
     Button btn_Submit;
     Input_Information input_information;
+    TextView actionBarTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input);
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.action_bar_layout);
+        actionBarTitle = (TextView)findViewById(R.id.action_bar_title_text);
+        actionBarTitle.setText("Tư vấn món ăn");
 
         // Connect Views:
         radioButton_Nam = (RadioButton)findViewById(R.id.radio_nam_input_activity);

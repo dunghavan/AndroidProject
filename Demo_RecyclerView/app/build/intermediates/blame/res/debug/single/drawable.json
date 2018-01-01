@@ -148,12 +148,12 @@
         "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\drawable\\failed_load_food.png"
     },
     {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\8d4d6dac4365cfc65b47f26724a53c81755b27d6\\output\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
-    },
-    {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
         "source": "C:\\Users\\Dung\\.android\\build-cache\\791415d759bc642b87bd5e72a98aaab3076d2cc5\\output\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8d4d6dac4365cfc65b47f26724a53c81755b27d6\\output\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_dark_normal.xml",
@@ -176,12 +176,12 @@
         "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\drawable\\messages_user.png"
     },
     {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark_normal.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\8d4d6dac4365cfc65b47f26724a53c81755b27d6\\output\\res\\drawable\\common_google_signin_btn_icon_dark_normal.xml"
-    },
-    {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_send_background.xml",
         "source": "C:\\Users\\Dung\\.android\\build-cache\\59a3d2c823d0209d174c9226f38e3b3015b5b3b6\\output\\res\\drawable\\com_facebook_button_send_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark_normal.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\8d4d6dac4365cfc65b47f26724a53c81755b27d6\\output\\res\\drawable\\common_google_signin_btn_icon_dark_normal.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_send_button_icon.xml",

@@ -1,5 +1,6 @@
 package com.example.dung.demo_recyclerview;
 
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -7,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.dung.demo_recyclerview.model.Input_Information;
@@ -26,11 +28,16 @@ public class Activity_MonAnDeXuat extends AppCompatActivity {
     MonAnRecyclerAdapter customRecyclerAdapter;
     RecyclerView.LayoutManager layoutManager;
     List<MonAn> data;
+    TextView actionBarTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mon_an_de_xuat);
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.action_bar_layout);
+        actionBarTitle = (TextView)findViewById(R.id.action_bar_title_text);
+        actionBarTitle.setText("Món ăn đề xuất");
 
         //Connect to views:
         recyclerView = (RecyclerView)findViewById(R.id.recyclerview_monan_child);

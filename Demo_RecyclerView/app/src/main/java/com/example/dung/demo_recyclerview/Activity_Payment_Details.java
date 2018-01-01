@@ -26,6 +26,7 @@ public class Activity_Payment_Details extends AppCompatActivity {
     final DecimalFormat decimalFormat = new DecimalFormat("###,###,###.#");
     TextView tv_tongSoMon, tv_tongSoTien, tv_ngayLap, tv_ngayGiaoHang, tv_diaChiGiao, tv_SDT
             , tv_hinhThucThanhToan, tv_payID, tv_textViewToAppend;
+    TextView actionBarTitle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,7 +47,12 @@ public class Activity_Payment_Details extends AppCompatActivity {
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
 
-        getSupportActionBar().setTitle("Chi tiết đơn hàng " + payment.getId());
+        getSupportActionBar().setDisplayOptions(android.support.v7.app.ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.action_bar_layout);
+        actionBarTitle = (TextView)findViewById(R.id.action_bar_title_text);
+        actionBarTitle.setText("Chi tiết đơn hàng " + payment.getId());
+        //getSupportActionBar().setTitle("Chi tiết đơn hàng " + payment.getId());
+
         tv_tongSoTien.setText("Tổng thanh toán: " + String.format("%s", decimalFormat.format(payment.getTongTien())) + "đ");
         tv_ngayLap.setText("Ngày lập: " + payment.getNgayThang());
         tv_ngayGiaoHang.setText("Thời gian giao hàng: " + payment.getNgayGioGiao());

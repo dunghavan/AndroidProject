@@ -81,7 +81,6 @@ public class Fragment_History extends Fragment {
 
             @Override
             public void onFailure(Call<List<Payment>> call, Throwable t) {
-                Log.d("Parse payment onFailure", t.getMessage()); //crash
                 MyAlertDialog.showMyAlertDialog("Thông báo", "Không tải được lịch sử giao dịch, hãy thử lại!");
             }
         });

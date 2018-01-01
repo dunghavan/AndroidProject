@@ -2,9 +2,11 @@ package com.example.dung.demo_recyclerview;
 //hash key: Y6GdAOm1lkSoWnONzJs3j5ZEnbw=
 //website: http://www.howkteam.vn/course/khoa-hoc-lap-trinh-android-co-ban/tich-hop-mang-xa-hoi--tao-app-facebook-1219
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.dung.demo_recyclerview.model.Facebook_Profile;
@@ -29,6 +31,7 @@ public class LoginActivity extends AppCompatActivity {
     static LoginActivity activity;
     CallbackManager callbackManager;
     LoginButton fbLoginButton;
+    TextView actionBarTitle;
 
     public interface OnUpdateListener{
         void onUpdateUI();
@@ -49,6 +52,15 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         activity = this; //Used to close Activity in static method
+
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.action_bar_layout);
+        actionBarTitle = (TextView)findViewById(R.id.action_bar_title_text);
+        if(isAuthenticated())
+            actionBarTitle.setText("Đăng xuất");
+        else
+            actionBarTitle.setText("Đăng nhập");
+
         callbackManager = CallbackManager.Factory.create();
         facebook_profile = new Facebook_Profile();
 
@@ -64,6 +76,7 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(MyApplication.getCurrentContext(), "Login Facebook success.", Toast.LENGTH_SHORT).show();
 
                 getFbInfo();
+                finish();
             }
 
             @Override
@@ -117,8 +130,8 @@ public class LoginActivity extends AppCompatActivity {
                                 Toast.makeText(MyApplication.getCurrentContext(), "Name: " + me.optString("name"), Toast.LENGTH_SHORT).show();
                                 Toast.makeText(MyApplication.getCurrentContext(), "ID: " + me.optString("id"), Toast.LENGTH_SHORT).show();
 
-                                if(activity != null)
-                                    activity.finish();
+//                                if(activity != null)
+//                                    activity.finish();
                             }
                         }
                     });

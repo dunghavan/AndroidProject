@@ -3,6 +3,7 @@ package com.example.dung.demo_recyclerview;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -61,11 +62,16 @@ public class MyPaymentActivity extends AppCompatActivity {
 
     PayPalPayment thingToBuy;
     TextView tv_amount;
+    TextView actionBarTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_payment);
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.action_bar_layout);
+        actionBarTitle = (TextView)findViewById(R.id.action_bar_title_text);
+        actionBarTitle.setText("Thanh toán qua cổng PayPal");
 
         Intent intent = new Intent(this, PayPalService.class);
         intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION, config);

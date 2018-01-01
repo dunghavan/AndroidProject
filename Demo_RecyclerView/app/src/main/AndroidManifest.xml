@@ -24,8 +24,9 @@
             android:value="@string/facebook_app_id" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDiyT1psu_4SiQoLnvLqENuvD5rb5X5AgU" />
+            android:value="AIzaSyB0dW8f_kCC6xWP34cNzLe5sg6ItLZFEwM" />
 
+        <!--old key: AIzaSyDiyT1psu_4SiQoLnvLqENuvD5rb5X5AgU-->
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

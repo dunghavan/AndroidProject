@@ -272,6 +272,8 @@ public class Route {
         protected void onPreExecute() {
             // TODO Auto-generated method stub
             super.onPreExecute();
+            if(progressDialog != null)
+                progressDialog.dismiss();
             progressDialog = new ProgressDialog(context);
             progressDialog.setMessage("Fetching route, Please wait...");
             progressDialog.setIndeterminate(true);
@@ -292,6 +294,7 @@ public class Route {
                 drawPath(result,steps);
             }
         }
+
     }
 
     private void drawPath(String  result, boolean withSteps) {

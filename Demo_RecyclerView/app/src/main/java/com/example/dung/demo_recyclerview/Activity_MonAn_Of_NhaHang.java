@@ -6,6 +6,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -27,6 +28,7 @@ public class Activity_MonAn_Of_NhaHang extends AppCompatActivity {
     TabLayout tabLayout;
     ViewPager viewPager;
     private static Context context;
+    TextView actionBarTitle;
     public Activity_MonAn_Of_NhaHang(){
     }
 
@@ -39,6 +41,10 @@ public class Activity_MonAn_Of_NhaHang extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_monan_of_nhahang);
 
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.action_bar_layout);
+        actionBarTitle = (TextView)findViewById(R.id.action_bar_title_text);
+
         imageView_hinhAnh = (ImageView)findViewById(R.id.imageView_nhahang_in_nhahang_detail);
         tv_tenNhaHang = (TextView)findViewById(R.id.tv_tennhahang_in_nhahang_detail);
         tv_diaChi = (TextView)findViewById(R.id.tv_giomocua_in_nhahang_detail);
@@ -46,7 +52,8 @@ public class Activity_MonAn_Of_NhaHang extends AppCompatActivity {
 
         Intent intent = getIntent();
         NhaHang nhaHang = (NhaHang)intent.getSerializableExtra("NHA_HANG");
-        getSupportActionBar().setTitle("Nhà hàng " + nhaHang.getTenNhaHang());
+        //getSupportActionBar().setTitle("Nhà hàng " + nhaHang.getTenNhaHang());
+        actionBarTitle.setText("Nhà hàng " + nhaHang.getTenNhaHang());
 
         tabLayout = (TabLayout)findViewById(R.id.tabLayout_monan_of_nhahang);
         viewPager = (ViewPager)findViewById(R.id.view_pager_monan_of_nhahang);

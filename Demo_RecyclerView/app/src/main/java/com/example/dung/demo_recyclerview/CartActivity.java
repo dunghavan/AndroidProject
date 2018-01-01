@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -40,13 +41,18 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
     CartActivity cartActivity; // Used to start LoginActivity
     LoginActivity loginActivity; // Used to setOnUpdateListener in LoginActivity
     public static boolean isCheckAuthen;
+    TextView actionBarTitle;
 
     final DecimalFormat decimalFormat = new DecimalFormat("###,###,###.#");
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().setTitle("Giỏ hàng của bạn");
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.action_bar_layout);
+        actionBarTitle = (TextView)findViewById(R.id.action_bar_title_text);
+        actionBarTitle.setText("Giỏ hàng của bạn");
+        //getSupportActionBar().setTitle("Giỏ hàng của bạn");
         setContentView(R.layout.activity_cart);
         cartActivity = this; // Used to start LoginActivity
         loginActivity = new LoginActivity();   // Used to setOnUpdateListener in LoginActivity
