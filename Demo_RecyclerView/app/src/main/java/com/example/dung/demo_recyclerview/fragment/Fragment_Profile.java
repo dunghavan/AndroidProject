@@ -99,20 +99,32 @@ public class Fragment_Profile extends Fragment implements LoginActivity.OnUpdate
                 MyApplication.getCurrentContext().startActivity(intent);
             }
         });
+
+        updateProfileUI();
     }
 
     public void updateProfileUI(){
         tv_username.setText(LoginActivity.NAME);
         tv_id.setText("ID: " + LoginActivity.ID);
-        String url = "https://graph.facebook.com/" + LoginActivity.ID + "/picture?type=large";
+        String url = "";
+        if(LoginActivity.isLoggedInWithFacebook)
+            url = "https://graph.facebook.com/" + LoginActivity.ID + "/picture?type=large";
+        else
+            url = LoginActivity.googleImageUrl;
         if (url != null && !url.isEmpty()) {
             Picasso.with(MainActivity.getMainActivityContext())
                     .load(url)
                     .placeholder(R.drawable.loading)
-                    .error(R.drawable.failed_load_food)
+                    .error(R.drawable.user_icon)
                     .fit()
                     .into(imgview_avatar);
         }
 
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        updateProfileUI();
     }
 }

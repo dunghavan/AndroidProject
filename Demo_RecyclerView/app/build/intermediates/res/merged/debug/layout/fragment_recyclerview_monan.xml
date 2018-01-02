@@ -2,12 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-
     <ProgressBar
-        android:id="@+id/progress_bar"
-        android:layout_width="match_parent"
+        android:id="@+id/progressbar_in_recyclerview"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+        android:indeterminate="true"
+        android:max="100"
+        android:backgroundTint="#b75959"
+        android:layout_below="@+id/framelauout"
+        android:indeterminateTint="#1a09d6"
+        android:layout_marginTop="-7dp"/>
     <!--Demo RecyclerView-->
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerview_monan_child"

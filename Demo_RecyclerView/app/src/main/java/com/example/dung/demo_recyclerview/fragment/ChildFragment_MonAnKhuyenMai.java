@@ -56,8 +56,8 @@ public class ChildFragment_MonAnKhuyenMai extends Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState){
         recyclerView = (RecyclerView)view.findViewById(R.id.recyclerview_monan_child);
-        progressBar = (ProgressBar)view.findViewById(R.id.progress_bar);
-        progressBar.setVisibility(View.GONE);
+        progressBar = (ProgressBar)view.findViewById(R.id.progressbar_in_recyclerview);
+        progressBar.setVisibility(View.VISIBLE);
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(context);
         recyclerView.setLayoutManager(layoutManager);
@@ -86,6 +86,7 @@ public class ChildFragment_MonAnKhuyenMai extends Fragment {
                     adapter = new MonAnRecyclerAdapter(listMonAnKhuyenMai);
                     recyclerView.setAdapter(adapter);
                     setRetainInstance(false);
+                    progressBar.setVisibility(View.GONE);
                 }
                 catch (Exception e){
                     Log.d("Err monAnKhuyenMai", e.getMessage());

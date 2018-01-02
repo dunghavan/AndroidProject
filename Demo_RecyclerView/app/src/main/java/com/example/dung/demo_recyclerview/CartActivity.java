@@ -28,7 +28,7 @@ import java.text.DecimalFormat;
  */
 
 public class CartActivity extends AppCompatActivity implements RecyclerAdapter_For_CartActivity.OnUpdateListener,
-            LoginActivity.OnUpdateListener{
+        LoginActivity.OnUpdateListener{
 
     RecyclerView.LayoutManager layoutManager;
     RecyclerView recyclerView;
@@ -103,7 +103,8 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
 
     }
 
-    public void onUpdateUI(){
+    @Override
+    public void onUpdateCartUI(){
         if(!isCheckAuthen)
         {
             if(!LoginActivity.isAuthenticated()){
@@ -133,6 +134,12 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
         isCheckAuthen = false;
         onUpdateUI();
     }
+
+    @Override
+    public void onUpdateUI() {
+
+    }
+
 
     private class ReadApiTask extends AsyncTask<String, Integer, String> {
         protected String doInBackground(String... urls) {

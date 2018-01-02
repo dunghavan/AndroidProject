@@ -50,11 +50,11 @@ public class ChildFragment_TatCaMonAn extends Fragment{
     RecyclerView recyclerView;
     MonAnRecyclerAdapter customRecyclerAdapter;
     RecyclerView.LayoutManager layoutManager;
-    ProgressBar progressBar;
     List<MonAn> data;
     int foodCategory;
     String tabCategory;
 
+    ProgressBar progressBar;
     Context context;
     public ChildFragment_TatCaMonAn(){
         context = MainActivity.getMainActivityContext();
@@ -71,9 +71,8 @@ public class ChildFragment_TatCaMonAn extends Fragment{
         Log.d("Call method", "onViewCreated");
         //Connect to views:
         recyclerView = (RecyclerView)view.findViewById(R.id.recyclerview_monan_child);
-        progressBar = (ProgressBar)view.findViewById(R.id.progress_bar);
-        progressBar.setMax(100);
-        progressBar.setProgress(5);
+        progressBar = (ProgressBar)view.findViewById(R.id.progressbar_in_recyclerview);
+        progressBar.setVisibility(View.VISIBLE);
         //Set fixed size for ReclyclerView:
         recyclerView.setHasFixedSize(true);
         //Setting the LayoutManager:
@@ -121,17 +120,8 @@ public class ChildFragment_TatCaMonAn extends Fragment{
                 @Override
                 public void onResponse(Call<List<MonAn>> call, Response<List<MonAn>> response) {
                     try{
-                        progressBar.setVisibility(View.VISIBLE);
-//                        data = response.body();
-//                        Log.d("Data length: ", String.valueOf(data.size()));
-
-                        //Test progressBar
-                        int n = response.body().size();
-                        progressBar.setMax(n - 1);
-                        for(int i = 0; i < n; i++) {
-                            data.add(response.body().get(i));
-                            progressBar.setProgress(i);
-                        }
+                        data = response.body();
+                        Log.d("Data length: ", String.valueOf(data.size()));
 
                         customRecyclerAdapter = new MonAnRecyclerAdapter(data);
                         recyclerView.setAdapter(customRecyclerAdapter);
@@ -141,7 +131,6 @@ public class ChildFragment_TatCaMonAn extends Fragment{
                     }
                     catch (Exception e){
                         Log.d("Err ma Loai", e.getMessage());
-                        progressBar.setVisibility(View.GONE);
                     }
                 }
 
@@ -159,17 +148,8 @@ public class ChildFragment_TatCaMonAn extends Fragment{
                 @Override
                 public void onResponse(Call<List<MonAn>> call, Response<List<MonAn>> response) {
                     try{
-                        progressBar.setVisibility(View.VISIBLE);
-//                        data = response.body();
-//                        Log.d("Data length: ", String.valueOf(data.size()));
-
-                        //Test progressBar
-                        int n = response.body().size();
-                        progressBar.setMax(n - 1);
-                        for(int i = 0; i < n; i++) {
-                            data.add(response.body().get(i));
-                            progressBar.setProgress(i);
-                        }
+                        data = response.body();
+                        Log.d("Data length: ", String.valueOf(data.size()));
 
                         customRecyclerAdapter = new MonAnRecyclerAdapter(data);
                         recyclerView.setAdapter(customRecyclerAdapter);
@@ -178,13 +158,11 @@ public class ChildFragment_TatCaMonAn extends Fragment{
                     }
                     catch (Exception e){
                         Log.d("Err ma Loai", e.getMessage());
-                        progressBar.setVisibility(View.GONE);
                     }
                 }
 
                 @Override
                 public void onFailure(Call<List<MonAn>> call, Throwable t) {
-                    Log.d("Err maLoai onFailure", t.getMessage());
                     Toast.makeText(MyApplication.getCurrentContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
                     if(!isShowAlertDialog){
                         MyAlertDialog.showMyAlertDialog("Thông báo", "Không tải được danh sách tất cả món ăn mã loại: " + _foodCategory + ", hãy thử lại!");

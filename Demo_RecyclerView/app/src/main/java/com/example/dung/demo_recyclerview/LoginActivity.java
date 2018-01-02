@@ -43,13 +43,18 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
     public static Facebook_Profile facebook_profile;
     public static String NAME = "";
     public static String ID = "";
+    public static boolean isLoggedInWithFacebook;
     static LoginActivity activity;
     CallbackManager callbackManager;
     LoginButton fbLoginButton;
     TextView actionBarTitle;
+    TextView tv_label;
+
+    public static String googleImageUrl = "";
+
 
     public interface OnUpdateListener{
-        void onUpdateUI();
+        void onUpdateCartUI();
     }
     public interface OnUpdateProfileUIListener{
         void updateProfileUI();
@@ -68,13 +73,14 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
     private SignInButton  btn_googleLogin;
     Button btn_googleLogout, btn_googleRevokeAccess;
     private ProgressDialog mProgressDialog;
+    static GoogleSignInOptions gso;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         activity = this; //Used to close Activity in static method
 
-        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+        gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
                 .build();
 
@@ -82,8 +88,9 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                 .enableAutoManage(this, this)
                 .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
                 .build();
+        tv_label = (TextView)findViewById(R.id.textview_label_in_login_activity);
         btn_googleLogin = (SignInButton )findViewById(R.id.google_login_button);
-        btn_googleLogin.setSize(SignInButton.SIZE_STANDARD);
+        btn_googleLogin.setSize(SignInButton.SIZE_WIDE);
         btn_googleLogout = (Button)findViewById(R.id.google_logout_button);
         btn_googleRevokeAccess = (Button)findViewById(R.id.google_revoke_access_button);
         btn_googleLogin.setOnClickListener(this);
@@ -160,6 +167,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                     @Override
                     public void onResult(Status status) {
                         updateUI(false);
+                        finish();
                     }
                 });
     }
@@ -212,24 +220,46 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
 
             ID = googleID;
             NAME = acct.getDisplayName();
+            if(acct.getPhotoUrl() != null)
+                googleImageUrl = acct.getPhotoUrl().toString();
 
+            isLoggedInWithFacebook = false;
             updateUI(true);
+            //finish();
         } else {
             // Signed out, show unauthenticated UI.
             updateUI(false);
         }
+        updateUIByInterface();
     }
 
-    private void updateUI(boolean isSignedIn) {
-        if (isSignedIn) {
+    private void updateUI(boolean isSignedInWithGoogle) {
+        if (isSignedInWithGoogle) {
             btn_googleLogin.setVisibility(View.GONE);
             btn_googleLogout.setVisibility(View.VISIBLE);
-            btn_googleRevokeAccess.setVisibility(View.VISIBLE);
-        } else {
-            btn_googleLogin.setVisibility(View.VISIBLE);
-            btn_googleLogout.setVisibility(View.GONE);
             btn_googleRevokeAccess.setVisibility(View.GONE);
+
+            fbLoginButton.setVisibility(View.GONE);
+            tv_label.setVisibility(View.GONE);
+        } else {
+            if(isLoggedInWithFacebook){
+                btn_googleLogin.setVisibility(View.GONE);
+                btn_googleLogout.setVisibility(View.GONE);
+                btn_googleRevokeAccess.setVisibility(View.GONE);
+
+                fbLoginButton.setVisibility(View.VISIBLE);
+                tv_label.setVisibility(View.GONE);
+            }
+            else {
+                btn_googleLogin.setVisibility(View.VISIBLE);
+                btn_googleLogout.setVisibility(View.GONE);
+                btn_googleRevokeAccess.setVisibility(View.GONE);
+
+                fbLoginButton.setVisibility(View.VISIBLE);
+                tv_label.setVisibility(View.VISIBLE);
+            }
         }
+
     }
 
     @Override
@@ -243,6 +273,13 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         callbackManager.onActivityResult(requestCode, resultCode, data);
+
+        // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
+        if (requestCode == RC_SIGN_IN) {
+            GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
+            handleSignInResult(result);
+            finish();
+        }
     }
 
     public static void getFbInfo() {
@@ -266,14 +303,12 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
 //                                facebook_profile.setEmail(me.optString("email"));
 //                                facebook_profile.setUser_mobile_phone(me.optString("user_mobile_phone"));
 
-                                if(listener != null)
-                                    listener.onUpdateUI();
-                                if(ui_listner != null)
-                                    ui_listner.updateProfileUI();
+                                updateUIByInterface();
+                                isLoggedInWithFacebook = true;
 
                                 CartActivity.isCheckAuthen = true;
-                                Toast.makeText(MyApplication.getCurrentContext(), "Name: " + me.optString("name"), Toast.LENGTH_SHORT).show();
-                                Toast.makeText(MyApplication.getCurrentContext(), "ID: " + me.optString("id"), Toast.LENGTH_SHORT).show();
+                                //Toast.makeText(MyApplication.getCurrentContext(), "Name: " + me.optString("name"), Toast.LENGTH_SHORT).show();
+                                //Toast.makeText(MyApplication.getCurrentContext(), "ID: " + me.optString("id"), Toast.LENGTH_SHORT).show();
 
 //                                if(activity != null)
 //                                    activity.finish();
@@ -289,15 +324,32 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         }
     }
 
+    private static void updateUIByInterface(){
+        if(listener != null)
+            listener.onUpdateCartUI();
+        if(ui_listner != null)
+            ui_listner.updateProfileUI();
+    }
     @Override
     protected void onResume() {
         super.onResume();
         MyApplication.setCurrentContext(this);
 
+
+        // Check fb
+        AccessToken token = AccessToken.getCurrentAccessToken();
+        if(token == null){
+            isLoggedInWithFacebook = false;
+        }
+
+        // Check Google and updateUI
         getGoogleInfor();
     }
 
     public void getGoogleInfor(){
+
+        if(mGoogleApiClient == null)
+            return;
         OptionalPendingResult<GoogleSignInResult> opr = Auth.GoogleSignInApi.silentSignIn(mGoogleApiClient);
         if (opr.isDone()) {
             // If the user's cached credentials are valid, the OptionalPendingResult will be "done"
@@ -329,6 +381,16 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         }
 
         // Google
+        if(mGoogleApiClient == null){
+            gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                    .requestEmail()
+                    .build();
+
+            mGoogleApiClient = new GoogleApiClient.Builder(MyApplication.getCurrentContext())
+                    .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
+                    .build();
+        }
+
         OptionalPendingResult<GoogleSignInResult> opr = Auth.GoogleSignInApi.silentSignIn(mGoogleApiClient);
         if (opr.isDone()) {
             // If the user's cached credentials are valid, the OptionalPendingResult will be "done"
@@ -340,6 +402,10 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                 GoogleSignInAccount acct = result.getSignInAccount();
                 ID = acct.getId();
                 NAME = acct.getDisplayName();
+                if(acct.getPhotoUrl() != null)
+                    googleImageUrl = acct.getPhotoUrl().toString();
+
+                updateUIByInterface();
                 return true;
             }
         }
