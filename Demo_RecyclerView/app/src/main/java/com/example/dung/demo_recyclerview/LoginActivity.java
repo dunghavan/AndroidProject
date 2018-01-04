@@ -194,8 +194,8 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
             mProgressDialog.setMessage("Loading");
             mProgressDialog.setIndeterminate(true);
         }
-
-        mProgressDialog.show();
+        if(!mProgressDialog.isShowing())
+            mProgressDialog.show();
     }
 
     private void hideProgressDialog() {
@@ -222,6 +222,8 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
             NAME = acct.getDisplayName();
             if(acct.getPhotoUrl() != null)
                 googleImageUrl = acct.getPhotoUrl().toString();
+            else
+                googleImageUrl = "";
 
             isLoggedInWithFacebook = false;
             updateUI(true);
@@ -413,6 +415,14 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         ID = null;
         NAME = null;
         return false;
+    }
+
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+        if ( mProgressDialog != null && mProgressDialog.isShowing() ){
+            mProgressDialog.cancel();
+        }
     }
 
     public static void logout(){

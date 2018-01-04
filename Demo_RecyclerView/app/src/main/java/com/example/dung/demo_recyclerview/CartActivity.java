@@ -107,6 +107,7 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
     public void onUpdateCartUI(){
         if(!isCheckAuthen)
         {
+            isCheckAuthen = true;
             if(!LoginActivity.isAuthenticated()){
                 login_btn.setVisibility(View.VISIBLE);
                 next_btn.setVisibility(View.GONE);
@@ -132,41 +133,7 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
         super.onResume();
         MyApplication.setCurrentContext(this);
         isCheckAuthen = false;
-        onUpdateUI();
+        onUpdateCartUI();
     }
 
-    @Override
-    public void onUpdateUI() {
-
-    }
-
-
-    private class ReadApiTask extends AsyncTask<String, Integer, String> {
-        protected String doInBackground(String... urls) {
-            Log.d("AsyncTask", "sendPost() to submitCart");
-            try{
-                String jsonString = MyHttpURLConnection.sendPost();
-                return  jsonString;
-            }
-            catch (Exception e){
-                Log.d("Error while read api: ", e.getMessage());
-            }
-            return "";
-        }
-
-        protected void onProgressUpdate(Integer... progress) {
-
-        }
-
-        @Override
-        protected void onPostExecute(String result) {
-            Log.d("Call method", "onPostExecute of submitCart");
-            try{
-                Log.d("Result of submitCart: ", result);
-            }
-            catch (Exception e){
-                Log.d("Error after submitCar: ", e.getMessage());
-            }
-        }
-    }
 }

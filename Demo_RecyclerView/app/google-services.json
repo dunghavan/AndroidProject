@@ -1,19 +1,21 @@
 {
   "project_info": {
-    "project_number": "543926317714",
-    "project_id": "app-for-login-function"
+    "project_number": "940137215817",
+    "firebase_url": "https://orderfoodonline-2f505.firebaseio.com",
+    "project_id": "orderfoodonline-2f505",
+    "storage_bucket": "orderfoodonline-2f505.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:543926317714:android:7942fc67c6cd634c",
+        "mobilesdk_app_id": "1:940137215817:android:7942fc67c6cd634c",
         "android_client_info": {
           "package_name": "com.example.dung.demo_recyclerview"
         }
       },
       "oauth_client": [
         {
-          "client_id": "543926317714-c1factn6m6kjnmqf9k73fp7fn7aqb3c2.apps.googleusercontent.com",
+          "client_id": "940137215817-fk7m8da7sindlbl1eg4eocbr9m4n05dt.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.dung.demo_recyclerview",
@@ -21,13 +23,13 @@
           }
         },
         {
-          "client_id": "543926317714-rfafuavnfgokhbkjm8pqf7vbopprvg6f.apps.googleusercontent.com",
+          "client_id": "940137215817-0un9k98km4q36h727asvufshvdfl2lhf.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB6gPHD0rgIb83xXS2a1JdfDFkh-iB2JBc"
+          "current_key": "AIzaSyBFji0EUK0jhbb81UH7rbrR9Mg3RQOcqYE"
         }
       ],
       "services": {
@@ -35,11 +37,16 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "940137215817-0un9k98km4q36h727asvufshvdfl2lhf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
-          "status": 1
+          "status": 2
         }
       }
     }

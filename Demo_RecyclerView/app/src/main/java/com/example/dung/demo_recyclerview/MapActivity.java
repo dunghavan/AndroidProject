@@ -4,12 +4,15 @@ import android.Manifest;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
+import android.location.LocationManager;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.DialogFragment;
@@ -80,6 +83,7 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
     LatLng nhaHangLatLong;
     private GoogleApiClient gac;
     LocationRequest mLocationRequest;
+    GoogleApiClient locationClient;
     private GoogleMap mMap;
     LatLng userLatLong;
     Marker currLocationMarker;
@@ -484,6 +488,19 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
 
     @Override
     public void onConnected(Bundle connectionHint) {
+//        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+//            // Kiểm tra quyền hạn
+//            ActivityCompat.requestPermissions(this,  new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, 2);
+//        }
+//        Location location = LocationServices.FusedLocationApi.getLastLocation(gac);
+//        if (location == null) {
+//            mLocationRequest = new LocationRequest();
+//            mLocationRequest.setInterval(5000); //5 seconds
+//            mLocationRequest.setFastestInterval(3000); //3 seconds
+//            mLocationRequest.setPriority(LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY);
+//            //locationClient.requestLocationUpdates(locationRequest, this);
+//            LocationServices.FusedLocationApi.requestLocationUpdates(gac, mLocationRequest, this);
+//        }
         getLocation();
     }
 
@@ -579,5 +596,49 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
     protected void onResume() {
         super.onResume();
         MyApplication.setCurrentContext(this);
+        checkLocationEnabled();
+        if(gac != null)
+            getLocation();
+    }
+
+    private void checkLocationEnabled(){
+        final Context context = MyApplication.getCurrentContext();
+        LocationManager lm = (LocationManager)context.getSystemService(Context.LOCATION_SERVICE);
+        boolean gps_enabled = false;
+        boolean network_enabled = false;
+
+        try {
+            gps_enabled = lm.isProviderEnabled(LocationManager.GPS_PROVIDER);
+        } catch(Exception ex) {}
+
+        try {
+            //network_enabled = lm.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
+        } catch(Exception ex) {}
+
+        if(!gps_enabled) {
+            // notify user
+            AlertDialog.Builder dialog = new AlertDialog.Builder(context);
+            dialog.setMessage("Thông báo");
+            dialog.setPositiveButton("Cài đặt", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface paramDialogInterface, int paramInt) {
+                    // TODO Auto-generated method stub
+                    Intent myIntent = new Intent( Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                    context.startActivity(myIntent);
+                    //get gps
+                }
+            });
+            dialog.setNegativeButton("Hủy", new DialogInterface.OnClickListener() {
+
+                @Override
+                public void onClick(DialogInterface paramDialogInterface, int paramInt) {
+                    // TODO Auto-generated method stub
+
+                }
+            });
+
+            AlertDialog alertDialog =  dialog.create();
+            alertDialog.show();
+        }
     }
 }

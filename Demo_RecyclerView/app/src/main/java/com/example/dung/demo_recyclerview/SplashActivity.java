@@ -2,9 +2,11 @@ package com.example.dung.demo_recyclerview;
 
 import android.content.Intent;
 import android.os.Handler;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
@@ -14,6 +16,7 @@ public class SplashActivity extends AppCompatActivity {
     /** Duration of wait **/
     private final int SPLASH_DISPLAY_LENGTH = 1000;
     ImageView imageView;
+    TextView actionBarTitle;
 
     /** Called when the activity is first created. */
     @Override
@@ -21,6 +24,12 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(icicle);
         setContentView(R.layout.activity_splash);
         imageView = (ImageView)findViewById(R.id.gif_image_splash);
+
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.action_bar_layout);
+        actionBarTitle = (TextView)findViewById(R.id.action_bar_title_text);
+        actionBarTitle.setText("OrderFood App UIT");
+
         //Get Login Info
         LoginActivity.getFbInfo();
 

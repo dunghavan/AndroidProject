@@ -40,7 +40,7 @@ public class RecyclerAdapter_For_CartActivity extends RecyclerView.Adapter <Recy
     final DecimalFormat decimalFormat = new DecimalFormat("###,###,###.#");
 
     public interface OnUpdateListener {
-        void onUpdateUI();
+        void onUpdateCartUI();
     }
     private OnUpdateListener listener;
     public void setOnUpdateListner(OnUpdateListener listener) {
@@ -286,7 +286,7 @@ public class RecyclerAdapter_For_CartActivity extends RecyclerView.Adapter <Recy
             textView_Gia.setText(giaKhuyenMai_String + "đ x " + count + " = " + tongTien_String + "đ");
             //update UI in CartActivity
             if(listener != null){
-                listener.onUpdateUI();
+                listener.onUpdateCartUI();
             }
         }
 

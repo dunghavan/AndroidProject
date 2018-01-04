@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 
+import com.example.dung.demo_recyclerview.MyAlertDialog;
 import com.example.dung.demo_recyclerview.MyApplication;
 import com.example.dung.demo_recyclerview.MyHttpURLConnection;
 import com.example.dung.demo_recyclerview.R;
@@ -82,7 +83,6 @@ public class ChildFragment_MonAnKhuyenMai extends Fragment {
             public void onResponse(Call<List<MonAn>> call, Response<List<MonAn>> response) {
                 try{
                     listMonAnKhuyenMai = response.body();
-                    Log.d("Data length: ", String.valueOf(listMonAnKhuyenMai.size()));
                     adapter = new MonAnRecyclerAdapter(listMonAnKhuyenMai);
                     recyclerView.setAdapter(adapter);
                     setRetainInstance(false);
@@ -90,17 +90,27 @@ public class ChildFragment_MonAnKhuyenMai extends Fragment {
                 }
                 catch (Exception e){
                     Log.d("Err monAnKhuyenMai", e.getMessage());
+                    progressBar.setVisibility(View.GONE);
                 }
             }
 
             @Override
             public void onFailure(Call<List<MonAn>> call, Throwable t) {
-
+                showLoadFailedDialog();
+                progressBar.setVisibility(View.GONE);
             }
         });
 
     }
+    static boolean isShowAlertDialog = false;
+    public void showLoadFailedDialog(){
+        if(!isShowAlertDialog){
+            MyAlertDialog.showMyAlertDialog("Thông báo", "Không tải được danh sách món ăn khuyến mại. Hãy thử lại!");
+            isShowAlertDialog = true;
+            progressBar.setVisibility(View.GONE);
+        }
 
+    }
 
 
     private class DownloadFilesTask extends AsyncTask<String, Integer, List<MonAn>> {

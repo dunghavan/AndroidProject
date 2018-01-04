@@ -101,19 +101,16 @@ public class ChildFragment_TatCaMonAn extends Fragment{
     public void onResume() {
         super.onResume();
 
+        isShowAlertDialog = false;
         customRecyclerAdapter = new MonAnRecyclerAdapter(data);
         recyclerView.setAdapter(customRecyclerAdapter);
         setRetainInstance(false);
     }
 
     //Load du lieu theo loai da chon:
-    boolean isShowAlertDialog = false;
+    static boolean isShowAlertDialog = false;
     private void initialData(final int _foodCategory, String _tabCategory){
-//        Log.d("Call method", "initialData");
-//        String api = "http://orderfooduit.azurewebsites.net/api/MonAn/GetByMaLoai/" + String.valueOf(foodCategoryName);
-//        new ReadApiTask().execute(api);
-//        Log.d("API", api);
-        isShowAlertDialog = false;
+        //isShowAlertDialog = false;
         APIService apiService = ApiUtils.getAPIService();
         if(_tabCategory == MyConstant.DATNHIEU){
             apiService.getMonAnDatNhieuByMaLoai(_foodCategory).enqueue(new Callback<List<MonAn>>() {
@@ -131,15 +128,14 @@ public class ChildFragment_TatCaMonAn extends Fragment{
                     }
                     catch (Exception e){
                         Log.d("Err ma Loai", e.getMessage());
+                        progressBar.setVisibility(View.GONE);
                     }
                 }
 
                 @Override
                 public void onFailure(Call<List<MonAn>> call, Throwable t) {
-                    if(!isShowAlertDialog){
-                        MyAlertDialog.showMyAlertDialog("Thông báo", "Không tải được danh sách món ăn đặt nhiều mã loại: " + _foodCategory + ", hãy thử lại!");
-                        isShowAlertDialog = true;
-                    }
+                    showLoadFailedDialog();
+                    progressBar.setVisibility(View.GONE);
                 }
             });
         }
@@ -158,18 +154,24 @@ public class ChildFragment_TatCaMonAn extends Fragment{
                     }
                     catch (Exception e){
                         Log.d("Err ma Loai", e.getMessage());
+                        progressBar.setVisibility(View.GONE);
                     }
                 }
 
                 @Override
                 public void onFailure(Call<List<MonAn>> call, Throwable t) {
                     Toast.makeText(MyApplication.getCurrentContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
-                    if(!isShowAlertDialog){
-                        MyAlertDialog.showMyAlertDialog("Thông báo", "Không tải được danh sách tất cả món ăn mã loại: " + _foodCategory + ", hãy thử lại!");
-                        isShowAlertDialog = true;
-                    }
+                    showLoadFailedDialog();
+                    progressBar.setVisibility(View.GONE);
                 }
             });
+        }
+
+    }
+    public void showLoadFailedDialog(){
+        if(!isShowAlertDialog){
+            MyAlertDialog.showMyAlertDialog("Thông báo", "Không tải được danh sách món ăn. Hãy thử lại!");
+            isShowAlertDialog = true;
         }
 
     }
