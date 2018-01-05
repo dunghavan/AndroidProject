@@ -43,6 +43,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
     public static Facebook_Profile facebook_profile;
     public static String NAME = "";
     public static String ID = "";
+    public static String EMAIL = "";
     public static boolean isLoggedInWithFacebook;
     static LoginActivity activity;
     CallbackManager callbackManager;
@@ -220,6 +221,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
 
             ID = googleID;
             NAME = acct.getDisplayName();
+            EMAIL = email;
             if(acct.getPhotoUrl() != null)
                 googleImageUrl = acct.getPhotoUrl().toString();
             else
@@ -242,7 +244,8 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
             btn_googleRevokeAccess.setVisibility(View.GONE);
 
             fbLoginButton.setVisibility(View.GONE);
-            tv_label.setVisibility(View.GONE);
+            tv_label.setVisibility(View.VISIBLE);
+            tv_label.setText("Bạn đã đăng nhập với tài khoản " + EMAIL);
         } else {
             if(isLoggedInWithFacebook){
                 btn_googleLogin.setVisibility(View.GONE);
@@ -259,6 +262,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
 
                 fbLoginButton.setVisibility(View.VISIBLE);
                 tv_label.setVisibility(View.VISIBLE);
+                tv_label.setText("Bạn chưa đăng nhập. Đăng nhập với Facebook hoặc Google để tiếp tục");
             }
         }
 
@@ -297,6 +301,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
 
                                 ID = me.optString("id");
                                 NAME = me.optString("name");
+                                EMAIL = me.optString("email");
 
 //                                facebook_profile.setId(me.optString("id"));
 //                                facebook_profile.setName(me.optString("name"));
@@ -320,7 +325,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
 
             Bundle parameters = new Bundle();
             //parameters.putString("fields", "id, name, link, gender, birthday, email, user_mobile_phone");
-            parameters.putString("fields", "id, name, link");
+            parameters.putString("fields", "id, name, link, email");
             request.setParameters(parameters);
             request.executeAsync();
         }

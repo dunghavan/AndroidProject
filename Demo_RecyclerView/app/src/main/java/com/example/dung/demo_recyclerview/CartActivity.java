@@ -105,27 +105,26 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
 
     @Override
     public void onUpdateCartUI(){
+        tv_soLuongMon.setText("Số lượng món: " + String.valueOf(Cart.getAllItemCount()));
+        tv_tongTien.setText("Tổng tiền: " + String.valueOf(decimalFormat.format(Cart.getTotal())) + " đ");
+        next_btn.setVisibility(View.GONE);
+
         if(!isCheckAuthen)
         {
             isCheckAuthen = true;
             if(!LoginActivity.isAuthenticated()){
                 login_btn.setVisibility(View.VISIBLE);
                 next_btn.setVisibility(View.GONE);
+                tv_tenKhachHang.setText("Khách hàng: [Bạn chưa đăng nhập]");
             }
             else { // Logged in
                 login_btn.setVisibility(View.GONE);
-            }
-            if(LoginActivity.isAuthenticated()== false)
-                tv_tenKhachHang.setText("Khách hàng: [Bạn chưa đăng nhập]");
-            else
                 tv_tenKhachHang.setText("Khách hàng: " + LoginActivity.NAME);
-        }
-        tv_soLuongMon.setText("Số lượng món: " + String.valueOf(Cart.getAllItemCount()));
-        tv_tongTien.setText("Tổng tiền: " + String.valueOf(decimalFormat.format(Cart.getTotal())) + " đ");
 
-        next_btn.setVisibility(View.GONE);
-        if(Cart.getCartContent().size() != 0)
-            next_btn.setVisibility(View.VISIBLE);
+                if(Cart.getCartContent().size() != 0)
+                    next_btn.setVisibility(View.VISIBLE);
+            }
+        }
     }
 
     @Override
