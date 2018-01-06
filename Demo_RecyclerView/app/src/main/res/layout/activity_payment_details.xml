@@ -17,6 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tổng số món: 0"
+            android:textColor="#000000"
             android:textSize="18sp"/>
 
         <TextView
@@ -24,6 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tổng thanht toán: 0đ"
+            android:textColor="#000000"
             android:textSize="18sp"/>
 
         <TextView
@@ -31,36 +33,42 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ngày lập: 0000-00-00"
+            android:textColor="#000000"
             android:textSize="18sp"/>
         <TextView
             android:id="@+id/textview_ngayGiaoHang_in_payment_detail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ngày giao hàng: 0000-00-00"
+            android:textColor="#000000"
             android:textSize="18sp"/>
         <TextView
             android:id="@+id/textview_diaChiGiaoHang_in_payment_detail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Địa chỉ giao: "
+            android:textColor="#000000"
             android:textSize="18sp"/>
         <TextView
             android:id="@+id/textview_SDT_in_payment_detail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Số điện thoại: "
+            android:textColor="#000000"
             android:textSize="18sp"/>
         <TextView
             android:id="@+id/textview_hinhThucThanhToan_in_payment_detail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hình thức thanh toán: "
+            android:textColor="#000000"
             android:textSize="18sp"/>
         <TextView
             android:id="@+id/textview_PaypalID_in_payment_detail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="PayPal ID: "
+            android:textColor="#000000"
             android:textSize="18sp"/>
         <View
             android:layout_marginTop="5dp"
@@ -74,6 +82,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Danh sách các món: "
+            android:textColor="#000000"
             android:textSize="18sp"/>
 
         <TextView
@@ -81,6 +90,7 @@
             android:id="@+id/textView_to_append_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#000000"
             android:textSize="18sp"/>
     </LinearLayout>
 </ScrollView>

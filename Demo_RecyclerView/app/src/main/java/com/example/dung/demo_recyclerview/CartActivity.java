@@ -107,7 +107,6 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
     public void onUpdateCartUI(){
         tv_soLuongMon.setText("Số lượng món: " + String.valueOf(Cart.getAllItemCount()));
         tv_tongTien.setText("Tổng tiền: " + String.valueOf(decimalFormat.format(Cart.getTotal())) + " đ");
-        next_btn.setVisibility(View.GONE);
 
         if(!isCheckAuthen)
         {
@@ -123,6 +122,8 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
 
                 if(Cart.getCartContent().size() != 0)
                     next_btn.setVisibility(View.VISIBLE);
+                else
+                    next_btn.setVisibility(View.GONE);
             }
         }
     }

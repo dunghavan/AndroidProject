@@ -8,10 +8,27 @@
     android:weightSum="1">
 
 
+    <ProgressBar
+        android:id="@+id/progressbar_in_recyclerview_nhahang"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:max="100"
+        android:backgroundTint="#b75959"
+        android:indeterminateTint="#1a09d6"
+        android:layout_marginTop="-7dp"/>
     <!--Demo RecyclerView-->
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerview_nhahang"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:scrollbars="vertical" />
+    <TextView
+        android:id="@+id/textView_reload_behind_recyclerview_nhahang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center"
+        android:text="Danh sách rỗng. Nhấn để tải lại!"/>
 </LinearLayout>

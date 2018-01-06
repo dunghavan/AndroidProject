@@ -313,7 +313,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                                 updateUIByInterface();
                                 isLoggedInWithFacebook = true;
 
-                                CartActivity.isCheckAuthen = true;
+                                //CartActivity.isCheckAuthen = true;
                                 //Toast.makeText(MyApplication.getCurrentContext(), "Name: " + me.optString("name"), Toast.LENGTH_SHORT).show();
                                 //Toast.makeText(MyApplication.getCurrentContext(), "ID: " + me.optString("id"), Toast.LENGTH_SHORT).show();
 
@@ -380,6 +380,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
     }
 
     public static boolean isAuthenticated() {
+        CartActivity.isCheckAuthen = true;
         // FB
         AccessToken token = AccessToken.getCurrentAccessToken();
         if(token != null){

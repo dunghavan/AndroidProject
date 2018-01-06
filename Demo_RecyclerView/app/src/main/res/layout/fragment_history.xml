@@ -32,7 +32,16 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@android:color/darker_gray"/>
-
+    <ProgressBar
+        android:id="@+id/progressbar_in_recyclerview_history"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:max="100"
+        android:backgroundTint="#b75959"
+        android:indeterminateTint="#1a09d6"
+        android:layout_marginTop="-7dp"/>
     <FrameLayout
         android:id="@+id/frame_layout"
         android:layout_width="match_parent"
@@ -43,8 +52,15 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerview_history"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:scrollbars="vertical" />
+        <TextView
+            android:id="@+id/textView_reload_behind_recyclerview_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_gravity="center"
+            android:text="Lịch sử giao dịch rỗng. Nhấn để tải lại!"/>
     </FrameLayout>
 
 </LinearLayout>

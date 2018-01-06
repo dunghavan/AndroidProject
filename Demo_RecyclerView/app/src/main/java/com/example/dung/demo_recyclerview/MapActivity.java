@@ -3,6 +3,7 @@ package com.example.dung.demo_recyclerview;
 import android.Manifest;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -331,7 +332,14 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
         tv_thoiGian.setText("Thời gian di chuyển: " + duration);
     }
 
+    ProgressDialog progressDialog;
     public void sendSubmitToServer(String _paymentType, String _payID){
+
+        progressDialog = new ProgressDialog(MyApplication.getCurrentContext());
+        progressDialog.setMessage("Đang gửi đơn hàng...");
+        progressDialog.setIndeterminate(true);
+        progressDialog.show();
+
         String _deliveryDateTime = deliveryDateTime.toString();
         if(radio_btn_earliest.isChecked()){
             _deliveryDateTime = curDateTime;
@@ -355,6 +363,7 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
                 //Create a dialog:
                 AlertDialog dialogToShow = alertDialog.create();
                 dialogToShow.show();
+                progressDialog.dismiss();
             }
 
             @Override
@@ -371,6 +380,7 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
                 //Create a dialog:
                 AlertDialog dialogToShow = alertDialog.create();
                 dialogToShow.show();
+                progressDialog.dismiss();
             }
         });
         //WriteLog.WriteToFile("Write to file: " + _deliveryDateTime);

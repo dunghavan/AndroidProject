@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.dung.demo_recyclerview.LoginActivity;
@@ -35,7 +36,9 @@ import retrofit2.Response;
  */
 
 public class Fragment_History extends Fragment {
-    private List<Payment> listData;
+    TextView tv_reload;
+    ProgressBar progressBar;
+    private List<Payment> listData = new ArrayList<>();
     RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
     Payment_RecyclerAdapter adapter;
@@ -47,6 +50,11 @@ public class Fragment_History extends Fragment {
     }
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState){
+        progressBar = (ProgressBar)view.findViewById(R.id.progressbar_in_recyclerview_history);
+        progressBar.setVisibility(View.VISIBLE);
+        tv_reload = (TextView)view.findViewById(R.id.textView_reload_behind_recyclerview_history);
+        tv_reload.setVisibility(View.GONE);
+
         tv_username = (TextView)view.findViewById(R.id.textview_username_in_history);
         tv_maKhachHang = (TextView)view.findViewById(R.id.textview_maKhachHang_in_history);
 
@@ -55,13 +63,20 @@ public class Fragment_History extends Fragment {
         layoutManager = new LinearLayoutManager(MyApplication.getCurrentContext());
         recyclerView.setLayoutManager(layoutManager);
 
-        listData = new ArrayList<>();
         initializeData();
         adapter = new Payment_RecyclerAdapter(listData, MyApplication.getCurrentContext());
         recyclerView.setAdapter(adapter);
+
+        tv_reload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                initializeData();
+            }
+        });
     }
 
     private void initializeData(){
+        progressBar.setVisibility(View.VISIBLE);
         APIService apiService = ApiUtils.getAPIService();
         if(LoginActivity.ID == null)  // Chưa login
             return;
@@ -73,15 +88,25 @@ public class Fragment_History extends Fragment {
                     adapter = new Payment_RecyclerAdapter(listData ,MyApplication.getCurrentContext());
                     recyclerView.setAdapter(adapter);
                     setRetainInstance(false);
+
+                    if(listData.size() == 0)
+                        tv_reload.setVisibility(View.VISIBLE);
+                    else
+                        tv_reload.setVisibility(View.GONE);
+                    progressBar.setVisibility(View.GONE);
                 }
                 catch (Exception e){
                     Log.d("Err parse payment", e.getMessage());
+                    tv_reload.setVisibility(View.VISIBLE);
+                    progressBar.setVisibility(View.GONE);
                 }
             }
 
             @Override
             public void onFailure(Call<List<Payment>> call, Throwable t) {
-                MyAlertDialog.showMyAlertDialog("Thông báo", "Không tải được lịch sử giao dịch, hãy thử lại!");
+                //MyAlertDialog.showMyAlertDialog("Thông báo", "Không tải được lịch sử giao dịch, hãy thử lại!");
+                tv_reload.setVisibility(View.VISIBLE);
+                progressBar.setVisibility(View.GONE);
             }
         });
         tv_username.setText("Khách hàng: " + LoginActivity.NAME);

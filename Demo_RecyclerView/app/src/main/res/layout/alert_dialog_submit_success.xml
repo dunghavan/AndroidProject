@@ -4,7 +4,7 @@
     android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="90dp"
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
@@ -24,8 +24,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Đơn hàng của bạn đã được gửi thành công!"
+            android:text="Đơn hàng của bạn đã được gửi thành công! Bạn có thể xem lại chi tiết đơn hàng trong mục Lịch sử giao dịch"
             android:layout_gravity="center"
-            android:layout_marginTop="15dp"/>
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
     </LinearLayout>
 </LinearLayout>

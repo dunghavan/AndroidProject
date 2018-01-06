@@ -10,11 +10,14 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.example.dung.demo_recyclerview.MainActivity;
 import com.example.dung.demo_recyclerview.MyAlertDialog;
 import com.example.dung.demo_recyclerview.R;
 import com.example.dung.demo_recyclerview.model.NhaHang;
+import com.example.dung.demo_recyclerview.recycler_adapter.MonAnRecyclerAdapter;
 import com.example.dung.demo_recyclerview.recycler_adapter.NhaHangRecyclerAdapter;
 import com.example.dung.demo_recyclerview.retrofit.APIService;
 import com.example.dung.demo_recyclerview.retrofit.ApiUtils;
@@ -31,11 +34,12 @@ import retrofit2.Response;
  */
 
 public class ChildFragment_TatCaNhaHang extends Fragment {
-
+    TextView tv_reload;
+    ProgressBar progressBar;
     RecyclerView recyclerView;
     NhaHangRecyclerAdapter nhaHangRecyclerAdapter;
     RecyclerView.LayoutManager layoutManager;
-    List<NhaHang> listNhaHang;
+    List<NhaHang> listNhaHang = new ArrayList<>();
     Context context;
 
     public ChildFragment_TatCaNhaHang(){
@@ -48,18 +52,29 @@ public class ChildFragment_TatCaNhaHang extends Fragment {
     }
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState){
+        progressBar = (ProgressBar)view.findViewById(R.id.progressbar_in_recyclerview_nhahang);
+        progressBar.setVisibility(View.VISIBLE);
+        tv_reload = (TextView)view.findViewById(R.id.textView_reload_behind_recyclerview_nhahang);
+        tv_reload.setVisibility(View.GONE);
         recyclerView = (RecyclerView)view.findViewById(R.id.recyclerview_nhahang);
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(context);
         recyclerView.setLayoutManager(layoutManager);
 
-        listNhaHang = new ArrayList<>();
         initializeData();
         nhaHangRecyclerAdapter = new NhaHangRecyclerAdapter(listNhaHang, (MainActivity)context);
         recyclerView.setAdapter(nhaHangRecyclerAdapter);
+
+        tv_reload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                initializeData();
+            }
+        });
     }
 
     public void initializeData(){
+        progressBar.setVisibility(View.VISIBLE);
         APIService apiService;
         apiService = ApiUtils.getAPIService();
         apiService.getAllNhaHang().enqueue(new Callback<List<NhaHang>>() {
@@ -70,19 +85,47 @@ public class ChildFragment_TatCaNhaHang extends Fragment {
                     Log.d("response.body()", response.body().get(0).getHinhAnh());
                     nhaHangRecyclerAdapter = new NhaHangRecyclerAdapter(listNhaHang, (MainActivity)context);
                     recyclerView.setAdapter(nhaHangRecyclerAdapter);
+
+                    if(listNhaHang.size() == 0)
+                        tv_reload.setVisibility(View.VISIBLE);
+                    else
+                        tv_reload.setVisibility(View.GONE);
+                    progressBar.setVisibility(View.GONE);
                 }
                 catch (Exception e){
                     if(e.getMessage() != null)
                         Log.d("Error get all NhaHang", e.getMessage());
-                    MyAlertDialog.showMyAlertDialog("Lỗi API nhà hàng", "Lỗi gán danh sách nhà hàng!");
+                    showLoadFailedDialog();
+                    tv_reload.setVisibility(View.VISIBLE);
+                    progressBar.setVisibility(View.GONE);
                 }
             }
 
             @Override
             public void onFailure(Call<List<NhaHang>> call, Throwable t) {
                 Log.d("onFailure getallNhaHang", call.toString());
-                MyAlertDialog.showMyAlertDialog("Lỗi API nhà hàng", "Đọc API bị onFailure!");
+                showLoadFailedDialog();
+                tv_reload.setVisibility(View.VISIBLE);
+                progressBar.setVisibility(View.GONE);
             }
         });
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        isShowAlertDialog = false;
+        nhaHangRecyclerAdapter = new NhaHangRecyclerAdapter(listNhaHang, (MainActivity)context);
+        recyclerView.setAdapter(nhaHangRecyclerAdapter);
+        setRetainInstance(false);
+    }
+
+    private static boolean isShowAlertDialog;
+    public void showLoadFailedDialog(){
+        if(!isShowAlertDialog){
+            MyAlertDialog.showMyAlertDialog("Thông báo", "Không tải được danh sách nhà hàng. Hãy thử lại!");
+            isShowAlertDialog = true;
+        }
     }
 }

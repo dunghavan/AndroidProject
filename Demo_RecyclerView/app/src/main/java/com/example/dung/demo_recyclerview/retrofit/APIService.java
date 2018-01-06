@@ -65,7 +65,7 @@ public interface APIService {
     @GET("api/MonAn/GetByMaLoaiDatNhieu/{maLoai}")
     Call<List<MonAn>> getMonAnDatNhieuByMaLoai(@Path("maLoai") Integer maLoai);
 
-    @GET("api/DonDatHang/GetAllOrder/{maKhachHang}")
+    @GET("api/DonDatHang/GetAllOrderKH/{maKhachHang}")
     Call<List<Payment>> getAllPayment(@Path("maKhachHang")String maKhachHang);
 
     @FormUrlEncoded

@@ -1,6 +1,7 @@
 package com.example.dung.demo_recyclerview;
 
 import android.app.ActionBar;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -97,6 +98,7 @@ public class Activity_Payment_Details extends AppCompatActivity {
             }
             tv_tongSoMon.setText("Tổng số món: " + dsMonAn.size());
             tv_textViewToAppend.setText("");
+            tv_textViewToAppend.setTextColor(Color.parseColor("#000000"));
             for(CTDonDatHang item: dsMonAn){
                 tv_textViewToAppend.append(item.getMaMonAn() + ": " + item.getDonGia() + "đ x " + item.getSoLuong() + " = " + item.getThanhTien() + "đ\n");
             }
