@@ -2197,6 +2197,9 @@
     </style><style name="CustomStyle" parent="android:Theme.Dialog">
         <item name="android:windowBackground">@color/colorPrimary</item>
         <item name="android:windowContentOverlay">@null</item>
+    </style><style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">#c2bbbb</item>
+        <item name="colorControlActivated">#fcc203</item>
     </style><style name="NewAppTheme.ActionBar" parent="Widget.AppCompat.Light.ActionBar">
         <item name="android:titleTextStyle">@style/NewAppTheme.ActionBar.TitleText</item>
         <item name="titleTextStyle">@style/NewAppTheme.ActionBar.TitleText</item>

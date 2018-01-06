@@ -46,12 +46,12 @@ public class Activity_Payment_Details extends AppCompatActivity {
         Payment payment = (Payment)getIntent().getSerializableExtra("PaymentObject");
         // bind data to screen:
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
 
-        getSupportActionBar().setDisplayOptions(android.support.v7.app.ActionBar.DISPLAY_SHOW_CUSTOM);
-        getSupportActionBar().setCustomView(R.layout.action_bar_layout);
+        actionBar.setDisplayOptions(android.support.v7.app.ActionBar.DISPLAY_SHOW_CUSTOM);
+        actionBar.setCustomView(R.layout.action_bar_layout);
         actionBarTitle = (TextView)findViewById(R.id.action_bar_title_text);
         actionBarTitle.setText("Chi tiết đơn hàng " + payment.getId());
+        actionBar.setDisplayHomeAsUpEnabled(true);
         //getSupportActionBar().setTitle("Chi tiết đơn hàng " + payment.getId());
 
         tv_tongSoTien.setText("Tổng thanh toán: " + String.format("%s", decimalFormat.format(payment.getTongTien())) + "đ");

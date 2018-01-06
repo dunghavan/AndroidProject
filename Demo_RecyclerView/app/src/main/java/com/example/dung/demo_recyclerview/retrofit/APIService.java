@@ -78,6 +78,13 @@ public interface APIService {
                                      @Field("CheDoLaoDong")int CheDoLaoDong,
                                      @Field("Bua")int Bua);
 
+    @FormUrlEncoded
+    @POST("api/TuVan/Post/")
+    Call<Void> tuVanTrucTuyen(@Field("HoTen")String hoTen,
+                                     @Field("SoDienThoai")String soDienThoai,
+                                     @Field("Email")String email,
+                                     @Field("TinNhan")String message);
+
     @POST("api/MonAn/DanhGia/{point}/{maMonAn}")
     Call<Void> danhgiaMonAn(@Path("point")Float point, @Path("maMonAn")String maMonAn);
 }

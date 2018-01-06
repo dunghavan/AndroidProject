@@ -5,17 +5,46 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Danh sach mon an de xuat"/>
+            android:text="Các món ăn được đề xuất phù hợp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="10dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000"
+            android:layout_marginTop="5dp"/>
     </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar_in_recyclerview_monan_dexuat"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:max="100"
+        android:backgroundTint="#b75959"
+        android:indeterminateTint="#1a09d6"
+        android:layout_marginTop="-7dp"/>
+
     <!--Demo RecyclerView-->
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerview_monan_child"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:scrollbars="vertical" />
+
+    <TextView
+        android:id="@+id/textView_reload_behind_recyclerview_monan_dexuat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center"
+        android:text="Danh sách rỗng. Nhấn để tải lại!"/>
 
 </LinearLayout>

@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.dung.demo_recyclerview.fragment.Fragment_Profile;
 import com.example.dung.demo_recyclerview.model.Facebook_Profile;
 import com.facebook.*;
 import com.facebook.login.LoginManager;
@@ -121,8 +122,9 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                 Log.d(TAG, "Facebook Access Token: " + loginResult.getAccessToken().getToken());
                 Toast.makeText(MyApplication.getCurrentContext(), "Login Facebook success.", Toast.LENGTH_SHORT).show();
 
+                Fragment_Profile.isFromLogoutRequest = false;
                 getFbInfo();
-                finish();
+                //finish();
             }
 
             @Override
@@ -317,8 +319,8 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                                 //Toast.makeText(MyApplication.getCurrentContext(), "Name: " + me.optString("name"), Toast.LENGTH_SHORT).show();
                                 //Toast.makeText(MyApplication.getCurrentContext(), "ID: " + me.optString("id"), Toast.LENGTH_SHORT).show();
 
-//                                if(activity != null)
-//                                    activity.finish();
+                                if(activity != null && !Fragment_Profile.isFromLogoutRequest)
+                                    activity.finish();
                             }
                         }
                     });

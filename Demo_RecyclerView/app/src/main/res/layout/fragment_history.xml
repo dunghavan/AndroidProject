@@ -58,7 +58,6 @@
             android:id="@+id/textView_reload_behind_recyclerview_history"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
             android:layout_gravity="center"
             android:text="Lịch sử giao dịch rỗng. Nhấn để tải lại!"/>
     </FrameLayout>

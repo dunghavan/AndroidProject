@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tổng số món: 0"
-            android:textColor="#000000"
+            android:textColor="#bc5704"
             android:textSize="18sp"/>
 
         <TextView
@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tổng thanht toán: 0đ"
-            android:textColor="#000000"
+            android:textColor="#bc4711"
             android:textSize="18sp"/>
 
         <TextView

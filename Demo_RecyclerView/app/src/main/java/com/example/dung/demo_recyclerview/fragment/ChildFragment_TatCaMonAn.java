@@ -49,6 +49,7 @@ import static android.content.Context.ACTIVITY_SERVICE;
 
 public class ChildFragment_TatCaMonAn extends Fragment{
     TextView tv_reload;
+    ProgressBar progressBar;
     RecyclerView recyclerView;
     MonAnRecyclerAdapter customRecyclerAdapter;
     RecyclerView.LayoutManager layoutManager;
@@ -56,7 +57,6 @@ public class ChildFragment_TatCaMonAn extends Fragment{
     int foodCategory;
     String tabCategory;
 
-    ProgressBar progressBar;
     Context context;
     public ChildFragment_TatCaMonAn(){
         context = MainActivity.getMainActivityContext();

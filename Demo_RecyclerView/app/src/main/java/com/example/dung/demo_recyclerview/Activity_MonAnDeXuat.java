@@ -1,11 +1,16 @@
 package com.example.dung.demo_recyclerview;
 
+import android.content.Intent;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -24,6 +29,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class Activity_MonAnDeXuat extends AppCompatActivity {
+    TextView tv_reload;
+    ProgressBar progressBar;
     RecyclerView recyclerView;
     MonAnRecyclerAdapter customRecyclerAdapter;
     RecyclerView.LayoutManager layoutManager;
@@ -38,6 +45,12 @@ public class Activity_MonAnDeXuat extends AppCompatActivity {
         getSupportActionBar().setCustomView(R.layout.action_bar_layout);
         actionBarTitle = (TextView)findViewById(R.id.action_bar_title_text);
         actionBarTitle.setText("Món ăn đề xuất");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        tv_reload = (TextView)findViewById(R.id.textView_reload_behind_recyclerview_monan_dexuat);
+        tv_reload.setVisibility(View.GONE);
+        progressBar = (ProgressBar)findViewById(R.id.progressbar_in_recyclerview_monan_dexuat);
+        progressBar.setVisibility(View.VISIBLE);
 
         //Connect to views:
         recyclerView = (RecyclerView)findViewById(R.id.recyclerview_monan_child);
@@ -50,12 +63,19 @@ public class Activity_MonAnDeXuat extends AppCompatActivity {
         customRecyclerAdapter = new MonAnRecyclerAdapter(data);
         recyclerView.setAdapter(customRecyclerAdapter);
 
-        Input_Information input_information = (Input_Information)getIntent().getSerializableExtra("Input Information");
+        final Input_Information input_information = (Input_Information)getIntent().getSerializableExtra("Input Information");
 
         initialData(input_information);
+        tv_reload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                initialData(input_information);
+            }
+        });
     }
 
     private void initialData(Input_Information _inforObject){
+        progressBar.setVisibility(View.VISIBLE);
         APIService apiService = ApiUtils.getAPIService();
         apiService.getMonAnDeXuat(_inforObject.getGioiTinh(), _inforObject.getCanNang(), _inforObject.getNamSinh(), _inforObject.getCheDo(),
                 _inforObject.getNhuCau(), _inforObject.getCheDoLaoDong(), _inforObject.getBuaAn()).enqueue(new Callback<List<MonAn>>() {
@@ -67,10 +87,17 @@ public class Activity_MonAnDeXuat extends AppCompatActivity {
                     customRecyclerAdapter = new MonAnRecyclerAdapter(data);
                     recyclerView.setAdapter(customRecyclerAdapter);
 
+                    progressBar.setVisibility(View.GONE);
+                    if(data.size() != 0)
+                        tv_reload.setVisibility(View.GONE);
+                    else
+                        tv_reload.setVisibility(View.VISIBLE);
+
                 }
                 catch (Exception e){
                     Log.d("Err ma Loai", e.getMessage());
-                    MyAlertDialog.showMyAlertDialog("Thông báo", "Lỗi gán kết quả món ăn đề xuất!");
+                    progressBar.setVisibility(View.GONE);
+                    tv_reload.setVisibility(View.VISIBLE);
                 }
             }
 
@@ -79,8 +106,8 @@ public class Activity_MonAnDeXuat extends AppCompatActivity {
                 Log.d("Err maLoai onFailure", t.getMessage());
                 Toast.makeText(MyApplication.getCurrentContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
 
-                MyAlertDialog.showMyAlertDialog("Thông báo", "Không tải được danh sách món ăn, hãy thử lại!");
-
+                progressBar.setVisibility(View.GONE);
+                tv_reload.setVisibility(View.VISIBLE);
             }
         });
 
@@ -90,5 +117,63 @@ public class Activity_MonAnDeXuat extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         MyApplication.setCurrentContext(this);
+    }
+
+
+    // Menu hien thi gio hang:
+    static TextView textCartItemCount;
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu, menu);
+        menu.findItem(R.id.action_search).setVisible(false);
+        final MenuItem cartItem = menu.findItem(R.id.cart);
+
+        View actionView = MenuItemCompat.getActionView(cartItem);
+        textCartItemCount = (TextView) actionView.findViewById(R.id.counter);
+
+        // /Open CartActivity when click
+        cartItem.getActionView().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onOptionsItemSelected(cartItem);
+            }
+        });
+        setupBadge(Cart.getAllItemCount());
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.home:
+                finish();
+                return true;
+            case R.id.cart:
+                Intent intent = new Intent(this, CartActivity.class);
+                this.startActivity(intent);
+                return true;
+            case R.id.action_search:
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    public static void setupBadge(int mCartItemCount){
+        if (textCartItemCount != null) {
+            if (mCartItemCount == 0) {
+                if (textCartItemCount.getVisibility() != View.GONE) {
+                    textCartItemCount.setVisibility(View.GONE);
+                }
+            } else {
+                textCartItemCount.setText(String.valueOf(Math.min(mCartItemCount, 99)));
+                if (textCartItemCount.getVisibility() != View.VISIBLE) {
+                    textCartItemCount.setVisibility(View.VISIBLE);
+                }
+            }
+        }
     }
 }

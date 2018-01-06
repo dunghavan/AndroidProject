@@ -887,7 +887,7 @@
         <item name="android:windowExitAnimation">@anim/design_bottom_sheet_slide_out</item>
     </style>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        
+        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -2019,18 +2019,18 @@
     </style>
     <style name="NewAppTheme" parent="Theme.AppCompat.Light">
 
-        
-        
+        <!-- Main theme colors -->
+        <!--   your app branding color for the app bar -->
         <item name="colorPrimary">#d0d247</item>
 
-        
+        <!--   darker variant for the status bar and contextual app bars -->
         <item name="colorPrimaryDark">@color/actionBar_background</item>
 
-        
-        
+        <!--   theme UI controls like checkboxes and text fields -->
+        <!--   native widgets will now be "tinted" with accent color -->
         <item name="colorAccent">@color/colorAccent</item>
 
-        
+        <!--Action bar style-->
         <item name="android:actionBarStyle">@style/NewAppTheme.ActionBar</item>
         <item name="actionBarStyle">@style/NewAppTheme.ActionBar</item>
 
@@ -2153,6 +2153,10 @@
         <item name="android:dropDownItemStyle">@style/Widget.AppCompat.DropDownItem.Spinner</item>
     </style>
     <style name="Platform.Widget.AppCompat.Spinner" parent="android:Widget.Spinner"/>
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">#c2bbbb</item>
+        <item name="colorControlActivated">#fcc203</item>
+    </style>
     <style name="RtlOverlay.DialogWindowTitle.AppCompat" parent="Base.DialogWindowTitle.AppCompat">
     </style>
     <style name="RtlOverlay.Widget.AppCompat.ActionBar.TitleItem" parent="android:Widget">

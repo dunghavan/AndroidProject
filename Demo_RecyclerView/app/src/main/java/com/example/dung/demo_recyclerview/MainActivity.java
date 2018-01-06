@@ -69,6 +69,7 @@ public class MainActivity extends AppCompatActivity{
                 int id = item.getItemId();
                 switch (id){
                     case R.id.action_home:
+                        showCartIcon(true);
                         fragment = new Fragment_NhaHang();
                         transaction.replace(R.id.frame_layout_in_main_activity, fragment).commit();
                         //getSupportActionBar().setTitle("Nhà Hàng");
@@ -81,6 +82,7 @@ public class MainActivity extends AppCompatActivity{
                         }
                         break;
                     case R.id.action_food:
+                        showCartIcon(true);
                         fragment = new Fragment_MonAn_6_Tabs();
                         transaction.replace(R.id.frame_layout_in_main_activity, fragment).commit();
                         //getSupportActionBar().setTitle("Món Ăn");
@@ -93,6 +95,7 @@ public class MainActivity extends AppCompatActivity{
                         }
                         break;
                     case R.id.action_advanced:
+                        showCartIcon(true);
                         fragment = new Fragment_NangCao_2_Tabs();
                         transaction.replace(R.id.frame_layout_in_main_activity, fragment).commit();
                         //getSupportActionBar().setTitle("Khuyến mại");
@@ -106,6 +109,7 @@ public class MainActivity extends AppCompatActivity{
                         }
                         break;
                     case R.id.action_history:
+                        showCartIcon(false);
                         if(LoginActivity.isAuthenticated()){
                             fragment = new Fragment_History();
                         }
@@ -124,6 +128,7 @@ public class MainActivity extends AppCompatActivity{
                         }
                         break;
                     case R.id.action_user:
+                        showCartIcon(false);
                         if(LoginActivity.isAuthenticated()){
                             fragment = new Fragment_Profile();
                         }
@@ -141,7 +146,6 @@ public class MainActivity extends AppCompatActivity{
                             onPrepareOptionsMenu(mOptionsMenu);
                         }
                         break;
-
                 }
                 return true;
             }
@@ -151,6 +155,12 @@ public class MainActivity extends AppCompatActivity{
         bottomNavigation.setSelectedItemId(R.id.action_food);
 
     }
+
+    private void showCartIcon(boolean isVisible){
+        if(mOptionsMenu != null)
+            mOptionsMenu.setGroupVisible(R.id.main_menu_group, isVisible);
+    }
+
     @Override
     protected void onResume() {
         super.onResume();

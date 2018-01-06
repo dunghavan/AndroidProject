@@ -320,7 +320,7 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
 
                                                 }
                                             });
-                                            Toast.makeText(MyApplication.getCurrentContext(), "Rating Mon An", Toast.LENGTH_SHORT).show();
+                                            //Toast.makeText(MyApplication.getCurrentContext(), "Rating Mon An", Toast.LENGTH_SHORT).show();
                                         }
                                     });
                             AlertDialog dialog_toShow_rating = alertDialog_rating.create();

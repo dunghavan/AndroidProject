@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -52,6 +53,7 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
         getSupportActionBar().setCustomView(R.layout.action_bar_layout);
         actionBarTitle = (TextView)findViewById(R.id.action_bar_title_text);
         actionBarTitle.setText("Giỏ hàng của bạn");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         //getSupportActionBar().setTitle("Giỏ hàng của bạn");
         setContentView(R.layout.activity_cart);
         cartActivity = this; // Used to start LoginActivity
@@ -136,4 +138,14 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
         onUpdateCartUI();
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 }
