@@ -15,8 +15,10 @@ public class MonAn {
     private Float soDiem;
     private int luotXem;
     private String nguyenLieu;
-    private int protein;
     private int nangLuong;
+    private Double kL_Dam;
+    private Double kL_Beo;
+    private Double kL_Duong;
     private String moTa;
     private String tenNhaHang;
     private String id;
@@ -35,45 +37,8 @@ public class MonAn {
     public MonAn(){
 
     }
-    public MonAn(String id, String tenMonAn, Double donGia, String hinhAnh, int protein, int nangLuong, String moTa,
-                 Double khuyenMai) {
-        this.tenMonAn = tenMonAn;
-        this.donGia = donGia;
-        this.hinhAnh = hinhAnh;
-        this.protein = protein;
-        this.nangLuong = nangLuong;
-        this.moTa = moTa;
-        this.id = id;
-        this.khuyenMai = khuyenMai;
-        this.itemCount = 0;
-    }
-    public MonAn(String tenMonAn, Double donGia, String maNhaHang, String hinhAnh, Float soDiem, int luotXem,
-                 String nguyenLieu, int protein, int nangLuong, String moTa, String tenNhaHang, String id, String createDate,
-                 String createdBy, boolean active, String updateBy, Double giaKhuyenMai, Double khuyenMai) {
-        this.tenMonAn = tenMonAn;
-        this.donGia = donGia;
-        this.maNhaHang = maNhaHang;
-        this.hinhAnh = hinhAnh;
-        this.soDiem = soDiem;
-        this.luotXem = luotXem;
-        this.nguyenLieu = nguyenLieu;
-        this.protein = protein;
-        this.nangLuong = nangLuong;
-        this.moTa = moTa;
-        this.tenNhaHang = tenNhaHang;
-        this.id = id;
-        this.createDate = createDate;
-        this.createdBy = createdBy;
-        this.active = active;
-        this.updateBy = updateBy;
-        this.giaKhuyenMai = giaKhuyenMai;
-        if(khuyenMai == null)
-            this.khuyenMai = 0D;
-        else
-            this.khuyenMai = khuyenMai;
 
-        this.itemCount = 0;
-    }
+
 
     public int getItemCount() {
             return itemCount;
@@ -151,12 +116,28 @@ public class MonAn {
         this.nguyenLieu = nguyenLieu;
     }
 
-    public int getProtein() {
-        return protein;
+    public Double getkL_Dam() {
+        return kL_Dam;
     }
 
-    public void setProtein(int protein) {
-        this.protein = protein;
+    public void setkL_Dam(Double kL_Dam) {
+        this.kL_Dam = kL_Dam;
+    }
+
+    public Double getkL_Beo() {
+        return kL_Beo;
+    }
+
+    public void setkL_Beo(Double kL_Beo) {
+        this.kL_Beo = kL_Beo;
+    }
+
+    public Double getkL_Duong() {
+        return kL_Duong;
+    }
+
+    public void setkL_Duong(Double kL_Duong) {
+        this.kL_Duong = kL_Duong;
     }
 
     public int getNangLuong() {

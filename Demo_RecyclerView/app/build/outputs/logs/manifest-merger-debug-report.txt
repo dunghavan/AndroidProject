@@ -100,7 +100,7 @@ MERGED from [com.google.firebase:firebase-analytics-license:11.4.2] C:\Users\Dun
 	android:allowBackup
 		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:18:9-35
 	android:icon
-		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:19:9-40
+		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:19:9-52
 	android:theme
 		ADDED from C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\AndroidManifest.xml:23:9-43
 	android:name

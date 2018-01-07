@@ -94,10 +94,14 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
         viewHolder.textView_GiaKhuyenMai.setVisibility(View.INVISIBLE);
         viewHolder.textView_KhuyenMai.setVisibility(View.INVISIBLE);
         APIService apiService = ApiUtils.getAPIService();
+        Log.d("Mon an crash", monAnSelected.getId());
         apiService.getChietKhauByMa(monAnSelected.getId()).enqueue(new Callback<Integer>() {
             @Override
             public void onResponse(Call<Integer> call, Response<Integer> response) {
-                khuyenMaiFromServer = response.body();
+                if(response.body() == null)
+                    khuyenMaiFromServer = 0;
+                else
+                    khuyenMaiFromServer = response.body();
                 monAnSelected.setKhuyenMai((double)khuyenMaiFromServer);
                 if(khuyenMaiFromServer != 0){
                     viewHolder.textView_GiaKhuyenMai.setText(String.valueOf(decimalFormat.format(monAnSelected.getGiaKhuyenMai())) + " đ");
@@ -227,7 +231,7 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                     TextView tv_nangLuong = (TextView)alertDialogView.findViewById(R.id.textview_nangluong);
                     TextView tv_protein = (TextView)alertDialogView.findViewById(R.id.textview_protein);
                     tv_nangLuong.setText("Năng lượng: " + String.valueOf(monAn.getNangLuong()) + " Kcal");
-                    tv_protein.setText("Protein: " + String.valueOf(monAn.getProtein()) + " g");
+                    tv_protein.setText("Protein: " + String.valueOf(monAn.getkL_Dam()) + " g");
 
                     //Click 2 button tren dialog:
                     final TextView tv_SoLuongDat_In_Dialog = (TextView)alertDialogView.findViewById(R.id.textview_soluongdat_in_dialog);
@@ -307,7 +311,7 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                                                 @Override
                                                 public void onResponse(Call<Void> call, Response<Void> response) {
                                                     try {
-                                                        Log.d("rating onResponse", response.body().toString());
+                                                        Log.d("rating onResponse", "Rating success!");
                                                     }
                                                     catch (Exception e){
                                                         Log.d("rating onResponse", e.getMessage());
@@ -328,8 +332,6 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
 
                         }
                     });
-
-
 
                     alertDialog.setCancelable(true)
                             .setPositiveButton("Xong", new DialogInterface.OnClickListener() {

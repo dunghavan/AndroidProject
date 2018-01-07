@@ -87,4 +87,7 @@ public interface APIService {
 
     @POST("api/MonAn/DanhGia/{point}/{maMonAn}")
     Call<Void> danhgiaMonAn(@Path("point")Float point, @Path("maMonAn")String maMonAn);
+
+    @GET("api/MonAn/GetByNhaHang/{MaNhaHang}")
+    Call<List<MonAn>> getAllMonAnByNhaHang(@Path("MaNhaHang")String MaNhaHang);
 }

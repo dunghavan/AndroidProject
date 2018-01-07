@@ -194,7 +194,7 @@ public class MainActivity extends AppCompatActivity{
         super.onPause();
     }
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public boolean onCreateOptionsMenu(final Menu menu) {
         mOptionsMenu = menu;
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main_menu, menu);
@@ -205,6 +205,7 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 MainActivity.this.onOptionsItemSelected(cartItem);
+                //menu.performIdentifierAction(cartItem.getItemId(), 0);
             }
         });
 

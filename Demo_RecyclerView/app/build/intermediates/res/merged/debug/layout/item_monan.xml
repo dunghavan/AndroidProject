@@ -14,6 +14,7 @@
             android:scaleType="centerCrop" />
 
         <LinearLayout
+            android:layout_weight="1"
             android:layout_width="190dp"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -90,6 +91,7 @@
             android:layout_height="20dp"
             android:text="10"/>
         <ImageButton
+            android:layout_marginRight="10dp"
             android:id="@+id/btn_plus"
             android:src="@drawable/ic_plus"
             android:layout_gravity="center"

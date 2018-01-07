@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import com.example.dung.demo_recyclerview.R;
 import com.example.dung.demo_recyclerview.model.NhaHang;
+import com.example.dung.demo_recyclerview.viewpager_adapter.VP_Adapter_MonAn_2Tabs_For_NhaHang;
 import com.example.dung.demo_recyclerview.viewpager_adapter.ViewPagerAdapter_MonAn_2_Tabs;
 import com.squareup.picasso.Picasso;
 
@@ -74,7 +75,8 @@ public class Activity_MonAn_Of_NhaHang extends AppCompatActivity {
         }
 
         FragmentManager fm = getSupportFragmentManager();
-        ViewPagerAdapter_MonAn_2_Tabs viewPagerAdapter_monAn_of_nhaHang = new ViewPagerAdapter_MonAn_2_Tabs(fm, 0);
+        VP_Adapter_MonAn_2Tabs_For_NhaHang viewPagerAdapter_monAn_of_nhaHang
+                = new VP_Adapter_MonAn_2Tabs_For_NhaHang(nhaHang.getId(), fm);
 
         viewPager.setAdapter(viewPagerAdapter_monAn_of_nhaHang);
         tabLayout.setupWithViewPager(viewPager);

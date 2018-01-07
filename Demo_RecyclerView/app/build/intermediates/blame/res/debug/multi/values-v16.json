@@ -1,50 +1,5 @@
 [
     {
-        "outputFile": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 65,
-                    "endOffset": 116
-                },
-                "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\a4794f80946235f685247bdb3534ac2e673b0769\\output\\res\\values-v16\\values-v16.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 55,
-                        "endColumn": 65,
-                        "endOffset": 116
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 3,
-                    "startColumn": 4,
-                    "startOffset": 121,
-                    "endLine": 6,
-                    "endColumn": 12,
-                    "endOffset": 289
-                },
-                "from": {
-                    "file": "C:\\Users\\Dung\\.android\\build-cache\\791415d759bc642b87bd5e72a98aaab3076d2cc5\\output\\res\\values-v16\\values-v16.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 55,
-                        "endLine": 5,
-                        "endColumn": 12,
-                        "endOffset": 223
-                    }
-                }
-            }
-        ]
-    },
-    {
         "outputFile": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
         "map": [
             {
@@ -77,6 +32,51 @@
                 },
                 "from": {
                     "file": "C:\\home\\dunghv\\.android\\build-cache\\92669e0d671f1bf5f58cc27967eb1df7aa8e3244\\output\\res\\values-v16\\values-v16.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endLine": 5,
+                        "endColumn": 12,
+                        "endOffset": 223
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 65,
+                    "endOffset": 116
+                },
+                "from": {
+                    "file": "C:\\Users\\Dung\\.android\\build-cache\\a4794f80946235f685247bdb3534ac2e673b0769\\output\\res\\values-v16\\values-v16.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 65,
+                        "endOffset": 116
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 121,
+                    "endLine": 6,
+                    "endColumn": 12,
+                    "endOffset": 289
+                },
+                "from": {
+                    "file": "C:\\Users\\Dung\\.android\\build-cache\\791415d759bc642b87bd5e72a98aaab3076d2cc5\\output\\res\\values-v16\\values-v16.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,

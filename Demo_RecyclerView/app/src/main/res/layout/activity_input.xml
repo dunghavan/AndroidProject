@@ -33,154 +33,161 @@
             android:background="#807474"
             android:layout_marginTop="10dp"/>
         <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp">
-            <TextView
-                android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Giới tính: "
-                android:layout_marginStart="5dp"
-                android:layout_gravity="center_vertical"
-                android:textSize="18sp"/>
-            <RadioGroup
-                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Giới tính: "
+                    android:layout_marginStart="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="18sp"/>
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/radio_nam_input_activity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nam"
+                        android:checked="true"
+                        android:layout_marginStart="50dp"
+                        android:textSize="18sp"/>
+                    <RadioButton
+                        android:id="@+id/radio_nu_input_activity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nữ"
+                        android:layout_marginStart="50dp"
+                        android:textSize="18sp"/>
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <RadioButton
-                    android:id="@+id/radio_nam_input_activity"
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Nam"
-                    android:checked="true"
-                    android:layout_marginStart="50dp"
+                    android:text="Năm sinh: "
+                    android:layout_marginStart="5dp"
+                    android:layout_gravity="center_vertical"
                     android:textSize="18sp"/>
-                <RadioButton
-                    android:id="@+id/radio_nu_input_activity"
+                <Spinner
+                    android:id="@+id/spinner_namsinh_input_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </Spinner>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Nữ"
-                    android:layout_marginStart="50dp"
+                    android:text="Cân nặng: "
+                    android:layout_marginStart="5dp"
+                    android:layout_gravity="center_vertical"
                     android:textSize="18sp"/>
-            </RadioGroup>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
+                <Spinner
+                    android:id="@+id/spinner_cannang_input_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </Spinner>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(kg)"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Năm sinh: "
-                android:layout_marginStart="5dp"
-                android:layout_gravity="center_vertical"
-                android:textSize="18sp"/>
-            <Spinner
-                android:id="@+id/spinner_namsinh_input_activity"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-            </Spinner>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chế độ: "
+                    android:layout_marginStart="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="18sp"/>
+                <Spinner
+                    android:id="@+id/spinner_chedo_input_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </Spinner>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Cân nặng: "
-                android:layout_marginStart="5dp"
-                android:layout_gravity="center_vertical"
-                android:textSize="18sp"/>
-            <Spinner
-                android:id="@+id/spinner_cannang_input_activity"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-            </Spinner>
-            <TextView
-                android:layout_width="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nhu cầu: "
+                    android:layout_marginStart="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="18sp"/>
+                <Spinner
+                    android:id="@+id/spinner_nhucau_input_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </Spinner>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="(kg)"
-                android:layout_gravity="center_vertical"
-                android:textSize="18sp"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chế độ lao động: "
+                    android:layout_marginStart="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="18sp"/>
+                <Spinner
+                    android:id="@+id/spinner_chedolaodong_input_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </Spinner>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Chế độ: "
-                android:layout_marginStart="5dp"
-                android:layout_gravity="center_vertical"
-                android:textSize="18sp"/>
-            <Spinner
-                android:id="@+id/spinner_chedo_input_activity"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-            </Spinner>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bữa ăn: "
+                    android:layout_marginStart="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="18sp"/>
+                <Spinner
+                    android:id="@+id/spinner_buaan_input_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </Spinner>
+            </LinearLayout>
+            <Button
+                android:id="@+id/btn_hien_thi_mon_an_input_activity"
+                android:text="Hiển thị danh sách món ăn phù hợp"
+                android:textAllCaps="false"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:text="Nhu cầu: "
-                android:layout_marginStart="5dp"
-                android:layout_gravity="center_vertical"
-                android:textSize="18sp"/>
-            <Spinner
-                android:id="@+id/spinner_nhucau_input_activity"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-            </Spinner>
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="#72a4e1"/>
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Chế độ lao động: "
-                android:layout_marginStart="5dp"
-                android:layout_gravity="center_vertical"
-                android:textSize="18sp"/>
-            <Spinner
-                android:id="@+id/spinner_chedolaodong_input_activity"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-            </Spinner>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Bữa ăn: "
-                android:layout_marginStart="5dp"
-                android:layout_gravity="center_vertical"
-                android:textSize="18sp"/>
-            <Spinner
-                android:id="@+id/spinner_buaan_input_activity"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-            </Spinner>
-        </LinearLayout>
-        <Button
-            android:id="@+id/btn_hien_thi_mon_an_input_activity"
-            android:text="Hiển thị danh sách món ăn phù hợp"
-            android:textAllCaps="false"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
-            android:background="#72a4e1"/>
     </LinearLayout>
 </LinearLayout>

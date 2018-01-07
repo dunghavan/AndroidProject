@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
-        "source": "C:\\home\\dunghv\\.android\\build-cache\\92669e0d671f1bf5f58cc27967eb1df7aa8e3244\\output\\res\\layout\\abc_action_bar_title_item.xml"
-    },
-    {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
         "source": "C:\\Users\\Dung\\.android\\build-cache\\791415d759bc642b87bd5e72a98aaab3076d2cc5\\output\\res\\layout\\abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
+        "source": "C:\\home\\dunghv\\.android\\build-cache\\92669e0d671f1bf5f58cc27967eb1df7aa8e3244\\output\\res\\layout\\abc_action_bar_title_item.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_doan.xml",
@@ -28,12 +28,12 @@
         "source": "C:\\home\\dunghv\\.android\\build-cache\\b3101f35c87d3418fd94d8f0f16b2bb158068f65\\output\\res\\layout\\notification_media_action.xml"
     },
     {
-        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_tooltip_bubble.xml",
-        "source": "C:\\home\\dunghv\\.android\\build-cache\\2f9cb04561fe7d1b5023ce9bf5c445c56ffecafc\\output\\res\\layout\\com_facebook_tooltip_bubble.xml"
-    },
-    {
         "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
         "source": "C:\\home\\dunghv\\.android\\build-cache\\b3101f35c87d3418fd94d8f0f16b2bb158068f65\\output\\res\\layout\\notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_tooltip_bubble.xml",
+        "source": "C:\\home\\dunghv\\.android\\build-cache\\2f9cb04561fe7d1b5023ce9bf5c445c56ffecafc\\output\\res\\layout\\com_facebook_tooltip_bubble.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
@@ -68,12 +68,12 @@
         "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\layout\\action_bar_layout.xml"
     },
     {
-        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_navigation_item.xml",
-        "source": "C:\\home\\dunghv\\.android\\build-cache\\742d5ffba5ed2a5bab5f805f086dbbfa02bd3606\\output\\res\\layout\\design_bottom_navigation_item.xml"
-    },
-    {
         "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
         "source": "C:\\home\\dunghv\\.android\\build-cache\\92669e0d671f1bf5f58cc27967eb1df7aa8e3244\\output\\res\\layout\\abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_navigation_item.xml",
+        "source": "C:\\home\\dunghv\\.android\\build-cache\\742d5ffba5ed2a5bab5f805f086dbbfa02bd3606\\output\\res\\layout\\design_bottom_navigation_item.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow_custom.xml",
@@ -124,12 +124,12 @@
         "source": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\layout\\fragment_monan_2tabs.xml"
     },
     {
-        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_monan_of_nhahang.xml",
-        "source": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\layout\\activity_monan_of_nhahang.xml"
-    },
-    {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
         "source": "C:\\Users\\Dung\\.android\\build-cache\\791415d759bc642b87bd5e72a98aaab3076d2cc5\\output\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_monan_of_nhahang.xml",
+        "source": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\layout\\activity_monan_of_nhahang.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_monan_of_nhahang.xml",
@@ -160,12 +160,12 @@
         "source": "C:\\Users\\Dung\\.android\\build-cache\\c60ce2b127a89db8c90b682b812ace0bfcf9652a\\output\\res\\layout\\design_navigation_menu.xml"
     },
     {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_login_fragment.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\6e39395939a91aa359162225c6e9f8222b784a63\\output\\res\\layout\\com_facebook_login_fragment.xml"
-    },
-    {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_white_round.xml",
         "source": "C:\\Users\\Dung\\.android\\build-cache\\250aa632a20caf6fe07b3b0fa5cf3f420aed576c\\output\\res\\layout\\messenger_button_send_white_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_login_fragment.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\6e39395939a91aa359162225c6e9f8222b784a63\\output\\res\\layout\\com_facebook_login_fragment.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_input.xml",
@@ -248,12 +248,12 @@
         "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\layout\\item_payment.xml"
     },
     {
-        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_blue_round.xml",
-        "source": "C:\\home\\dunghv\\.android\\build-cache\\7cab69497a466394fa500adf3037c52836ba09d9\\output\\res\\layout\\messenger_button_send_blue_round.xml"
-    },
-    {
         "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_input.xml",
         "source": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\layout\\activity_input.xml"
+    },
+    {
+        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_blue_round.xml",
+        "source": "C:\\home\\dunghv\\.android\\build-cache\\7cab69497a466394fa500adf3037c52836ba09d9\\output\\res\\layout\\messenger_button_send_blue_round.xml"
     },
     {
         "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\tooltip.xml",
@@ -344,12 +344,12 @@
         "source": "C:\\Users\\Dung\\.android\\build-cache\\791415d759bc642b87bd5e72a98aaab3076d2cc5\\output\\res\\layout\\abc_dialog_title_material.xml"
     },
     {
-        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_blue_small.xml",
-        "source": "C:\\home\\dunghv\\.android\\build-cache\\7cab69497a466394fa500adf3037c52836ba09d9\\output\\res\\layout\\messenger_button_send_blue_small.xml"
-    },
-    {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_nhahang.xml",
         "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\layout\\fragment_nhahang.xml"
+    },
+    {
+        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_blue_small.xml",
+        "source": "C:\\home\\dunghv\\.android\\build-cache\\7cab69497a466394fa500adf3037c52836ba09d9\\output\\res\\layout\\messenger_button_send_blue_small.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
@@ -376,12 +376,12 @@
         "source": "C:\\Users\\Dung\\.android\\build-cache\\c60ce2b127a89db8c90b682b812ace0bfcf9652a\\output\\res\\layout\\design_navigation_menu_item.xml"
     },
     {
-        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\alert_dialog_submit_failed.xml",
-        "source": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\layout\\alert_dialog_submit_failed.xml"
-    },
-    {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\map_activity.xml",
         "source": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\layout\\map_activity.xml"
+    },
+    {
+        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\alert_dialog_submit_failed.xml",
+        "source": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\layout\\alert_dialog_submit_failed.xml"
     },
     {
         "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
