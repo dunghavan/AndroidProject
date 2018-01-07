@@ -1,13 +1,9 @@
 package com.example.dung.demo_recyclerview.fragment;
 
-import android.app.ActivityManager;
-import android.content.ComponentName;
 import android.content.Context;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -22,26 +18,17 @@ import com.example.dung.demo_recyclerview.MainActivity;
 import com.example.dung.demo_recyclerview.MyAlertDialog;
 import com.example.dung.demo_recyclerview.MyApplication;
 import com.example.dung.demo_recyclerview.MyConstant;
-import com.example.dung.demo_recyclerview.MyHttpURLConnection;
 import com.example.dung.demo_recyclerview.R;
 import com.example.dung.demo_recyclerview.model.MonAn;
 import com.example.dung.demo_recyclerview.recycler_adapter.MonAnRecyclerAdapter;
 import com.example.dung.demo_recyclerview.retrofit.APIService;
 import com.example.dung.demo_recyclerview.retrofit.ApiUtils;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.deser.std.StringArrayDeserializer;
-
-import org.json.JSONArray;
-
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
-import static android.content.Context.ACTIVITY_SERVICE;
 
 /**
  * Created by Dung on 10/6/2017.

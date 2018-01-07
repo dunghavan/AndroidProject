@@ -21,5 +21,6 @@
     <string name="tiep_theo"><u>Tiếp theo</u></string>
     <string name="quay_lai"><u>Quay lại</u></string>
     <string name="gui_don_hang"><u>Gửi đơn hàng</u></string>
+    <string name="dang_xuat"><u>Đăng xuất</u></string>
 
 </resources>

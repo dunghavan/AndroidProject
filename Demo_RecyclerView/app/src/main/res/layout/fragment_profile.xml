@@ -230,7 +230,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="5dp"
-            android:text="Đăng xuất"
+            android:text="@string/dang_xuat"
             android:textStyle="bold"
             android:textSize="18sp"/>
     </LinearLayout>

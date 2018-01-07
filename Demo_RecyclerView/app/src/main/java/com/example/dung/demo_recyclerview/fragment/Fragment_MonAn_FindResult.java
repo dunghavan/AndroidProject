@@ -11,6 +11,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.example.dung.demo_recyclerview.MainActivity;
 import com.example.dung.demo_recyclerview.MyHttpURLConnection;
@@ -36,6 +38,8 @@ import retrofit2.Response;
  */
 
 public class Fragment_MonAn_FindResult extends Fragment {
+    TextView tv_reload;
+    ProgressBar progressBar;
 
     RecyclerView recyclerView;
     MonAnRecyclerAdapter monAnRecyclerAdapter;
@@ -57,6 +61,10 @@ public class Fragment_MonAn_FindResult extends Fragment {
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        tv_reload = (TextView)view.findViewById(R.id.textView_reload_behind_recyclerview_monan);
+        tv_reload.setVisibility(View.GONE);
+        progressBar = (ProgressBar)view.findViewById(R.id.progressbar_in_recyclerview_monan);
+        progressBar.setVisibility(View.VISIBLE);
 
         //Connect to views:
         recyclerView = (RecyclerView)view.findViewById(R.id.recyclerview_monan_child);
@@ -69,29 +77,36 @@ public class Fragment_MonAn_FindResult extends Fragment {
         keywordMonAn += this.getArguments().getString("MONAN_KEYWORD");
         searchResultData = new ArrayList<>();
         initialData();
-
+        tv_reload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                initialData();
+            }
+        });
     }
 
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
-        if (isVisibleToUser) {
-            if(monAnRecyclerAdapter == null)
-                monAnRecyclerAdapter = new MonAnRecyclerAdapter(searchResultData);
-            else
-                monAnRecyclerAdapter.notifyDataSetChanged();
-        }
+//        if (isVisibleToUser) {
+//            if(monAnRecyclerAdapter == null)
+//                monAnRecyclerAdapter = new MonAnRecyclerAdapter(searchResultData);
+//            else
+//                monAnRecyclerAdapter.notifyDataSetChanged();
+//        }
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        initialData();
+        monAnRecyclerAdapter = new MonAnRecyclerAdapter(searchResultData);
+        recyclerView.setAdapter(monAnRecyclerAdapter);
+        setRetainInstance(false);
     }
 
     //Load du lieu theo loai da chon:
     private void initialData(){
-        //String api = "http://orderfooduit.azurewebsites.net/api/MonAn/Get";
+        progressBar.setVisibility(View.VISIBLE);
         apiService = ApiUtils.getAPIService();
         apiService.searchMonAn(keywordMonAn).enqueue(new Callback<List<MonAn>>() {
             @Override
@@ -102,15 +117,21 @@ public class Fragment_MonAn_FindResult extends Fragment {
                     monAnRecyclerAdapter = new MonAnRecyclerAdapter(searchResultData);
                     recyclerView.setAdapter(monAnRecyclerAdapter);
                     setRetainInstance(false);
+                    progressBar.setVisibility(View.GONE);
+                    if(searchResultData.size() != 0)
+                        tv_reload.setVisibility(View.GONE);
+                    else
+                        tv_reload.setVisibility(View.VISIBLE);
                 }
                 catch (Exception e){
                     Log.d("Error search MonAn", e.getMessage());
+                    tv_reload.setVisibility(View.VISIBLE);
                 }
             }
 
             @Override
             public void onFailure(Call<List<MonAn>> call, Throwable t) {
-
+                tv_reload.setVisibility(View.VISIBLE);
             }
         });
         //new DownloadFilesTask().execute(api);
