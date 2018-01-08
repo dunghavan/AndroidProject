@@ -15,6 +15,8 @@ import android.widget.Toast;
 
 import com.example.dung.demo_recyclerview.fragment.Fragment_Profile;
 import com.example.dung.demo_recyclerview.model.Facebook_Profile;
+import com.example.dung.demo_recyclerview.retrofit.APIService;
+import com.example.dung.demo_recyclerview.retrofit.ApiUtils;
 import com.facebook.*;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
@@ -32,6 +34,10 @@ import com.google.android.gms.common.api.Status;
 
 
 import org.json.JSONObject;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * Created by Dung on 12/3/2017.
@@ -228,6 +234,19 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                 googleImageUrl = acct.getPhotoUrl().toString();
             else
                 googleImageUrl = "";
+            //Send information to server
+            APIService apiService = ApiUtils.getAPIService();
+            apiService.guiThongTinKhachHang(NAME, EMAIL, ID).enqueue(new Callback<Void>() {
+                @Override
+                public void onResponse(Call<Void> call, Response<Void> response) {
+                    Toast.makeText(MyApplication.getCurrentContext(), "Send gg infor success" + ID, Toast.LENGTH_SHORT).show();
+                }
+
+                @Override
+                public void onFailure(Call<Void> call, Throwable t) {
+                    Toast.makeText(MyApplication.getCurrentContext(), "Send gg infor failure" + ID, Toast.LENGTH_SHORT).show();
+                }
+            });
 
             isLoggedInWithFacebook = false;
             updateUI(true);
@@ -305,12 +324,19 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                                 NAME = me.optString("name");
                                 EMAIL = me.optString("email");
 
-//                                facebook_profile.setId(me.optString("id"));
-//                                facebook_profile.setName(me.optString("name"));
-//                                facebook_profile.setGender(me.optString("gender"));
-//                                facebook_profile.setBirthday(me.optString("birthday"));
-//                                facebook_profile.setEmail(me.optString("email"));
-//                                facebook_profile.setUser_mobile_phone(me.optString("user_mobile_phone"));
+                                //Send information to server
+                                APIService apiService = ApiUtils.getAPIService();
+                                apiService.guiThongTinKhachHang(NAME, EMAIL, ID).enqueue(new Callback<Void>() {
+                                    @Override
+                                    public void onResponse(Call<Void> call, Response<Void> response) {
+                                        Toast.makeText(MyApplication.getCurrentContext(), "Send fb infor success" + ID, Toast.LENGTH_SHORT).show();
+                                    }
+
+                                    @Override
+                                    public void onFailure(Call<Void> call, Throwable t) {
+                                        Toast.makeText(MyApplication.getCurrentContext(), "Send fb infor failure" + ID, Toast.LENGTH_SHORT).show();
+                                    }
+                                });
 
                                 updateUIByInterface();
                                 isLoggedInWithFacebook = true;

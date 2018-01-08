@@ -90,4 +90,10 @@ public interface APIService {
 
     @GET("api/MonAn/GetByNhaHang/{MaNhaHang}")
     Call<List<MonAn>> getAllMonAnByNhaHang(@Path("MaNhaHang")String MaNhaHang);
+
+    @FormUrlEncoded
+    @POST("api/KhachHang/Post")
+    Call<Void> guiThongTinKhachHang(@Field("HoTen")String hoTen,
+                                    @Field("Email")String email,
+                                    @Field("Id")String id);
 }
