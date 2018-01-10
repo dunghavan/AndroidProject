@@ -100,7 +100,7 @@ public class Activity_Payment_Details extends AppCompatActivity {
             tv_textViewToAppend.setText("");
             tv_textViewToAppend.setTextColor(Color.parseColor("#000000"));
             for(CTDonDatHang item: dsMonAn){
-                tv_textViewToAppend.append(item.getMaMonAn() + ": " + item.getDonGia() + "đ x " + item.getSoLuong() + " = " + item.getThanhTien() + "đ\n");
+                tv_textViewToAppend.append("- " + item.getTenMonAn() + ": " + item.getDonGia() + "đ x " + item.getSoLuong() + " = " + item.getThanhTien() + "đ\n");
             }
         }
         catch (Exception e){

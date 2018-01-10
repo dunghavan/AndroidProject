@@ -94,7 +94,7 @@ public class ChildFragment_NhaHangDatNhieu extends Fragment {
                     if(e.getMessage() != null)
                         Log.d("Error get all NhaHang", e.getMessage());
                     progressBar.setVisibility(View.GONE);
-                    tv_reload.setVisibility(View.GONE);
+                    tv_reload.setVisibility(View.VISIBLE);
                     showLoadFailedDialog();
                 }
             }
@@ -103,7 +103,7 @@ public class ChildFragment_NhaHangDatNhieu extends Fragment {
             public void onFailure(Call<List<NhaHang>> call, Throwable t) {
                 Log.d("onFailure getallNhaHang", call.toString());
                 progressBar.setVisibility(View.GONE);
-                tv_reload.setVisibility(View.GONE);
+                tv_reload.setVisibility(View.VISIBLE);
                 showLoadFailedDialog();
             }
         });

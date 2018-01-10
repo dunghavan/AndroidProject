@@ -347,9 +347,12 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
         phoneNumber = editText_Phone.getText().toString();
         DecimalFormat df = new DecimalFormat("###");
         int tongTien = (int)Math.round(Cart.getTotal());
+        String maNhaHang = "";
+        if(nhaHang != null)
+            maNhaHang = nhaHang.getId();
         apiService.submitOrder(LoginActivity.ID, curDateTime, _deliveryDateTime,
                 submitAddress, phoneNumber, _paymentType, _payID, tongTien, Cart.convertTo_CTDDH(),
-                "false", "false", nhaHang.getId()).enqueue(new Callback<Void>() {
+                "false", "false", maNhaHang).enqueue(new Callback<Void>() {
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {
                 //Toast.makeText(MyApplication.getCurrentContext(), "Send success", Toast.LENGTH_SHORT).show();

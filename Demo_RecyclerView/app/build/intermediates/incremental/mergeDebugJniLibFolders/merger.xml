@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\main\jniLibs"/></dataSet><dataSet config="debug"><source path="C:\Users\Dung\Desktop\AndroidProject\Demo_RecyclerView\app\src\debug\jniLibs"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/main/jniLibs"/></dataSet><dataSet config="debug"><source path="/home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/src/debug/jniLibs"/></dataSet></merger>

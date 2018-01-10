@@ -115,7 +115,7 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
 
             @Override
             public void onFailure(Call<Integer> call, Throwable t) {
-
+                khuyenMaiFromServer = 0;
             }
         });
 
@@ -321,7 +321,6 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                                                 @Override
                                                 public void onFailure(Call<Void> call, Throwable t) {
                                                     Log.d("rating onFailure", t.getMessage());
-
                                                 }
                                             });
                                             //Toast.makeText(MyApplication.getCurrentContext(), "Rating Mon An", Toast.LENGTH_SHORT).show();
@@ -353,8 +352,9 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                     MonAn itemSelected = listData.get(getLayoutPosition());
                     String maNhaHang = itemSelected.getMaNhaHang();
                     //Check
-                    if(Cart.getCartContent().size() != 0 && maNhaHangNotExist(maNhaHang))
+                    if(Cart.getCartContent().size() != 0 && maNhaHangNotExist(maNhaHang)){
                         Toast.makeText(MyApplication.getCurrentContext(), "Bạn phải chọn các món ăn trong cùng một nhà hàng!", Toast.LENGTH_SHORT).show();
+                    }
                     else {
                         Cart.addToCart(itemSelected);
                         String count = String.valueOf(Cart.getItemCountById(itemSelected.getId()));
@@ -391,6 +391,8 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
 
         public boolean maNhaHangNotExist(String maNhaHang){
             String maNhaHang_in_cart = Cart.getCartContent().get(0).getMaNhaHang();
+            if(maNhaHang_in_cart == null)
+                return false;
             if(maNhaHang_in_cart.equalsIgnoreCase(maNhaHang))
                 return false; //exist
             return true; //not exist
