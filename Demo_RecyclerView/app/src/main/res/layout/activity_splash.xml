@@ -6,11 +6,18 @@
     <ImageView
         android:id="@+id/gif_image_splash"
         android:layout_width="match_parent"
-        android:layout_height="200dp" />
+        android:layout_height="100dp" />
+
+    <ImageView
+        android:id="@+id/logo_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/oder_food_app_logo"/>
 
     <TextView android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Welcome..."/>
+        android:text="Welcome..."
+        android:layout_marginTop="10dp"/>
 
 </LinearLayout>
