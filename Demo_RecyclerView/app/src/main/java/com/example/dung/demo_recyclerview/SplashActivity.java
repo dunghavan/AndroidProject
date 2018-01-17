@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
+import com.example.dung.demo_recyclerview.model.RestAuthenticationProvider;
 import com.facebook.login.Login;
 
 public class SplashActivity extends AppCompatActivity {
@@ -29,7 +30,7 @@ public class SplashActivity extends AppCompatActivity {
         getSupportActionBar().setCustomView(R.layout.action_bar_layout);
         actionBarTitle = (TextView)findViewById(R.id.action_bar_title_text);
         actionBarTitle.setText("OrderFood App UIT");
-
+        RestAuthenticationProvider.calculateHMAC();
         //Get Login Info
         LoginActivity.getFbInfo();
 

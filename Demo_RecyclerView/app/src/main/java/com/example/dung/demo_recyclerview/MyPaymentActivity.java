@@ -146,7 +146,7 @@ public class MyPaymentActivity extends AppCompatActivity {
                         }
                         //Callback to MapActivity:
                         if(listener != null){
-                            listener.sendSubmitToServer("HinhThucThanhToan2", idOfResponse);
+                            listener.sendSubmitToServer("Thanh toán qua cổng PayPal", idOfResponse);
                         }
                         finish();
 

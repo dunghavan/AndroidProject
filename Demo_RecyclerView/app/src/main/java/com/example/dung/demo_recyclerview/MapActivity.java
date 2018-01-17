@@ -237,7 +237,7 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
                             .setPositiveButton("Gửi đơn hàng", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
-                                    sendSubmitToServer("HinhThucThanhToan1", "");
+                                    sendSubmitToServer("Thanh toán khi nhận hàng", "");
                                 }
                             });
                     AlertDialog dialogToShow = alertDialog.create();

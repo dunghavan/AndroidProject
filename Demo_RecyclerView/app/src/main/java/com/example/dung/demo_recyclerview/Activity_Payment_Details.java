@@ -60,7 +60,7 @@ public class Activity_Payment_Details extends AppCompatActivity {
         if(payment.getDiaChiGiao() != null)
             tv_diaChiGiao.setText("Địa chỉ giao hàng: " + payment.getDiaChiGiao());
         tv_SDT.setText("Số điện thoại: " + payment.getSoDienThoai());
-        if(payment.getHinhThucThanhToan().equalsIgnoreCase("HinhThucThanhToan2")){
+        if(payment.getHinhThucThanhToan().equalsIgnoreCase("Thanh toán qua cổng PayPal")){
             tv_hinhThucThanhToan.setText("Hình thức: Thanh toán qua cổng PayPal");
             tv_payID.setText("PayID: " + payment.getPayID());
         }
