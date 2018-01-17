@@ -15,7 +15,7 @@ import com.facebook.login.Login;
 
 public class SplashActivity extends AppCompatActivity {
     /** Duration of wait **/
-    private final int SPLASH_DISPLAY_LENGTH = 2000;
+    private final int SPLASH_DISPLAY_LENGTH = 10;
     ImageView imageView;
     TextView actionBarTitle;
 
@@ -30,7 +30,6 @@ public class SplashActivity extends AppCompatActivity {
         getSupportActionBar().setCustomView(R.layout.action_bar_layout);
         actionBarTitle = (TextView)findViewById(R.id.action_bar_title_text);
         actionBarTitle.setText("OrderFood App UIT");
-        RestAuthenticationProvider.calculateHMAC();
         //Get Login Info
         LoginActivity.getFbInfo();
 

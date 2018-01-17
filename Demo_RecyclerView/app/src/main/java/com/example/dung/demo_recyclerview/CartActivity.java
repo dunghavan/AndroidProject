@@ -14,7 +14,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.dung.demo_recyclerview.model.HMACClient;
 import com.example.dung.demo_recyclerview.model.MonAn;
+import com.example.dung.demo_recyclerview.model.RestAuthenticationProvider;
 import com.example.dung.demo_recyclerview.recycler_adapter.MonAnRecyclerAdapter;
 import com.example.dung.demo_recyclerview.recycler_adapter.RecyclerAdapter_For_CartActivity;
 
@@ -100,6 +102,15 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
                 cartActivity.startActivity(intent);
             }
         });
+
+        RestAuthenticationProvider.calculateHMAC();
+        HMACClient client = new HMACClient();
+        try{
+            client.makeHTTPCallUsingHMAC("4d53bce03ec34c0a911182d4c228ee6c");
+        }
+        catch (Exception e){
+            Log.d("HMACClient", e.getMessage());
+        }
 
         //onUpdateUI();
 

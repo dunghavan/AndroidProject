@@ -1,6 +1,8 @@
 package com.example.dung.demo_recyclerview.model;
 
 
+import android.util.Log;
+
 import org.apache.commons.codec.binary.Base64;
 import org.apache.http.auth.AuthenticationException;
 
@@ -21,6 +23,7 @@ public class RestAuthenticationProvider  {
             mac.init(signingKey);
             byte[] rawHmac = mac.doFinal(data.getBytes());
             result = new String(Base64.encodeBase64(rawHmac));
+            Log.d("HMAC", result);
             //return result;
         } catch (GeneralSecurityException e) {
             throw new IllegalArgumentException();
