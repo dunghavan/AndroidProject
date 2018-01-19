@@ -1,5 +1,6 @@
 package com.example.dung.demo_recyclerview.retrofit;
 
+import com.example.dung.demo_recyclerview.model.HinhThucThanhToan;
 import com.example.dung.demo_recyclerview.model.MonAn;
 import com.example.dung.demo_recyclerview.model.NhaHang;
 import com.example.dung.demo_recyclerview.model.Payment;
@@ -10,6 +11,7 @@ import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
+import retrofit2.http.Header;
 import retrofit2.http.POST;
 import retrofit2.http.Part;
 import retrofit2.http.Path;
@@ -96,4 +98,7 @@ public interface APIService {
     Call<Void> guiThongTinKhachHang(@Field("HoTen")String hoTen,
                                     @Field("Email")String email,
                                     @Field("Id")String id);
+
+    @GET("api/hinhthucthanhtoan/get")
+    Call<List<HinhThucThanhToan>> getHinhThucThanhToan(@Header("Authorization")String amxString);
 }

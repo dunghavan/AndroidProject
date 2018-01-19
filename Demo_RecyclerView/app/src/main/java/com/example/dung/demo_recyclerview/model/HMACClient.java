@@ -34,7 +34,7 @@ public class HMACClient {
     static String APIKey = "A93reRTUJHsCuQSHR+L3GxqOJyDmQpCgps102ciuabc=";
     static String AppId = "4d53bce03ec34c0a911182d4c228ee6c";
 
-    public void makeHTTPCallUsingHMAC(String username) throws HttpException, IOException, NoSuchAlgorithmException {
+    public static String createHMAC() throws HttpException, IOException, NoSuchAlgorithmException {
         String url = "http://orderfooduit.azurewebsites.net/api/hinhthucthanhtoan/get";
 
         Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("UTC"));
@@ -53,17 +53,18 @@ public class HMACClient {
                 , 105, (byte)183};
         String signatureBase64String = calculateHMAC(signatureRawData);
 
-        HttpGet httpGet = new HttpGet(url);
+        //HttpGet httpGet = new HttpGet(url);
         Log.d("HMAC 2", signatureBase64String);
-        httpGet.addHeader("amx", AppId + ":" + signatureBase64String + ":" + nonce + ":" + timeStamp);
+        //httpGet.addHeader("amx", AppId + ":" + signatureBase64String + ":" + nonce + ":" + timeStamp);
 
-        HttpClient client = new DefaultHttpClient();
+        //HttpClient client = new DefaultHttpClient();
+        return "amx " + AppId + ":" + signatureBase64String + ":" + nonce + ":" + timeStamp;
 
         //System.out.println("client response:" + response.getStatusLine().getStatusCode());
     }
 
 
-    private String calculateHMAC(String data) {
+    private static String calculateHMAC(String data) {
         try {
             byte[] byteBase64 = org.apache.commons.codec.binary.Base64.decodeBase64(APIKey.getBytes());
             SecretKeySpec signingKey = new SecretKeySpec(byteBase64, HMAC_SHA256_ALGORITHM);
@@ -77,7 +78,7 @@ public class HMACClient {
             throw new IllegalArgumentException();
         }
     }
-    private String parseURL(String api){
+    private static String parseURL(String api){
         return api.replaceAll(":", "%3a").replaceAll("/", "%2f");
     }
 

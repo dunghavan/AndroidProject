@@ -14,9 +14,17 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.dung.demo_recyclerview.model.HMACClient;
+import com.example.dung.demo_recyclerview.model.HinhThucThanhToan;
 import com.example.dung.demo_recyclerview.recycler_adapter.RecyclerAdapter_For_CartActivity;
+import com.example.dung.demo_recyclerview.retrofit.APIService;
+import com.example.dung.demo_recyclerview.retrofit.ApiUtils;
 
 import java.text.DecimalFormat;
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * Created by Dung on 11/22/2017.
@@ -95,9 +103,19 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
             }
         });
 
-        HMACClient client = new HMACClient();
         try{
-            client.makeHTTPCallUsingHMAC("4d53bce03ec34c0a911182d4c228ee6c");
+            APIService apiService = ApiUtils.getAPIService();
+            apiService.getHinhThucThanhToan(HMACClient.createHMAC()).enqueue(new Callback<List<HinhThucThanhToan>>() {
+                @Override
+                public void onResponse(Call<List<HinhThucThanhToan>> call, Response<List<HinhThucThanhToan>> response) {
+                    Log.d("CALL OK", response.body().toString());
+                }
+
+                @Override
+                public void onFailure(Call<List<HinhThucThanhToan>> call, Throwable t) {
+                    Log.d("CAll FAILED", t.getMessage());
+                }
+            });
         }
         catch (Exception e){
             Log.d("HMACClient", e.getMessage());
