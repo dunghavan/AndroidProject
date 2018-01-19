@@ -1,7 +1,6 @@
 package com.example.dung.demo_recyclerview;
 
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
@@ -15,14 +14,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.dung.demo_recyclerview.model.HMACClient;
-import com.example.dung.demo_recyclerview.model.MonAn;
-import com.example.dung.demo_recyclerview.model.RestAuthenticationProvider;
-import com.example.dung.demo_recyclerview.recycler_adapter.MonAnRecyclerAdapter;
 import com.example.dung.demo_recyclerview.recycler_adapter.RecyclerAdapter_For_CartActivity;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import org.json.JSONArray;
 
 import java.text.DecimalFormat;
 
@@ -103,7 +95,6 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
             }
         });
 
-        RestAuthenticationProvider.calculateHMAC();
         HMACClient client = new HMACClient();
         try{
             client.makeHTTPCallUsingHMAC("4d53bce03ec34c0a911182d4c228ee6c");
@@ -113,7 +104,6 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
         }
 
         //onUpdateUI();
-
     }
 
     @Override

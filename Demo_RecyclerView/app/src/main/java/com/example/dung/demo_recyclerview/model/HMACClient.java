@@ -2,13 +2,14 @@ package com.example.dung.demo_recyclerview.model;
 
 import android.util.Log;
 
-import org.apache.commons.codec.binary.Base64;
 import org.apache.http.HttpException;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
+import android.util.Base64;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -21,6 +22,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Formatter;
 import java.util.TimeZone;
 import java.util.UUID;
 
@@ -28,73 +30,61 @@ import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
 
 public class HMACClient {
-
-    private final static String DATE_FORMAT = "EEE, d MMM yyyy HH:mm:ss z";
-    private final static String HMAC_SHA1_ALGORITHM = "HmacSHA1";
-
-    private final static String SECRET = "4d53bce03ec34c0a911182d4c228ee6c";
-    private final static String USERNAME = "jos";
-
-//    public static void main(String[] args) throws HttpException, IOException, NoSuchAlgorithmException {
-//        HMACClient client = new HMACClient();
-//        client.makeHTTPCallUsingHMAC(USERNAME);
-//    }
+    private final static String HMAC_SHA256_ALGORITHM = "HmacSHA256";
+    static String APIKey = "A93reRTUJHsCuQSHR+L3GxqOJyDmQpCgps102ciuabc=";
+    static String AppId = "4d53bce03ec34c0a911182d4c228ee6c";
 
     public void makeHTTPCallUsingHMAC(String username) throws HttpException, IOException, NoSuchAlgorithmException {
-        String contentToEncode = "{\"comment\" : {\"message\":\"blaat\" , \"from\":\"blaat\" , \"commentFor\":123}}";
-        String contentType = "application/vnd.geo.comment+json";
-        //String contentType = "text/plain";
-        String currentDate = new SimpleDateFormat(DATE_FORMAT).format(new Date());
-
-        HttpPost post = new HttpPost("http://localhost:9000/resources/rest/geo/comment");
-        StringEntity data = new StringEntity(contentToEncode,"UTF-8");
-        post.setEntity(data);
-
-        String verb = post.getMethod();
-        String contentMd5 = calculateMD5(contentToEncode);
-        String toSign = verb + "\n" + contentMd5 + "\n"
-                + data.getContentType().getValue() + "\n" + currentDate + "\n"
-                + post.getURI().getPath();
-
-        String hmac = calculateHMAC(SECRET, toSign);
-        //dunghv:
+        String url = "http://orderfooduit.azurewebsites.net/api/hinhthucthanhtoan/get";
 
         Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("UTC"));
-        long secondsSinceEpoch = calendar.getTimeInMillis() / 1000L;
+        long timeStamp = calendar.getTimeInMillis() / 1000L;
 
         //return number of milliseconds since January 1, 1970, 00:00:00 GMT
-        UUID uuid = UUID.randomUUID();
+        String nonce = UUID.randomUUID().toString();
+        String contentHashBase64 = "";
+        String signatureRawData = AppId + "GET" + parseURL(url) + timeStamp + nonce + contentHashBase64;
 
-        Log.d("HMAC 2", hmac);
+        //signatureRawData = "4d53bce03ec34c0a911182d4c228ee6cGEThttp://orderfooduit.azurewebsites.net/api/hinhthucthanhtoan/get1516358557de6569cb-1df6-4fe7-bcae-3a4de7730d7a";
 
-        post.addHeader("hmac", username + ":" + hmac);
-        post.addHeader("Date", currentDate);
-        post.addHeader("Content-Md5", contentMd5);
+        byte[] byteArrayFromCSharp = {3, (byte)221, (byte)235, 121, 20, (byte)212, 36, 123, 2, (byte)185
+                , 4, (byte)135, 71, (byte)226, (byte)247, 27, 26, (byte)142, 39, 32
+                , (byte)230, 66, (byte)144, (byte)160, (byte)166, (byte)205, 116, (byte)217, (byte)200, (byte)174
+                , 105, (byte)183};
+        String signatureBase64String = calculateHMAC(signatureRawData);
+
+        HttpGet httpGet = new HttpGet(url);
+        Log.d("HMAC 2", signatureBase64String);
+        httpGet.addHeader("amx", AppId + ":" + signatureBase64String + ":" + nonce + ":" + timeStamp);
 
         HttpClient client = new DefaultHttpClient();
-        HttpResponse response = client.execute(post);
 
         //System.out.println("client response:" + response.getStatusLine().getStatusCode());
     }
 
-    private String calculateHMAC(String secret, String data) {
+
+    private String calculateHMAC(String data) {
         try {
-            SecretKeySpec signingKey = new SecretKeySpec(secret.getBytes(),	HMAC_SHA1_ALGORITHM);
-            Mac mac = Mac.getInstance(HMAC_SHA1_ALGORITHM);
+            byte[] byteBase64 = org.apache.commons.codec.binary.Base64.decodeBase64(APIKey.getBytes());
+            SecretKeySpec signingKey = new SecretKeySpec(byteBase64, HMAC_SHA256_ALGORITHM);
+            Mac mac = Mac.getInstance(HMAC_SHA256_ALGORITHM);
             mac.init(signingKey);
             byte[] rawHmac = mac.doFinal(data.getBytes());
-            String result = new String(Base64.encodeBase64(rawHmac));
-            return result;
+            String result = Base64.encodeToString(rawHmac, Base64.CRLF);
+            return result.replaceAll("(\\r|\\n)", "");
         } catch (GeneralSecurityException e) {
             Log.d("Error creating hash: ", e.getMessage());
             throw new IllegalArgumentException();
         }
     }
+    private String parseURL(String api){
+        return api.replaceAll(":", "%3a").replaceAll("/", "%2f");
+    }
 
     private String calculateMD5(String contentToEncode) throws NoSuchAlgorithmException {
         MessageDigest digest = MessageDigest.getInstance("MD5");
         digest.update(contentToEncode.getBytes());
-        String result = new String(Base64.encodeBase64(digest.digest()));
+        String result = new String(org.apache.commons.codec.binary.Base64.encodeBase64(digest.digest()));
         return result;
     }
 
