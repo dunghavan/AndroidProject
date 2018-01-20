@@ -82,8 +82,14 @@ public interface APIService {
 
     @FormUrlEncoded
     @POST("api/TuVan/Post/")
+//    Call<Void> tuVanTrucTuyen(@Header("Authorization")String amxString,
+//                              @Field("HoTen")String hoTen,
+//                                     @Field("SoDienThoai")String soDienThoai,
+//                                     @Field("Email")String email,
+//                                     @Field("TinNhan")String message);
+
     Call<Void> tuVanTrucTuyen(@Field("HoTen")String hoTen,
-                                     @Field("SoDienThoai")String soDienThoai,
+                                     @Field("SoDT")String soDienThoai,
                                      @Field("Email")String email,
                                      @Field("TinNhan")String message);
 
@@ -93,12 +99,19 @@ public interface APIService {
     @GET("api/MonAn/GetByNhaHang/{MaNhaHang}")
     Call<List<MonAn>> getAllMonAnByNhaHang(@Path("MaNhaHang")String MaNhaHang);
 
+    @GET("api/MonAn/GetByNhaHangDatNhieu/{MaNhaHang}")
+    Call<List<MonAn>> getAllMonAnDatNhieuByNhaHang(@Path("MaNhaHang")String MaNhaHang);
+
     @FormUrlEncoded
     @POST("api/KhachHang/Post")
     Call<Void> guiThongTinKhachHang(@Field("HoTen")String hoTen,
                                     @Field("Email")String email,
                                     @Field("Id")String id);
 
-    @GET("api/hinhthucthanhtoan/get")
+    @GET("api/HinhThucThanhToan/Get")
     Call<List<HinhThucThanhToan>> getHinhThucThanhToan(@Header("Authorization")String amxString);
+
+    @GET("api/MonAn/GetId/{id}")
+    Call<MonAn> getMonAnById(@Header("Authorization")String amxString
+                                                , @Path("id") String id);
 }

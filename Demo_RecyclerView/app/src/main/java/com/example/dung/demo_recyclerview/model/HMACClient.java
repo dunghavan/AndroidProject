@@ -34,33 +34,30 @@ public class HMACClient {
     static String APIKey = "A93reRTUJHsCuQSHR+L3GxqOJyDmQpCgps102ciuabc=";
     static String AppId = "4d53bce03ec34c0a911182d4c228ee6c";
 
-    public static String createHMAC() throws HttpException, IOException, NoSuchAlgorithmException {
-        String url = "http://orderfooduit.azurewebsites.net/api/hinhthucthanhtoan/get";
+    public static String createHMAC(String urlAndPathVariable, String methodType) {
+        String amxString = "";
+        try{
+            Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("UTC"));
+            long timeStamp = calendar.getTimeInMillis() / 1000L;
 
-        Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("UTC"));
-        long timeStamp = calendar.getTimeInMillis() / 1000L;
+            //return number of milliseconds since January 1, 1970, 00:00:00 GMT
+            String nonce = UUID.randomUUID().toString();
+            String contentHashBase64 = "";
+            String signatureRawData = AppId + methodType + parseURL(urlAndPathVariable) + timeStamp + nonce + contentHashBase64;
 
-        //return number of milliseconds since January 1, 1970, 00:00:00 GMT
-        String nonce = UUID.randomUUID().toString();
-        String contentHashBase64 = "";
-        String signatureRawData = AppId + "GET" + parseURL(url) + timeStamp + nonce + contentHashBase64;
+            String signatureBase64String = calculateHMAC(signatureRawData);
 
-        //signatureRawData = "4d53bce03ec34c0a911182d4c228ee6cGEThttp://orderfooduit.azurewebsites.net/api/hinhthucthanhtoan/get1516358557de6569cb-1df6-4fe7-bcae-3a4de7730d7a";
+            //HttpGet httpGet = new HttpGet(url);
+            Log.d("HMAC 2", signatureBase64String);
+            //httpGet.addHeader("amx", AppId + ":" + signatureBase64String + ":" + nonce + ":" + timeStamp);
 
-        byte[] byteArrayFromCSharp = {3, (byte)221, (byte)235, 121, 20, (byte)212, 36, 123, 2, (byte)185
-                , 4, (byte)135, 71, (byte)226, (byte)247, 27, 26, (byte)142, 39, 32
-                , (byte)230, 66, (byte)144, (byte)160, (byte)166, (byte)205, 116, (byte)217, (byte)200, (byte)174
-                , 105, (byte)183};
-        String signatureBase64String = calculateHMAC(signatureRawData);
-
-        //HttpGet httpGet = new HttpGet(url);
-        Log.d("HMAC 2", signatureBase64String);
-        //httpGet.addHeader("amx", AppId + ":" + signatureBase64String + ":" + nonce + ":" + timeStamp);
-
-        //HttpClient client = new DefaultHttpClient();
-        return "amx " + AppId + ":" + signatureBase64String + ":" + nonce + ":" + timeStamp;
-
-        //System.out.println("client response:" + response.getStatusLine().getStatusCode());
+            //HttpClient client = new DefaultHttpClient();
+            amxString = "amx " + AppId + ":" + signatureBase64String + ":" + nonce + ":" + timeStamp;
+        }
+        catch (Exception e){
+            Log.d("createHMAC", "Throw exception");
+        }
+        return amxString;
     }
 
 

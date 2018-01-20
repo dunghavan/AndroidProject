@@ -12,9 +12,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.dung.demo_recyclerview.model.HMACClient;
 import com.example.dung.demo_recyclerview.model.HinhThucThanhToan;
+import com.example.dung.demo_recyclerview.model.MonAn;
 import com.example.dung.demo_recyclerview.recycler_adapter.RecyclerAdapter_For_CartActivity;
 import com.example.dung.demo_recyclerview.retrofit.APIService;
 import com.example.dung.demo_recyclerview.retrofit.ApiUtils;
@@ -45,6 +47,7 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
     LoginActivity loginActivity; // Used to setOnUpdateListener in LoginActivity
     public static boolean isCheckAuthen;
     TextView actionBarTitle;
+    APIService apiService;
 
     final DecimalFormat decimalFormat = new DecimalFormat("###,###,###.#");
 
@@ -103,23 +106,36 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
             }
         });
 
-        try{
-            APIService apiService = ApiUtils.getAPIService();
-            apiService.getHinhThucThanhToan(HMACClient.createHMAC()).enqueue(new Callback<List<HinhThucThanhToan>>() {
-                @Override
-                public void onResponse(Call<List<HinhThucThanhToan>> call, Response<List<HinhThucThanhToan>> response) {
+        apiService = ApiUtils.getAPIService();
+//        apiService.getHinhThucThanhToan(HMACClient.createHMAC(ApiUtils.getHinhThucThanhToan, "GET")).enqueue(new Callback<List<HinhThucThanhToan>>() {
+//            @Override
+//            public void onResponse(Call<List<HinhThucThanhToan>> call, Response<List<HinhThucThanhToan>> response) {
+//                Log.d("CALL OK", response.body().toString());
+//                Toast.makeText(MyApplication.getCurrentContext(), "Authen Ok", Toast.LENGTH_SHORT).show();
+//            }
+//
+//            @Override
+//            public void onFailure(Call<List<HinhThucThanhToan>> call, Throwable t) {
+//                Log.d("CAll FAILED", t.getMessage());
+//                Toast.makeText(MyApplication.getCurrentContext(), "Authen Failed", Toast.LENGTH_SHORT).show();
+//            }
+//        });
+
+        apiService.getMonAnById(HMACClient.createHMAC(ApiUtils.getMonAnById + "monan103", "GET"), "monan103").enqueue(new Callback<MonAn>() {
+            @Override
+            public void onResponse(Call<MonAn> call, Response<MonAn> response) {
+                if(response.body() != null){
                     Log.d("CALL OK", response.body().toString());
                 }
+                Toast.makeText(MyApplication.getCurrentContext(), "Authen Ok", Toast.LENGTH_SHORT).show();
+            }
 
-                @Override
-                public void onFailure(Call<List<HinhThucThanhToan>> call, Throwable t) {
-                    Log.d("CAll FAILED", t.getMessage());
-                }
-            });
-        }
-        catch (Exception e){
-            Log.d("HMACClient", e.getMessage());
-        }
+            @Override
+            public void onFailure(Call<MonAn> call, Throwable t) {
+                Log.d("CAll FAILED", t.getMessage());
+                Toast.makeText(MyApplication.getCurrentContext(), "Authen Failed", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         //onUpdateUI();
     }

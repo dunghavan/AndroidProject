@@ -265,9 +265,13 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
                     nhaHangLatLong = new LatLng(nhaHang.getViDo(), nhaHang.getKinhDo());
                     //for map:
                     // kiểm tra play services
-                    if (checkPlayServices()) {
+                    if (checkPlayServices())
+                    {
                         // Building the GoogleApi client
                         buildGoogleApiClient();
+                    }
+                    else {
+                        Toast.makeText(MyApplication.getCurrentContext(), "Thiết bị không hỗ trợ GooglePlay Service", Toast.LENGTH_SHORT).show();
                     }
                     geocoder = new Geocoder(MyApplication.getCurrentContext(), Locale.getDefault());
                 }
@@ -416,10 +420,10 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
         }
     }
     private void getLocation() {
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED)
+        {
             // Kiểm tra quyền hạn
-            ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, 2);
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, 2);
         }
         //else {
         Location location = LocationServices.FusedLocationApi.getLastLocation(gac);

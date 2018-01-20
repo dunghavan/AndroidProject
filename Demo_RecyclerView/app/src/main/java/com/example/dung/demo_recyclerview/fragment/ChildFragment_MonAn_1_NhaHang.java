@@ -110,7 +110,7 @@ public class ChildFragment_MonAn_1_NhaHang extends Fragment{
         progressBar.setVisibility(View.VISIBLE);
         //isShowAlertDialog = false;
         APIService apiService = ApiUtils.getAPIService();
-        if(_tabCategory == MyConstant.DATNHIEU){
+        if(_tabCategory == MyConstant.TATCA){
             apiService.getAllMonAnByNhaHang(_maNhaHang).enqueue(new Callback<List<MonAn>>() {
                 @Override
                 public void onResponse(Call<List<MonAn>> call, Response<List<MonAn>> response) {
@@ -144,7 +144,7 @@ public class ChildFragment_MonAn_1_NhaHang extends Fragment{
             });
         }
         else {
-            apiService.getAllMonAnByNhaHang(_maNhaHang).enqueue(new Callback<List<MonAn>>() {
+            apiService.getAllMonAnDatNhieuByNhaHang(_maNhaHang).enqueue(new Callback<List<MonAn>>() {
                 @Override
                 public void onResponse(Call<List<MonAn>> call, Response<List<MonAn>> response) {
                     try{
