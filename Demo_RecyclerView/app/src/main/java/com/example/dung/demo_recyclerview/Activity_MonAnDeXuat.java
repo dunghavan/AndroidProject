@@ -41,11 +41,14 @@ public class Activity_MonAnDeXuat extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mon_an_de_xuat);
-        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-        getSupportActionBar().setCustomView(R.layout.action_bar_layout);
+
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+
+        actionBar.setDisplayOptions(android.support.v7.app.ActionBar.DISPLAY_SHOW_CUSTOM);
+        actionBar.setCustomView(R.layout.action_bar_layout);
         actionBarTitle = (TextView)findViewById(R.id.action_bar_title_text);
         actionBarTitle.setText("Món ăn đề xuất");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
         tv_reload = (TextView)findViewById(R.id.textView_reload_behind_recyclerview_monan_dexuat);
         tv_reload.setVisibility(View.GONE);
@@ -119,7 +122,6 @@ public class Activity_MonAnDeXuat extends AppCompatActivity {
         MyApplication.setCurrentContext(this);
     }
 
-
     // Menu hien thi gio hang:
     static TextView textCartItemCount;
     @Override
@@ -148,14 +150,8 @@ public class Activity_MonAnDeXuat extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
         switch (item.getItemId()) {
-            case R.id.home:
+            case 16908332:
                 finish();
-                return true;
-            case R.id.cart:
-                Intent intent = new Intent(this, CartActivity.class);
-                this.startActivity(intent);
-                return true;
-            case R.id.action_search:
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

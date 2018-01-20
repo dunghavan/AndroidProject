@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class MonAn {
     private String tenMonAn;
+    private String maLoai;
     private Double donGia;
     private String maNhaHang;
     private String hinhAnh;
@@ -38,7 +39,13 @@ public class MonAn {
 
     }
 
+    public String getMaLoai() {
+        return maLoai;
+    }
 
+    public void setMaLoai(String maLoai) {
+        this.maLoai = maLoai;
+    }
 
     public int getItemCount() {
             return itemCount;

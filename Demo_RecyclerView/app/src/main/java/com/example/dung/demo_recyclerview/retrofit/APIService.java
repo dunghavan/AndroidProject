@@ -71,7 +71,7 @@ public interface APIService {
     Call<List<Payment>> getAllPayment(@Path("maKhachHang")String maKhachHang);
 
     @FormUrlEncoded
-    @POST("api/NutritionConsulting")
+    @POST("api/NutritionConsulting/Post")
     Call<List<MonAn>> getMonAnDeXuat(@Field("GioiTinh")int GioiTinh,
                                      @Field("CanNang")int CanNang,
                                      @Field("NamSinh")int NamSinh,

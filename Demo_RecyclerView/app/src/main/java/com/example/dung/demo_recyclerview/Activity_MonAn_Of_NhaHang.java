@@ -45,6 +45,7 @@ public class Activity_MonAn_Of_NhaHang extends AppCompatActivity {
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.action_bar_layout);
         actionBarTitle = (TextView)findViewById(R.id.action_bar_title_text);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         imageView_hinhAnh = (ImageView)findViewById(R.id.imageView_nhahang_in_nhahang_detail);
         tv_tenNhaHang = (TextView)findViewById(R.id.tv_tennhahang_in_nhahang_detail);
@@ -123,6 +124,9 @@ public class Activity_MonAn_Of_NhaHang extends AppCompatActivity {
                 this.startActivity(intent);
                 return true;
             case R.id.action_search:
+                return true;
+            case 16908332:
+                finish();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

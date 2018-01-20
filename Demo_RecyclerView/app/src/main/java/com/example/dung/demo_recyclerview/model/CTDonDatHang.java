@@ -10,6 +10,7 @@ public class CTDonDatHang {
     private int SoLuong;
     private Double ThanhTien;
     private String TenMonAn;
+    private String MaLoaiMonAn;
     private String maNhaHang;
 
     public String getMaMonAn() {
@@ -50,6 +51,14 @@ public class CTDonDatHang {
 
     public void setTenMonAn(String tenMonAn) {
         TenMonAn = tenMonAn;
+    }
+
+    public String getMaLoaiMonAn() {
+        return MaLoaiMonAn;
+    }
+
+    public void setMaLoaiMonAn(String maLoaiMonAn) {
+        MaLoaiMonAn = maLoaiMonAn;
     }
 
     public String getMaNhaHang() {
