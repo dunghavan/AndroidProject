@@ -168,7 +168,7 @@ public class ChildFragment_TatCaMonAn extends Fragment{
 
                 @Override
                 public void onFailure(Call<List<MonAn>> call, Throwable t) {
-                    Toast.makeText(MyApplication.getCurrentContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(MyApplication.getCurrentContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
                     showLoadFailedDialog();
                     progressBar.setVisibility(View.GONE);
                     tv_reload.setVisibility(View.VISIBLE);

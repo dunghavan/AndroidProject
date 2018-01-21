@@ -10,8 +10,8 @@ public class CTDonDatHang {
     private int SoLuong;
     private Double ThanhTien;
     private String TenMonAn;
-    private String MaLoaiMonAn;
-    private String maNhaHang;
+    private String MaLoai;
+    private String MaNhaHang;
 
     public String getMaMonAn() {
         return MaMonAn;
@@ -53,20 +53,21 @@ public class CTDonDatHang {
         TenMonAn = tenMonAn;
     }
 
-    public String getMaLoaiMonAn() {
-        return MaLoaiMonAn;
+    public String getMaLoai() {
+        return MaLoai;
     }
 
-    public void setMaLoaiMonAn(String maLoaiMonAn) {
-        MaLoaiMonAn = maLoaiMonAn;
+    public void setMaLoai(String maLoai) {
+        MaLoai = maLoai;
     }
+
 
     public String getMaNhaHang() {
-        return maNhaHang;
+        return MaNhaHang;
     }
 
     public void setMaNhaHang(String maNhaHang) {
-        this.maNhaHang = maNhaHang;
+        MaNhaHang = maNhaHang;
     }
 
     public String itemToString(){

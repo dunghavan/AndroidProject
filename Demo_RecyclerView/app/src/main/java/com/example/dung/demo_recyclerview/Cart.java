@@ -153,7 +153,7 @@ public class Cart {
             ct.setDonGia(item.getGiaKhuyenMai());
             ct.setThanhTien(item.getToTal_1_Item());
             ct.setTenMonAn(item.getTenMonAn());
-            ct.setMaLoaiMonAn(item.getMaLoai());
+            ct.setMaLoai(item.getMaLoai());
             ct.setMaNhaHang(item.getMaNhaHang());
 
             ObjectMapper objectMapper = new ObjectMapper();

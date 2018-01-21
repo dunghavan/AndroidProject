@@ -106,7 +106,7 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
             }
         });
 
-        apiService = ApiUtils.getAPIService();
+        //apiService = ApiUtils.getAPIService();
 //        apiService.getHinhThucThanhToan(HMACClient.createHMAC(ApiUtils.getHinhThucThanhToan, "GET")).enqueue(new Callback<List<HinhThucThanhToan>>() {
 //            @Override
 //            public void onResponse(Call<List<HinhThucThanhToan>> call, Response<List<HinhThucThanhToan>> response) {
@@ -120,22 +120,22 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
 //                Toast.makeText(MyApplication.getCurrentContext(), "Authen Failed", Toast.LENGTH_SHORT).show();
 //            }
 //        });
-
-        apiService.getMonAnById(HMACClient.createHMAC(ApiUtils.getMonAnById + "monan103", "GET"), "monan103").enqueue(new Callback<MonAn>() {
-            @Override
-            public void onResponse(Call<MonAn> call, Response<MonAn> response) {
-                if(response.body() != null){
-                    Log.d("CALL OK", response.body().toString());
-                }
-                Toast.makeText(MyApplication.getCurrentContext(), "Authen Ok", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onFailure(Call<MonAn> call, Throwable t) {
-                Log.d("CAll FAILED", t.getMessage());
-                Toast.makeText(MyApplication.getCurrentContext(), "Authen Failed", Toast.LENGTH_SHORT).show();
-            }
-        });
+//
+//        apiService.getMonAnById(HMACClient.createHMAC(ApiUtils.getMonAnById + "monan103", "GET"), "monan103").enqueue(new Callback<MonAn>() {
+//            @Override
+//            public void onResponse(Call<MonAn> call, Response<MonAn> response) {
+//                if(response.body() != null){
+//                    Log.d("CALL OK", response.body().toString());
+//                }
+//                Toast.makeText(MyApplication.getCurrentContext(), "Authen Ok", Toast.LENGTH_SHORT).show();
+//            }
+//
+//            @Override
+//            public void onFailure(Call<MonAn> call, Throwable t) {
+//                Log.d("CAll FAILED", t.getMessage());
+//                Toast.makeText(MyApplication.getCurrentContext(), "Authen Failed", Toast.LENGTH_SHORT).show();
+//            }
+//        });
 
         //onUpdateUI();
     }

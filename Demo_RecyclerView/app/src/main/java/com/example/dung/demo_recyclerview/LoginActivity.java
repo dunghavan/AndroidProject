@@ -126,7 +126,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
             public void onSuccess(LoginResult loginResult) {
                 Log.d(TAG, "======Facebook login success======");
                 Log.d(TAG, "Facebook Access Token: " + loginResult.getAccessToken().getToken());
-                Toast.makeText(MyApplication.getCurrentContext(), "Login Facebook success.", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MyApplication.getCurrentContext(), "Login Facebook success.", Toast.LENGTH_SHORT).show();
 
                 Fragment_Profile.isFromLogoutRequest = false;
                 getFbInfo();
@@ -239,12 +239,12 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
             apiService.guiThongTinKhachHang(NAME, EMAIL, ID).enqueue(new Callback<Void>() {
                 @Override
                 public void onResponse(Call<Void> call, Response<Void> response) {
-                    Toast.makeText(MyApplication.getCurrentContext(), "Send gg infor success" + ID, Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(MyApplication.getCurrentContext(), "Send gg infor success" + ID, Toast.LENGTH_SHORT).show();
                 }
 
                 @Override
                 public void onFailure(Call<Void> call, Throwable t) {
-                    Toast.makeText(MyApplication.getCurrentContext(), "Send gg infor failure" + ID, Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(MyApplication.getCurrentContext(), "Send gg infor failure" + ID, Toast.LENGTH_SHORT).show();
                 }
             });
 
@@ -329,12 +329,12 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                                 apiService.guiThongTinKhachHang(NAME, EMAIL, ID).enqueue(new Callback<Void>() {
                                     @Override
                                     public void onResponse(Call<Void> call, Response<Void> response) {
-                                        Toast.makeText(MyApplication.getCurrentContext(), "Send fb infor success" + ID, Toast.LENGTH_SHORT).show();
+                                        //Toast.makeText(MyApplication.getCurrentContext(), "Send fb infor success" + ID, Toast.LENGTH_SHORT).show();
                                     }
 
                                     @Override
                                     public void onFailure(Call<Void> call, Throwable t) {
-                                        Toast.makeText(MyApplication.getCurrentContext(), "Send fb infor failure" + ID, Toast.LENGTH_SHORT).show();
+                                        //Toast.makeText(MyApplication.getCurrentContext(), "Send fb infor failure" + ID, Toast.LENGTH_SHORT).show();
                                     }
                                 });
 
