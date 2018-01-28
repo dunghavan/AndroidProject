@@ -155,6 +155,7 @@ public class Cart {
             ct.setTenMonAn(item.getTenMonAn());
             ct.setMaLoai(item.getMaLoai());
             ct.setMaNhaHang(item.getMaNhaHang());
+            ct.setMaKhachHang(LoginActivity.ID);
 
             ObjectMapper objectMapper = new ObjectMapper();
             try{

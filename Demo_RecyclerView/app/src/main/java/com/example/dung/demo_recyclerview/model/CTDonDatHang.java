@@ -12,6 +12,7 @@ public class CTDonDatHang {
     private String TenMonAn;
     private String MaLoai;
     private String MaNhaHang;
+    private String MaKhachHang;
 
     public String getMaMonAn() {
         return MaMonAn;
@@ -75,5 +76,13 @@ public class CTDonDatHang {
                 + ", " + "\"DonGia\": " + DonGia
                 + ", " + "\"SoLuong\": " + SoLuong
                 + ", " + "\"ThanhTien\": " + ThanhTien;
+    }
+
+    public String getMaKhachHang() {
+        return MaKhachHang;
+    }
+
+    public void setMaKhachHang(String maKhachHang) {
+        MaKhachHang = maKhachHang;
     }
 }

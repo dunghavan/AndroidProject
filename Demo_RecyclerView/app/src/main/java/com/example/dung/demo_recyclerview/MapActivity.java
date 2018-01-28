@@ -287,6 +287,7 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
             }
         });
 
+
     }
 
     public static class DatePickerFragment extends DialogFragment implements DatePickerDialog.OnDateSetListener {
@@ -344,9 +345,9 @@ public class MapActivity extends FragmentActivity implements GoogleApiClient.Con
         progressDialog.setIndeterminate(true);
         progressDialog.show();
 
-        String _deliveryDateTime = deliveryDateTime.toString();
-        if(radio_btn_earliest.isChecked()){
-            _deliveryDateTime = curDateTime;
+        String _deliveryDateTime = curDateTime;
+        if(radio_btn_select_time.isChecked()){
+            _deliveryDateTime = deliveryDateTime.toString();
         }
         phoneNumber = editText_Phone.getText().toString();
         DecimalFormat df = new DecimalFormat("###");

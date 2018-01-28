@@ -106,8 +106,8 @@ public class Activity_MonAnDeXuat extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<MonAn>> call, Throwable t) {
-                Log.d("Err maLoai onFailure", t.getMessage());
-                Toast.makeText(MyApplication.getCurrentContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
+                //Log.d("Err maLoai onFailure", t.getMessage());
+                //Toast.makeText(MyApplication.getCurrentContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
 
                 progressBar.setVisibility(View.GONE);
                 tv_reload.setVisibility(View.VISIBLE);

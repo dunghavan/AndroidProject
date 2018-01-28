@@ -14,7 +14,7 @@ import com.facebook.login.Login;
 
 public class SplashActivity extends AppCompatActivity {
     /** Duration of wait **/
-    private final int SPLASH_DISPLAY_LENGTH = 10;
+    private final int SPLASH_DISPLAY_LENGTH = 3000;
     ImageView imageView;
     TextView actionBarTitle;
 
