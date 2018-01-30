@@ -114,4 +114,7 @@ public interface APIService {
     @GET("api/MonAn/GetId/{id}")
     Call<MonAn> getMonAnById(@Header("Authorization")String amxString
                                                 , @Path("id") String id);
+
+    @GET("api/Recommender/GetKhuyenNghi/{idKH}")
+    Call<List<MonAn>> getMonAnKhuyenNghi(@Path("idKH") String idKH);
 }
