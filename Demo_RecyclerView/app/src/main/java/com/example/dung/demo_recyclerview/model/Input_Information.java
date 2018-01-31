@@ -14,6 +14,7 @@ public class Input_Information implements Serializable{
     private int nhuCau;
     private int cheDoLaoDong;
     private int buaAn;
+    private boolean anChay;
 
     public int getGioiTinh() {
         return gioiTinh;
@@ -69,5 +70,13 @@ public class Input_Information implements Serializable{
 
     public void setBuaAn(int buaAn) {
         this.buaAn = buaAn;
+    }
+
+    public boolean isAnChay() {
+        return anChay;
+    }
+
+    public void setAnChay(boolean anChay) {
+        this.anChay = anChay;
     }
 }

@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.Spinner;
@@ -26,6 +27,7 @@ public class Input_Activity extends AppCompatActivity {
     Button btn_Submit;
     Input_Information input_information;
     TextView actionBarTitle;
+    CheckBox checkBox_anChay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +48,7 @@ public class Input_Activity extends AppCompatActivity {
         spinner_CheDoLaoDong = (Spinner)findViewById(R.id.spinner_chedolaodong_input_activity);
         spinner_BuaAn = (Spinner)findViewById(R.id.spinner_buaan_input_activity);
         btn_Submit = (Button)findViewById(R.id.btn_hien_thi_mon_an_input_activity);
+        checkBox_anChay = (CheckBox) findViewById(R.id.checkbox_anchay_in_input_activity);
 
         setUpSpinners(true);
 
@@ -162,6 +165,14 @@ public class Input_Activity extends AppCompatActivity {
                     break;
                 default: input_information.setBuaAn(1);
             }
+        }
+
+        // An chay:
+        if(checkBox_anChay.isChecked()){
+            input_information.setAnChay(true);
+        }
+        else {
+            input_information.setAnChay(false);
         }
 
         // Send information to Activity_MonAnDeXuat

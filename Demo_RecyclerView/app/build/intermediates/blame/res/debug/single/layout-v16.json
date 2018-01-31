@@ -1,6 +1,10 @@
 [
     {
-        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout-v16\\notification_template_custom_big.xml",
-        "source": "C:\\Users\\Dung\\.android\\build-cache\\47ad2fab6ea44392917a792293e21deddc642950\\output\\res\\layout-v16\\notification_template_custom_big.xml"
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/build/intermediates/res/merged/debug/layout-v16/notification_template_custom_big.xml",
+        "source": "/home/dunghv/.android/build-cache/e0bfc7a3e0fec0f27a2da3de2ad7d3462a7c79d7/output/res/layout-v16/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout-v16\\notification_template_custom_big.xml",
+        "source": "/home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/C:\\Users\\Dung\\.android\\build-cache\\47ad2fab6ea44392917a792293e21deddc642950\\output\\res\\layout-v16\\notification_template_custom_big.xml"
     }
 ]

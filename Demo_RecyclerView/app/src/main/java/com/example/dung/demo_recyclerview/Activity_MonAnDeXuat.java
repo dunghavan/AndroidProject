@@ -81,7 +81,7 @@ public class Activity_MonAnDeXuat extends AppCompatActivity {
         progressBar.setVisibility(View.VISIBLE);
         APIService apiService = ApiUtils.getAPIService();
         apiService.getMonAnDeXuat(_inforObject.getGioiTinh(), _inforObject.getCanNang(), _inforObject.getNamSinh(), _inforObject.getCheDo(),
-                _inforObject.getNhuCau(), _inforObject.getCheDoLaoDong(), _inforObject.getBuaAn()).enqueue(new Callback<List<MonAn>>() {
+                _inforObject.getNhuCau(), _inforObject.getCheDoLaoDong(), _inforObject.getBuaAn(), _inforObject.isAnChay()).enqueue(new Callback<List<MonAn>>() {
             @Override
             public void onResponse(Call<List<MonAn>> call, Response<List<MonAn>> response) {
                 try{

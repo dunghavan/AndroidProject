@@ -77,8 +77,9 @@ public interface APIService {
                                      @Field("NamSinh")int NamSinh,
                                      @Field("CheDo")int CheDo,
                                      @Field("NhuCau")int NhuCau,
-                                     @Field("CheDoLaoDong")int CheDoLaoDong,
-                                     @Field("Bua")int Bua);
+                                     @Field("LaoDong")int LaoDong,
+                                     @Field("Bua")int Bua,
+                                        @Field("AnChay") boolean AnChay);
 
     @FormUrlEncoded
     @POST("api/TuVan/Post/")
