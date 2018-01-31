@@ -23,4 +23,50 @@
     <string name="gui_don_hang"><u>Gửi đơn hàng</u></string>
     <string name="dang_xuat"><u>Đăng xuất</u></string>
 
+    <string name="loi_khuyen_benh_tim_mach">- Đối với những người bị bệnh tim mạch, cần kiểm soát khẩu phần ăn theo số lượng và kích cỡ phù hợp, nên ăn nhiều rau
+và hoa quả - nguồn thực phẩn giàu vitamin và khoáng chất, ít clorie, nhiều chất xơ,
+ngũ cốc nguyên hạt, chất béo chưa bão hòa như dầu olive, dầu hạt cải, các loại cá béo
+như cá hồi, cá thu, cá trích, đậu nành, thịt nạc, quả óc chó, thảo dược và gia vị,
+các sản phẩm thay thế muối.</string>
+
+    <string name="loi_khuyen_benh_beo_phi">- Khi bị bệnh béo phì, nên ăn ít tinh bột từ cơm, xôi, nếp, nui, mì gói, ăn thịt nạc, nhiều cá hơn thịt, các món luộc,
+hấp, nướng ít dầu mỡ. Tăng cường rau củ quả, trái cây ít ngọt như củ sắn, táo, mận, uống nhiều nước,
+vận động thường xuyên.
+-Không nên ăn ngọt, bánh kẹo, snack, nước ngọt, chè, kem, trái cây ngọt, món chiên, quay, nước cốt dừa,
+xúc xích, lạp xưởng, thịt mỡ, da, nội tạng động vật, nước sốt nhiều dầu mỡ.</string>
+
+    <string name="loi_khuyen_benh_da_day">Đối với người mắc bệnh dạ dày:
+\n- Nên ăn rau xanh như cải xanh, cải bắp, măng tây,... thức ăn nhiều protein ít chất béo như thịt nạc,
+cá, gia cầm, đậu, cần tây, táo, nam việt quất, ớt chuông, các món canh thịt nấu nấm rơm, dạ dày lợn
+hầm đậu tương, cháo hạt sen, cháo gạo nếp táo đỏ.
+\n- Không nên ăn các loại có tính axit như cam chanh, nước ép của chúng, không ăn cay nhiều dầu mỡ, tránh ớt,
+mù tạt, tiêu, tỏi, thức uống chứa caffeine, rượu bia, rau sống, thịt cá sống.</string>
+
+    <string name="loi_khuyen_benh_gout">Đối với bệnh nhân bị bệnh gout:
+\n- Nên ăn thực phẩm giàu chất xơ như dưa leo, củ sắn, cà chua, uống nhiều nước
+\n- Không nên ăn hải sản, thịt trâu, thịt bò, thịt ngựa, thịt dê, lưỡi, lòng, tim, gan, thận, trứng gia cầm,
+măng tre, nấm, măng tây, giá, bạc hà, không ăn khuya.</string>
+
+    <string name="loi_khuyen_benh_tieu_duong">Đối với bệnh nhân bệnh tiểu đường:
+\n- Nên ăn nhiều rau xanh, trái cây như củ cải, cải xoăn, bông cải xanh, trái cây ít đường như bưởi,
+cam, quýt, táo, thịt nạc đặc biệt thịt bò, chất béo từ quả bơ, hồ đào, hạnh nhân, óc chó, dầu ô liu,
+cá hồi, cá ngừ, cá thu nấu dưới dạng hấp, súp.
+\n- Không nên ăn thực phẩm ngọt: bánh ngọt, kẹo, nước ngọt, mía đường, hoa quả ngọt, hạn chế tinh bột
+từ cơm, phở, bún, mì gói, cháo ăn liền, nội tạng động vật, thịt mỡ, lòng đỏ trứng gà, pho mát, bơ
+sữa, nước cốt dừa, kem, xúc xích, lạp xưởng, khoai tây chiên, thực phẩm đóng hộp, trái cây khô, sữa, rượu, bia.</string>
+
+    <string name="loi_khuyen_phu_nu_mang_thai">Đối với phụ nữ mang thai:
+\n- Nên ăn đạm từ thịt, cá, trứng, sữa, các loại đậu, chất sắt từ thịt, tim, gan, cật, rau xanh,
+các loại hạt, canxi từ trứng, tôm cua cá, vitamin b9 từ rau muống, cải xanh, súp lơ xanh, bó xôi, vừng lạc,
+thịt gia cầm, viramin D từ trứng, sữa, ánh năng mặt trời, vitamin D từ rau xanh, trái cây.
+\n- Không nên ăn nhiều muối, cá thu, cá mập, cá kiếm vì có nguy cơ nhiễm thủy ngân, rau củ mọc mầm,
+bơ sữa chưa qua tiệt trùng, cá thịt trứng còn tái, rau quả cần rửa sạch, gọt vỏ trước khi ăn,
+đu đủ xanh, táo mèo, long nhãn, đào, gừng, ớt, rau sam. Tránh rượu bia, nước ngọt, caffe.</string>
+
+    <string name="loi_khuyen_phu_nu_cho_con_bu">Đối với phụ nữ đang cho con bú:
+\n- Nên ăn chất đạm từ thịt, cá, trứng, sữa, các loại đậu, xá, lạc vừng, rau xanh chứa nhiều vitamin và khoáng chất,
+các loại quả chín như chuối, cam, xoài.
+\n- Không nên dùng rượu, cà phê, trà, ớt, tỏi, giấm, tiêu, cá kiếm, cá mập, cá thu, hạn chế cá biển, rau mùi tây,
+bạc, socola, không ăn quá nhiều trái cây họ cam quýt.</string>
+
 </resources>

@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
+        "outputFile": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 207
                 },
                 "from": {
-                    "file": "/home/dunghv/.android/build-cache/7a476ed78e6077a68931fd5f229e8c83ce63e1d1/output/res/values-v24/values-v24.xml",
+                    "file": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\C:\\Users\\Dung\\.android\\build-cache\\88e14c82de511322640466e233f6ebd8dbd1e9d5\\output\\res\\values-v24\\values-v24.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 342
                 },
                 "from": {
-                    "file": "/home/dunghv/.android/build-cache/7a476ed78e6077a68931fd5f229e8c83ce63e1d1/output/res/values-v24/values-v24.xml",
+                    "file": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\C:\\Users\\Dung\\.android\\build-cache\\88e14c82de511322640466e233f6ebd8dbd1e9d5\\output\\res\\values-v24\\values-v24.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -49,7 +49,7 @@
                     "endOffset": 408
                 },
                 "from": {
-                    "file": "/home/dunghv/.android/build-cache/aeeb8ea4bbe503a849b091c83aefd6fff9ad4de6/output/res/values-v24/values-v24.xml",
+                    "file": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\C:\\Users\\Dung\\.android\\build-cache\\1e9b8a0e155f7b128d5f5a4aeeef1a2a533f135c\\output\\res\\values-v24\\values-v24.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -68,7 +68,7 @@
                     "endOffset": 469
                 },
                 "from": {
-                    "file": "/home/dunghv/.android/build-cache/aeeb8ea4bbe503a849b091c83aefd6fff9ad4de6/output/res/values-v24/values-v24.xml",
+                    "file": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\C:\\Users\\Dung\\.android\\build-cache\\1e9b8a0e155f7b128d5f5a4aeeef1a2a533f135c\\output\\res\\values-v24\\values-v24.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -87,7 +87,7 @@
                     "endOffset": 535
                 },
                 "from": {
-                    "file": "/home/dunghv/.android/build-cache/aeeb8ea4bbe503a849b091c83aefd6fff9ad4de6/output/res/values-v24/values-v24.xml",
+                    "file": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\C:\\Users\\Dung\\.android\\build-cache\\1e9b8a0e155f7b128d5f5a4aeeef1a2a533f135c\\output\\res\\values-v24\\values-v24.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -106,7 +106,7 @@
                     "endOffset": 602
                 },
                 "from": {
-                    "file": "/home/dunghv/.android/build-cache/aeeb8ea4bbe503a849b091c83aefd6fff9ad4de6/output/res/values-v24/values-v24.xml",
+                    "file": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\C:\\Users\\Dung\\.android\\build-cache\\1e9b8a0e155f7b128d5f5a4aeeef1a2a533f135c\\output\\res\\values-v24\\values-v24.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -119,7 +119,7 @@
         ]
     },
     {
-        "outputFile": "/home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
+        "outputFile": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
         "map": [
             {
                 "to": {
@@ -130,7 +130,7 @@
                     "endOffset": 207
                 },
                 "from": {
-                    "file": "/home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/C:\\Users\\Dung\\.android\\build-cache\\88e14c82de511322640466e233f6ebd8dbd1e9d5\\output\\res\\values-v24\\values-v24.xml",
+                    "file": "C:\\home\\dunghv\\.android\\build-cache\\7a476ed78e6077a68931fd5f229e8c83ce63e1d1\\output\\res\\values-v24\\values-v24.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -149,7 +149,7 @@
                     "endOffset": 342
                 },
                 "from": {
-                    "file": "/home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/C:\\Users\\Dung\\.android\\build-cache\\88e14c82de511322640466e233f6ebd8dbd1e9d5\\output\\res\\values-v24\\values-v24.xml",
+                    "file": "C:\\home\\dunghv\\.android\\build-cache\\7a476ed78e6077a68931fd5f229e8c83ce63e1d1\\output\\res\\values-v24\\values-v24.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -168,7 +168,7 @@
                     "endOffset": 408
                 },
                 "from": {
-                    "file": "/home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/C:\\Users\\Dung\\.android\\build-cache\\1e9b8a0e155f7b128d5f5a4aeeef1a2a533f135c\\output\\res\\values-v24\\values-v24.xml",
+                    "file": "C:\\home\\dunghv\\.android\\build-cache\\aeeb8ea4bbe503a849b091c83aefd6fff9ad4de6\\output\\res\\values-v24\\values-v24.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -187,7 +187,7 @@
                     "endOffset": 469
                 },
                 "from": {
-                    "file": "/home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/C:\\Users\\Dung\\.android\\build-cache\\1e9b8a0e155f7b128d5f5a4aeeef1a2a533f135c\\output\\res\\values-v24\\values-v24.xml",
+                    "file": "C:\\home\\dunghv\\.android\\build-cache\\aeeb8ea4bbe503a849b091c83aefd6fff9ad4de6\\output\\res\\values-v24\\values-v24.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -206,7 +206,7 @@
                     "endOffset": 535
                 },
                 "from": {
-                    "file": "/home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/C:\\Users\\Dung\\.android\\build-cache\\1e9b8a0e155f7b128d5f5a4aeeef1a2a533f135c\\output\\res\\values-v24\\values-v24.xml",
+                    "file": "C:\\home\\dunghv\\.android\\build-cache\\aeeb8ea4bbe503a849b091c83aefd6fff9ad4de6\\output\\res\\values-v24\\values-v24.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -225,7 +225,126 @@
                     "endOffset": 602
                 },
                 "from": {
-                    "file": "/home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/C:\\Users\\Dung\\.android\\build-cache\\1e9b8a0e155f7b128d5f5a4aeeef1a2a533f135c\\output\\res\\values-v24\\values-v24.xml",
+                    "file": "C:\\home\\dunghv\\.android\\build-cache\\aeeb8ea4bbe503a849b091c83aefd6fff9ad4de6\\output\\res\\values-v24\\values-v24.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 248,
+                        "endColumn": 66,
+                        "endOffset": 310
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 156,
+                    "endOffset": 207
+                },
+                "from": {
+                    "file": "C:\\Users\\Dung\\.android\\build-cache\\88e14c82de511322640466e233f6ebd8dbd1e9d5\\output\\res\\values-v24\\values-v24.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 156,
+                        "endOffset": 207
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 212,
+                    "endColumn": 134,
+                    "endOffset": 342
+                },
+                "from": {
+                    "file": "C:\\Users\\Dung\\.android\\build-cache\\88e14c82de511322640466e233f6ebd8dbd1e9d5\\output\\res\\values-v24\\values-v24.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 212,
+                        "endColumn": 134,
+                        "endOffset": 342
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 347,
+                    "endColumn": 65,
+                    "endOffset": 408
+                },
+                "from": {
+                    "file": "C:\\Users\\Dung\\.android\\build-cache\\1e9b8a0e155f7b128d5f5a4aeeef1a2a533f135c\\output\\res\\values-v24\\values-v24.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 65,
+                        "endOffset": 116
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 413,
+                    "endColumn": 60,
+                    "endOffset": 469
+                },
+                "from": {
+                    "file": "C:\\Users\\Dung\\.android\\build-cache\\1e9b8a0e155f7b128d5f5a4aeeef1a2a533f135c\\output\\res\\values-v24\\values-v24.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 121,
+                        "endColumn": 60,
+                        "endOffset": 177
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 474,
+                    "endColumn": 65,
+                    "endOffset": 535
+                },
+                "from": {
+                    "file": "C:\\Users\\Dung\\.android\\build-cache\\1e9b8a0e155f7b128d5f5a4aeeef1a2a533f135c\\output\\res\\values-v24\\values-v24.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 182,
+                        "endColumn": 65,
+                        "endOffset": 243
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 540,
+                    "endColumn": 66,
+                    "endOffset": 602
+                },
+                "from": {
+                    "file": "C:\\Users\\Dung\\.android\\build-cache\\1e9b8a0e155f7b128d5f5a4aeeef1a2a533f135c\\output\\res\\values-v24\\values-v24.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,

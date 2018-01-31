@@ -1,10 +1,14 @@
 [
     {
-        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\design_layout_snackbar.xml",
-        "source": "/home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/C:\\Users\\Dung\\.android\\build-cache\\c60ce2b127a89db8c90b682b812ace0bfcf9652a\\output\\res\\layout-sw600dp-v13\\design_layout_snackbar.xml"
+        "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\design_layout_snackbar.xml",
+        "source": "C:\\Users\\Dung\\.android\\build-cache\\c60ce2b127a89db8c90b682b812ace0bfcf9652a\\output\\res\\layout-sw600dp-v13\\design_layout_snackbar.xml"
     },
     {
-        "merged": "/home/dunghv/Desktop/TestGit/AndroidProject/Demo_RecyclerView/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
-        "source": "/home/dunghv/.android/build-cache/742d5ffba5ed2a5bab5f805f086dbbfa02bd3606/output/res/layout-sw600dp-v13/design_layout_snackbar.xml"
+        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\design_layout_snackbar.xml",
+        "source": "C:\\home\\dunghv\\.android\\build-cache\\742d5ffba5ed2a5bab5f805f086dbbfa02bd3606\\output\\res\\layout-sw600dp-v13\\design_layout_snackbar.xml"
+    },
+    {
+        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\design_layout_snackbar.xml",
+        "source": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\C:\\Users\\Dung\\.android\\build-cache\\c60ce2b127a89db8c90b682b812ace0bfcf9652a\\output\\res\\layout-sw600dp-v13\\design_layout_snackbar.xml"
     }
 ]

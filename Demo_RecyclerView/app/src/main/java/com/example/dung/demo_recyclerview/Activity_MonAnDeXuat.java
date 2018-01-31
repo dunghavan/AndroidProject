@@ -36,6 +36,7 @@ public class Activity_MonAnDeXuat extends AppCompatActivity {
     RecyclerView.LayoutManager layoutManager;
     List<MonAn> data;
     TextView actionBarTitle;
+    TextView tv_advice_1, tv_advice_2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +51,8 @@ public class Activity_MonAnDeXuat extends AppCompatActivity {
         actionBarTitle.setText("Món ăn đề xuất");
         actionBar.setDisplayHomeAsUpEnabled(true);
 
+        tv_advice_1 = (TextView)findViewById(R.id.textView_advice_1);
+        tv_advice_2 = (TextView)findViewById(R.id.textView_advice_2);
         tv_reload = (TextView)findViewById(R.id.textView_reload_behind_recyclerview_monan_dexuat);
         tv_reload.setVisibility(View.GONE);
         progressBar = (ProgressBar)findViewById(R.id.progressbar_in_recyclerview_monan_dexuat);
@@ -75,6 +78,37 @@ public class Activity_MonAnDeXuat extends AppCompatActivity {
                 initialData(input_information);
             }
         });
+
+        //Textview advice 1:
+        switch (input_information.getCheDo()){
+            case 2: //Benh tim mach:
+                tv_advice_1.setText(R.string.loi_khuyen_benh_tim_mach);
+                break;
+            case 3: //Benh beo phi:
+                tv_advice_1.setText(R.string.loi_khuyen_benh_beo_phi);
+                break;
+            case 4: //Benh da day:
+                tv_advice_1.setText(R.string.loi_khuyen_benh_da_day);
+                break;
+            case 5: //Benh gout:
+                tv_advice_1.setText(R.string.loi_khuyen_benh_gout);
+                break;
+            case 6: //Benh tieu duong:
+                tv_advice_1.setText(R.string.loi_khuyen_benh_tieu_duong);
+                break;
+            default: tv_advice_1.setText("");
+                break;
+        }
+
+        //Textview advice 2:
+        switch (input_information.getNhuCau()){
+            case 3: //Mang thai:
+                tv_advice_1.setText(R.string.loi_khuyen_phu_nu_mang_thai);
+                break;
+            case 4: //Cho con bu:
+                tv_advice_1.setText(R.string.loi_khuyen_phu_nu_cho_con_bu);
+                break;
+        }
     }
 
     private void initialData(Input_Information _inforObject){

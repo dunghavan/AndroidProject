@@ -123,7 +123,7 @@ public class Input_Activity extends AppCompatActivity {
             }
         }
 
-        // Muc dich:
+        // Nhu cau:
         if(spinner_NhuCau.getSelectedItem() != null){
             String mucDich = spinner_NhuCau.getSelectedItem().toString();
             switch (mucDich){

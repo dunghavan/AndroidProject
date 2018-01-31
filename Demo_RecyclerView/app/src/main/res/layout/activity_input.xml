@@ -18,20 +18,19 @@
             android:layout_marginStart="5dp"
             android:layout_gravity="center"
             android:textStyle="bold"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="2dp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Để lựa chọn được món ăn phù hợp với bản thân mình, bạn hãy nhập các thông tin dưới đây để chúng tôi có thể đề xuất các món ăn phù hợp nhất cho bạn"
             android:layout_marginStart="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginBottom="3dp"
             android:textSize="16sp"/>
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="#807474"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="5dp"/>
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -42,7 +41,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="5dp">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -73,7 +72,7 @@
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:orientation="horizontal">
                 <TextView
                     android:layout_width="wrap_content"
@@ -85,12 +84,13 @@
                 <Spinner
                     android:id="@+id/spinner_namsinh_input_activity"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
                 </Spinner>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:orientation="horizontal">
                 <TextView
                     android:layout_width="wrap_content"
@@ -102,7 +102,8 @@
                 <Spinner
                     android:id="@+id/spinner_cannang_input_activity"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
                 </Spinner>
                 <TextView
                     android:layout_width="wrap_content"
@@ -113,7 +114,7 @@
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:orientation="horizontal">
                 <TextView
                     android:layout_width="wrap_content"
@@ -125,12 +126,13 @@
                 <Spinner
                     android:id="@+id/spinner_chedo_input_activity"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
                 </Spinner>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:orientation="horizontal">
                 <TextView
                     android:layout_width="wrap_content"
@@ -142,12 +144,13 @@
                 <Spinner
                     android:id="@+id/spinner_nhucau_input_activity"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
                 </Spinner>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:orientation="horizontal">
                 <TextView
                     android:layout_width="wrap_content"
@@ -159,12 +162,13 @@
                 <Spinner
                     android:id="@+id/spinner_chedolaodong_input_activity"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
                 </Spinner>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:orientation="horizontal">
                 <TextView
                     android:layout_width="wrap_content"
@@ -176,12 +180,13 @@
                 <Spinner
                     android:id="@+id/spinner_buaan_input_activity"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
                 </Spinner>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:orientation="horizontal">
                 <TextView
                     android:layout_width="wrap_content"
@@ -194,6 +199,7 @@
                     android:id="@+id/checkbox_anchay_in_input_activity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginStart="20dp"/>
             </LinearLayout>
             <Button
