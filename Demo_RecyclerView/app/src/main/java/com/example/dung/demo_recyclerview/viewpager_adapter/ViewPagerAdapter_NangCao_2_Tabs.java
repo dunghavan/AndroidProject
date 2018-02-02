@@ -43,7 +43,7 @@ public class ViewPagerAdapter_NangCao_2_Tabs extends FragmentPagerAdapter{
         switch (position){
             case 0: TAB_NAME = MyConstant.KHUYENMAI;
                 break;
-            case 1: TAB_NAME = MyConstant.KHUYENNGHI;
+            case 1: TAB_NAME = MyConstant.BANSETHICH;
                 break;
         }
         return TAB_NAME;

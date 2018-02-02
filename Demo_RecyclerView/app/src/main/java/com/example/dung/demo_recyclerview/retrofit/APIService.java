@@ -52,7 +52,8 @@ public interface APIService {
                      @Field("CTDonDatHang")String ChiTietDonHang,
                      @Field("DaXacNhan")String DaXacNhan,
                      @Field("DaGiaoDich")String DaGiaoDich,
-                        @Field("MaNhaHang")String MaNhaHang);
+                        @Field("MaNhaHang")String MaNhaHang,
+                           @Field("GhiChu") String GhiChu);
 
 
     @GET("/api/PhieuGiamGia/GetChietKhau/{idMonAn}")

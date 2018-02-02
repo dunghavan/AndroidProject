@@ -29,11 +29,11 @@ public class VP_Adapter_MonAn_2Tabs_For_NhaHang extends FragmentPagerAdapter {
         Bundle bundle = new Bundle();
         bundle.putString("MA_NHA_HANG", maNhaHang);
         switch (position){
-            case 0: bundle.putString(MyConstant.KEY_FOR_CATEGORY_TAB, MyConstant.DATNHIEU);
+            case 0: bundle.putString(MyConstant.KEY_FOR_CATEGORY_TAB, MyConstant.TATCA);
                 fragment = new ChildFragment_MonAn_1_NhaHang();
                 fragment.setArguments(bundle);
                 break;
-            case 1: bundle.putString(MyConstant.KEY_FOR_CATEGORY_TAB, MyConstant.TATCA);
+            case 1: bundle.putString(MyConstant.KEY_FOR_CATEGORY_TAB, MyConstant.DATNHIEU);
                 fragment = new ChildFragment_MonAn_1_NhaHang();
                 fragment.setArguments(bundle);
                 break;
@@ -49,9 +49,9 @@ public class VP_Adapter_MonAn_2Tabs_For_NhaHang extends FragmentPagerAdapter {
     @Override
     public CharSequence getPageTitle(int position){
         switch (position){
-            case 0: TAB_NAME = MyConstant.DATNHIEU;
+            case 0: TAB_NAME = MyConstant.TATCA;
                 break;
-            case 1: TAB_NAME = MyConstant.TATCA;
+            case 1: TAB_NAME = MyConstant.DATNHIEU;
                 break;
         }
         return TAB_NAME;

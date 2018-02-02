@@ -127,6 +127,8 @@ public class Input_Activity extends AppCompatActivity {
         if(spinner_NhuCau.getSelectedItem() != null){
             String mucDich = spinner_NhuCau.getSelectedItem().toString();
             switch (mucDich){
+                case "Giữ cân": input_information.setNhuCau(0);
+                    break;
                 case "Giảm cân": input_information.setNhuCau(1);
                     break;
                 case "Tăng cân": input_information.setNhuCau(2);
@@ -218,6 +220,7 @@ public class Input_Activity extends AppCompatActivity {
 
         // Nhu Cau
         List<String> data_NhuCau = new ArrayList<>();
+        data_NhuCau.add("Giữ cân");
         data_NhuCau.add("Giảm cân");
         data_NhuCau.add("Tăng cân");
         if(!_gioiTinh){

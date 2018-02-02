@@ -108,6 +108,8 @@ public class Activity_MonAnDeXuat extends AppCompatActivity {
             case 4: //Cho con bu:
                 tv_advice_1.setText(R.string.loi_khuyen_phu_nu_cho_con_bu);
                 break;
+            default:
+                break;
         }
     }
 

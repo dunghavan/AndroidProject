@@ -17,6 +17,7 @@ public class MyConstant {
     public static String DATNHIEU = "Đặt nhiều";
     public static String KHUYENMAI = "Khuyến mại";
     public static String KHUYENNGHI = "Khuyến nghị";
+    public static String BANSETHICH = "Bạn sẽ thích";
 
 
     public static String TAB_NHAHANG = "Tab Nhà Hàng";

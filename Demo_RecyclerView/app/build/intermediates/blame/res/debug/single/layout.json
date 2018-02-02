@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
-        "source": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\C:\\Users\\Dung\\.android\\build-cache\\88e14c82de511322640466e233f6ebd8dbd1e9d5\\output\\res\\layout\\abc_dialog_title_material.xml"
-    },
-    {
         "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\alert_dialog_rating_monan.xml",
         "source": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\src\\main\\res\\layout\\alert_dialog_rating_monan.xml"
+    },
+    {
+        "merged": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
+        "source": "C:\\home\\dunghv\\Desktop\\TestGit\\AndroidProject\\Demo_RecyclerView\\C:\\Users\\Dung\\.android\\build-cache\\88e14c82de511322640466e233f6ebd8dbd1e9d5\\output\\res\\layout\\abc_dialog_title_material.xml"
     },
     {
         "merged": "C:\\Users\\Dung\\Desktop\\AndroidProject\\Demo_RecyclerView\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",

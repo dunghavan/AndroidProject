@@ -27,6 +27,7 @@ import retrofit2.Response;
 
 public class Cart {
     private static List<MonAn> cartContent = new ArrayList<>();
+    public static String note;
 
     public static List<MonAn> getCartContent(){
         return cartContent;

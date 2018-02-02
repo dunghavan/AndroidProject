@@ -55,6 +55,22 @@
             android:layout_height="match_parent"
             android:scrollbars="vertical" />
     </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+
+    <EditText
+        android:id="@+id/editText_note_in_cart_activity"
+        android:hint="Thêm ghi chú cho giỏ hàng..."
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/rounded_edittext"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:lines="3"/>
     <LinearLayout
         android:id="@+id/linearLayout_for_btn"
         android:layout_width="match_parent"

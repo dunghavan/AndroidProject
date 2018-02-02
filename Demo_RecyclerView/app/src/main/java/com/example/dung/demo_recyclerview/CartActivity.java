@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -41,6 +42,7 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
     TextView tv_tenKhachHang;
     TextView tv_soLuongMon;
     TextView tv_tongTien;
+    EditText editText_note;
 
     Button back_btn, next_btn, login_btn;
     CartActivity cartActivity; // Used to start LoginActivity
@@ -71,6 +73,8 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
         tv_tenKhachHang = (TextView)findViewById(R.id.textview_username_in_cart_activity);
         tv_soLuongMon = (TextView)findViewById(R.id.textview_soluongmon_in_cart_activity);
         tv_tongTien = (TextView)findViewById(R.id.textview_tongtien_in_cart_activity);
+        editText_note = (EditText)findViewById(R.id.editText_note_in_cart_activity);
+
 
         //Setting the LayoutManager:
         layoutManager = new LinearLayoutManager(this);
@@ -93,6 +97,7 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
         next_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Cart.note = editText_note.getText().toString();
                 Intent intent = new Intent(cartActivity, MapActivity.class);
                 cartActivity.startActivity(intent);
             }

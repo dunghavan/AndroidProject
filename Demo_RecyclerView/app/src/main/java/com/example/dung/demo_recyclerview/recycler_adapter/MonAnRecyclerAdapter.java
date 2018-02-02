@@ -95,6 +95,9 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
         viewHolder.textView_KhuyenMai.setVisibility(View.INVISIBLE);
         APIService apiService = ApiUtils.getAPIService();
         Log.d("Mon an crash", monAnSelected.getId());
+        if(monAnSelected.getId().equalsIgnoreCase("MonAn67")){
+            int x = 0;
+        }
         apiService.getChietKhauByMa(monAnSelected.getId()).enqueue(new Callback<Integer>() {
             @Override
             public void onResponse(Call<Integer> call, Response<Integer> response) {
@@ -103,6 +106,8 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                 else
                     khuyenMaiFromServer = response.body();
                 monAnSelected.setKhuyenMai((double)khuyenMaiFromServer);
+                viewHolder.textView_Gia.setPaintFlags(viewHolder.textView_Gia.getPaintFlags() & (~ Paint.STRIKE_THRU_TEXT_FLAG));
+                viewHolder.textView_Gia.setTextColor(Color.parseColor("#FF893E07"));
                 if(khuyenMaiFromServer != 0){
                     viewHolder.textView_GiaKhuyenMai.setText(String.valueOf(decimalFormat.format(monAnSelected.getGiaKhuyenMai())) + " đ");
                     viewHolder.textView_KhuyenMai.setText("-" + String.valueOf(monAnSelected.getKhuyenMai()) + "%");
@@ -275,7 +280,6 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                                 MainActivity.setupBadge(Cart.getAllItemCount());
                                 Activity_MonAn_Of_NhaHang.setupBadge(Cart.getAllItemCount());
                             }
-
                         }
                     });
 
