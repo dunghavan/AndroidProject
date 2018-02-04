@@ -5,6 +5,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -37,6 +38,7 @@ public class Input_Activity extends AppCompatActivity {
         getSupportActionBar().setCustomView(R.layout.action_bar_layout);
         actionBarTitle = (TextView)findViewById(R.id.action_bar_title_text);
         actionBarTitle.setText("Tư vấn món ăn");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // Connect Views:
         radioButton_Nam = (RadioButton)findViewById(R.id.radio_nam_input_activity);
@@ -248,5 +250,16 @@ public class Input_Activity extends AppCompatActivity {
     public void onResume(){
         super.onResume();
         MyApplication.setCurrentContext(this);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case 16908332:
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

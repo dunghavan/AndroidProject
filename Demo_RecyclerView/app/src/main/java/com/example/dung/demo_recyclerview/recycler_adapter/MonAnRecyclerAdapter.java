@@ -20,6 +20,7 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.dung.demo_recyclerview.Activity_MonAnDeXuat;
 import com.example.dung.demo_recyclerview.Activity_MonAn_Of_NhaHang;
 import com.example.dung.demo_recyclerview.Cart;
 import com.example.dung.demo_recyclerview.LoginActivity;
@@ -256,6 +257,7 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                             update_SoLuongDat(count);
                             MainActivity.setupBadge(Cart.getAllItemCount());
                             Activity_MonAn_Of_NhaHang.setupBadge(Cart.getAllItemCount());
+                            Activity_MonAnDeXuat.setupBadge(Cart.getAllItemCount());
 
                         }
                     });
@@ -279,6 +281,7 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                                 update_SoLuongDat(count);
                                 MainActivity.setupBadge(Cart.getAllItemCount());
                                 Activity_MonAn_Of_NhaHang.setupBadge(Cart.getAllItemCount());
+                                Activity_MonAnDeXuat.setupBadge(Cart.getAllItemCount());
                             }
                         }
                     });
@@ -365,6 +368,7 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                         update_SoLuongDat(count);
                         MainActivity.setupBadge(Cart.getAllItemCount());
                         Activity_MonAn_Of_NhaHang.setupBadge(Cart.getAllItemCount());
+                        Activity_MonAnDeXuat.setupBadge(Cart.getAllItemCount());
                     }
 
                 }
@@ -379,6 +383,7 @@ public class MonAnRecyclerAdapter extends RecyclerView.Adapter <MonAnRecyclerAda
                     update_SoLuongDat(count);
                     MainActivity.setupBadge(Cart.getAllItemCount());
                     Activity_MonAn_Of_NhaHang.setupBadge(Cart.getAllItemCount());
+                    Activity_MonAnDeXuat.setupBadge(Cart.getAllItemCount());
                     notifyDataSetChanged();
                     //Toast.makeText(context, "Item in Cart: " + Cart.getAllItemCount(), Toast.LENGTH_SHORT).show();
                 }

@@ -186,6 +186,10 @@ public class Activity_MonAnDeXuat extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
         switch (item.getItemId()) {
+            case R.id.cart:
+                Intent intent = new Intent(this, CartActivity.class);
+                this.startActivity(intent);
+                return true;
             case 16908332:
                 finish();
                 return true;

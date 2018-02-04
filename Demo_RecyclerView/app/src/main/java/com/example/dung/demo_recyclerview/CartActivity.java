@@ -168,6 +168,8 @@ public class CartActivity extends AppCompatActivity implements RecyclerAdapter_F
                     next_btn.setVisibility(View.GONE);
             }
         }
+        if(Cart.getCartContent().size() == 0)
+            next_btn.setVisibility(View.GONE);
     }
 
     @Override
